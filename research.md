@@ -17,7 +17,7 @@ tagline: Current and completed research projects that I am involved with
                 <h3><a href="http://dust.leeds.ac.uk/">DUST (<i>starting soon</i>)</a></h3>
                 Data Assimilation for Agent-Based Models: Applications to Civil Emergencies
             </li>
-            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based modelss.</li>
+            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based models.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -50,7 +50,7 @@ tagline: Current and completed research projects that I am involved with
                 <h3><a href="http://cdrc.ac.uk/">CDRC</a></h3>
                 Consumer Data Research Centre
             </li>
-            <li style="font-size: small; line-height: 20px;">The aim of the CDRC is to work with organisations to open up their data to our trusted researchers to provide solutions that drive economic growth and improve our society.</li>
+            <li style="font-size: small; line-height: 20px;">The CDRC is working with organisations to open up their data to trusted researchers to provide solutions that drive economic growth and improve our society.</li>
             <li>&nbsp;</li>
         </ul>
     </div>

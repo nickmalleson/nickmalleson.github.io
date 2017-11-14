@@ -1,7 +1,7 @@
 ---
 layout: main
-title: XX TITLE
-tagline: XX TAGLINE
+title: CV
+tagline: 
 ---
  
 _Under construction_
