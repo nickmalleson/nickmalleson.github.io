@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>GISRUK2014: Using Social Media Data to Assess Spatial Crime Hotspots</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="Hakim El Hattab">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- Styles for the slides. -->
+        
+        <!-- Remove the one below to to have all on one continuous page with notes-->
+        <link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+        
+        <!-- Default reveal.js template -->
+        <!--
+            <link rel="stylesheet" href="./reveal.js/css/theme/default.css" id="theme">
+        -->
+        
+        
+        <!-- Adapted tempate -->        
+        <link rel="stylesheet" href="./styles/nick_reveal.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+                document.write( '<link rel="stylesheet" href="./reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="slides">
+                
+                <section class="title"  id="Title">
+                    
+                    <!-- script for follow buttons https://about.twitter.com/resources/buttons#follow -->
+                    
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                    
+                    <h2 style="text-transform: none;">Using Social Media Data to Assess Spatial Crime Hotspots</h2>
+                    
+                    <h3>Presentation to GISRUK 2014</h3>
+                    
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+		    <strong>Dr Nick Malleson</strong>, School of Geography, University of Leeds<br/>
+                    <strong>Dr Martin Andresen</strong> School of Criminology, Simon Fraser University, BC, Canada</h4>
+                    
+                    
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        <h5><a href="https://twitter.com/nickmalleson" class="twitter-follow-button" data-show-count="false" data-size="large">@nickmalleson</a>
+                    </h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    
+                </section>
+		
+		<section  id="Admin">
+		    
+		    <h2>Admin</h2>
+		    
+		    <p>This presentation is based on the following paper:</p>
+		    <p class="level2">Malleson, N and M. Andresen (in press). The impact of using social media data in crime rate calculations:
+		    shifting hot spots and changing spatial patterns.
+		    <i>Cartography and Geographical Information Society (CaGIS)</i>.</p>
+                    
+                    <p>The GISRUK abstract is available here:</p>
+                    <p class="level2"><a href="http://nickmalleson.co.uk/wp-content/uploads/2014/04/gisruk2014_abstract.pdf">
+                        http://nickmalleson.co.uk/wp-content/uploads/2014/04/gisruk2014_abstract.pdf
+                    </a></p>
+		    
+		    <p>These slides are available online:</p>
+                    <p class="level2"><a href="http://nickmalleson.co.uk/html/presentations/2014-04-GISRUK/index.html">
+                    http://nickmalleson.co.uk/html/presentations/2014-04-GISRUK</a></p>
+		    
+		</section>
+                
+                <section  id="Outline">
+                
+                    <h2>Outline</h2>
+		    
+		    <p>Context: the population at risk of crime</p>
+		    
+		    <img class="right" src="./figures/Shoppers in Hong Kong_108365843.jpg" alt="Shoppers in Hong Kong"/>
+		    
+		    <p>Data and the study area</p>
+		    <p class="level2">Residential population</p>
+		    <p class="level2">'Ambient' population</p>
+		    <p>Crime Clusters</p>
+		    <p class="level2">GI*</p>
+		    <p class="level2">GAM</p>
+		    <p>Results and Conclusions</p>
+                    
+                    
+                </section>
+                
+                <section id="ResearchQuestions">
+                    
+                    <h2>Research Questions</h2>
+                    <img class="right" src="./figures/crime_2012-violent.png" alt="Violent crime map"/>
+                    <p>Are crime hot spots stable under the application of different population-at-risk measures?</p>
+                    <p>Which areas have the highest crime rates when using both residential (census) and mobile (social media) population at risk data?</p>
+                    
+                </section>
+             
+                <section id="Context">
+                    
+                    <h2>Context:</h2><h3>The Population-At-Risk in Crime Analysis</h3>
+                    
+                    <p>The population at risk is fundamental for crime rate calculations</p>
+                    <!-- begin MathToWeb -->
+                    <!-- (your LaTeX) ${CrimeRate}_i = \frac{Crimes_i}{Population_i}$ -->
+                    <math xmlns="http://www.w3.org/1998/Math/MathML" class="box">
+                        <mrow>
+                                <msub>
+                                        <mrow>
+                                            <mi>CrimeRate</mi>
+                                        </mrow>
+                                        <mi>i</mi>
+                                </msub>
+                                <mo>=</mo>
+                                <mfrac linethickness="1">
+                                        <mrow>
+                                                <mi>CrimeCoun</mi>
+                                                <msub>
+                                                        <mi>t</mi>
+                                                        <mi>i</mi>
+                                                </msub>
+                                        </mrow>
+                                        <mrow>
+                                                <mi>PopulationAtRis</mi>
+                                                <msub>
+                                                        <mi>k</mi>
+                                                        <mi>i</mi>
+                                                </msub>
+                                        </mrow>
+                                </mfrac>
+                        </mrow>
+                    </math>
+                    <!-- end MathToWeb -->
+                    
+                    <p class="level2">&nbsp;</p>
+                    <p>No consensus on the best population-at-risk measure to use</p>
+                    <blockquote>
+                        &ldquo;a valid rate ... should form a probability statement, and therefore should be based on the risk
+                        or target group appropriate for each specific crime category&rdquo; (Boggs, 1965)
+                    </blockquote>
+                    
+                    <p>Usually default to <strong>residential population</strong></p>
+                    
+                    
+                </section>
+                
+                
+                <section id="Residential">
+                    <h2>Residential Population</h2>
+                    <img class="right" src="./figures/landscan.png" alt="Example Landscan data"/>
+                    <p>OK for some crime types</p>
+                    <p class="level2">E.g. Burglary</p>
+                    <p>But not for many others. E.g.:</p>
+                    <p class="level2">Assaults (Boivin 2013)</p>
+                    <p class="level2">Robbery (Zhang et al. 2012)</p>
+                    <p class="level2">Violent crime (Andresen 2006, 2011)</p>
+                    
+                    <p>Why residential?</p>
+                    <p class="level2">Data availability and resource constraints</p>
+                    
+                    <p>More recent attempts to estimate the <strong>ambient</strong> population:</p>
+                    <p class="level2"><strong>Proxies</strong> (Boggs, 1965). E.g. car park locations, pavement area, etc.</p>		
+                    <p class="level2"><strong>LandScan </strong>data (Andresen et al. 2012). Global estimates of average (24hr)
+                    population, resolution ~1km<sup style="font-size: small; ">2</sup></p>
+                </section>
+                
+                <section id="SocialMedia">
+                    <h2>Another Solution: Social Media</h2>
+                    <p>Surge in volume of contributions to social media</p>
+                    <p class="level2">66% of online adults use social media (Smith, 2011)</p>
+                    <p class="level2">100 million active Twitter accounts in 2011 (Twitter, 2011)</p>
+                    <p class="level2">270,000 tweets per minute produced worldwide in 2012 (TechCrunch, 2012)</p>
+                    <p>Accurate time stamps and (occasionally) spatial location</p>
+                    <p>Combination of text, media, location, etc.</p>
+                    <p>Potentially powerful source of data for urban dynamics</p>
+                    <p>Potential to create targeted population-at-risk measures</p>
+                </section>
+                    
+    
+                    
+                <section id="SocialMedia2">
+                    <h2>Social Media - Limitations</h2>
+                    
+                    <p>Messiness / Noise</p>
+                    <p class="level2">Not gathered using systematic / statistically guided methodology</p>
+                    <p class="level2">Omissions are commonplace</p>
+                    <p class="level2">No systematic corrections</p>
+                    <p>Generalisability</p>
+                    <p class="level2">The digital divide</p>
+                    <p class="level2">E.g. higher socioeconomic status groups are over represented in Twitter
+                    and Flickr (Li et al., 2013)</p>
+                    <p>Bias</p>
+                    <p class="level2">Over-representation of the most prolific users</p>
+                    <p class="level2">Or certain activities</p>
+                    <p><strong>Still, potentially lower bias than using the residential population</strong></p>
+                </section>
+                
+                <section id="Data">
+                    <h2>Data and the Study Area</h2>
+                    <img class="right" src="./figures/tweets_density.png" alt="Tweet density" />
+                    <p>Leeds</p>
+                    <p class="level2">Population 757,655 (in 2012)</p>
+                    <p class="level2">Central shopping/leisure/commercial area: high ambient population, low
+                    residential population</p>
+                    <p>Violent Crime data</p>
+                    <p class="level2">All <a href="www.police.uk">Police recorded data</a> for 2011</p>
+                    <p class="level2">(Only ~40% reporting rate, Flatley, 2013)</p>
+                    <p>Residential population data</p>
+                    <p class="level2">Census 2011</p>
+                    <p>Ambient population data</p>
+                    <p class="level2">Geo-located Twitter messages from 22 June 2011 to 14 April 2013</p>
+                    <p class="level2">N=1,955,655 (after cleaning)</p>
+                </section>
+                
+                <section id="DensityMap" style="box-shadow: none;">
+                    <img src="./figures/tweet_density2-forGISRUK.png" alt="Tweet density and violent crime" />
+                </section>
+                
+                <section id="Methods">
+                    <h2>Methods</h2>
+                    <p>Aim: highlight high-crime areas using both residential and mobile population at risk estimates. </p>
+                    <p>Two complementary statistics:</p>
+                    <p>Getis-Ord GI* (Getis and Ord 1992; Ord and Getis 1995)</p>
+                    <p class="level2">Popular in crime analysis (definition closely matches that of a 'hot spot')</p>
+                    <p class="level2">Area based: reveal statistically significant high/low density areas</p>
+                    <p>Geographical Analysis Machine (Openshaw, 1987)</p>
+                    <p class="level2">Estimate <i>expected</i> events in overlapping search circles</p>
+                    <p class="level2">Identify statistically significant circles</p>
+                    <p class="level2">Fuzzy output by varying search radius (200m - 1km)</p>
+                </section>
+                
+                <section id="GIMap" style="box-shadow: none;">
+                    <img src="./figures/gi_star-forGISRUK.png" alt="GI* results map"/>
+                </section>
+                
+                <section id="GAMMap" style="box-shadow: none;">
+                    <img style="height:700px;" src="./figures/gam-combined_centroid2-forGISRUK.png" alt="GAM results map"/>
+                </section>
+                
+                <section id="Conclusion">
+                    <h2>Conclusions</h2>
+                    <p>Residential and ambient population-at-risk lead to very different crime rates</p>
+                    <p class="level2">Apparently obvious, but novel.</p>
+                    <p class="level2">Ambient population is theoretically and empirically justified, but rarely used</p>
+                    <p>City centre hot spot disappears with ambient population, but some neighbourhoods are consistently
+                    high (areas of high deprivation)</p>
+                    <p>Serious limitations: generalisability of Twitter data, the digital divide</p>
+                    <p>But also great optimism, 50 years on from Boggs (1965)</p>
+                    <p class="level2">Population tailored to crime category</p>
+                    <p class="level2">Temporal disaggregation (day/night, week/weekend)</p>
+                    <p class="level2">Finally, population-at-risk measures might catch up with crime analysis methods</p>
+                </section>
+                
+                <section id="Conclusion2" style="box-shadow: none;">
+                    <blockquote>
+                        "One of the areas that is being most dramatically shaken up by N=all is the social sciences.
+                        They have lost their monopoly of making sense of empirical social data, as big data analysis
+                        replaces the highly skilled survey specialists of the past. ..
+                        When data are collected passively while people do what they normally do anyway,
+                        the old biases associated with sampling and questionnaires disappear."<br/>
+                        (Mayer-Schonberger and Cukier, 2013) 
+                    </blockquote>
+                </section>
+                
+                <section id="Thankyou">
+                    <h2>Thank you</h2>
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                    <strong>Dr Nick Malleson</strong>, School of Geography, University of Leeds<br/>
+                    <strong>Dr Martin Andresen</strong> School of Criminology, Simon Fraser University, BC, Canada</h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        <h5><a href="https://twitter.com/nickmalleson" class="twitter-follow-button" data-show-count="false" data-size="large">@nickmalleson</a>
+                    </h5>
+                    
+                    
+                    <div class="small">
+                        <p>Presentation adapted from paper:</p>
+                        <p class="level2">Malleson, N and M. Andresen (in press). The impact of using social media data in crime rate calculations:
+                        shifting hot spots and changing spatial patterns.
+                        <i>Cartography and Geographical Information Society (CaGIS)</i>.</p>
+                        
+                        
+                        <p>Abstract:</p>
+                        <p class="level2"><a href="http://nickmalleson.co.uk/wp-content/uploads/2014/04/gisruk2014_abstract.pdf">
+                        http://nickmalleson.co.uk/wp-content/uploads/2014/04/gisruk2014_abstract.pdf
+                        </a></p>
+		    
+		    <p>Slides:</p>
+                    <p class="level2"><a href="http://nickmalleson.co.uk/html/presentations/2014-04-GISRUK/index.html">
+                    http://nickmalleson.co.uk/html/presentations/2014-04-GISRUK</a></p>
+                    </div>
+                    
+                    
+                </section>
+                
+                
+                <section id="References1">
+                    <h2>References</h2>
+                    <div class="small">
+                        <p>Andresen, M.A., 2006. “Crime Measures and the Spatial Analysis of Criminal Activity.” British Journal of Criminology 46 (2): 258–285.</p>
+                        <p>Andresen, M.A., 2011. “The Ambient Population and Crime Analysis.” Professional Geographer 63 (2): 193–212.</p>
+                        <p>Andresen, M.A., G.W. Jenion, and A.A. Reid. 2012. “An Evaluation of Ambient Population Estimates for Use in Crime Analysis.” Crime Mapping: A Journal of Research and Practice 4(1): 7–30.</p>
+                        <p>Boivin, R. 2013. On the Use of Crime Rates. Canadian Journal of Criminology and Criminal Justice 55 (2): 263—277.</p>
+                        <p>Boggs, S.L. 1965. “Urban Crime Patterns.” American Sociological Review 30 (6): 899–908.</p>
+                        <p>Flatley, J. 2013. Crime in England and Wales, year ending September 2012. London: Office for National Statistics.</p>
+                        <p>Getis, A., and J.K. Ord. 1992. ÒThe Analysis of Spatial Association by Use of Distance Statistics.Ó Geographical Analysis 24 (3): 189Ð206.</p>
+                    </div>
+                </section>
+                <section id="References2">
+                    <h2>References</h2>
+                    <div class="small">
+                        <p>Openshaw, S. 1987. ÒAn Automated Geographical Analysis System.Ó Environment and Planning A 19 (4): 431Ð436.</p>
+                        <p>Ord, J.K., and A. Getis. 1995. ÒLocal Spatial Autocorrelation Statistics: Distributional Issues and an Application.Ó Geographical Analysis 27 (4): 286-306.</p>
+                        <p>Li, L., M.F. Goodchild, and B. Xu. (2013). ÒSpatial, Temporal, and Socioeconomic Patterns in the Use of Twitter and Flickr.Ó <i>Cartography and Geographic Information Science</i> 40(2): 61 Ð 77.</p>
+                        <p>Mayer-Schonberger, V., and K. Cukier. 2013. Big Data: A Revolution That Will Transform How We Live, Work and Think. London: John Murray.</p>
+                        <p>Smith, A. 2011. Why Americans use social media. Technical report, Pew Research Centre Available online: <a href="http://www.pewinternet.org/Reports/2011/Why-Americans-Use-Social-Media.aspx">http://www.pewinternet.org/Reports/2011/Why-Americans-Use-Social-Media.aspx</a> [Accessed 28 November 2013].</p>
+                        <p>TechCrunch (2012). Analyst: Twitter Passed 500M Users In June 2012. Online: <a href="http://techcrunch.com/2012/07/30/analyst-twitter-passed-500m-users-in-june-2012-140m-of-them-in-us-jakarta-biggest-tweeting-city/">http://techcrunch.com/2012/07/30/analyst-twitter-passed-500m-users-in-june-2012-140m-of-them-in-us-jakarta-biggest-tweeting-city/</a> [Accessed on 19/1/13].</p>
+                        <p>Twitter (2011) One hundred million voices. Twitter Blog. Online: <a href="https://blog.twitter.com/2011/one-hundred-million-voices">https://blog.twitter.com/2011/one-hundred-million-voices</a> [accessed Jan 2014]</p>
+                        <p>Zhang, H., G. Suresh, and Y. Qiu. 2012. “Issues in the Aggregation and Spatial Analysis of Neighborhood Crime. Annals of GIS 18 (3): 173–183.</p>
+                    </div>
+                </section>
+                
+            
+            </div> <!-- class=slides -->
+            <!-- **** Slides finish here **** -->
+            
+            <script src="./reveal.js/lib/js/head.min.js"></script>
+            <script src="./reveal.js/js/reveal.min.js"></script>
+
+            <script>
+
+                    // Full list of configuration options available here:
+                    // https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                            controls: true,
+                            progress: true,
+                            slideNumber: true,
+                            history: true,
+                            center: true,
+                            previewLinks: true,  // Opens links in an iframe preview overlay
+
+                            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                            // Parallax scrolling
+                            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                            // parallaxBackgroundSize: '2100px 900px',
+                            
+                            // Ptresentation size
+                            width: 960,
+                            height: 700,
+                        
+                            // Factor of the display size that should remain empty around the content
+                            margin: 0.05,
+                        
+                            // Bounds for smallest/largest possible scale to apply to content
+                            minScale: 0.2,
+                            maxScale: 1.0,
+
+                            // Optional libraries used to extend on reveal.js
+                            dependencies: [
+                                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                            ]
+                    });
+
+            </script>
+
+	</body>
+</html>
+

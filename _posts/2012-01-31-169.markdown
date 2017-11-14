@@ -1,0 +1,23 @@
+---
+author: nick
+comments: true
+date: 2012-01-31 12:51:33+00:00
+layout: post
+link: http://nickmalleson.co.uk/2012/01/169/
+slug: '169'
+title: CrimeEx Exploratory in FutureICT
+wordpress_id: 169
+categories:
+- big data
+- meeting / workshop
+tags:
+- ABM
+- Crime
+- Grant
+---
+
+As part of a much larger European funding initiative, the [FutureICT](http://www.futurict.eu/) project is proposing to use ICT, Complexity Science and the Social Sciences to understand and manage complex, global, socially interactive systems, with a focus on sustainability and resilience. One project in particular, the [Crime Exploratory](http://futurictcrimeexploratory.wordpress.com/), is highly relevant as it aimed to set up a pan-European crime modelling and data mining observatory, under the EU Collaborative projects and Coordination and Support Actions (CPCSA) funding stream.
+
+[Andy Evans](http://www.geog.leeds.ac.uk/people/a.evans/) recently attended the first CrimeExploratory meeting in Rome to [present our work](http://www.geog.leeds.ac.uk/presentations/12-1/12-1.pptx), and got to hear a series of interesting talks from crime modellers from across Europe, including discussions of the financial systems of organised crime, datamining of human trafficking data, and the tricky problem of modelling morality. The talks should be available on the [project website](http://futurictcrimeexploratory.wordpress.com/%20) soon.
+
+[![](http://www.futurict.eu/sites/default/files/home-carousel/F97869586.jpeg)](http://www.futurict.eu/)

@@ -1,0 +1,99 @@
+---
+author: nick
+comments: false
+date: 2014-10-01 09:04:03+00:00
+layout: post
+link: http://nickmalleson.co.uk/2014/10/250-great-minds/
+slug: 250-great-minds
+title: 250 Great Minds
+wordpress_id: 663
+categories:
+- mapping / GIS
+---
+
+# University of Leeds announces 250 academic fellowships
+
+
+[
+](http://250greatminds.leeds.ac.uk/)[![](http://250greatminds.leeds.ac.uk/wp-content/uploads/2014/09/250Fellows-HeadderImage-GREATMINDS-AMENDED.jpg)](http://250greatminds.leeds.ac.uk/)
+
+The University of Leeds has just announced [250 new 5-year fellowships](http://250greatminds.leeds.ac.uk/). They are fully funded and  lead to senior lecturer (grade 9) position. My research group has a fellowship that is linked to the Leeds Institute for Data Analytics. For more information, see [Academic Fellow in Spatial Data Analytics](https://jobs.leeds.ac.uk/Vacancy.aspx?id=330&forced=1).
+<table cellpadding="0" cellspacing="0" border="0" >
+<tbody >
+<tr >
+
+<td >**Location: **
+</td>
+
+<td >Leeds - Main Campus
+</td>
+</tr>
+<tr >
+
+<td >**Faculty/Service: **
+</td>
+
+<td >Faculty of Environment
+</td>
+</tr>
+<tr >
+
+<td >**School/Institute: **
+</td>
+
+<td >School of Geography
+</td>
+</tr>
+<tr >
+
+<td >**Category: **
+</td>
+
+<td >Academic
+</td>
+</tr>
+<tr >
+
+<td >**Grade: **
+</td>
+
+<td >Grade 8
+</td>
+</tr>
+<tr >
+
+<td >**Salary: **
+</td>
+
+<td >£38,511 to £45,954
+</td>
+</tr>
+<tr >
+
+<td >**Closing Date: **
+</td>
+
+<td >Sunday 16 November 2014
+</td>
+</tr>
+<tr >
+
+<td >**Reference: **
+</td>
+
+<td >ENVGE1003
+</td>
+</tr>
+</tbody>
+</table>
+
+
+The Centre for Spatial Analysis and Policy (CSAP) within the School of Geography has been successful in securing a major ESRC award in the form of the Consumer Data Research Centre (CDRC).  The CDRC will initially focus on collecting and exploiting anonymised consumer data collected by organisations in customer facing sectors such as retail, telecoms, financial services and market research.  The research agenda within CDRC will have a major focus on questions relating to daily mobility and movement, and to consumption, sustainability and ethical behaviours. The availability of new data sets will not only allow better perspectives on problems currently identified, it will allow for tackling entirely new social challenges e.g. regarding obesity and lifestyles; infrastructure investment and mobility; spatial interaction, guardianship and neighbourhood security. It will call for new methods in GIS and spatial data analysis to leverage newly abundant seams of intelligence about social patterns.
+
+You will be expected to play an important role in ensuring the delivery of high class research within the Centre and you will also play an important role within LIDA (Leeds Institute for Data Analytics) building links with other emerging ‘big data’ research centres on the campus and beyond (e.g. health informatics and the potential new food informatics centre and a transport daily mobility project).
+
+You will develop a research profile that will contribute to the University’s ambition to excel at REF2020, with a sustained record of internationally excellent (and some world-leading) publications and a strong record of presentations at international conferences.  In addition to further ESRC opportunities likely to be announced around big data and quantitative techniques, we expect you to find innovative ways to lead future calls around key thematic Horizon 2020 opportunities: i.e. future and emerging technologies, health and well-being, food, demographic change and future sustainable cities.
+
+You will also contribute to excellence in teaching by contributing to existing spatial analysis modules and to new courses at both postgraduate and undergraduate levels.
+
+With a PhD in quantitative geography, GIS or related discipline, you will have expertise and a strong research record in spatial analysis, the ability to teach at both Undergraduate and Postgraduate level, as well as a clear and compelling vision for personal academic development.

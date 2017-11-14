@@ -1,0 +1,1547 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Understanding Complex Social Phenomena with Agent-Based Modelling</title>
+
+		<meta name="description" content="Presentation to Lipari Summer School: Modeling Spatio-Temporal Reasoning in Complex Social Systems">
+		<meta name="author" content="Nick Malleson">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/nick.css" >
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+	   <div class="reveal">
+           
+			<!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                
+                <section class="title"  id="Title">
+                    
+                    <img style="width:100%; height:auto;" src="./figures/cdrc_logo.jpg" alt="CRDC Logo" />
+                    
+                    <p></p>
+                    
+                    <h2 style="text-transform: none;">Agent-Based Modelling for Smarter Cities</h2>
+                    
+                    
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        <strong>Dr Nick Malleson</strong><br/>
+                        School of Geography, University of Leeds
+                    </h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    <h5>Slides: <a style="color: inherit;" href="http://mass.leeds.ac.uk/html/slides/Lipari2014/">
+                        http://mass.leeds.ac.uk/html/slides/Lipari2014/</a></h5>
+                    
+                    
+                </section>
+                
+                <section id="AboutNick">
+                    
+                    <img class="right" src="./figures/Network%20server%20room_87108880.jpg" alt="computer room"/>
+                    <h2>First: About me</h2>
+                    <p>Education</p>
+                    <p class="l2">BSc: Computer Science</p>
+                    <p class="l2">MSc: GeoInformatics</p>
+                    <p class="l2">PhD: (Computational) Human Geography</p>
+                    <p class="l3">Note: 'computational' bit is important!</p>
+                    <p>Now: Lecturer in Geographical Information Systems</p>
+                    <img class="right" style="width:200px; height:auto;" src="./figures/burglar_behaviour-geotime.png" alt="Spatio-temporal behaviour of virtual agents" />
+                    <p>Research Interests:</p>
+                    <p class="l2">Spatial analysis and simulation</p>
+                    <p class="l2">Crime patterns</p>
+                    <p class="l2">Agent-Based Modelling</p>
+                    <p class="l2">Big data (particularly for social simulation)</p>
+                
+                </section>
+                
+                <section id="Introduction">
+                    
+                    <h2>Agent-Based Modelling for Smarter Cities</h2>
+                    
+                    
+                    <div id="columns">
+                        <div class="left column">
+                            <p>Session 1 - Modelling Society</p>
+                            <p class="l2">Complex Cities</p>
+                            <p class="l2">Social Simulation and Agent-Based Modelling</p>
+                            <p class="l2">Modelling (Human) Behaviour</p>
+                            <p class="l2">&nbsp;</p>
+                        </div>
+                        <div class="right column">
+                            <p>Session 2 - The Big Data Revolution</p>
+                            <p class="l2">The Abundance of Data</p>
+                            <p class="l2">The Big Data "Revolution"</p>
+                            <p class="l2">Urban Dynamics and Social Media</p>
+                            <p class="l2">Improving our Models of Human Behaviour</p>
+                            
+                        </div>
+                    </div>
+                    
+                    <aside class="notes">
+                        <p>Abstract: Developments in Smart Cities are underpinned by a big data "revolution".
+                        New data from sources such as public transport systems, mobile telephones,
+                        social media, etc., are unparalleled in their scope, scale and resolution,
+                        and can reveal deep insight into the complex micro-interactions that drive
+                        urban systems. These new insights are being used effectively to improve the
+                        efficiency, sustainability and resilience of cities. However, in order to
+                        reap the greatest benefit from these new data, Smart Cities require reliable
+                        models to estimate the impacts of new initiatives or to highlight
+                        unfavourable emerging trends that require intervention.</p>
+                        <p>Agent-based modelling
+                        is a methodology that simulates behaviour at the level of the individual
+                        unit (e.g. person, household, business) and is therefore ideally suited for
+                        modelling complex urban phenomena. However, the benefits of modelling
+                        individuals are often tempered by difficulties in accounting for complexities
+                        in simulating human behaviour. This workshop will introduce the technique of
+                        Agent-Based Modelling in relation to advances in Smart Cities and the Big
+                        Data "revolution". In particular, it will explore the ways in which human
+                        behaviour can be simulated in computer models. The use of Agent-Based
+                        Modelling, coupled with new social insights from Big Data, is a fundamental
+                        element to a successful Smart City agenda.</p>
+                    </aside>
+                    
+                </section>
+                
+                <section id="Introduction2">
+                    
+                    <h2>Agent-Based Modelling for Smarter Cities</h2>
+                    <h3>Main aims / outcomes</h3>
+                                    
+                    <p><em>Enthusiasm</em> for agent-based modelling and its use in smart cities</p>
+                    <p>Some appreciation for the benefits and drawbacks</p>
+                    <p>The potential to use the technique in your research (or at least how to learn more)</p>
+                    <p>This is a very coarse introduction!!</p>
+                    <p class="l2">My undergraduate course consists of 20 hours of lectures 
+                    and 10 hours of pratical classes</p>
+                    <p class="l2">See the Introduction to CSS book - chapter 10</p>
+                </section>
+                
+                <section id="Outline1" data-state="outline">
+                    <h2>Outline: Modelling Society</h2>
+                    <ul class="outline">
+                        <li><a href="#/ComplexSystems-Emergence">Context: Cities as Complex Systems</a></li>
+                        <li><a href="#/ModellingUrban">Modelling Urban Phenomena (with ABM)</a></li>
+                        <li><a href="#/ModellingBehaviour">Modelling (Human) Behaviour</a></li>
+                        <li><a href="#/ABMInPractice">Agent-Based Modelling in Practice</a></li>
+                    </ul>
+                </section>
+                
+                
+                
+                <section id="ComplexSystems-Emergence">
+                    <h2>Background: Complex Systems</h2>
+                    
+                    <figure class="right" style="width:35%;">
+                        <img style="width:70%; height:auto;" src="./figures/termite_mound.jpg" alt="A termite mound"/>
+                        <figcaption>
+                            <p>Attribution: Yewenyi at the English language Wikipedia <a href="https://en.wikipedia.org/wiki/User:Yeweny">
+                                https://en.wikipedia.org/wiki/User:Yewenyi</a></p>
+                        </figcaption>
+                    </figure>
+                    
+                    <h3>Emergence</h3>
+                    
+                    <div style="font-size: 80%; line-height: 1.2em;">
+                        <blockquote id="shorter_blockquote">&ldquo;A property of a collection of simple sub-units that comes about 
+                            through the interactions of the subunits and is not a property of any single subunit&rdquo;<br/>
+                            - Gary Flake
+                        </blockquote>
+
+                        <p>&nbsp;</p>
+
+                        <blockquote id="shorter_blockquote">&ldquo;The way that complex systems and patterns arise out of a multiplicity 
+                            of relatively simple interactions&rdquo;<br/>
+                            - Wikipedia
+                        </blockquote>
+
+                        <p>&nbsp;</p>
+
+                        <blockquote id="shorter_blockquote">&ldquo;The whole is greater than the sum of its parts&rdquo;<br/>
+                            - Aristotle
+                        </blockquote>
+                    </div>
+                </section>
+                
+                <section id="ComplexSystems-Emergence2">
+                    <h2>Background: Complex Systems</h2>
+                    
+                    <iframe class="right" src="http://www.youtube.com/embed/aEaZHWXmbRw" >IFrames not supported</iframe>
+                    
+                    <h3>Emergence</h3>
+                    
+                    <p>Video (<a href="http://www.pbs.org/wgbh/nova/nature/emergence.html">NOVA scienceNOW</a>)</p>
+                    <p class="l2"><a href="http://www.youtube.com/watch?v=aEaZHWXmbRw">
+                        http://www.youtube.com/watch?v=aEaZHWXmbRw</a> (up to 4:50)</p>
+                    
+                    <p>When watching the video, think about:</p>
+                    <p class="l2">1. If there is no leader, how are flocks etc. controlled?</p>
+                    <p class="l2">2. List some of the organisms that demonstrate emergent behaviour.</p>
+                    <p class="l2">3. Can you think of any other examples of emergent phenomena?</p>
+                
+                </section>
+                
+                <!--
+                <section id="GameTime">
+                    <h2>Game Time</h2>
+                    <p><a href="http://www.icosystem.com/labsdemos/the-game/">http://www.icosystem.com/labsdemos/the-game/</a></p>
+                    
+                    <p>Rules</p>
+                    <p class="l2">Everyone randomly selects 2 individuals - person A and person B.</p>
+                    <p class="l2">Now move so that you always keep A in between yourself and B – so that A is your protector from B.</p>
+                    <p class="l2">At some point Nick will say ‘stop’. Then you become the protector, and need to move so that you keep yourself between A and B.</p>
+
+                </section>
+                -->
+                
+                <section id="ComplexSystems-Schelling1">
+                    <h2>Background: Complex Systems</h2>
+                    
+                    <h3>Emergence Example</h3>
+                    
+                    <img src="figures/schelling-1.png" class="right"  />
+                    
+                    <p>Thomas Schelling's model of racial segregation</p>
+                    <p class="l2">Cells either 1 or 0 ("black" or "white").</p>
+                    <p class="l2">If neighbourhood > x% of another colour, move to nearest area where this isn’t true.</p>
+                    
+                    <p>Demo: What do you think will happen when these different preference levels are selected?</p>
+                    <p class="l2">35%</p>
+                    <p class="l2">50%</p>
+                    <p class="l2">80%</p>
+                    
+                </section>
+                
+                <section id="ComplexSystems-Schelling2">
+                    <h2>Background: Complex Systems</h2>
+                    
+                    <h3>Schelling Results</h3>
+                    
+                    <p>Even with low individual preferences for neighbour similarity, segregation emerges.</p>
+                    
+                    <figure style="float:left; padding-left:10px">
+                        <figcaption>35%</figcaption>
+                        <img src="figures/schelling-1.png" style="width:300px; height:300px;"  />
+                    </figure>
+                    
+                    <figure style="float:left;">
+                        <figcaption>50%</figcaption>
+                        <img src="figures/schelling-2.png" style="width:300px; height:300px;" />
+                    </figure>
+                    
+                    <figure style="float:left">
+                        <figcaption>80%</figcaption>
+                        <img src="figures/schelling-3.png" style="width:300px; height:300px; " />
+                    </figure>
+                    
+                </section>
+                
+                <section id="ComplexSystems-Emergence5">
+                    <h2>Background: Complex Systems</h2>
+                    <h3>Emergence: Key messages</h3>
+                    
+                    <p>Simple rules &#x2192; complex outcomes</p>
+                    <p class="l2">Complex structures can emerge from simple rules</p>
+                    <p class="l2">In the past, we have assumed that complex phenomena are driven by a complex mechanism</p>
+                    <p class="l2">This is not always the case</p>
+                    
+                    <p>Global (macro) level patterns are the result of micro interactions.</p>
+                    <p class="l2">Understanding <i>interactions</i> is key to understanding macro behaviour.</p>
+                    <p>Emergence is hard to anticipate</p>
+                    <p class="l2">Cannot be deduced from solely analysis of individuals’ behaviour</p>
+                    
+                </section>
+                
+                <!--
+                <section id="Flock">
+                    <img src="./figures/flock.png" alt="Picture of flocking birds" />
+                    <aside class="notes">
+                        <p>Scientists have puzzled over how flocks are controlled</p>
+                        <p>A solution has been offered by Craig Reynolds (1986) – a simulation of flocking behaviour</p>
+                        <p>Each agent has the following rules</p>
+                        <p class="l2">Avoid colliding with your neighbour most of all.</p>
+                        <p class="l2">Fly in the average direction of your neighbours.</p>
+                        <p class="l2">Try to move into the centre of the flock (to prevent being eaten).</p>
+                        <p>The seemingly realistic flocking patterns suggest that it is an emergent phenomena with no 'leader'.</p>
+                        <p>This video is avialable on youtube: <a href="http://www.youtube.com/watch?v=qJjeHLcbQJ0 ">
+                        http://www.youtube.com/watch?v=qJjeHLcbQJ0</a>
+                        </p>
+                    </blockquote>
+                    
+                    
+                </section>
+                -->
+                
+                
+                <section id="ComplexSystems-NonLinearDynamics">
+                    <h2>Background: Complex Systems</h2>
+                    <h3>Non-Linear Dynamics</h3>
+                    
+                    <p>Another fundamental characteristic of complex systems</p>
+                    <p>In a linear system, the output linearly proportional to the inputs</p>
+                    <p>However, complex systems to not behave in a linear fashion</p>
+                    <p class="l2">A liner change in system inputs does not necessarily result in a linear change in model outputs</p>
+                    
+                </section>
+                
+                
+                <section id="ComplexSystems-NonLinearDynamics2">
+                    <h2>Background: Complex Systems</h2>
+                    <h3>Non-Linear Dynamics Example</h3>
+                    
+                    <img class="right" src="./figures/netlogo_bunnies.png" alt="NetLogo Wolf-Sheep Predation Model" />
+                    
+                    <p>NetLogo Wolf-Sheep Predation Model</p>
+                    <p class="l2">Grass grows</p>
+                    <p class="l2">Sheep eat grass</p>
+                    <p class="l2">Wolves eat sheep</p>
+                    <p>What will happen to the sheep population when we:</p>
+                    <p class="l2">Reduce the number of wolves?</p>
+                    <p class="l2">Increase the number of sheep?</p>
+                    <p class="l2">Reduce the speed at which grass regrows?</p>
+                    <p class="fragment"><strong>Interactions are key!</strong></p>
+                    
+                </section>
+
+                <section id="WhyImportant">
+                    <h2>What does all this have to do with agent-based modelling and smart cities??</h2>
+                </section>
+
+
+                <section id="CitiesComplexSystems">
+                    
+                    <h2>Cities are Complex Systems</h2>
+                    
+                    <p>Recent work recognises the complex characteristics of cities (e.g. Batty, 2005, 2012)</p>
+                    
+                    <img class="right" src="./figures/new_york.jpg" alt="new york at night" />
+                    
+                    <p>Characterised by:</p>
+                    
+                    <p class="l2">Enumerable micro-interactions </p>
+                    <p class="l3">(both human-human and human-environment)</p>
+                    <p class="l2">Emergence</p>
+                    <p class="l3">Phenomena that arise (unexpectedly) from behaviour of individual units</p>
+                    <p class="l2">Non-linear dynamics</p>
+                    <p class="l3">Difficult to predict output from inputs</p>
+                    <p class="l3"><em>Remember Braess’ paradox (Tuesday)</em></p>
+                    <p class="l2">Feedback loops</p>
+                    <p class="l3">Damping or amplifying</p>
+                    <p class="l3">"The effects of an element's behaviour are fed back to in such a way that 
+                        the element itself is altered." (Wikipedia)</p>
+                    <aside class="notes">
+                        <p>"Cities are complex systems par excellence, more than the sum of their parts
+                        and developed through a multitude of individual and collective decisions from
+                        the bottom up to the top down." (Batty et al, 2012) </p>
+                        <p>Batty, M. (2005). Agents, cells, and cities: new representational models for 
+                        simulating multiscale urban dynamics. <i>Environment and Planning A</i>,
+                        vol. 37, pp. 1373-1394, 2005.</p>
+                        <p>Batty, M., Axhausen, K.W., Giannotti, F., Pozdnoukhov, A., Bazzani, A., Wachowicz, M.,
+                        Ouzounis, G., Portugali, Y., 2012. Smart cities of the future. 
+                        <i>The European Physical Journal Special Topics</i> 214, 481–518. 
+                        doi:10.1140/epjst/e2012-01703-3</p>
+                    </aside>
+                </section>
+                
+                <!--
+                <section id="CitiesComplexSystems2">
+                    
+                    <h2>Cities are Complex Systems</h2>
+                    
+                    <img class="right" src="./figures/new_york.jpg" alt="new york at night" />
+                    
+                    <p>Traffic / Urban Mobility</p>
+                    <p class="l2">Highly complex, interdependent network</p>
+                    <p class="l2">Need to consider individual behaviour, preferences, agency, etc.</p>
+                    <p>Crowds</p>
+                    <p class="l2">Multitude of human-human and human-environment interactions</p>
+                    <p class="l2">Demonstrations vs. riots</p>
+                    <p>Crime</p>
+                    <p class="l2">Offender-victim-guardian interactions</p>
+                    <p class="l2">Detailed physical environment</p>
+                    <p>... etc ...</p>
+                    
+
+                </section>
+                -->
+                
+
+                
+                
+                <section id="Outline2" data-state="outline">
+                    <h2>Outline: Modelling Society</h2>
+                    <ul class="outline">
+                        <li><a href="#/ComplexSystems-Emergence">Context: Cities as Complex Systems</a></li>
+                        <li class="current"><a href="#/ModellingUrban">Modelling Urban Phenomena (with ABM)</a></li>
+                        <li><a href="#/ModellingBehaviour">Modelling (Human) Behaviour</a></li>
+                        <li><a href="#/ABMInPractice">Agent-Based Modelling in Practice</a></li>
+                    </ul>
+                </section>
+                
+                
+                <section id="ModellingUrban">
+                    <h2>Modelling Urban Phenomena</h2>
+                    <img class="right" src="./figures/regression.png" alt="Example of regression" />
+                    <p>To really understand urban phenomena, or to make predictions, we need to create models</p>
+                    <p>Traditional approach: <strong>aggregate</strong> models</p>
+                    <p class="l2">Work at an aggregate level, from the top-down</p>
+                    <p class="l2">E.g. Regression, spatial interaction modelling, location-allocation, 
+                        system dynamics, etc.</p>
+                    <p class="l2">Also other Computational Social Science approaches (e.g. equation-based
+                        models) (Cioffi-Revilla, 2014)</p>
+                </section>
+                
+                <section id="AggregateModels">
+                    <h2>Aggregate Models</h2>
+                    <p>Aggregate models work very well in some situations</p>
+                    <p class="l2">Homogeneous individuals</p>
+                    <p class="l2">Interactions not important</p>
+                    <p class="l2">Very large systems (e.g. pressure-volume gas relationship)</p>
+                    
+                    <p><strong>BUT:</strong> many systems are driven by individuals</p>
+                    <p class="l2">(cars, people, ants, trees, whatever)</p>
+                    
+                    <p>Aggregate models miss some important elements:</p>
+                    <p class="l2">Low-level dynamics, i.e. "smoothing out" (Batty, 2005)</p>
+                    <p class="l2">Interactions and emergence</p>
+                    
+                    <p>Unsuitable for modelling complex systems</p>
+
+                </section>
+                
+                <!-- Too much material, don't want to start explaining SIMs and microsimuation 
+                <section id="AlternativeModels">
+                    
+                    <h2>Alternative Modelling Approaches</h2>
+                    
+                    <figure class="right">
+                        <iframe class="youtube-player-right"  
+                                src="http://www.youtube.com/embed/OtYby7QnyAE" frameborder="0" allowfullscreen>
+                        </iframe>
+                        <figcaption>
+                            <p>PTVVissim - A commercial traffic simulation program. The video shows
+                                an experiment with the design of a complicated intersection.</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <h3>Example: Traffic Simulation</h3>
+                    
+                    <p>Spatial interaction (gravity) models</p>
+                    <p class="l2">Where are people going? How are they getting there?</p>
+                    <p>Microsimulation</p>
+                    <p class="l2">Who is in the car?</p>
+                    <p>Agent-Based Modelling</p>
+                    <p class="l2">How do they behave?</p>
+                    
+                </section> 
+                -->
+                
+                <section id="ABM">
+                    <h2>An Alternative: Agent-Based Modelling (ABM)</h2>
+                    <img class="right" src="./figures/sims.png" alt="THe Sims" />
+                    <p>Rather than controlling from the top, try to represent the <em>individuals</em></p>
+                    <p class="l2">"Grow" the phenomena from the ground up (Epstein and Axtell, 1996)</p>
+                    <p class="l2">'Object-based models' - variables and equations are "encapsulated"
+                        within objects (Cioffi-Revilla, 2014)</p>
+                    <p>Account for system behaviour <em>directly</em></p>
+                    <p>Can model emergence, non-linearity, and other features of complex systems</p>
+                    <p><strong>Essential ingredient for a smart city</strong></p>
+                    
+                    <aside class="notes">
+                        <p>Epstein, J., Axtell, R., 1996. <em>Growing Artificial Societies: Social Science 
+                            from the Bottom Up</em>. Brookings Institution Press.</p>
+                    </aside>
+                </section>
+                
+                <section id="ABM2">
+                    <h2>An Alternative: Agent-Based Modelling (ABM)</h2>
+                    <img class="right" src="./figures/sims.png" alt="THe Sims" />
+                    <h3>Basic execution process</h3>
+                    <p><em>t=0</em> (initialisation) : create a population of agents and their environment</p>
+                    <p class="l2">Each agent has <em>variables</em> that represent their state
+                    and <em>rules</em> to control their behaviour</p>
+                    <p><em>t+1</em> : Each agent executes its behavioural rules and updates its state</p>
+                    <p class="l2">This can involve moving, interacting with, interacting with 
+                        other agents, performing no action etc.</p>
+                </section>
+                
+                <section id="ABMExample-Massive">
+                    <h2>ABM Example: MASSIVE</h2>
+                    <p class="l2">http://www.youtube.com/watch?v=W5pNPJAhsBI</p>
+                    <p class="l2">http://www.lordoftherings.net/effects/index.html </p>
+                    <iframe class="youtube-player-right" src="http://www.youtube.com/embed/W5pNPJAhsBI"></iframe>
+                    <p>When watching the video, think about:</p>
+                    <p class="l2">What do the agents represent? </p>
+                    <p class="l2">What behaviours have been implemented?</p>
+                    <p class="l2">How many agents can they model?</p>
+                    <p class="l2">How have the agents’ brains been represented?</p>
+                </section>
+                
+                
+                
+                <section id="WhatIsAnAgent">
+                    <h2>What is an agent?</h2>
+                    
+                    <p>No universal definition, but most people agree that agents should exhibit some of the following criteria</p>
+                    <p><strong>Autonomy</strong></p>
+                    <p class="l2">Act independently, free from central control</p>
+                    <p class="l2">Control its own state and make independent decisions</p>
+                    
+                    <p><strong>Heterogeneity</strong></p>
+                    <p class="l2">Agents should not normally be identical</p>
+                    <p class="l2">Groups of similar agents are formed from the ground-up (e.g. by agents interacting with each other)</p>
+                    
+                    <p><strong>Reactivity (and proactivity)</strong></p>
+                    <p class="l2">Agents can sense their environment and respond to changes (or respond to
+                    <em>expected</em> changes</p>
+                    <p class="l2">Responses should be goal-directed</p>
+                </section>
+                    
+                <section id="WhatIsAnAgent2">
+                    <h2>What is an agent?</h2>
+
+                    <p><strong>Bounded rationality</strong></p>
+                    <p class="l2">Agents should not have full knowledge of the world (this would be very unrealistic)</p>
+                    <p class="l2">Environmental perception can be limited</p>
+                    <p class="l2">Choices will not be perfectly rational – they can make mistakes</p>
+                    
+                    <p><strong>Interactive</strong></p>
+                    <p class="l2">Agents can communicate with each other</p>
+                    <p class="l2">Could be dependent on environment (e.g. distance)</p>
+                    
+                    <p><strong>Mobile</strong></p>
+                    <p class="l2">Often agents will be able to navigate a space.</p>
+                    
+                    <p><strong>Learning / adaption</strong></p>
+                    <p class="l2">Agents should be able to adapt future decisions, based on past experiences</p>
+
+                </section>
+                
+                <section id="Environment1">
+                    <h2>The Environment</h2>
+                    <p>In models of human systems, agents are <em>usually</em> placed in some sort of
+                        geographical environment</p>
+                    <p>Structure / type of the environment depends on the research question(s)</p>
+                    <img class="right" src="./figures/schelling_2d.png" alt="2D Schelling example" />
+                    <p>Abstract: discrete grids</p>
+                    <p class="l2">Objects located at discrete (integer) coordinates</p>
+                    <p class="l2">Can only move onto cells</p>
+                    <p class="l2">Often conduct neighbourhood / proximity queries (e.g. 
+                        which cells are next to me?)</p>
+                    <p class="l2">Cells can have different shapes (squares, hexagons, triangles ... )</p>
+
+                </section>
+                
+                <section id="Environment2">
+                    <h2>The Environment</h2>
+                    <img class="right" src="./figures/zombies-continuous.png" alt="Continuous geography" />
+                    <p>Abstract: continuous space</p>
+                    <p class="l2">Objects located at arbitrary decimal coordinates</p>
+                    <p class="l2">Can move to any location within the boundary of the world</p>
+                    <p class="l2">Often the researcher restricts these movements to roads, paths, etc.</p>
+                    <p class="l2">Conduct <em>spatial</em> queries</p>
+                    <p class="l3">Find all objects within 10 meters</p>
+                    <p class="l3">Find objects that are within a boundary</p>
+                    <p>Continuous space example: <a href="http://www.play.vg/games/4-Asteroids.html">
+                        asteroids</a>!</p>
+                </section>
+                
+                <section id="WorldBoundaries">
+                    <h2>Boundaries of the world</h2>
+                   
+                    <p>What happens if an agent tries to walk outside the boundary of the world?</p>
+                    <p class="level2">Agents bounce back from the boundary (<strong>bouncy?</strong>)</p>
+                    <p class="level2">Walls absorb agent momentum (<strong>absorbent?</strong>)</p>
+                    <p class="level2">Left/right and up/down borders joined together (<strong>torus</strong>)</p>
+                    <p>Choice of boundaries depends on the application area</p>
+                </section>
+                
+                
+                <section id="BoundariesQuiz" data-state="question">
+                    <h2>Boundaries Quiz</h2>
+                    <p>Can you think of some example applications that require the different types
+                    of boundary.</p>
+                    
+                    <div class="box footnote">
+                        <p>
+                            <br/>Bouncy:<br/><br/><br/>
+                            Absorbent:<br/><br/><br/>
+                            Torus:<br/><br/>
+                        </p>
+                    </div>                    
+                </section>
+                
+                <section id="ABMGeography">
+                    <h2>But what about geography?</h2>
+                    <img class="right" src="./figures/mastermap_topography.png" alt="Mastermap topography" />
+                    <p>Sometimes including a realistic geographic space is important, somtimes not</p>
+                    <p>Explanatory vs Predictive modelling</p>
+                    <p class="l2">Abstract environments great for exploring theory (e.g. Schelling)</p>
+                    <p class="l2">But in some cases the underlying geography is a fundamental part
+                    of the model and abstracting space is not appropriate</p>
+                    <p class="l2">E.g. predicting positive / negative impacts of smart cities initiatives</p>
+                    <p>Including geography increases complexity, need to consider its value to
+                    answering the research questions.</p>
+                    <p class="l2"><em>Remember Claudio's chair?</em></p>
+                    <p>Challenge: integrating geogrpahical data with an ABM</p>
+                    <aside class="notes">
+                        <p>In some cases the underlying real-world geography is too important to
+                        abstract. This is often the case for real-world problems and policy evaluation.</p>
+                    </aside>
+                </section>
+                
+                <section id="LooseCoupling">
+                    <h2>Linking an ABM and GIS</h2>
+                    <h3>Loose coupling</h3>
+                    <img src="./figures/loose_coupling.png" alt="Loose coupling" />
+                    <aside class="notes">
+                        <p>With loose coupling, the you prepare model inputs using a GIS but the
+                        model and GIS do not communicate while the model executes</p>
+                        <p>After the model has finished, results can be analysed in a GIS</p>
+                        <p>NetLogo is an example of loose coupling</p>
+                    </aside>
+                </section>
+                
+                <section id="TightCoupling">
+                    <h2>Linking an ABM and GIS</h2>
+                    <h3>Tight coupling</h3>
+                    <img src="./figures/tight_coupling.png" alt="Tight coupling" />
+                    <p></p>
+                    <aside class="notes">
+                        <p>With Tight Coupling, the GIS and the model communicate directly.
+                        At each model iteration the model updates GIS on new system state.</p>
+                        <p>The GIS can then display the current model state as it is running.</p>
+                        <p>The main drawback with tight coupling is that the GIS can add a considerable
+                        computational overhead. This means models will probably take longer to run.</p>
+                        <p>The Agent Analyst ArcGIS plugin is an example of tight coupling.</p>
+                    </aside>
+                </section>
+                
+                <section id="Loose-VS-Tight">
+                    <h2>Loose vs. Tight coupling</h2>
+                    <div id="columns">
+                        <div class="left column">
+                            <p style="text-align: center;">Loose</p>
+                            <p class="l2"><strong>Efficient</strong>: GIS are slow, allowing the model to run on
+                            its own will almost certainly be quicker</p>
+                            <p class="l2"><strong>Flexible</strong>: The model can run on any computer system,
+                            including high-performance 'grid' systems</p>
+                            <p class="l2"><strong>Free</strong>: The model is not tied to a proprietary GIS so
+                            can be released and reused freely by others. <i>(Note: Open-source GIS systems
+                            are available, e.g. <a href="http://qgis.org/en/site/">QuantumGIS</a> and
+                            <a href="http://grass.osgeo.org/">GRASS</a>)</i></p>
+                        </div>
+                        <div class="right column">
+                            <p style="text-align: center;">Tight</p>
+                            <p class="l2"><strong>Convenient</strong>: Easy to see what the model is doing
+                            while it is running</p>
+                            <p class="l2"><strong>Interactive</strong>: Possible to interact with the model
+                            and influence an individual model run.</p>
+                            <p class="l2"><strong>Reusable</strong>: Stakeholders / users will find it easier
+                            to use if it is built into their GIS.</p>
+                        
+                        </div>
+                    </div>    
+                </section>
+                
+                <section id="Geog_aspatial">
+                    <h2>A-Spatial Environments</h2>
+                    <p>So far, we have come across <i>grid</i>, <i>continuous</i>
+                        and <i>geographical</i> environments.</p>
+                    <p>In some models, a spatial environment is not needed.</p>
+                    <p class="l2">E.g. a social network</p>
+                    <p>Can still account for interactions, complexity, emergence,
+                    non-linearity, etc. etc.</p>                    
+                </section>
+                
+                <section id="EnvironmentQuiz" data-state="question">
+                    
+                    <figure class="right">
+                        <img  src="./figures/fox_hunting.jpg" alt="fox hunting"/>
+                        <figcaption>Photo attributed to
+                            <a href="http://www.flickr.com/photos/tortitri/">Justortitri</a>,
+                            (<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">CC BY-NC-SA 2.0</a>)
+                        </figcaption>
+                    </figure>
+                                        
+                    <h2>Environment Quiz</h2>
+                    
+                    <p>You want to create a model to better understand fox hunting by simulating a
+                    hunt in progress (riders, hounds, foxes). The aim is to find out how many foxes are needed for an
+                    enjoyable killing spree, and where they should be located.</p>
+                    
+                    <p>List some elements that you would want to include in a virtual environment
+                    for this model.</p>
+                        <p>
+                        &nbsp;<br/>&nbsp;<br/>&nbsp;<br/>
+                        </p>       
+                    <p class="fragment">Would you use an abstract or a more realistic environment?</p>
+                </section>
+                
+                <section id="ABM-Advantages">
+                    <h2>Appeal of ABM</h2>
+                    <p>Most 'natural' way of thinking about social systems</p>
+                    <p class="l2">Individual actions drive the system</p>
+                    <p>Able to model emergence</p>
+                    <blockquote>
+                        &ldquo;A phenomenon is emergent when it can only be described and characterised using terms
+                        and measurements that are inappropriate or impossible to apply to the component units&rdquo;<br/>
+                        - Gilbert (2004) page 3. 
+                    </blockquote>
+                    
+                    <aside class="notes">
+                        <p>Gilbert, N. (2004). Agent-based social simulation: dealing with complexity. 
+                            Available <a href="http://www. econ.iastate.edu/tesfatsi/ABM.DealingWithComplexity.Gilbert.pdf">
+                            online</a> [accessed - January 2007].</p>
+                    </aside>
+
+                </section>
+                
+                <section id="ABM-Advantages2">
+                    <img class="right" src="./figures/burglar_behaviour-geotime.png"/>
+                    <h2>Appeal of ABM</h2>
+                    <p>Can include physical space / social processes </p>
+                    <p>Designed at abstract level: easy to change scale</p>
+                    <p>Bridge between verbal theories and mathematical models</p>
+                    <p>Dynamic history of system</p>
+                    <p><strong>An essential ingredient for smart cities</strong></p>
+                </section>
+                
+                <section id="ABM-Disadvantages">
+                    <h2>Disadvantages of ABM</h2>
+                    <img class="right" src="./figures/jacobs_choice.png" />
+                    <p>Known unknowns</p>
+                    <p class="l2">We don’t know exactly what someone will do.</p>
+                    <p class="l2">So we guess</p>
+                    <p class="l2">E.g. there is a 30% change of little Jacob playing with his duck
+                        this morning, and a 70% chance of playing with his truck.</p>
+                    <!-- <p class="l2">E.g. There is a 30% change of attending this morning’s lecture, 
+                        and 70% chance of staying in bed</p>-->
+                    <p>Models that use randomness like this are <em>probabilistic</em></p>
+                    <p class="l2">The need to run many times to ensure robust results</p>
+                    
+                    <aside class="notes">
+                        <p>'Known unknowns' comes from a quote by Donald Rumsfeld:</p>
+                        <p>&ldquo; ... there are known knowns; there are things we know that we know.
+                        There are known unknowns; that is to say, there are things that we now know we don't know.
+                        But there are also unknown unknowns – there are things we do not know we don't know.&rdquo;</p>
+                        <p>See the <a href="https://en.wikipedia.org/wiki/Unknown_unknown">Wikipedia article</a>.</p>
+                    </aside>
+                </section>
+                
+                <section id="ABM-Disadvantages2">
+                    <h2>Disadvantages of ABM</h2>
+                    <img class="right" src="./figures/jacobs_choice.png" />
+                    <p>Computationally expensive.</p>
+                    <p class="l2">Complicated agent decisions</p>
+                    <p class="l2">Lots of decisions!</p>
+                    <p class="l2">Multiple model runs (robustness)</p>
+
+                    <p>Modelling "soft" human factors</p>
+                    <p class="l2">A benefit is that we can include complex psychology</p>
+                    <p class="l2">But this is really hard!</p>
+
+                    <p>Potential to over-complicate</p>
+                    <p class="l2">Need to think carefully about what to include</p>
+
+                </section>
+                
+                <section id="ABM-Disadvantages3">
+                    <h2>Another disadvantage: data</h2>
+                    
+                    <p>Data required at every stage</p>
+                    <p class="l2">Understanding the system / behaviour</p>
+                    <p class="l2"><strong>Calibration and validation</strong></p>
+                    <p>But high-quality data are hard to come by</p>
+                    <p class="l2">Many sources are too sparse, low spatial/temporal resolution</p>
+                    <p class="l2">Censuses focus on attributes rather than behaviour and occur infrequently</p>
+                    <p class="l2">Also need data from numerous scales (e.g. <em>pattern oriented modelling</em>;
+                        Grimm et al. 2005)</p>
+                    <p>Understanding social behaviour</p>
+                    <p class="l2">How to estimate leisure times / locations?  Where to socialise?</p>
+                    <p><strong>More on this later..</strong></p>
+                </section>
+                
+                <section id="ABM-Disadvantages4" data-state="question">
+                    <h2>Another disadvantage: data</h2>
+                    <h3>Question</h3>
+                    <p>Can you suggest some sources of information that we can use to
+                    inform our agent-based models?</p>
+                    <p class="fragment">What are we missing? (In a perfect world, what would you also
+                    like to know?)</p>
+                    
+                    
+                </section>
+                    
+                
+                
+                
+                
+                
+                <section id="Outline3" data-state="outline">
+                    <h2>Outline: Modelling Society</h2>
+                    <ul class="outline">
+                        <li><a href="#/ComplexSystems-Emergence">Context: Cities as Complex Systems</a></li>
+                        <li><a href="#/ModellingUrban">Modelling Urban Phenomena (with ABM)</a></li>
+                        <li class="current"><a href="#/ModellingBehaviour">Modelling (Human) Behaviour</a></li>
+                        <li><a href="#/ABMInPractice">Agent-Based Modelling in Practice</a></li>
+                    </ul>
+                </section>
+                
+                
+                <section id="ModellingBehaviour">                    
+                    <h2>Modelling (Human) Behaviour</h2>
+                    
+                    <figure class="right">
+                        <img src="./figures/human_brain.png" alt="Human brain" />
+                        <figcaption><p>Photo attributed to <a href="http://www.flickr.com/photos/arselectronica/">
+                            Arts Electronica</a> (<a href="http://creativecommons.org/licenses/by-nc-nd/2.0/">
+                            CC BY-NC-ND 2.0</a>)</p></figcaption>
+                    </figure>
+                    
+                    <p>One of the main advantages to Agent-Based Modelling.</p>
+                    <p>But also really difficult</p>
+                    <p class="l2">Subjective choices</p>
+                    <p class="l2">Complicated psychology</p>
+                    <p class="l2">(Seemingly) irrational behaviour</p>
+
+                    <p>Also difficult decisions about what to include in a model</p>
+                
+                </section>
+                
+                <section id="BehaviourExample1">
+                    <h2>Modelling (Human) Behaviour</h2>
+                    <h3>Quiz</h3>
+                    
+                    <p>Choose a number between 1 and 4</p>
+                    
+                    <p>Write the number down on a slip of paper</p>
+                    
+                    <div class="fragment">
+                        <p>What percentage of people do you think chose:</p>
+                        <p class="l2">1?</p>
+                        <p class="l2">2?</p>
+                        <p class="l2">3?</p>
+                        <p class="l2">4?</p>                    
+                    </div>
+                </section>
+                
+                <section id="BehaviourExample2">
+                    <h2>Modelling (Human) Behaviour</h2>
+                    <h3>Results</h3>
+                    
+                    <blockquote>
+                        <p class="small">
+                            "The most common response is 'three' and there is a secondary effect of this task: 
+                            people feel a need to explain why they chose whatever answer they did. 
+                            The second most common answer is 'two'. Very few people decide to respond with either
+                            'one' or 'four'. Sadly, there is not a serious study of this behaviour but
+                            undocumented sources suggest that the response statistics are close to 50% for 
+                            'three', 30% for 'two' and about 10% for the other two answers." (Kennedy, 2012)
+                        </p>
+                    </blockquote>
+                    
+                    <p>Key message: "Humans are not random. They (we) are strange and wonderful" (Kennedy, 2012)</p>
+
+                    <p>The previous example shows that even simple decisions can be hard to predict</p>
+                    
+                    <p>Fortunately there are architectures that can help with building behavioural models.</p>
+
+                    <aside class="notes">
+                        <p>This example, from Kennedy (2012), shows that human behaviour is not random.</p>
+                        <p>"The most common response is 'three' and there is a secondary effect of this task: 
+                            people feel a need to explain why they chose whatever answer they did. 
+                            The second most common answer is 'two'. Very few people decide to respond with either
+                            'one' or 'four'. Sadly, there is not a serious study of this behaviour but
+                            undocumented sources suggest that the response statistics are close to 50% for 
+                            'three', 30% for 'two' and about 10% for the other two answers."</p>
+                        <p>"This behaviour is interesting. The decision-making process should be simple, 
+                            but it certainly does not appear to be a simple random selection among equally 
+                            likely options. What this shows us is that people cannot even be random when 
+                            they want to be. Further, if this task had been modelled as a uniform random 
+                            distribution among equally likely choices, it would have been very different from 
+                            actual behaviour"</p>
+                        <p>Kennedy, W.G., 2012. Modelling Human Behaviour in Agent-Based Models, 
+                            in: Heppenstall, A.J., Crooks, A.T., See, L.M., Batty, M. (Eds.), 
+                            <em>Agent-Based Models of Geographical Systems</em>. Springer Netherlands, pp. 167–179.</p>
+
+                    </aside>
+                </section>
+                
+                <section id="RuleBased">
+                    
+                    <h2>Rule-Based Systems</h2>
+                    
+                    <p>(Simple) Rules</p>
+                    <pre><code>
+IF hunger &lt; hungerThreshold1 THEN 
+    agent-dies
+IF hunger &gt; hungerThreshold2 THEN 
+    address-another-goal
+IF hunger &gt; hungerThreshold1 and hunger &lt; hungerThreshold2 THEN 
+    search-for-food.
+                    </code></pre>
+                    
+                    <img class="left" style="width:250px;height:auto;" src="./figures/decision_tree.png" alt="Example decision tree" />
+                    <p>Node-based</p>
+                    <p class="l2">E.g. decision trees</p>
+                    <p class="l2">(Remember LOTR and MASSIVE ?)</p>
+                </section>
+                
+                <section id="LayeredBehaviour">
+                    <h2>Behaviour Based Artificial Intelligence (BBAI) </h2>
+                    
+                    <img class="right" src="./figures/layered_behaviour.png" />
+                    
+                    <p>Layered behaviour</p>
+                    <p class="l2">Upper layers take control when they can</p>
+                    <p class="l2">Robot can default to lower-level behaviour</p>
+                    
+                    <p>Behavioural <i>modules</i>, working concurrently compete/contribute to overall behaviour</p>
+                    
+                    <p>Popular in robotics, less common in simulation.</p>
+                    
+                    <p class="small">See: Brooks, R. (1996) From Earwigs to Humans. 
+                    <em>Robotics and Autonomous Systems</em> 20: 291--304</p>
+                </section>
+                
+                <!--<section id="LayeredBehaviour2">
+                <h2>Criticisms of layered behaviour</h2>
+                    <p>Lack clarity</p>
+                    <p>Over-complicated with many layers</p>
+                    <p>Conflict between layers?</p>
+                    <p>Not similar to human cognitive process (?)</p>
+                </section>-->
+                
+                
+                <section id="BDI">
+                    <img class="right" style="width:200px;height:auto;" src="figures/bdi.png" alt="BDI flowchart" />
+                    <h2>Beliefs, Desires, Intentions (BDI)</h2>
+                    <p>Beliefs:</p>
+                    <p class="l2">Internal knowledge about the world</p>
+                    <p class="l2">Memory of past experiences</p>
+                    <p>Desires</p>
+                    <p class="l2">Goals the agent is trying to achieve</p>
+                    <p class="l2">Can be short and long term (e.g. 'eat food', 'raise children')</p>
+                    <p class="l2">Can be contradictory</p>
+                    <p>Intentions</p>
+                    <p class="l2">The most important immediate goals</p>
+                    <p class="l2">Can alter the rapidity with which an agent changes intentions (e.g. 'caution').</p>
+                </section>
+                
+                <section id="BDI2">
+                    <img class="right" style="width:200px;height:auto;" src="figures/bdi.png" alt="BDI flowchart" />
+                    <h2>Beliefs, Desires, Intentions (BDI)</h2>
+                    <p>Probably the most common / popular architecture in ABM</p>
+                    <p>Rational model</p>
+                    <p class="l2">All action requires some deliberation</p>
+                    <p>Good representation of human cognition (?). But:</p>
+                    <p class="l2">Core elements hard to observe directly</p>
+                    <p class="l2">Rational decisions only useful to a limited degree (e.g. pulling hand away from fire requires no rational thought)</p>
+
+                </section>
+                
+                <section id="PECS">
+                    <h2>PECS</h2>
+                    <p>Physical conditions, Emotional states, Cognitive capabilities and Social status (Schmidt, 2000) </p>
+                    <img class="right" src="figures/pecs.png" alt="Example PECS motives and intensity functions" />
+                    <p>Internal states</p>
+                    <p class="l2">Physical</p>
+                    <p class="l2">Emotional</p>
+                    <p class="l2">Cognitive</p>
+                    <p class="l2">Social</p>
+                    <p>Motives</p>
+                    <p class="l2">Intensity functions determine motive strength</p>
+                    <p class="l2">Include level of need, personal preference, environment, others.. </p>
+                    <p class="l2">Strongest motive becomes action guiding motive</p>
+                    
+                    <aside class="notes">
+                        <p>To illustrate the PECS features, an example proposed by Urban (2000) will be adapted. 
+                            Consider a person in a shop who is thinking about purchasing some goods. 
+                            They might experience physical needs (such as hunger), emotional states (such as 
+                            surprise at the available goods), cognition (such as information about current 
+                            prices) and social status (which will affect how the agent reacts to the 
+                            shop assistant).</p>
+                    </aside>
+                </section>
+                
+                
+                <section id="KISSKIDS">
+                    
+                    <h2>How realistic / complicated does the behaviour need to be?</h2>
+                    
+                    <p>Cognitive architectures help us to structure behaviour. But don't suggest
+                    what we should include</p>
+                    <p>Two broad approaches that think about behavioural complexity:</p>
+                    <div id="columns">
+                        <div class="left column">
+                            <p>KISS</p>
+                            <p class="l2">Keep It Simple, Stupid</p>
+                            <p class="l2">Start with the simplest model, build complexity if necessary</p>
+                        </div>
+                        <div class="right column">
+                            <p>KIDS</p>
+                            <p class="l2">Keep It Descriptive, Stupid</p>
+                            <p class="l2">Start with a model that <em>fully describes</em> the system, then
+                    simplify if possible.</p>
+                        </div>
+                    </div>  
+                    <p><em>Remember Claudio's chair?</em></p>
+                    <p class="l3">&nbsp;</p>
+                    
+                    <p style="font-size:50%;">Axelrod, R. (1997). Advancing the art of simulation in the social sciences. 
+                            In Conte, R., Hegselmann, R., and Terna, P. (eds) <em>Simulating Social Phenomena </em>, 
+                            pages 21–40. Springer-Verlag, Berlin. (Draft chapter
+                            <a href="http://www-personal.umich.edu/~axe/research/AdvancingArtSim2005.pdf">
+                                available online</a>)</p>
+                    <p style="font-size:50%;">Edmonds, B. and Moss, S. (2005). From KISS to KIDS: an 'anti-simplistic' 
+                        modelling approach. In Davidsson, P., Logan, B., and Takadama, K., editors, 
+                        <em>Multi Agent Based Simulation</em> 2004, Lecture Notes in Artificial Intelligence,
+                        pages 130–144. Springer. <a href="http://cfpm.org/cpmrep132.html">
+                        Available online</a>.</p>
+                </section>
+                
+                <section id="ImportantBehaviour">
+                    <h2>How to find out which behaviour is important?</h2>
+                    
+                    <p>Published literature</p>
+                    <p>Talking to the experts</p>
+                    <p>Numerical experimentation</p>
+                    <p><strong>Rigorous data analysis</strong></p>
+                </section>
+                
+                <section id="MissingLink">
+                    
+                    <h2>Behaviour Missing Link: <strong>Data</strong></h2>
+                    
+                    <p>Advantage of modelling individuals tempered by lack of data to:</p>
+                    <p class="l2">Understand behaviour</p>
+                    <p class="l2">Calibrating and validate models (particularly pattern oriented modelling, e.g.
+                        Grimm et al. 2005)</p>
+                    <p>High-quality data are hard to come by</p>
+                    <p class="l2">Many sources are too sparse, low spatial/temporal resolution</p>
+                    <p class="l2">Censuses focus on attributes rather than behaviour and occur infrequently</p>
+                    <p>Big Data "Revolution" might offer a solution</p>
+                    <p class="l2">Social media (Facebook, Twitter, Flikr, FourSquare, etc.)</p>
+                    <p class="l2">Volunteered geographical information (VGI: Goodchild, 2007)</p>
+                    <p class="l2">Commercial data (Loyalty cards, Amazon customer database, Axciom)</p>
+                    <p class="l2">Movement data (Mobile phones, Oyster cards, etc.)</p>
+                    <p><em>This is the subject of the next lecture...</em></p>
+                </section>
+                    
+                
+                
+                
+                
+                
+                <section id="Outline4" data-state="outline">
+                    <h2>Outline: Modelling Society</h2>
+                    <ul class="outline">
+                        <li><a href="#/ComplexSystems-Emergence">Context: Cities as Complex Systems</a></li>
+                        <li><a href="#/ModellingUrban">Modelling Urban Phenomena (with ABM)</a></li>
+                        <li><a href="#/ModellingBehaviour">Modelling (Human) Behaviour</a></li>
+                        <li class="current"><a href="#/ABMInPractice">Agent-Based Modelling in Practice</a></li>
+                    </ul>
+                </section>
+                
+                <section id="ABMInPractice">
+                    <h2>Agent-Based Modelling in Practice</h2>
+                    
+                    <p>Creating an agent-based model can be difficult</p>
+                    <p class="l2">No standard software (e.g. R, SPSS, etc.)</p>
+                    <p class="l2">Some programming usually required</p>
+                    <p class="l2">Steep learning curve</p>
+                    <p>Fortunately, numerous tools and libraries exist to help</p>
+                    
+                    <img style="width:100%; height:auto;" src="./figures/software_tools.png" alt="Software tools" />
+                </section>
+                
+                <section id="Libraries">
+                    <h2>Computer code ('libraries')</h2>
+                    <img class=right src="./figures/code.png" />
+                    <p>Researchers write software to perform useful functions:</p>
+                    <p class="l2">Draw graphs</p>
+                    <p class="l2">Visualise the model</p>
+                    <p class="l2">Manage the schedule</p>
+                    <p>Great for programmers</p>
+                    <p class="l2">Less time spend worrying about admin, more time on
+                    modelling</p>
+                    <p>Examples:</p>
+                    <p class="l2"><a href="http://cs.gmu.edu/~eclab/projects/mason/">MASON</a></p>
+                    <p class="l2"><a href="http://repast.sourceforge.net/">Repast Simphony</a></p>
+                    <p class="l2"><a href="https://sites.google.com/site/mageosim/">Mageo</a></p>
+                    <p class="l2">Loads of others listed <a
+                    href="http://en.wikipedia.org/wiki/Comparison_of_agent-based_modeling_software"
+                    >here</a></p>
+                </section>
+                
+                <section id="RepastSimphony">
+                    <h2>Repast Simphony</h2>
+                    <a href="http://repast.sourceforge.net/" >
+                        <img class="right" src="http://repast.sourceforge.net/images/relogo_execution.png"
+                       alt="Screen shot of Repast software" />
+                    </a>
+                    <p>Written in Java</p>
+                    <p>Models can be developed by programming (Java, CoffeeScript, ReLogo), or using the GUI</p>
+                    <p>Relatively steep learning curve</p>
+                    <p>Powerful and popular</p>
+                    <p>C++ version designed for high-performance computer grids</p>
+                </section>
+
+                
+                
+                <section id="MallesonCrime">
+                    <h2>Repast Simphony Example</h2>
+                    <h3>Burglary</h3>
+                    
+                    <img class="right" src="./figures/mastermap_topography.png" alt="Mastermap topography" />
+                    <p>This model accurate geographical data for Leeds, UK</p>
+                    <p class="l2">Buildings / houses</p>
+                    <p class="l2">Roads</p>
+                    <p class="l2">etc.</p>
+                    <p>Behaviour:</p>
+                    <p class="l2">PECS: drug addiction, sleep, socialise..</p>
+                    <p>Able to explore the impacts that changes to the environment or changes in behaviour
+                    have on crime <i>in a real area</i></p>
+                    <aside class="notes">
+                        <p>This model (Malleson et al. 2013) uses a more realistic virtual environment.
+                        It has been built using Ordnance Survey Mastermap data. With models like this, it
+                        is possible to investigate what happens to crime patterns <i>in a real area</i>.</p>
+                    </aside>
+                </section>
+                
+                 <section id="MallesonCrime2">
+                    <iframe class="youtube-player" src="http://www.youtube.com/embed/5ySbS075MyA" allowfullscreen></iframe>
+                    <p><a href="http://www.youtube.com/embed/5ySbS075MyA">www.youtube.com/embed/5ySbS075MyA</a></p>
+                 </section>
+                
+                <section id="MASON">
+                    <h2>MASON</h2>
+                    <a href="http://cs.gmu.edu/~eclab/projects/mason/">
+                        <img class="right" src="http://cs.gmu.edu/~eclab/projects/mason/3DWindow.png" alt="MASON 3D window" />
+                    </a>
+                    <p>A joint effort between <a href="http://gmu.edu/">George Mason University</a>'s 
+                        <a href="http://cs.gmu.edu/~eclab/">Evolutionary Computation Laboratory</a> 
+                        and the GMU <a href="http://socialcomplexity.gmu.edu">Center for Social Complexity</a>.</p>
+                    <p>Simple, light-weight. Written in Java.</p>
+                    <p>Coding skills needed, so steep learning curve.</p>
+                    <p>But very powerful and easy extend / customise</p>
+                    <p>Can run on high performance computer Grids</p>
+                </section>
+                
+                <section id="MasonExample">                    
+                    <figure class="right" style="width:50%">
+                        <iframe class="youtube-player" src="http://www.youtube.com/embed/WZuSE0qGOdI"
+                                frameborder="0" allowfullscreen></iframe>
+                        <figcaption>
+                            <p>Crooks, A.T. and Wise, S. (2013), GIS and Agent-Based models for Humanitarian Assistance, 
+                            <em>Computers, Environment and Urban Systems</em>, 41: 100-111. 
+                            (<a href="http://css.gmu.edu/andrew/pubs/Crooks_Wise_2013.pdf">pdf</a>)</p>
+                        </figcaption>
+                    </figure>
+                    <h2>MASON</h2>
+                    <h3>Example</h3>
+                    
+                    <p>ABM for modelling natural disasters and humanitarian assistance</p>
+                    <p>Lots of 'crowd-sourced' becomming avaiable, but models are needed to predict
+                    (crowd) behaviour</p>
+                    <p>Scenarios:</p>
+                    <p class="l2">Reactions to distribution of aid</p>
+                    <p class="l2">Rumour propogation</p>
+                    <p class="l2">Emergency evacuations</p>
+                    
+                    <p>For more information, see: <a href="http://www.css.gmu.edu/haiti/">
+                        http://www.css.gmu.edu/haiti/</a></p>
+                    
+                </section>
+                
+                <section id="RepastSimphonyMason">
+                    <h2>Repast Simphony &amp; MASON</h2>
+                    <h3>Critique</h3>
+                    <div id="columns">
+                        <div class="left column">
+                            <p><strong>Advantages</strong></p>
+                            <p>Flexible / customisable</p>
+                            <p>Easy integration with other (Java) libraries</p>
+                            <p>Free / Open Source</p>
+                            <p>Execute on high performance grids</p>
+                        </div>
+                        <div class="right column">
+                            <p><strong>Disadvantages</strong></p>
+                            <p>Need to be programmed: steep learning curve</p>
+                            <p>Complicated (?)</p>
+                            <p></p>
+                            <p></p>
+                        </div>
+                    </div>
+                </section>
+                
+                
+                    
+                    
+                <section id="Graphical">
+                    <h2>Graphical Environments</h2>
+                    <!-- <a href="http://visualbots.com/"><img class=right src="http://visualbots.com/Images/tree2.gif"/></a> -->
+                    <a href="http://repast.sourceforge.net/docs.html">
+                        <img class="right" src="./figures/repast-behavior_editor_example.png" alt="Repast behaviour editor"/>
+                    </a>
+                    <p>Entirely visual - no programming needed</p>
+                    <p>Most useful for non-programmers</p>
+                    <p>Examples</p>
+                    <p class="l2"><a href="http://www.agentsheets.com/">Agent Sheets</a></p>
+                    <p class="l2"><a href="http://visualbots.com/">VisualBots</a></p>
+                    <p class="l2"><a href="http://repast.sourceforge.net/">Repast Simphony</a></p>
+                    <p class="l2"><a href="http://m.modelling4all.org/">Modelling4All</a></p>
+                </section>
+                
+                
+                <section id="Middle">
+                    <h2>Somewhere in the middle</h2>
+                    <img class="right" src="./figures/netlogo-gui.png" alt="NetLogo GUI"/>
+                    <p>Some code writing, some visual development</p>
+                    <p>More powerful than purely visual tools, but easier to use.</p>
+                    <p>Save time having to learn to do simple tasks and concentrate on model
+                    behaviour</p>
+                    <p>e.g. NetLogo</p>
+                </section>
+                    
+
+                <!--
+                <section id="AgentAnalyst1">
+                    <h2>Agent Analyst</h2>
+                    
+                    <figure class="right" style="width:50%;">
+                        <img  src="./figures/groff1.png" alt="Agent analyst example by Elizabeth Groff" />
+                        <figcaption>
+                        <p>Groff, E. R. (2006). <i>Exploring the Geography of Routine Activity Theory:
+                        A Spatio-temporal Test Using Street Robbery</i>.
+                        Unpublished Dissertation, University of Maryland, College Park, MD.</p>
+                        </figcaption>
+                    </figure>
+                    
+                    <p>Plug-in for ArcGIS (<i>tight-coupling</i>)</p>
+                    <p>ABM development <i>within</i> the GIS</p>
+                    <p>Example: street robbery (Groff, 2006)</p>
+                    <p>Shows the initial start locations of the three types of agents</p>
+                    <p class="l2">Criminals (i.e., citizens with criminal propensity)</p>
+                    <p class="l2">Citizens (i.e., citizens without criminal propensity)</p>
+                    <p class="l2">Cops (<i>that's American for 'Police'</i>).</p>
+                </section>
+                -->
+
+                
+                
+                <section id="NetlogoIntro">
+                
+                    <a href="http://ccl.northwestern.edu/netlogo/">
+                        <!-- <img class=top src="http://ccl.northwestern.edu/netlogo/images/netlogo-title-wide-60.jpg"></img> -->
+                        <img class=top src="./figures/netlogo-title-wide-60.jpg"/>
+                    </a>
+                    
+                    <a href="http://www.youtube.com/watch?v=8wU6NdjTVTA">
+                        <iframe class="youtube-player-right" type="text/html"
+                            src="http://www.youtube.com/embed/8wU6NdjTVTA">
+                        </iframe>
+                    </a>
+                    
+                    <p>Base on <strong>Star Logo</strong>.</p>
+                    <p>Popular teaching tool, originally Designed to be used by children</p>
+                    <p>Very powerful, but also easy to learn</p>
+                    <p class="l2">Easy to  build models</p>
+                    <p class="l2">Easy to interact with models</p>
+                    <p class="l2">East to extract data and create plots</p>
+                    <p>Excellent documentation: <a href="http://ccl.northwestern.edu/netlogo/docs/">http://ccl.northwestern.edu/netlogo/docs/</a></p>
+                </section>
+            
+
+                
+                <section id="NetLogo-TheProgram">
+                    <h2>NetLogo</h2>
+                    <p class=level2>Graphical part (<strong>Interface</strong>) with sliders, graphs, buttons and a map</p>
+                    <p class=level2>Scripting part (<strong>Procedures</strong>) which contains instructions (code)</p>
+                    <img src="./figures/netlogo-program.png" alt="NetLogo program"/>
+                </section>
+
+                
+                <section id="BirksCrime">
+                    <h2>NetLogo</h2>
+                    <h3>Example: Exploring crime theory</h3>
+                    <img class="right" src="./figures/birks-environment.png" alt="Birks (2012) model environment" />
+                    <p>Birks et al. (2012)</p>
+                    <p>Randomly generated abstract environments</p>
+                    
+                    <p>Theoretical 'switches' (activate three different criminology theories)</p>
+                    
+                    <p>Compare results to expected outcomes:</p>
+                    <p class="l2">Spatial crime concentration</p>
+                    <p class="l2">Repeat victimisation</p>
+                    <p class="l2">Journey to crime curve</p>
+                    
+                    <aside class="notes">
+                        <p>We will look at Birks' model in more detail in later lectures.</p>
+                        <p>It is an excellent example of an agent-based model with an abstract
+                        environment used to explore crime theory.</p>
+                        <p>There are three 'switches' that (de)activate different theories
+                        from the environmental criminology literature: routine activities theory,
+                        rational choice theory and the geometric theory of crime (awareness spaces).</p>
+                        <p>By comparing the crime patterns that the model produces when these
+                        different switches are activated to real crime patterns, the authors are able
+                        to suggest which theories have the most substantial impact on crime.</p>
+                    </aside>
+                </section>
+                
+                <section id="BirksCrime2">
+                    <h2>NetLogo</h2>
+                    <h3>Example: Exploring crime theory</h3>
+                    <div style="font-size:0.5em;" >
+                    <table>
+                        <tr><th>Theory</th><th>Enabled</th><th>Disabled</th></tr>
+                        <tr>
+                            <td>Routine activities</td>
+                            <td>Agents assigned a 'home' and routine paths</td>
+                            <td>Random movements</td>
+                        </tr>
+                        <tr>
+                            <td>Rational choice</td>
+                            <td>Victim attractiveness (based on risk, reward, effort)</td>
+                            <td>Homogeneous target attractiveness</td></tr>
+                        <tr>
+                            <td>Awareness space</td>
+                            <td>Dynamic awareness - alters offender decision-making</td>
+                            <td>Uniform environment awareness</td>
+                        </tr>
+                        <caption style="font-size:1.2em;">Theoretical 'switches' in the model</caption>
+                    </table>
+                    </div>
+                    <p>Results:</p>
+                    <p class="l2">All hypotheses are supported</p>
+                    <p class="l2">Rational choice theory has lower influence</p>
+                </section>
+                
+                <section id="LearningNetlogo">
+                    <h2>Learning NetLogo</h2>
+                    <p>Great documentation on the NetLogo <a href="http://ccl.northwestern.edu/netlogo/docs/">
+                        website</a></p>
+                    <p>Or see my 6 NetLogo practicals (written for a final-year undergraduate
+                    course)</p>
+                    <p class="l2"><a href="http://www.geog.leeds.ac.uk/courses/level3/geog3150/">
+                        http://www.geog.leeds.ac.uk/courses/level3/geog3150/</a></p>
+                </section>
+                
+                
+                <section id="SomewhereElse">
+                
+                    <!-- <img class="right" src="./figures/secondlife.png" alt="Second life" /> -->
+                    <h2>... somewhere else ...</h2>
+                    <p>There are loads of other packages that people are using in novel ways. E.g.</p>
+                    <p class="level2">Second Life (see <a href="http://www.casa.ucl.ac.uk/abm/secondlife/">http://www.casa.ucl.ac.uk/abm/secondlife/</a></p>
+                                        <a href="http://www.casa.ucl.ac.uk/abm/secondlife/">
+                        <iframe class="right" src="//player.vimeo.com/video/4429002" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </a>
+                </section>
+                
+
+                
+                <section id="Conclusion">
+                    <h2>Conclusion / Final Thoughts</h2>
+                    
+                    <p>Cities are complex systems </p>
+                    <p>ABM can capture many 'complex' properties</p>
+                    <p>This makes them essential for understanding urban dynamics and designing 'smart' cities</p>
+                    <p>Frameworks exist to organise behaviour in computer models</p>
+                    <p><strong>BUT:</strong> data to understand individual behaviour are hard to come by</p>
+                    <p class="l2">Data sparcity for predictive modelling</p>
+                    <p>The 'Big Data Revolution' might help...</p>
+                
+                </section>
+                
+
+
+                
+                <section id="Reading" class="small">
+                    <h2>Reading and Other Resources (I)</h2>
+                    <p>Papers - all offer excellent introductions to agent-based modelling</p>
+                    <p class="l2">Macal, C. M., and North, M. J. (2010). Tutorial on agent-based
+                    modelling and simulation. <i>Journal of Simulation</i>, 4(3), 151-162. doi:
+                    <a href="http://www.palgrave-journals.com/jos/journal/v4/n3/full/jos20103a.html">10.1057/jos.2010.3</a>.</p>
+                    <p class="l2">Bonabeau, E. (2002). Agent-based modeling: Methods and techniques for simulating human systems.
+                    <i>Proceedings of the National Academy of Sciences</i>, 99(90003), 7280-7287. doi:
+                    <a href="http://www.icosystem.com/site/wp-content/uploads/PNAS2002.pdf">10.1073/pnas.082080899</a>.</p>
+                    <p class="l2">O'Sullivan & Haklay (2000), Agent-based models and individualism: is the world agent-based?,
+                    <i>Environment and Planning A</i> (32), 1409-25</p>
+                    <p class="l2">Castle, C. J. E. and Crooks, A. T. (2006). Principles and concepts of agent-based
+                    modelling for developing geospatial simulations. UCL Working Papers Series, Paper 110,
+                    Centre For Advanced Spatial Analysis, University College London.
+                    <a href="http://eprints.ucl.ac.uk/archive/00003342/01/3342.pdf">Available online</a>.</p>
+
+                </section>
+
+                <section id="Reading2" class="small">
+                    <h2>Reading and Other Resources (II)</h2>
+                    <p>There is also a long list of papers here: </p>
+                    <p class="l2"><a href="http://mass.leeds.ac.uk/2013/02/13/an-excellent-abm-paper/">
+                    http://mass.leeds.ac.uk/2013/02/13/an-excellent-abm-paper/</a>.</p>
+                    <p>Textbooks</p>
+                    <p class="l2">Batty, M., 2013. The New Science of Cities. MIT Press.</p>
+                    <p class="l2">Heppenstall, A.J., Crooks, A.T., See, L.M., Batty, M. (2012) 
+                            <i>Agent-Based Models of Geographical Systems</i>. Springer.</p>
+                    <p class="l2">Cioffi-Revilla, C., 2014. <em>Introduction to Computational Social Science</em>, 
+                            Texts in Computer Science. Springer, London. (Esp. chapter 10)</p>
+                    <p>Prof. Bruce Edmonds is one of the big names in agent-based modelling.
+                    He has two videos that provide excellent introductions to the methodology</p>
+                    <p class="l2">A short one: <a href="http://www.youtube.com/watch?v=JANTkSa4hmA">
+                        http://www.youtube.com/watch?v=JANTkSa4hmA</a></p>
+                    <p class="l2">A longer version from a conference presentation: <a href="http://www.youtube.com/watch?v=9nEPxb2J73w"
+                    >http://www.youtube.com/watch?v=9nEPxb2J73w</a></p>
+
+                </section>
+
+                <section id="References">
+
+                    <div id="references">
+
+                        <h2>References</h2>
+                        <p>Axelrod, R. (1997). Advancing the art of simulation in the social sciences. 
+                            In Conte, R., Hegselmann, R., and Terna, P. (eds) <em>Simulating Social Phenomena </em>, 
+                            pages 21–40. Springer-Verlag, Berlin. (Draft chapter
+                            <a href="http://www-personal.umich.edu/~axe/research/AdvancingArtSim2005.pdf">
+                            available online</a>)</p>
+                        <p>Batty, M. (2005). Agents, cells, and cities: new representational models for 
+                            simulating multiscale urban dynamics. <i>Environment and Planning A</i>,
+                            vol. 37, pp. 1373-1394, 2005.</p>
+                        <p>Batty, M., Axhausen, K.W., Giannotti, F., Pozdnoukhov, A., Bazzani, A., Wachowicz, M.,
+                            Ouzounis, G., Portugali, Y., 2012. Smart cities of the future. 
+                            <i>The European Physical Journal Special Topics</i> 214, 481–518. 
+                            doi:10.1140/epjst/e2012-01703-3</p>
+                        <p>Birks, Daniel, Michael Townsley, and Anna Stewart (2012). Generative Explanations of 
+                            Crime: Using Simulation to Test Criminological Theory. <i>Criminology</i> 50(1) 221-254.</p>
+                        <p>Cioffi-Revilla, C., 2014. <em>Introduction to Computational Social Science</em>, 
+                            Texts in Computer Science. Springer, London.</p>
+                        <p>Crooks, A.T. and Wise, S. (2013), GIS and Agent-Based models for Humanitarian Assistance, 
+                            <em>Computers, Environment and Urban Systems</em>, 41: 100-111. 
+                            (<a href="http://css.gmu.edu/andrew/pubs/Crooks_Wise_2013.pdf">pdf</a>)</p>
+                        <p>Edmonds, B. and Moss, S. (2005). From KISS to KIDS: an 'anti-simplistic' 
+                            modelling approach. In Davidsson, P., Logan, B., and Takadama, K., editors, 
+                            <em>Multi Agent Based Simulation</em> 2004, Lecture Notes in Artificial Intelligence,
+                            pages 130–144. Springer. <a href="http://cfpm.org/cpmrep132.html">
+                            Available online</a>.</p>
+                        <p>Epstein, J., Axtell, R., 1996. <em>Growing Artificial Societies: Social Science 
+                                from the Bottom Up</em>. Brookings Institution Press.</p>
+                        <p>Gilbert, N. (2004). Agent-based social simulation: dealing with complexity. 
+                            Available <a href="http://www.econ.iastate.edu/tesfatsi/ABM.DealingWithComplexity.Gilbert.pdf">
+                            online</a> [accessed - January 2007].</p>
+                        <p>Groff, E. R. (2006). <i>Exploring the Geography of Routine Activity Theory: 
+                            A Spatio-temporal Test Using Street Robbery</i>. Unpublished Dissertation, 
+                            University of Maryland, College Park, MD.</p>
+                        <p>Groff, E.R. (2007). "Situating" Simulation to Model Human Spatio‐Temporal Interactions: 
+                            An Example Using Crime Events. <em>Transactions in GIS</em> 11, 507–530.</p>
+                        <p>Heppenstall, A.J., Crooks, A.T., See, L.M., Batty, M. (2012) 
+                            <i>Agent-Based Models of Geographical Systems</i>. Springer.</p>
+                        <p>Kennedy, W.G., 2012. Modelling Human Behaviour in Agent-Based Models, 
+                            in: Heppenstall, A.J., Crooks, A.T., See, L.M., Batty, M. (Eds.), 
+                            <em>Agent-Based Models of Geographical Systems</em>. Springer Netherlands, pp. 167–179.</p>
+                        <p>Malleson, N., Heppenstall, A., See, L., Evans, A. (2013) Using an Agent-Based Crime Simulation 
+                            to Predict the Effects of Urban Regeneration on Individual Household Burglary Risk. 
+                            <em>Environment and Planning B: Planning and Design</em> 40(3) 405–426</p>
+                        <p>Schmidt, B., 2000. <i>The Modelling of Human Behaviour</i>. Society for Computer Simulation
+                            International, Ghent, Belgium.</p>
+                    </div>
+
+                </section>
+                
+                <section class="title"  id="Title2">
+                    
+                    <img style="width:100%; height:auto;" src="./figures/cdrc_logo.jpg" alt="CRDC Logo" />
+                    
+                    <p></p>
+                    
+                    <h2 style="text-transform: none;">Understanding Complex Social Phenomena with Agent-Based Modelling</h2>
+                    
+                    
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        <strong>Dr Nick Malleson</strong><br/>
+                        School of Geography, University of Leeds
+                    </h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    <h5>Slides: <a style="color: inherit;" href="http://mass.leeds.ac.uk/html/slides/Lipari2014/">
+                        http://mass.leeds.ac.uk/html/slides/Lipari2014/</a></h5>
+                    
+                    
+                </section>
+                
+                
+         
+            </div> <!-- div class="slides" -->
+
+            <script src="lib/js/head.min.js"></script>
+            <script src="js/reveal.min.js"></script>
+
+            <script>
+
+                    // Full list of configuration options available here:
+                    // https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                            controls: true,
+                            progress: true,
+                            history: true,
+                            center: true,
+
+                            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                            // Parallax scrolling
+                            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                            // parallaxBackgroundSize: '2100px 900px',
+
+                            // Optional libraries used to extend on reveal.js
+                            dependencies: [
+                                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                            ]
+                    });
+
+            </script>
+
+	</body>
+</html>

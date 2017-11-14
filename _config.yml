@@ -1,0 +1,32 @@
+# Site settings
+title: Nick Malleson's Homepage
+tagline: "A website about Nick Malleson's research and teaching at the University of Leeds"
+keywords: GIS, geography, ABM, data science
+description: > # this means to ignore newlines until "baseurl:"
+    "A website about Nick Malleson's research and teaching at the University of Leeds"
+
+# For the web
+url:      "http://nickmalleson.co.uk/"
+baseurl:  ""
+
+# For github
+#url:      "https://nickmalleson.github.io/ectqg2017/"
+#baseurl:  "/ectqg2017"
+
+# Define how blog permalinks should be constructed
+permalink: /:year/:month/:title.html
+# (the default:)
+#permalink: /:categories/:year/:month/:day/:title.html
+
+
+author :
+  name : Nick Malleson
+  github : nickmalleson
+  twitter : nickmalleson
+
+
+twitter_username: nickmalleson
+github_username:  nickmalleson
+email: n.s.malleson@leeds.ac.uk
+
+exclude: [.scss, README.md, node_modules, gruntfile.js, package.json]

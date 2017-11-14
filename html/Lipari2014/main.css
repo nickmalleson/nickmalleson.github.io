@@ -1,0 +1,239 @@
+/* Some extra styles not dealt with by the normal GEography style sheets */
+
+@font-face
+{
+    /*font-family: noto;
+    src: url(./NotoSans-Regular.ttf); */
+    font-family: HelveticaNeue;
+    src: url(./HelveticaNeueLight.ttf);
+}
+
+BODY{
+    max-width:960px;
+    margin:20px auto;
+    padding:20px;
+    line-height: 150%;
+    color:#333333; /* text colour */
+    /*letter-spacing:0.3px;*/
+    
+    
+        /* Google fonts. To use these, the following line has to be in the html header:
+     * <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed|Magra' rel='stylesheet' type='text/css'> */
+    /*font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Magra', sans-serif;*/
+
+    /* Another Google font that I downloaded, quite nice */
+/*    font-family: 'Noto Sans', sans-serif; */
+    
+    /* Another I quite like  */
+    font-family: 'HelveticaNeue', 'Arial', 'sans-serif';
+}
+
+
+h2, h3 {
+    /* Increase spacing between headers */
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    
+    /* And line spacing */
+    line-height: 110%;
+}
+
+
+/* Practicals are usually contained in one big list, so that numbers continue increasing when
+ * sections change. The following stops the whole page being indented, but still slightly indents
+ * list items.*/
+#outer_list { 
+    margin-left:0px;
+    padding-left:0px;
+}
+#outer_list li {
+    margin-left:30px;
+    padding-left:5px;    
+}
+
+li {
+    /* Increase spacing between list items */
+    margin-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+/* A nice box around self-contained elements. Often used by images (although
+Ive had to copy the code below directly into other styles because I don't think
+inheritance in CSS is possible without editting html and also including 'box'
+in the class definition.*/
+.box, .narrowbox, iframe, table, img, figure, blockquote{
+    padding:10px 10px 10px 10px;
+    border:1px solid #BFBFBF;
+    background-color:white;
+    box-shadow:2px 2px 3px #aaaaaa;
+    .border-radius:15px;
+}
+
+.narrowbox { /* narrow box does not go full width */
+    width:40%;
+}
+
+
+img, figure {
+    width:80%;
+    height: auto;
+    border: none;
+    border-radius:0px;
+}
+
+
+img.none { /* No style for the image */
+    width: auto;
+    height: auto;
+    padding: 0px;
+    margin: auto;
+    border:none;
+    background-color:none;
+    box-shadow:none;
+}
+
+
+img.right, figure.right {
+    width:40%;
+    float:right;
+    margin:10px 0px 10px 30px;
+}
+
+img.left, figure.left {
+    width:40%;
+    float:left;
+    margin:10px 30px 10px 0px;
+}
+
+img.med, figure.med { /* for medium-sized images. Can be used in conjunction with left and right*/
+    width:350px;
+    padding:10px 3px 3px 3px;
+
+}
+
+img.big, figure.big { /* for big-sized images, but not full size. Can be used in conjunction with left and right*/
+    width:550px;
+    padding:10px 3px 3px 3px;
+    
+}
+
+
+img.small, figure.small { /* for particularly small images. Can be used in conjunction with left and right*/
+    width:200px;
+    padding:10px 3px 3px 3px;
+    
+}
+
+figcaption {
+    font-size: 0.8em;
+}
+
+/* Nice border around tables */
+table {
+    
+    
+}
+td, th {
+    border-bottom: 1px solid #BFBFBF;
+    padding:5px;
+    
+}
+
+/* Special element for activities (a big container for all activities*/
+#activity {
+    padding:10px 10px 20px 10px;
+    border:1px solid #BFBFBF;
+    background-color:white;
+    box-shadow:2px 2px 3px #aaaaaa;
+    margin: 10px;
+    border-radius:15px;
+
+}
+
+#activity h2{
+    /* Don't want usual big space above headaer in activities */
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Little box for writing answers to individualactivities. Use following html to make a box:
+    <span class="activity_box">&nbsp;</span> */
+span.activity_box {
+    width:80%;
+    padding:15px 10px 15px 10px;
+    border:1px solid #BFBFBF;
+    background-color:white;
+    box-shadow:2px 2px 3px #aaaaaa;
+    overflow:hidden;
+    display: block;
+}
+
+
+/* Special table of contents element on practicals */
+#toc {
+    padding:10px 10px 20px 10px;
+    margin:10px;    
+    border:1px solid #BFBFBF;
+    background-color:white;
+    box-shadow:2px 2px 3px #aaaaaa;
+    border-radius:15px;
+    float:right;
+    
+} 
+#toc td { /* TOC usually has a table inside it to arrange the iteams,
+           * need to turn off the table borders*/
+    border: none;
+}
+
+
+
+/* Give iframes a nice border */
+
+
+IFRAME.lecture {
+    /*float:right;*/
+    height:300px;
+    width:400px;
+    
+}
+
+IFRAME.youtube-player {
+    width:640;
+    height:385;
+    frameborder:0;
+}
+
+IFRAME.youtube-player-small {
+    width:320;
+    height:192.5;
+    float: right;
+}
+
+
+
+code {
+    /* Stop code being broken up mid-way onto separate lines */
+    white-space: nowrap;
+}
+code.block { /* A block of code. Uses 'box' style. */
+    padding:10px 10px 10px 10px;
+    /*border:1px solid #BFBFBF;*/
+    border:1px solid #555555;
+    background-color:white;
+    /*box-shadow:2px 2px 3px #aaaaaa;*/
+    display: block;
+}
+
+code.narrowblock {
+    padding:10px 10px 10px 10px;
+    border:1px solid #555555;
+    background-color:white;
+    /*box-shadow:2px 2px 3px #aaaaaa;*/
+    display: block;
+    width:45%;
+}
+
+
+
+

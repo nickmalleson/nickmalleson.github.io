@@ -1,0 +1,1390 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Big Data and Smart Cities</title>
+
+        <meta name="description" content="Big Data and Smart Cities Presentation to LURE-LAP 2014"/>
+        <meta name="author" content="Nick Malleson"/>
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- Styles for the slides. -->
+        
+        <!-- Remove the one below to to have all on one continuous page with notes-->
+        <link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+        
+        <!-- Default reveal.js template -->
+        <!--
+            <link rel="stylesheet" href="./reveal.js/css/theme/default.css" id="theme">
+        -->
+        
+        
+        <!-- Adapted tempate -->        
+        <link rel="stylesheet" href="./styles/nick_reveal.css" id="theme"/>
+
+        <!-- For syntax highlighting -->
+        <!-- <link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css"> -->
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+                document.write( '<link rel="stylesheet" href="./reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="slides">
+                
+                <section class="title"  id="Title">
+                    
+                    <img style="width:100%; height:auto;" src="./figures/cdrc_logo.jpg" alt="CRDC Logo" />
+                    
+                    <p></p>
+                    
+                    <h2 style="text-transform: none;">Big Data and Smart Cities</h2>
+                    
+                    
+                                        
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        <strong>Dr Nick Malleson</strong><br/>
+                        School of Geography, University of Leeds
+                    </h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    <h5>Slides: <a style="color: inherit;" href="http://mass.leeds.ac.uk/html/slides/LURE-LAP-BigData-2014/">
+                        http://mass.leeds.ac.uk/html/slides/LURE-LAP-BigData-2014/</a></h5>
+                    
+                    
+                </section>
+                
+                <section id="Reading" class="small">
+                    <h2>Reading</h2>
+                    <p><strong>Here are some of the key texts for the lecture.</strong></p>
+                    <p>
+                        Mayer-Schonberger, V. and Cukier, K. (2013)
+                        <i>Big Data: A Revolution That Will Transform How We Live, Work, and Think</i>.
+                        John Murray
+                    </p>
+                    <p class=level2>
+                        The "<a href="http://big-data-book.com/">Big Data book</a>" is quite famous
+                        and gives a great overview of many of the issues associated with the big
+                        data "revolution" (to quote the authors). It's also very readable.
+                    </p>
+                    <p>
+                        Anderson, C., 2008. The End of Theory: The Data Deluge Makes the Scientific Method Obsolete.
+                        <I>WIRED</I>.
+                        <a href="http://www.wired.com/science/discoveries/magazine/16-07/pb_theory">
+                            Available online
+                        </a>
+                    </p>
+                    <p class=level2>
+                        Anderson's article in Wired magazine, in which he suggests that data are now
+                        so abundant that we no longer need theories to understand <i>why</i> things
+                        happen, was controversial and widely criticised. He makes an interesting
+                        argument, even if it is one he has since stepped away from.
+                    </p>
+                    
+                    <p>Savage, M. and Burrows, R., 2007. The Coming Crisis of Empirical Sociology.
+                    <i><a href="http://soc.sagepub.com/content/41/5/885.short">Sociology</a></i> 41, 885-899.</p>
+                    <p class=level2>Savage & Burrows discuss the impact that huge new data sources will have on a
+                    field that has traditionally prided itself on developing statistical methods that
+                    work with small amounts of neat, well structured data.</p>
+                    
+                    <p>Birkin, M., Malleson, N., (2013) Investigating the Behaviour of Twitter
+                    Users to Construct an Individual-Level Model of Metropolitan Dynamics.
+                    <i>National Centre for Research Methods (NCRM)
+                    <a href="http://eprints.ncrm.ac.uk/3166/1/complex_city_twitter_Birkin_Malleson.pdf">
+                        Working Paper 05/13</a></i>. University of Leeds.</p>
+                    <p class=level2>We discuss how messages posted to messages posted to Twitter
+                    can be used enrich our understanding of activity patterns in urban areas.</p>
+                    
+                    <p>Batty, M., 2012. Smart cities, big data. <i>Environment and Planning B: Planning and Design
+                    </i> 39, 191-193.<a href="http://www.envplan.com/abstract.cgi?id=b3902ed">
+                    Link</a>.</p>
+                    <p class=level2>A very optimistic view of possibilities offered by big data for understanding cities.</p>
+                    
+                    <p>Galdon-Clavell, Gemma (2013). (Not so) smart cities?: The drivers, impact and
+                    risks of surveillance-enabled smart environments. <i>Science and Public Policy</i>
+                    <a href="http://dx.doi.org/10.1093/scipol/sct070">Online first</a>.</p>
+                    <p class="level2">A somewhat less optimistic take on smart cities.</p>
+                    
+                    <p>Goodchild M (2007). Citizens as Sensors: the World of Volunteered Geography, GeoJournal, 211-221.
+                    <a href="http://www.ncgia.ucsb.edu/projects/vgi/docs/position/Goodchild_VGI2007.pdf">Link</a>.</p>
+                    <p class="level2">Discusses the concept of <i>Volunteered Geographical Information</i>
+                    (VGI) - geographical information created by citizens.</p>
+                    
+                    
+                    
+
+                    
+                        
+                </section>
+                
+                <section id="Resources" class="small">
+                    <h2>Other Resources</h2>
+                    <p><strong>Here are some good videos, news reports, etc. that are worth watching.</strong></p>
+                    
+                    <p>Kent Larson: Brilliant designs to fit more people in every city.
+                    <a href="http://www.ted.com/talks/kent_larson_brilliant_designs_to_fit_more_people_in_every_city.html">
+                        TED talk</a>.</p>
+                    <p class=level2>A talk about designing modern cities. Discusses some interesting
+                    new research aimed at making cities more efficient and user-friendly.</p>
+                    
+                    <p>BBC: Tomorrows Cities <a href="http://www.bbc.co.uk/news/technology-23517670">
+                    http://www.bbc.co.uk/news/technology-23517670</a></p>
+                    <p class="level2">A series of reports exploring 'smart cities' innovations. In
+                    particular, <a href="http://www.bbc.co.uk/news/technology-23757739">
+                    this video</a> looks at the ways that London is becoming a 'smart city'.</p>
+                    
+                    
+                    <p>Wakefield, J. 2013. Tomorrow's cities: How big data is changing the world. BBC News. [Online]. Available from:
+                    <a href="http://www.bbc.co.uk/news/technology-23253949">Available online</a></p>
+                    <p class=level2>A BBC news piece about big data and smart cities</p>
+
+                    
+                    <p>BBC. 2013. Horizon - <a href="http://www.bbc.co.uk/programmes/b01rt4c7">The Age of Big Data.</a>
+                    Available on YouTube: <a href="http://www.youtube.com/watch?v=EsVy28pDsYo">
+                    http://www.youtube.com/watch?v=EsVy28pDsYo</a></p>
+                    <p class=level2>
+                        BBC documentary that covers some of the new applications of big data. In particular,
+                        there is a section on how the L.A. Police Department are being directed by algorithms
+                        (developed by Jeff Brantingham's <a href="http://paleo.sscnet.ucla.edu/">UC MASC Project</a>)
+                        that predict emerging hot spots (often called <a href="http://www.predpol.com/">Predictive Policing</a>).
+                    </p>
+                        
+                </section>
+                
+                
+                <section id="Caveat">
+                <h2>Caveat</h2>
+                <p>You will see lots of question marks in these slides.</p>
+                <p>This is because there is still a lot of discussion about the impact that
+                'big data' and 'smart cities' will have on societies.</p>
+                <p>The lecture is posing <strong>questions</strong>, rather than
+                <strong>answers</strong>!</p>
+                </section>
+                
+                
+                
+                
+                
+                
+                <section data-state="outline" id="Outline1">
+                    <h2>Outline</h2>
+                    <ol class="outline">
+                        <li class="current"><a href=#/TypesOfData>Abundance of Data</a></li>
+                        <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                        <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                        <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                        <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                        <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                        <li><a href=#/Conclusions>Conclusions</a></li>
+                    </ol>
+                </section>
+                
+                
+                
+                
+                <section id="TypesOfData" data-state="question">
+                    <h2>Abundance of Data</h2>
+                    <p>What kinds of information about individuals can are being captured right now?</p>
+                    <p class="level2">Vote at: <a href="http://pollev.com/nickmalleson">http://pollev.com/nickmalleson</a></p>
+                    
+                    <script src="http://www.polleverywhere.com/polls/mJHGbmDB237xEGK/chart_widget.js?height=450&results_count_format=percent&width=800" type="text/javascript"></script>
+                </section>
+                
+                <section id="TypesOfData2" data-state="question">
+                    <h2>Abundance of Data</h2>
+                    <p>What kinds of information about individuals can are being captured right now?</p>
+                    <p class="level2">social media (Facebook, Google, Twitter, etc)</p>
+                    <p class="level2">movement data: Oyster cards, ANPR, air passengers ...</p>
+                    <p class="level2">internet search terms</p>
+                    <p class="level2">mobile telephone locations</p>
+                    <p class="level2">market research</p>
+                    <p class="level2">spatial data (Open Street Map etc.)</p>
+                    <p class="level2">transaction data (loyalty cards, shopping habits, etc.)</p>
+                    <p class="level2">patient data</p>
+                    <p class="level2">schools data</p>
+                    <p class="level2">sensed data: air quality, satellite imagery, noise levels ...</p>
+                </section>
+                
+                <section id="TypesOfData3" data-state="question">
+                    <h2>Abundance of Data</h2>
+                    <p>What data are being captured about <strong>you</strong>?</p>
+                    <span id="activity_box">&nbsp;</span>
+                    
+                    <aside class="notes">
+                        Think about the data that that is being captured about you, as you go about
+                        your day-to-day business. Can you opt out of any of these services? Are
+                        you comfortable about having all this data collected?
+                    </aside>
+                </section>
+                
+                
+                <section id="Abundance">
+                    <h2>The Abundance of Data</h2>
+                    
+                    <a href="http://www.sciencedaily.com/releases/2013/05/130522085217.htm">
+                        <img class="right" src="http://images.sciencedaily.com/2013/05/130522085217-large.jpg"/
+                        alt="Image of big data globe (from Science Daily)."></a>
+                    
+                    <p>In general, the amount of data being created by, and about, humans is
+                    proliferating.</p>
+                    
+                    <p class="level2">90% of the world's data has been generated in the last two
+                    years (<a href="http://www.sciencedaily.com/releases/2013/05/130522085217.htm">
+                        Science Daily</a>)</p>
+                    <p class="level2">The amount of data is doubling every two years
+                    (<a href="http://www.emc.com/about/news/press/2011/20110628-01.htm">EMC</a>).</p>
+                    <p class="level2">Total data will hit 8 zeta bytes by 2015
+                    (<a href="http://siliconangle.com/blog/2012/05/21/when-will-the-world-reach-8-zetabytes-of-stored-data-infographic/">
+                        Silicon Angle</a>).</p>
+                    <p class="level2">If this were printed out on double-sided A4 sheets the pile of
+                    paper would stretch to the moon and back 10,000 times! (<i>I've made this up so
+                    probably not one to quote, but you get the idea..</i>).</p>
+                    
+                    <aside class="notes">
+                        <p>The key message to take from this slide, is that we are creating more
+                        and more data all the time. The volume of new data, and the types of things
+                        that we are collecting data about, are going to have a big impact on many
+                        areas of our lives.</p>
+                        <p>One zeta byte, or ZB = 1,000,000,000,000,000,000,000 bytes</p>
+                        <p>An mp3 file is about 4 Mb = 4,000,000 bytes</p>
+                    </aside>
+                </section>
+                
+                <section id="Abundance2">
+                    
+                    <figure>
+                        <img style="width:90%; height:auto;" src="figures/world_data.jpg" alt="World data" />
+                        <figcaption><p>Originally published in <i>Science Express</i> on 10 February 2011,
+                        doi: 10.1126/science.1200970<br/>
+                        <i>Science</i> 1 April 2011:  vol. 332 no. 6025 60-65</p></figcaption>
+                    </figure>
+                    
+                    <aside class="notes">
+                        <p>Source: Hilbert, M., López, P., 2011. The World’s Technological Capacity
+                        to Store, Communicate, and Compute Information. <i>
+                        <a href="http://www.sciencemag.org/content/332/6025/60.abstract">Science</a></i>
+                        332, 60–65. doi:10.1126/science.1200970</p>
+                    </aside>
+                </section>
+                
+                <section id="Abundance3">
+                    
+                    <h2>World Information Capacity</h2>
+                    
+                    <p>Video draws interesting parallels with biological data processing
+                    capabilities.
+                    (<a href="https://www.youtube.com/watch?v=iIKPjOuwqHo">https://www.youtube.com/watch?v=iIKPjOuwqHo</a>).</p>
+                    
+                    <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/iIKPjOuwqHo" allowfullscreen></iframe>
+                    
+                    <aside class="notes">We probably wont have time to watch this video in the lecture,
+                    but it is worth watching in your own time.</aside>
+                    
+                </section>
+                
+                
+                
+                <section data-state="outline" id="Outline2">
+                <h2>Outline</h2>
+                    <ol class="outline">
+                        <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                        <li class="current"><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                        <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                        <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                        <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                        <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                        <li><a href=#/Conclusions>Conclusions</a></li>
+                    </ol>
+                </section>
+                
+                
+                
+                
+                <section id="Revolution">
+                    <h2>The Big Data "Revolution"</h2>
+                    
+                    <p>This abundance of new data is changing the way that we view the world.</p>
+                    
+                    <a href="http://www.nasa.gov/sites/default/files/styles/800x600_autoletterbox/public/potw1333a.jpg?itok=BOyH1HcG">
+                        <img class="right" src="./figures/nasa2.jpg" alt="Image of stars"/>
+                    </a>
+                    
+                    <p>In the physical sciences:</p>
+                    <p class="level2">"Data intensive science" (e-science) <a
+                    href="http://research.microsoft.com/en-us/collaboration/fourthparadigm/4th_paradigm_book_jim_gray_transcript.pdf">
+                    (Gray, 2007)</a></p>
+                    <p class="level2">Astronomy - Data are pooled in Virtual Observatories (VOs)</p>
+                    
+                    <p class="level2">CERN Large Hadron Collider "CERN does not have the computing
+                    or financial resources to crunch all of the data on site"
+                    (<a href="http://home.web.cern.ch/about/computing">CERN</a>)</p>
+                    
+                    <p class="level2"><a href="http://www.planethunters.org/">Planet Hunters</a>
+                    (<a href="http://www.wired.co.uk/news/archive/2013-01/07/amateur-astronomers-spot-new-planets">Wired, 2013</a>).
+                    </p>
+                    
+                    
+                    
+                    <aside class="notes">
+                        <p>Many people (e.g. Mayer-Schonberger and Cukier, 2013) have called the
+                        abundance of new data a "revolution". This might sound dramatic, but
+                        data are changing the way that people view, analyse and understand the
+                        world.</p>
+                        
+                        <p>In the <strong>physical sciences</strong>, some laboratories are generating so much
+                            data that they cannot hope to analyse it themselves. Instead, they are starting
+                            to provide online tools (e-science) so that the rest of the world can
+                            do some of the analysis for them.
+                        </p>
+                        
+                    </aside>
+                </section>
+                
+                <section id="Revolution2">
+                    <h2>The Big Data "Revolution"</h2>
+                    
+                    <img class="right" src="./figures/Network server room_87108880.jpg" alt="Server rack"/>
+                    
+                    <p>In business</p>
+                    <p class="level2">Loyalty cards etc - greater knowledge about customers</p>
+                    <p class="level3">E.g. predicting pregnancy <a
+                    href="http://www.forbes.com/sites/kashmirhill/2012/02/16/how-target-figured-out-a-teen-girl-was-pregnant-before-her-father-did/">
+                    and telling your parents!</a> <i>(take with a pinch of salt)</i></p>
+                    <p class="level2">Hidden value to 'secondary' / 'exhaust' data</p>
+                    <p class="level3">Online browsing behaviour</p>
+                    <p class="level3">Re-Captcha (digitising books)</p>
+                    <p class="level3">Street view (Google self-driving car, improved mapping, wireless locations)</p>
+                    
+                    <aside class="notes">
+                        <p>Business has seen the opportunities that this data deluge can offer
+                        and are starting to try to leverage it to make money. A common example is the
+                        use of <strong>purchasing habits</strong> (e.g. loyalty card data) to predict future
+                        purchases from current and past behaviour.</p>
+                        
+                        <p>A famous example of this is the <strong>Target</strong> retailer in the US sending
+                        free samples aimed at pregnant women to a teenager. Her father complained
+                        about the practice because, apparently, he did not know that his daughter
+                        was pregnant. (<i>I've struggled to find a reliable reference for this
+                        story, but it seems plausible</i>).</p>
+                        
+                        <p>More broadly, companies are realising that there is often hidden value
+                        to data that used to appear worthless.</p>
+                        
+                        <ul>
+                            <li>For example, information about how long people spend on websites,
+                            the links that they hover over, the places that they navigate to, etc.,
+                            can be useful for better understanding behaviour. Google, for example,
+                            use these types of techniques to optimise the order that results are
+                            returned in their search engine.</li>
+                            
+                            <li><strong>Re-captcha</strong> is a simple validation tool (it asks a person to type
+                            in some words to prove that they are human). But the technique is now
+                            being used to show people words from digitised books that a computer
+                            is having difficulty in understanding. Across the globe, these little,
+                            invisible, contributions can amount to millions of hours of work.</li>
+                            
+                            <li>Finally, <strong>street view</strong> is a Google service to let people see pictures of
+                            streets. However, when they were creating the service Google collected
+                            huge amounts of secondary data. E.g. the GPS locations of their cars
+                            can be used to improve their mapping products. There is also the
+                            possibility that it could help them to adapt an automatic car
+                            (reference needed).</li>
+                            
+                        </ul>
+                    </aside>
+                
+                </section>
+                
+                                
+                <section id="Revolution3">
+                    <h2>The Big Data "Revolution"</h2>
+                    
+                    <p>In medicine:</p>
+                    
+                    <p class="level2">Do mobile phones cause cancer?</p>
+                    <p class="level3">Mobile phone data (Danish Cancer Society)</p>
+                    <p class="level3">N&asymp;all - all cancer data and almost all mobile phone
+                    users (3.8 million person years)</p>
+                    <p class="level3">If you want to know whether mobile phones cause cancer, have
+                    a look at the study: <a href="http://www.bmj.com/content/343/bmj.d6387">http://www.bmj.com/content/343/bmj.d6387</a></p>
+                    
+                    <p class="level2">Abundance of patient data</p>
+                    <p class="level3">When patients take multiple drugsm unexpected <i>interactions</i> can occur</p>
+                    <p class="level3">Tatonetti et al. (2011) mine FDA adverse event reporting system (AERS) data.</p>
+                    <p class="level3">Find unexpected relationships between combinations of drugs and glucose levels</p>
+                    
+                    
+                    <p class="level2">Google Flu Trends
+                    (<a href="http://www.nature.com/nature/journal/v457/n7232/full/nature07634.html">Nature, 2009</a>)</p>
+                    <p class="level3">Identify particular search words linked to emergence of a flu cluster</p>
+                    <p class="level3">Able to predict new clusters rapidly (1 day vs. 1-2 weeks
+                    with traditional methods)</p>
+                    <p class="level3">(More recent accuracy is questionable)</p>
+                    
+                    
+                    <aside class="notes">
+                        
+                        <p>In medicine, having access to such vast amounts of data allows for
+                        huge studies that would not previously have been possible. For example, in
+                        the biggest study of its kind, the <strong>Danish Cancer Society</strong>
+                        conducted research that looked "all Danes aged ≥30 and born in Denmark
+                        after 1925, subdivided into subscribers and non-subscribers of mobile
+                        phones before 1995." The study found no evidence for increased risk of
+                        brain tumour as a result of owning a mobile phone.</p>
+                        
+                        <p></p>
+                        
+                        <p>Tatonetti, N.P., Denny, J.C., Murphy, S.N., Fernald, G.H., Krishnan, G., Castro, V.,
+                        Yue, P., Tsau, P.S., Kohane, I., Roden, D.M., Altman, R.B., 2011.
+                        Detecting Drug Interactions From Adverse-Event Reports: Interaction Between
+                        Paroxetine and Pravastatin Increases Blood Glucose Levels.
+                        <i>Clinical Pharmacology & Therapeutics</i> 90, 133–142. doi:10.1038/clpt.2011.83</p>
+                        
+                        
+                    </aside>
+                </section>
+                
+                <section id="Revolution4">
+                    <h2>The Big Data "Revolution"</h2>
+                    
+                    <img class="right" src="./figures/individual_tweeter_analysis-TFBMileyDemiNy3.jpg" />
+                    
+                    <p>In the social sciences:</p>
+                    
+                    <p class="level2">"Datafication" (Mayer-Schonberger and Cukier, 2013)</p>
+                    <p class="level3">friends, favourite places, moods, thoughts</p>
+                    
+                    <p class="level2">Location as data</p>
+                    <p class="level3">(particularly relevant to geographers)</p>
+                    
+                    <p class="level2">'Crisis' in the social sciences</p>
+                    <p class="level3">(More on this later)</p>
+                    
+                    
+                    
+                    <aside class="notes">
+                        
+                        <p>This <strong>'datafication'</strong> is spreading into many areas of our lives
+                        that we might think of as private. Through a combination of social media, transport
+                        use, mobile phones, spending habits, etc., etc., data are being created
+                        about who are friends are, where we travel to, even what we're thinking
+                        and feeling.</p>
+                        
+                        <p>The data hold great potential to learn about societies and improve our
+                        lives, but there are also obvious ethical risks (again, more on this later)</p>
+                        
+                    </aside>
+                </section>
+                
+                <section id="BigData-Characteristics">
+                    <h2>'Big Data' Characteristics</h2>
+                    <p>Volume</p>
+                    <p class="level2">There is lots of it!</p>
+                    <p class="level2">E.g. Public transport journeys (Oyster): <strong>3.5M daily tube journeys</strong>
+                    (not including busses, cycle hire, etc.). Mobile telephones: <strong>~5Bn events daily</strong>.</p>
+                    <p class="level2">But could be much smaller (<i>N=all</i>)</p>
+                    <p>Variety</p>
+                    <p class="level2">Extremely diverse sources and varied content within sources.</p>
+                    <p class="level2">'Exhaust' data not created for a particular purpose (unlike traditional surveys)</p>
+                    <p class="level2">Do the data tell us anything about the <i>real world</i>?</p>
+                    <p class="level2">Low signal to noise ratio</p>
+                    <p>Velocity</p>
+                    <p class="level2">Data streams, rather than static databases</p>
+                    <p class="level2">Often created (and necessarily analysed) in real time (c.f. climate models)</p>
+                    
+                    <aside class="notes">
+                        <p>It is also worth noting that some people add <i>veracity</i> </p>
+                        <p>Laney, D. (2001). 3D data management: Controlling data volume, velocity and variety. <i>META Group Research Note</i>, 6.</p>
+                        <p>Madden, S. (2012). From Databases to Big Data. Internet Computing, <i>IEEE</i>, 16(3), 4=6. doi:10.1109/MIC.2012.50</p>
+                    </aside>
+                </section>
+                
+                <section id="BigDataQuiz" data-state="question">
+                    <h2>Big data quiz</h2>
+                    <p>Which of the following do you think could be classified as 'Big Data'?
+                    (Think about volume, variety, velocity)</p>
+                    <p class="level2">Mobile telephone data</p>
+                    <p class="level2">Census data</p>
+                    <p class="level2">The Annual Business Survey</p>
+                    <p class="level2">Open Street Map data</p>
+                    <p class="level2">UK business tax returns</p>
+                    <p class="level2">MasterCard purchases</p>
+                    <p class="level2">Loyalty card data (e.g. Clubcard, Nectarcard)</p>
+                    <p class="level2">The scorer of every recorded Premiership goal</p>
+                </section>
+                
+                <section id="BigDataQuiz2" data-state="question">
+                    <h2>Big data quiz</h2>
+                    <p>Which of the following do you think could be classified as 'Big Data'?</p>
+                    <p class="level2">Vote at: <a href="http://pollev.com/nickmalleson">http://pollev.com/nickmalleson</a></p>
+                    
+                    <script src="http://www.polleverywhere.com/multiple_choice_polls/Lbomgl4OuhAC6Vz/web.js?height=450&results_count_format=percent&width=800" type="text/javascript"></script>
+                </section>
+                
+                
+                <section id="NewParadigm">
+                    <h2>A new research paradigm?</h2>
+                    
+                    <p>Correlation rather than causation</p>
+                    <p class="level2">Don't need to understand <i>why</i> something is happening,
+                    only that it <i>is</i> happening.</p>
+                    <p class="level2">e.g. Google Flu Trends</p>
+                    
+                    <p>Data-driven rather than hypothesis-driven -- letting the data speak</p>
+                    <p class="level2">"The End of Theory"
+                    (<a href="http://www.wired.com/science/discoveries/magazine/16-07/pb_theory">Anderson, 2008</a>)</p>
+                    
+                    <p>Lower sampling bias, can accept lower data accuracy</p>
+                    <p class="level2">With so much data, accuracy is less important (?)</p>
+                    
+                </section>
+                
+                <section id="Crisis">
+                    <h2>A Crisis for Social Scientists?</h2>
+                    
+                    <p>Savage and Burrows (<a href="http://soc.sagepub.com/content/41/5/885.short">2007</a>)
+                    have commended on a "coming crisis" for empirical sociology.</p>
+                    
+                    <p>The field has traditionally prided itself on developing statistical methods
+                    that can identify generalisable rules from small amounts of neat, well
+                    structured data.</p>
+                    
+                    <p>These small surveys are potentially being superseded by massive
+                    "crowd-sourced" databases that monitor activity patterns</p>
+                    
+                    <aside class="notes">
+                        
+                    </aside>
+                </section>
+                
+                <!--
+                <section id="IsCrisis" data-state="question">
+                    <h2>Is there a crisis?</h2>
+                    
+                    <p>List one or two 'traditional' surveys that you are familiar with.</p>
+                    <p>Could these be replaced by 'big data' analysis?</p>
+                    
+                    <span id="activity_box">
+                    <p class="level2" style="font-family:'Times New Roman', Times, serif">
+                        (e.g. the National Crime Survey for England and Wales)</p>
+                    </span>
+                    
+                    <p>We will come back to these after the lecture...</p>
+                    
+                    <aside class="notes">
+                        
+                    </aside>
+                </section>
+                -->
+                
+                
+                
+                <section data-state="outline" id="Outline3">
+                <h2>Outline</h2>
+                <ol class="outline">
+                    <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                    <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                    <li class="current"><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                    <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                    <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                    <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                    <li><a href=#/Conclusions>Conclusions</a></li>
+                    
+                </ol>
+                </section>
+                
+                
+                <section id="CitiesComplexSystems">
+                    
+                    <h2>Context - Cities and Complex Systems</h2>
+                    <img class="right" src="./figures/new_york.jpg" alt="new york at night" />
+                    <p>Recent work recognises the complex characteristics of cities (e.g. Batty, 2005)</p>
+                    <p>Strong potential of individual-level methods (e.g. ABM)</p>
+                    <p><strong>BUT</strong> data are often insufficient</p>
+                    <p class="level2">Excellent <i>residential</i> (night-time) population data (from censuses etc.).</p>
+		    <p class="level2">Limited <i>ambient</i> (day-time) population data.</p>
+                    <p>Potential for 'big' data sources to shed light on daily urban dynamics</p>
+                    
+                    <aside class="notes">
+                        <p>Batty, M. (2005). Agents, cells, and cities: new representational models for
+			simulating multiscale urban dynamics. <i>Environment and Planning A</i>,
+			vol. 37, pp. 1373-1394, 2005.</p>
+                    </aside>
+                </section>
+                
+                <section id="TwitterData">
+                    <h2>Example: Research with Twitter data</h2>
+                    <p>Surge in volume of contributions to social media</p>
+                    <p class="level2">66% of online adults use social media (Smith, 2011)</p>
+                    <p class="level2">100 million active Twitter accounts in 2011 (Twitter, 2011)</p>
+                    <p class="level2">270,000 tweets per minute produced worldwide in 2012 (TechCrunch, 2012)</p>
+                    <p>Accurate time stamps and (occasionally) spatial location</p>
+                    <p>Combination of text, media, location, etc.</p>
+                    <p>Potentially powerful source of data for urban dynamics</p>
+                </section>
+                
+                <section id="TwitterQuiz" data-state="question">
+                    <h3>What's in a Tweet?</h3>
+                    <p>The Twitter Application Programming Interface (API) provides full (?) access to Twitter data</p>
+                    <div class="small">
+                        <p class="level2"><a href="https://dev.twitter.com/console">https://dev.twitter.com/console</a></p>
+                        <p class="level2"><a href="https://api.twitter.com/1.1/statuses/show/478897997062111232.json">
+                            https://api.twitter.com/1.1/statuses/show/478897997062111232.json
+                        </a></p>
+                        <p class="level2"><a href="https://twitter.com/nickmalleson/status/478897997062111232">
+                            https://twitter.com/nickmalleson/status/478897997062111232
+                        </a></p>
+                    </div>
+                    <iframe src="https://apigee.com/embed/console/twitter" >
+                        <p>Your browser does not support iframes.</p</iframe>
+
+                </section>
+                
+                
+                <section id="LeedsData">
+		    <h2>Leeds Twitter Data</h2>
+                    <img class="right" src="./figures/tweets_density.png" alt="Tweet density" />
+                    <p>Leeds, UK</p>
+                    <p class="level2">Population 757,655 (in 2012)</p>
+                    <p class="level2">Central shopping / leisure / commercial area</p>
+                    <p class="level2">University and students</p>
+                    <p>Social media data</p>
+                    <p class="level2">Geo-located Twitter messages from 22 June 2011 to 14 April 2013</p>
+                    <p class="level2">N=1,955,655 (after cleaning)</p>
+                    <p>Two research directions:</p>
+                    <p class="level2"><strong>1 - Simulating daily urban movements</strong></p>
+                    <p class="level2"><strong>2 - Populations at risk of street crime</strong></p>
+		</section>
+                
+                <section id="SimulatingDaily">
+                    <h3>1 - Simulating daily urban movements</h3>
+                    <iframe src="http:////www.youtube.com/embed/5ySbS075MyA?&loop=1" class="iframe.youtube-player"></iframe>
+                </section>
+                
+                
+                <section id="SimulatingDaily-part1">
+                    <h3>Simulating daily urban movements</h3>
+                    <IMG class="right" style="height:500px; width:auto;"
+                             src="./figures/total_activityspace_density.png" alt='Total message density for all prolific users'/>
+                    <p>To begin with: Using twitter data to better understand how people use urban spaces</p>
+                    <!-- m_drive/mapping/projects/twitter/activity_spaces/ -->
+                    <p><strong>Stage 1: Extract prolific users</strong></p>
+                
+                </section>
+                
+                <section id="SimulatingDaily-KDE">
+                    <img class="right small" alt="Example 3D kernel" src="./figures/kernel_3d.png" />
+                    <h3>Simulating daily urban movements</h3>
+                    <p><strong>Stage 2 - Generate a message density surface</strong></p>
+                    <p>Kernel density estimation</p>
+                    <p>Highlight areas with high spatial message density for individual users</p>
+                    <br/>
+                    <IMG style="height:350px; width:auto;"
+                         src="./figures/example-3d.png"
+                         alt="Generating message density (3D)" />
+                </section>
+                
+                <section id="SimulatingDaily-anchorpoints">
+                    <h3>Simulating daily urban movements</h3>
+                    <p><strong>Stage 3 - Identify areas of 'unusually' high density (anchor points)</strong></p>
+                    <P>GIS method used to identify peaks in digital elevation data</P>
+                    <P class="level2">Use <a href="http://www.soi.city.ac.uk/~jwo/landserf/">Landserf</a> free software (Java) [11]</P>
+                    <IMG style="height:250px; width:auto;"
+                        src="./figures/activity_space-gis_analysis.png"
+                         alt="Example of GIS analysis to identify peaks" />
+                    <p>Anchor points are centres of peaks</p>
+                    <p>Assume highest peak is 'home'</p>
+                </section>
+                
+                <section id="GoodActivitySpace">
+                    <IMG src="./figures/good_activity_space.png" alt="Activity space identification - good results" />
+                </section>
+                
+                <section id="BadActivitySpace">
+                    <IMG src="./figures/bad_activity_space.png" alt="Activity space identification - bad results" />
+                </section>
+                
+                
+                
+                <section id="PopnAtRisk">
+                    <h3>2 - Populations at risk of street crime</h3>
+                    <img class="right" src="./figures/crime_2012-violent.png" alt="Violent crime map"/>
+                    <p>Are crime hot spots stable under the application of different population-at-risk measures?</p>
+                    <p>Which areas have the highest crime rates when using both residential (census) and mobile
+                    (social media) population at risk data?</p>
+                </section>
+                
+                
+                <section id="PopnAtRisk-Context">
+                    <h3>The Population-At-Risk in Crime Analysis</h3>
+                    
+                    <p>The population at risk is fundamental for crime rate calculations</p>
+                    
+                    <p style="text-align: center; font-style: italic">CrimeRate = Crime Count / Population At Risk</p>
+                    
+                    <p>No consensus on the best population-at-risk measure to use</p>
+                    <blockquote>
+                        &ldquo;a valid rate ... should form a probability statement, and therefore should be based on the risk
+                        or target group appropriate for each specific crime category&rdquo; (Boggs, 1965)
+                    </blockquote>
+                    
+                    <p>Usually default to <strong>residential population</strong></p>
+                    
+                    
+                </section>
+                
+                <section id="PopnAtRisk-Residential">
+                    <h3>Residential Population</h3>
+                    <img class="right" src="./figures/landscan.png" alt="Example Landscan data"/>
+                    <p>OK for some crime types</p>
+                    <p class="level2">E.g. Burglary</p>
+                    <p>But not for many others. E.g.:</p>
+                    <p class="level2">Assaults (Boivin 2013)</p>
+                    <p class="level2">Robbery (Zhang et al. 2012)</p>
+                    <p class="level2">Violent crime (Andresen 2006, 2011)</p>
+                    
+                    <p>Why residential?</p>
+                    <p class="level2">Data availability and resource constraints</p>
+                    
+                    <p>More recent attempts to estimate the <strong>ambient</strong> population:</p>
+                    <p class="level2"><strong>Proxies</strong> (Boggs, 1965). E.g. car park locations, pavement area, etc.</p>		
+                    <p class="level2"><strong>LandScan </strong>data (Andresen et al. 2012). Global estimates of average (24hr)
+                    population, resolution ~1km<sup style="font-size: small; ">2</sup></p>
+                </section>
+                
+                
+                <section id="PopnAtRisk-Results">
+                    <img src="./figures/gam-combined_centroid2-forGISRUK.png" alt="Clustering of crime"/>
+                </section>
+                
+                <section id="SocialMediaLimitations" data-state="question">
+                    <h2>Social Media - Limitations</h2>
+                    <p>What are some of the limitations of research with social media?</p>
+                    <p class="level2">Vote at: <a href="http://pollev.com/nickmalleson">http://pollev.com/nickmalleson</a></p>
+                    
+                    <script src="http://www.polleverywhere.com/polls/bHUAjaO5LOkKh2h/chart_widget.js?height=450&results_count_format=percent&width=800" type="text/javascript"></script>
+                </section>
+                
+                <section id="SocialMediaLimitations2">
+                    <h2>Social Media - Limitations</h2>
+                    
+                    <p>Messiness / Noise</p>
+                    <p class="level2">Not gathered using systematic / statistically guided methodology</p>
+                    <p class="level2">Omissions are commonplace</p>
+                    <p class="level2">No systematic corrections</p>
+                    <p>Generalisability</p>
+                    <p class="level2">The digital divide</p>
+                    <p class="level2">E.g. higher socioeconomic status groups are over represented in Twitter
+                    and Flickr (Li et al., 2013)</p>
+                    <p>Bias</p>
+                    <p class="level2">Over-representation of the most prolific users</p>
+                    <p class="level2">Or certain activities</p>
+                </section>
+                
+                <section id="SocialMedia-Conclusion">
+                    <h3>Research with Social Media: Conclusions</h3>
+                    <p>Lots of limitations, but considerable potential:</p>
+                    <p class="level2">Biased at present, but use of social media is rising</p>
+                    <p class="level2">Important <i>methodological</i> progress</p>
+                    <p class="level2">Best available data?</p>
+                    <p>Considerable investment from the Government and Research Councils. E.g. the
+                    <a href="http://www.lida.leeds.ac.uk/">Consumer Data Research Centre</a> at Leeds</p>
+                    <img style="width:100%; height:auto;" src="./figures/cdrc_logo.jpg" alt="CRDC Logo" />
+                </section>
+                
+                
+                
+                
+                <section data-state="outline" id="Outline4">
+                <h2>Outline</h2>
+                <ol class="outline">
+                    <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                    <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                    <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                    <li class="current"><a href=#/WhySmartCities>Smart Cities?</a></li>
+                    <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                    <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                    <li><a href=#/Conclusions>Conclusions</a></li>
+                    
+                </ol>
+                </section>
+                
+                
+                <section id="WhySmartCities2">
+                    
+                    <img src="./figures/shutterstock_3148280.jpg" alt="traffic jam" />
+                    
+                    <aside class="notes">
+                        <p>Traditional city plans are going to struggle to accommodate
+                        all the new residents. New approaches are needed. E.g.: see
+                        <i>Kent Larson: Brilliant designs to fit more people in every city.</i>
+                        <a href="http://www.ted.com/talks/kent_larson_brilliant_designs_to_fit_more_people_in_every_city.html">
+                        TED talk</a>.</p>
+                    </aside>
+                </section>
+                
+                
+                <section id="WhySmartCities">
+                    <h2>Why 'Smart Cities'?</h2>
+                    
+                    <iframe class="right" frameborder="0" scrolling="no" marginwidth="0" marginheight="0"
+                            src="http://www.google.co.uk/publicdata/embed?ds=n4ff2muj8bh2a_&amp;ctype=l&amp;strail=false&amp;bcs=d&amp;nselm=h&amp;met_y=PopPerUrb&amp;fdim_y=scenario:1&amp;scale_y=lin&amp;ind_y=false&amp;rdim=world&amp;idim=country:GB:US:CN:IN:BR&amp;ifdim=world&amp;tstart=1287702000000&amp;tend=2865625200000&amp;hl=en_US&amp;dl=en_US&amp;ind=false&amp;xMax=160.68656750000002&amp;xMin=-152.20405749999998&amp;yMax=-71.48991227507754&amp;yMin=81.05578768963501&amp;mapType=t&amp;icfg&amp;iconSize=0.98">
+                    </iframe>
+                    
+                    <p>By 2030, the population living in UK cities is expected to rise from
+                    <strong>79%</strong> (1950) to <strong>92.2%</strong></p>
+                    <p class="level2"> <a href="http://www.theguardian.com/news/datablog/2009/aug/18/percentage-population-living-cities">
+                        The Guardian</a>, using <a href="http://www.wri.org">World Resources Institute</a> data)</p>
+                    
+                    <p>Worldwide, the proportion is estimated to rise from <strong>40%</strong>
+                    in 1990 to <strong>70%</strong> by 2050</p>
+                    <p class="level2"><a href="http://www.who.int/gho/urban_health/situation_trends/urban_population_growth_text/en/">
+                        World Health Organisation</a></p>
+                    
+                </section>
+                
+                
+                
+                <section id="WhatAreSmartCities">
+                    <h2>What are 'Smart Cities'?</h2>
+                    <!--<h4>... and what do they have to do with geoplanning ...</h4>-->
+                    
+                    <p>We have seen how much (new) data are available</p>
+                    
+                    <p>This is being used by businesses and by researchers</p>
+                    
+                    <p>It could also be put to good use at improving the lives of people in
+                    cities</p>
+                   
+                </section>
+                
+                <section id="WhatAreSmartCities2">
+                    <h2>What are 'Smart Cities'?</h2>
+                    <!--
+                    <h4>... and what do they have to do with geoplanning ...</h4>
+                    -->
+                    
+                    <p>Some definitions.</p>
+                    
+                    <div class="small">
+                        <p>Smart city is a term that gets together in an integrated way
+                        those initiatives oriented at <strong>improving the quality of life,
+                        sustainability and efficient management </strong> of services while innovating
+                        in relation to the materials, resources and models used and using
+                        <strong>technology</strong> in an intensive manner. (CTECNO 2012)</p>
+                        <p>[A city] that uses information and communications
+                        <strong>technologies</strong> to make the critical infrastructure components
+                        and services ... more <strong>aware, interactive and efficient</strong>
+                        (Belissent 2010)</p>
+                        <p>A city [is] 'smart' when investments  ... fuel sustainable
+                        economic growth and a <strong>high quality of life</strong>, with a wise
+                        management of natural resources, through participatory government. (Caragliu et al. 2009)</p>
+                        <p> ... the urban center of the future, made <strong>safe,
+                        secure, environmentally green, and efficient</strong> because all structures ...
+                        are designed, constructed and maintained making use of advanced, integrated
+                        materials, sensors, electronics, and networks which are interfaced with
+                        computerized systems comprised of databases, tracking, and decision-making
+                        algorithms. (Bowerman et al. 2000)</p>
+                    </div>
+                    
+                    
+                    <p>What are common to all of these definitions?</p>
+                    <span id="activity_box-small">&nbsp;</span>
+                    
+                    <aside class="notes">
+                        <p>There are some commonalities to all these definitions. Firstly, they
+                        all mention <strong>social good</strong> or improving <strong>quality of
+                        life</strong>. Also, <strong>technology</strong> is seen as a key ingredient
+                        to making cities 'smarter'. </p>
+                        </>More interesting, perhaps, is that the definitions have changed little
+                        in the past decade. Also, they are somewhat <strong>vague</strong>. From
+                        reading these, is it really clear what a 'smart city' is?</p>
+                        
+                        <p>Definitions from: Galdon-Clavell, G., 2013. (Not so) smart cities?: The
+                        drivers, impact and risks of surveillance-enabled smart environments.
+                        <i>Science and Public Policy</i>.
+                        <a href="http://spp.oxfordjournals.org/content/early/2013/10/10/scipol.sct070">Online first</a>.</p>
+                    </aside>
+                    
+                    
+                </section>
+                                
+                                
+                
+                <section id="WhatAreSmartCities3">
+                    <h2>What are 'Smart Cities'?</h2>
+                    <!--
+                    <h4>... and what do they have to do with geoplanning ...</h4>
+                    -->
+                    
+                    <p>'Smart Cities' are characterised by:</p>
+                    <p class="level2">Abundance of data</p>
+                    <p class="level2">Technologies for interpretation and adding value</p>
+                    <p class="level3">Simulation</p>
+                    <p class="level3">Visualisation</p>
+                    <p class="level3">Animation</p>
+                    <p class="level3">etc.</p>
+                    <p class="level2">Mechanisms for feedback and control</p>
+                    
+                    <p>Lots of examples to follow...</p>
+                    
+                    <aside class="notes">
+                        <p>We have seen how much <strong>data</strong> is becoming available;
+                        a smart city is able to make use of these data to improve services
+                        and become more efficient / sustainable. This will require
+                        <strong>technological innovation</strong>, in areas such as:</p>
+                        
+                        <ul>
+                            <li><strong>Simulation</strong></li>
+                            <li><strong>Visualisation</strong></li>
+                            <li><strong>Animation</strong></li>
+                        </ul>
+                        
+                        <p>It will also require mechanisms for <strong>feedback and
+                        control</strong> to adapt to the changing behaviour of citizens.
+                        Examples include:</p>
+                        <ul>
+                            <li><strong>Intelligent traffic lights</strong> that adapt
+                            dynamically to traffic flow.</li>
+                            <li><strong>Congestion charging</strong> help route people
+                            away from congested areas and encourage the use of other forms
+                            of transport.</li>
+                            <li><strong>Policing, emergency vehicles etc</strong> that
+                            are able to better predict <i>where</i> and, equally importantly,
+                            <i>when</i> they will be needed.</li>
+                        </ul>                        
+                    </aside>
+                    
+                </section>
+                
+                
+                
+                
+                
+                <section data-state="outline" id="Outline5">
+                <h2>Outline</h2>
+                    <ol class="outline">
+                        <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                        <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                        <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                        <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                        <li class="current"><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                        <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                        <li><a href=#/Conclusions>Conclusions</a></li>
+                        
+                    </ol>
+                </section>
+                
+                
+                <section id="IntelligentRubbish">
+                    
+                    <h2>Intelligent Rubbish</h2>
+                    
+                    <iframe class="youtube-player-right"
+                            src="http://www.youtube.com/embed/fvTZc5hWBNY#t=44"></iframe>
+                    
+                    <p>Finding new ways to understand urban dynamics ... </p>
+                    <p class="level2">(example from the <a href="http://senseable.mit.edu/trashtrack/">Trash Truck</a> project)</p>
+                    
+                    <aside class="notes">
+                        <p>This is a project by the <a href="http://senseable.mit.edu/">
+                        MIT Senseable Cities Laboratory</a>. They are probably the academic leaders
+                        in big data and smart cities.</p>
+                    </aside>
+                </section>
+                
+                <section id="IntelligentTraffic">
+                    <h2>Intelligent Traffic Systems</h2>
+                 
+                    <img class="right"
+                         src="http://www-03.ibm.com/ibm/history/ibm100/images/icp/S116052A51247N58/us__en_us__ibm100__management_transportation_flow__icon__540x324.png"
+                         />
+                    
+                    <p>Stockholm becomes 'Green Capital'</p>
+                    <p>Part of this thanks to intelligent traffic systems designed with
+                    <a href="http://www-03.ibm.com/ibm/history/ibm100/us/en/icons/transportationflow/">IBM: </a></p>
+                    
+                    <p style="font-size: 0.7em"><i>To help Stockholm overcome its traffic congestion
+                    problems, IBM helped them develop a road charging system that covers a
+                    24-square-kilometer area of the inner city with 18 barrier-free control points
+                    equipped with cameras and a mix of payment channels. This project resulted in
+                    a 50 percent drop in morning traffic waiting time, an increase of 60,000
+                    passengers per day in public transportation ridership and an overall improved
+                    quality of life for the residents of Stockholm.</i></p>
+                    
+                    <aside class="notes">
+                        <p>Most of this material has come directly from IBM. Remember that they
+                        are not an unbiased source. If I were discussing this project in a
+                        research paper, I'd definitely look for other sources.</p>
+                        
+                    </aside>
+                </section>
+                
+                <section id="IntelligentTraffic2">
+                    <h2>Intelligent Traffic Systems</h2>
+                 
+                    <p>Or you could go one step further...</p>
+                    
+                    <iframe src="http://www.youtube.com/embed/zKLAeq1m2TY#t=63"
+                            class="youtube-player"></iframe>
+                    
+                    <aside class="notes">
+                        <p>The Affective Intelligent Driving Agent (<a href="http://senseable.mit.edu/aida2/">AIDA</a>)
+                        project is a collaboration between MIT and Audi. Its aim is to present
+                        some of the new, real-time data that are becoming available to drivers.
+                        One of the main challenges is how to present all this information without
+                        distracting the driver.</p>
+                        
+                    </aside>                    
+                    
+                </section>
+                
+                
+                
+                <section id="CityDashboard-London">
+                    <h2>City Dashboards - London</h2>
+                    
+                    <a href="http://citydashboard.org/london/" target="_blank">
+                        <img class="right" src="./figures/dashboard.png" alt="Example of London dashboard"/>
+                    </a>
+                    
+                    <p>A way to collect and present data from a variety of different sources</p>
+                    
+                    <p>Become an integral part of urban planning and management?</p>
+                    
+                    <p>Support a feedback loop; people make decisions based on dynamic, real-time
+                    data.</p>
+                    
+                    <p>Empowering citizens with knowledge about where they live?</p>
+                    
+                    <aside class="notes">
+                        <p>These dashboards provide access to a wealth of publicly available data
+                        about cities. Although they're mostly toys at the moment, it's easy to
+                        see how they could become an integral part of urban planning and daily
+                        management.</p>
+                        
+                        <p>Also, as the data are publicly available, they help to empower
+                        citizens with knowledge about where they live.</p>
+                    </aside>
+                    
+                </section>
+
+                
+                <section id="CityDashboard-Leeds">
+                    <h3>City Dashboards - <a href="http://citydashboard.org/leeds/">Leeds</a></h3>
+                    
+                    <iframe src = "http://citydashboard.org/leeds/" ></iframe>
+                    
+                </section>
+                
+                <section id="CityDashboard-Singapore">
+                    
+                    <h2>City Dashboards - Singapore</h2>
+                    
+                    <iframe class="youtube-player-right" src="http://www.youtube.com/embed/2aEPkyOBtRo"></iframe>
+                    
+                    <p>Or, if you are MIT, the dashboard looks more like this...</p>
+                    <p class="level2">A project as part of the <a href="http://senseable.mit.edu/">
+                        MIT Senseable Cities Laboratory</a>.</p>
+                    
+                </section>
+                
+                <!-- 
+                <section id="NGrams">
+                    
+                    <iframe src="https://books.google.com/ngrams"></iframe>
+                    
+                    <aside class="notes">
+                        
+                    </aside>
+                </section>
+                -->
+                
+                
+
+                
+                <section id="ParcelDelivery">
+                    <h2>Efficient Parcel Delivery</h2>
+                    
+                    <p>Not all projects are still in planning, some are a reality.</p>
+                    
+                    <p>UPS adopted a new route-finding system called ORION
+                    (On-Road Integration Optimisation and Navigation)</p>
+                    
+                    <p class="level2">Massive data-crunching algorithm (all trucks have sensors)</p>
+                    
+                    <p class="level2">Optimises parcel routes (even trying to avoid left turns)</p>
+                    
+                    <p>Some numbers (<a href="http://www.wired.com/business/2013/06/ups-astronomical-math/">
+                        Wired magazine</a>):</p>
+                        <p class="level2"><strong>85 million</strong> miles saved</p>
+                        <p class="level2"><strong>15 trillion trillion (15,000,000,000,000,000,000,000,000)</strong>
+                        possible routes for a driver with 25 packages</p>
+                        <p class="level2"><strong>$30 million</strong> saved per year if each driver travels
+                        one fewer mile each day.</p>
+                        
+                        <aside class="notes">
+                            <p>Many of the systems we have seen are prototypes. But there are
+                            examples of projects that are in operation at the moment.</p>
+                            
+                            <p>I couldn't find a good academic reference for these numbers, so use
+                            with care. Although Wired Magazine is pretty reliable.</p>
+                        </aside>
+                               
+                        
+                </section>
+                
+                <section id="SmartCityLondon">
+                    <h2>London as a Smart City</h2>
+                    
+                    <p>Some developments are taking place closer to home...</p>
+                    
+                    <p><a href="http://www.bbc.co.uk/news/technology-23757739">
+                    http://www.bbc.co.uk/news/technology-23757739</a></p>
+                    
+                    <iframe class="youtube-player" src="http://www.youtube.com/embed/F0NU4sHQXhs"></iframe>
+                    
+                </section>
+                
+                
+                
+                
+                
+                
+                
+                
+                <section data-state="outline" id="Outline6">
+                <h2>Outline</h2>
+                <ol class="outline">
+                    <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                    <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                    <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                    <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                    <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                    <li class="current"><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                    <li><a href=#/Conclusions>Conclusions</a></li>
+                    
+                </ol>
+                </section>
+                
+                <section id="EthicalImplications" data-state="question">
+                    <h2>Ethical Implications</h2>
+                    <p>What are some of the ethical implications associated with the use of Big Data?</p>
+                    <p class="level2">E.g. think about: surveillance, informed consent, privacy</p>
+                    <p class="level2">Vote at: <a href="http://pollev.com/nickmalleson">http://pollev.com/nickmalleson</a></p>
+                    
+                    <script src="http://www.polleverywhere.com/polls/Dd1IxT0Ae849xPD/chart_widget.js?height=450&results_count_format=percent&width=800" type="text/javascript"></script>
+                </section>
+                
+                <section id="GoodOrEvil">
+                    <h2>A force for good or for evil?</h2>
+                    
+                    <img class="right" src="./figures/luke.png" alt="Luke Skywalker" />
+                    
+                    <p>Some people are very optimistic about the possibilities offered by 'Smart
+                    Cities' (e.g. <a href="http://www.envplan.com/abstract.cgi?id=b3902ed">Batty, 2012</a>).</p>
+                    
+                    <p>Opportunities</p>
+                    
+                    <p class="level2">A deeper understanding of how urban systems function (at least
+                    in the short term).</p>
+                    <p class="level2">Manage disruption / emergencies - understand points of failure</p>
+                    <p class="level2">Improve quality of life</p>
+                    <p class="level2">Manage burgeoning urban populations</p>
+                    <p class="level2">Democratisation of urban management (through public data)</p>
+                    
+                    <aside class="notes">
+                        <p>Batty, M., 2012. Smart cities, big data. <i>Environment and Planning B: Planning and Design
+                        </i> 39, 191-193.<a href="http://www.envplan.com/abstract.cgi?id=b3902ed">
+                        Link</a>.</p>
+                        
+                    </aside>
+                </section>
+                
+                   <section id="GoodOrEvil2">
+                    <h2>A force for good or for evil?</h2>
+                    
+                    <p>But others are less so (e.g. <a href="http://dx.doi.org/10.1093/scipol/sct070">
+                    Galdon-Clavell, 2013</a>). </p>
+                    
+                    <img class="right" src="./figures/darth.png" alt="Darth Vader" />
+                    
+                    <p>Risks</p>
+                    
+                    <p class="level2">How to align 'smart cities' with</p>
+                    <p class="level3">informed consent</p>
+                    <p class="level3">privacy and data protection</p>
+                    <p class="level3">dual use</p>
+                    <p class="level3">non-discrimination</p>
+                    <p class="level2">Risks of abuse (big brother)</p>
+                    <p class="level3">E.g. "Surveillance ...  has challenged and undermined the
+                    right of all humans to "remain unobserved and unmolested" in their thoughts,
+                    personal environments and communications." (<a href=
+                    "http://www.theguardian.com/world/2013/dec/10/surveillance-theft-worlds-leading-authors">The Guardian, 2013</a>).</p>
+                    <p class="level2"></p>
+                    <p class="level2"></p>
+                    <p class="level2">Market driven, anti-democratic</p>
+                    <div class="small"><p class="level2">This all sounds awesome, but have you spotted the flaw in the
+                    plan? In such a smart city, the control systems would all be programmed,
+                    installed and managed by IBM and CISCO. These private companies would have huge,
+                    billion-dollar contracts to manage the biggest cities in the world. When Ops
+                    Centres around the world are eventually automated, IBM's software will
+                    effectively become your digital mayor - or tyrant.</br>
+                    ... IBM would become a de facto member of the government. After all,
+                    politicians might tell IBM how they want a city to be run, but it's IBM's
+                    implementation that ultimately matters. A new law might decree that smart cars
+                    travelling in smart cities must be limited to 30 mph - but what if IBM disagrees,
+                    or says the system doesn't have that capability, or simply takes six months
+                    to implement the change?<a href=
+                    "http://www.extremetech.com/extreme/127647-the-internet-of-things-and-smart-cities-will-an-ibm-computer-be-your-next-mayor"
+                    >(Anthony, 2012)</a>.</p></div>
+                                      
+                    
+                    <aside class="notes">
+                        
+                        <p>Galdon-Clavell, Gemma (2013). (Not so) smart cities?: The drivers, impact and
+                    risks of surveillance-enabled smart environments. <i>Science and Public Policy</i>
+                    <a href="http://dx.doi.org/10.1093/scipol/sct070">Online first</a>.</p>
+                        
+                    <p>Anthony, S., 2012. The internet of things and smart cities: Will an IBM
+                    computer be your next mayor? <i><a href=
+                       "http://www.extremetech.com/extreme/127647-the-internet-of-things-and-smart-cities-will-an-ibm-computer-be-your-next-mayor"
+                       >ExtremeTech</a></i>.</p>                        
+                    </aside>
+                </section>
+                   
+                   
+                   
+                   
+                   
+                   
+                   
+                <section data-state="outline" id="Outline7">
+                <h2>Outline</h2>
+                <ol class="outline">
+                    <li><a href=#/TypesOfData>Abundance of Data</a></li>
+                    <li><a href=#/Revolution>The Big Data "Revolution"</a></li>
+                    <li><a href=#/SocialMediaResearch>Urban Dynamics and Social Media</a>
+                    <li><a href=#/WhySmartCities>Smart Cities?</a></li>
+                    <li><a href=#/IntelligentRubbish>Smart Cities Examples</a></li>
+                    <li><a href=#/GoodOrEvil>A Force for Good or Evil?</a></li>
+                    <li class="current"><a href=#/Conclusions>Conclusions</a></li>
+                    
+                </ol>
+                </section>
+                
+                <section id="Conclusions">
+                    <h2>Conclusions</h2>
+                    <p>Abundance of new data</p>
+                    <p>Business already exploiting new sources</p>
+                    <p>Potentially use these data to better understand urban dynamics</p>
+                    <p>Lots of examples of new 'smart cities' initiatives</p>
+                    <p class="level2"><a href="http://www.ibm.com/smarterplanet/">IBM Smarter Planet</a></p>
+                    <p class="level2"><a href="http://www.cisco.com/web/strategy/smart_connected_communities.html">
+                        CISCO Smart + Connected Communities</a></p>
+                    <p>Ultimately improve quality of life (?)</p>
+                    <p>Big questions around data protection, privacy, ethics and surveillance.</p>
+                </section>
+            
+                <section class="title"  id="Thankyou">
+                    
+                    <img style="width:100%; height:auto;" src="./figures/cdrc_logo.jpg" alt="CRDC Logo" />
+                    
+                    <p></p>
+                    
+                    <h2 style="text-transform: none;">Big Data and Smart Cities</h2>
+                    
+                    
+                                        
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        <strong>Dr Nick Malleson</strong><br/>
+                        School of Geography, University of Leeds
+                    </h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    <h5>Slides: <a style="color: inherit;" href="http://mass.leeds.ac.uk/html/slides/LURE-LAP-BigData-2014/">
+                        http://mass.leeds.ac.uk/html/slides/LURE-LAP-BigData-2014/</a></h5>
+                    
+                    
+                </section>
+            
+            </div> <!-- class=slides -->
+            
+            <!-- **** Slides finish here **** -->
+            
+        </div> <!-- class=reveal -->
+        
+            
+            <script src="./reveal.js/lib/js/head.min.js"></script>
+            <script src="./reveal.js/js/reveal.min.js"></script>
+
+            <script>
+
+                    // Full list of configuration options available here:
+                    // https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                            controls: true,
+                            progress: true,
+                            slideNumber: true,
+                            history: true,
+                            center: true,
+                            previewLinks: true,  // Opens links in an iframe preview overlay
+
+                            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                            // Parallax scrolling
+                            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                            // parallaxBackgroundSize: '2100px 900px',
+                            
+                            // Ptresentation size
+                            width: 960,
+                            height: 700,
+                        
+                            // Factor of the display size that should remain empty around the content
+                            margin: 0.05,
+                        
+                            // Bounds for smallest/largest possible scale to apply to content
+                            minScale: 0.2,
+                            maxScale: 1.0,
+
+                            // Optional libraries used to extend on reveal.js
+                            dependencies: [
+                                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                            ]
+                    });
+
+            </script>
+
+	</body>
+</html>

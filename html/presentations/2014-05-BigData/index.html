@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>BigDataScience 2014: New Insights into Individual Activity Spaces using Crowd-Sourced Big Data<</title>
+
+        <meta name="description" content="New Insights into Individual Activity Spaces using Crowd-Sourced Big Data">
+        <meta name="author" content="Nick Malleson">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        
+        <!-- Styles for the slides. -->
+        
+        <!-- Remove the one below to to have all on one continuous page with notes-->
+        <link rel="stylesheet" href="./reveal.js/css/reveal.min.css"/>
+        
+        <!-- Default reveal.js template -->
+        <!--
+            <link rel="stylesheet" href="./reveal.js/css/theme/default.css" id="theme">
+        -->
+        
+        
+        <!-- Adapted tempate -->        
+        <link rel="stylesheet" href="./styles/nick_reveal.css" id="theme">
+
+        <!-- For syntax highlighting -->
+        <!-- <link rel="stylesheet" href="./reveal.js/lib/css/zenburn.css"> -->
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+                document.write( '<link rel="stylesheet" href="./reveal.js/css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="reveal">
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+
+            <div class="slides">
+                
+                <section class="title"  id="Title">
+                    
+                    
+                    <h2 style="text-transform: none;">New Insights into Individual Activity Spaces using Crowd-Sourced Big Data</h2>
+                    
+                    
+                    <h3>Presentation to <a style="color: inherit"
+                        href="http://www.scienceengineering.org/ase/conference/2014/bigdata/sanjose/website/">
+                        Big Data Science</a>
+                    </h3>
+                    <h4>Stanford, CA, USA, May 27 - May 31, 2014</h4>
+                    
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        <strong>Dr Nick Malleson</strong> and <strong>Prof. Mark Birkin</strong><br/>
+                        School of Geography, University of Leeds
+                    </h4>
+                    
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    
+                    <h5 style="border-top: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                        Slides: <a style="color: inherit;" href="http://bit.ly/1jrYInL">
+                        http://bit.ly/1jrYInL</a>
+                    </h5>
+                    
+                </section>
+                
+                <section  id="Outline">
+                
+                    <h3>Outline</h3>
+		    
+		    <p>Context: Towards a model of daily urban dynamics</p>
+		    <p>Background and theoretical frameworks</p>
+                    <img class="right" src="./figures/Shoppers in Hong Kong_108365843.jpg" alt="Shoppers in Hong Kong"/>
+		    <p class="level2">Space-time geographies</p>
+		    <p class="level2">Awareness / activity spaces</p>
+                    <p class="level2">Relevant research</p>
+		    <p>Data and the study area</p>
+                    <p>Method</p>
+                    <p class="level2">Estimating anchor points</p>
+                    <p class="level2">Textual analysis</p>
+		    <p>Results and Conclusions</p>
+                    
+                </section>
+                
+		<section id="Context">
+                    <h3>Context</h3>
+		    <p>Excellent <i>residential</i> (night-time) population data (from censuses etc.).</p>
+		    <p>But limited <i>ambient</i> (day-time) population data.</p>
+                    <p>Ambient population is relevant to diverse fields:</p>
+		    <p class="level2">Disease spread / mitigation</p>
+		    <p class="level2">Transport planning</p>
+                    <p class="level2">Pollution / disease burdens</p>
+		    <p class="level2">Crime (e.g. [13])</p>
+		    <p class="level2">. . .</p>
+                </section>
+                
+                <section id="Example1-Simulation">
+                    <iframe src="http:////www.youtube.com/embed/5ySbS075MyA?&loop=1" class="iframe.youtube-player"></iframe>
+                </section>
+                
+                <section id="Example2-PopnAtRisk">
+                    <img src="./figures/gam-combined_centroid2-forGISRUK.png" alt="Clustering of crime"/>
+                </section>
+		
+
+                <section id="ResearchQuestions">
+                    
+                    <h3>Research Aims</h3>
+                    
+                    <iframe class="youtube-player-right" src="http://www.youtube.com/embed/O_Mk2M4pVh0" frameborder="0" allowfullscreen></iframe>
+                    <p>Evaluate the extent to which crowd-sourced data can be used to gain insight into the individual
+                    <i>activity spaces</i> (the places that individuals visit on a regular basis)</p>
+                    <p>Identify the functions of different anchor points</p>
+                    
+                </section>
+
+		
+		<section id="Background1">
+		    <h3>Background: Space-Time Geography</h3>
+		    <p>Cities characterised as complex systems (e.g. [1])</p>
+		    <p class="level2">Aggregate <i>smoothing</i> of underlying dynamism</p>
+		    <img class="right" alt="Space-time prism" src="./figures/space_time_prism.png" />
+		    <p>Theories exploring spatio-temporal movement constraints</p>
+		    <p class="level2">E.g. Time Geography [2]</p>
+		    <p>Better understanding of:</p>
+		    <p class="level2">Who visits particular locations</p>
+		    <p class="level2">Which other locations have those people visited </p>
+		    <p class="level2">Who might they have met during their journey</p>
+		</section>
+		
+		<section id="Background2">
+		    <h3>Background: Activity Spaces and Anchor Points</h3>
+		    <p>First step towards a more realistic model of individual behaviour</p>
+		    <p>Activity spaces</p>
+		    <p class="level2">The <i>spaces</i> in which an individual's normal activity occurs</p>
+		    <p>Anchor points</p>
+		    <p class="level2">Important individual locations (home, work, school, etc.).</p>
+		    <p>Central pillar for diverse disciplines (e.g. criminology, geography)</p>	
+		    <p>Very difficult to quantify</p>
+		    <p>New opportunities offered by 'big' crowd-sourced</p>
+		</section>
+                
+                <section id="Background3">
+                    <h3>Big Data: from a geographer's perspective</h3>
+                    <p>Traditional data</p>
+                    <p class="level2">UK census: ~2000 output areas in Leeds</p>
+                    <p class="level2">Microsimulation: ~800,000 individuals</p>
+                    <p class="level2">Our twitter data: ~2M points</p>
+                    <p class="fragment level2">Big Data = "It won't open in Excel!"</p>
+                    <div class="fragment">
+                        <p>New data...</p>
+                        <p class="level2">Mobile telephones: ~5Bn events daily</p>
+                        <p class="level2">Public transport journeys (Oyster): 3.5M daily tube journeys
+                        (not including busses, cycle hire, etc.)</p>
+                        
+                        <p>As well as volume, there are difficulties with <strong>velocity</strong> and <strong>variety</strong></p>
+                    </div>
+                    
+                </section>
+                
+                <section id="Background4">
+                    <h3>Big Data: from a geographer's perspective</h3>
+                    <p>Similar to fourth paradigm data intensive research [3] in the physical sciences</p>
+                    <p>"Crisis" in "empirical sociology" [4]</p>
+                    <p class="level2">"One of the areas that is being most dramatically shaken up by <i>N = all</i> is
+                        the social sciences. They have lost their monopoly of making sense of empirical
+                        social data, as big data analysis replaces the highly skilled survey specialists
+                        of the past. .. When data is collective passively while people do what they
+                        normally do anyway, the old biases associated with sampling and questionnaires
+                        disappear." [5]</p>
+                </section>
+                
+
+		
+		
+		<section id="Data">
+		    <h3>Data and the Study Area</h3>
+                    <img class="right" src="./figures/tweets_density.png" alt="Tweet density" />
+                    <p>Leeds, UK</p>
+                    <p class="level2">Large city in north England</p>
+                    <p class="level2">Population 757,655 (in 2012)</p>
+                    <p class="level2">Central shopping / leisure / commercial area</p>
+                    <p>Social media data</p>
+                    <p class="level2">Geo-located Twitter messages from 22 June 2011 to 14 April 2013</p>
+                    <p class="level2">N=1,955,655 (after cleaning)</p>
+		</section>
+            
+                <!--
+                <section>
+                    <H3>Prior research: Spatio-temporal behaviour</H3>
+                    <P>Aim: To what extent can we learn about spatio-temporal behaviour from crowd-sourced data?</P>
+                    <IMG class="right" style="float:right; width:40%; height:auto;" src="./figures/2d_space_time.png" />
+                    <IMG class="right" style="float:left; width:40%; height:auto;" src="./figures/individual_tweeter_analysis.png" />
+                </section>
+                -->
+                
+                <section>
+                    <!-- m_drive/mapping/projects/twitter/activity_spaces/ -->
+                    <IMG class="right" style="height:500px; width:auto;"
+                             src="./figures/total_activityspace_density.png" alt='Total message density for all prolific users'/>
+                    <H3>Stage 1 - Extract prolific users</H3>
+                    <P>Those with 50+ messages in the data</P>
+
+                
+                </section>
+                
+                <section>
+                    <img class="right small" alt="Example 3D kernel" src="./figures/kernel_3d.png" />
+                    <H3>Stage 2 - Generate a message density surface</H3>
+                    <p>Kernel density estimation</p>
+                    <p>Highlight areas with high spatial message density for individual users</p>
+                    <br/>
+                    <IMG style="height:350px; width:auto;"
+                         src="./figures/example-3d.png"
+                         alt="Generating message density (3D)" />
+                </section>
+                
+                <section>
+                    <H3>Stage 3 - Identify areas of 'unusually' high density (<STRONG>anchor points</STRONG>)</H3>
+                    <P>GIS method used to identify peaks in digital elevation data</P>
+                    <P class="level2">Use <a href="http://www.soi.city.ac.uk/~jwo/landserf/">Landserf</a> free software (Java) [11]</P>
+                    <IMG style="height:250px; width:auto;"
+                        src="./figures/activity_space-gis_analysis.png"
+                         alt="Example of GIS analysis to identify peaks" />
+                    <p>Anchor points are centres of peaks</p>
+                    <p>Assume highest peak is 'home'</p>
+
+                </section>
+                
+                <section>
+                    <IMG src="./figures/good_activity_space.png" alt="Activity space identification - good results" />
+                </section>
+                
+                <section>
+                    <IMG src="./figures/bad_activity_space.png" alt="Activity space identification - bad results" />
+                </section>
+                
+                
+		<section id="TextAnalysis">
+		    <h3>Stage 4 - Analysing place functions</h3>
+                    <p>Identify words with distinction spatio-temporal profiles [12]</p>
+                    <p>Calculate 'domestic skew' - proportion of words that occur at 'home' locations
+                    compared to anywhere else ('away').</p>
+                    <p class="level2">&nbsp;</p>
+                    <img style="height:auto; width:auto;"
+                         src="./figures/word_classification.png" alt="Domestic skew for some marker words" />
+		</section>
+                
+		<section id="Summary">
+		    <h3>Summary / Conclusions</h3>
+                    <p>Explore awareness spaces / anchor points from social media data</p>
+                    <p>Estimate 'home' locations</p>
+                    <p>Some words clearly associated with 'home', others with 'away'</p>
+                    <p><strong>Severe limitations to the data, but future potential is promising.</strong></p>
+                    <p>Best available resource?</p>
+		</section>
+                
+                <section>
+                    <img class="right" style="width:40%;" src="./figures/gam-combined_centroid2-forGISRUK.png"
+                         alt="Clustering of crime"/>
+                    <h3>Future work</h3>
+                    <p>Further anlysis. Particularly:</p>
+                    <p class="level2"><strong>Validation / verification to handle skew, representation,
+                    accuracy, bias</strong></p>
+                    <p class="level2">Comparison with other data (e.g. geodemogrpahics)</p>
+                    <p class="level2">Identify additional activities (shopping, leisure, school, etc.).</p>
+                    <p class="level2">National language processing</p>
+                    <p class="level2">Leeds Institute for Data Analytics (LIDA)
+                    and the Consumer Data Research Centre (CDRC)</p>
+                    <!--<p>Applications:</p>
+                    <p class="level2">Crime (e.g. [13])</p>
+                    <p class="level2">Health / polution</p>
+                    <p class="level2">Transport / sustainability</p>-->
+                </section>
+                
+                <section id="RelatedResearch">
+		    <h3>Similar Research</h3>
+		    <p>Classifying neighbourhoods based on social media contributions</p>
+		    <p class="level2">LiveHoods (<a href="http://livehoods.org/">http://livehoods.org/</a>) [6]</p>
+		    <p class="level2">Functional profiles or areas [7]</p>
+		    <p class="level2">Land use classification [8]</p>
+                    <p class="level2">Identification of user 'patches' (regular activity and function) [9]</p>
+                    <p class="level2">Anchor points in mobile phone data [10]</p>
+		</section>
+		
+                <section id="References">
+                    <div class="small">
+		    <h3>References</h2>
+			<p>[1] M. Batty, "Agents, cells, and cities: new representational models for
+			simulating multiscale urban dynamics," <i>Environment and Planning A</i>,
+			vol. 37, pp. 1373-1394, 2005.</p>
+			<p>[2] T. H&auml;agerstrand, "What about people in regional science?"
+			<i>Papers of the Regional Science Association</i>, vol. 24, no. 1, pp. 6-21, 1970.</p>
+                        <p>[3] Bell, G., Hey, T., Szalay, A., 2009. Beyond the data deluge. Science 323, 1297-1298.
+                        doi: <a href="http://dx.doi.org/10.1126/science.1170411">10.1126/science.1170411</a></p>
+                        <p>[4] Savage, M, and R Burrows. 2007. "The Coming Crisis of Empirical Sociology."
+                        <i>Sociology</i> 41 (5): 885-899.</p>
+                        <p>[5] Mayer-Schonberger, Viktor, and Kenneth Cukier. 2013. <i>Big Data:
+                        A Revolution That Will Transform How We Live, Work and Think.</i> John Murray.</p>
+			<p>[6] J. Cranshaw, R. Schwartz, J. Hong, and N. Sadeh, "The livehoods project:
+			Utilizing social media to understand the dynamics of a city," in <i>Sixth International
+			AAAI Conference on Weblogs and Social Media</i> 2012-05-20.</p>
+			<p>[7] F. Kling and A. Pozdnoukhov, "When a city tells a story: urban topic analysis,"
+			in <i>Proceedings of the 20th International Conference on Advances in Geographic
+			Infomation Systems</i>, ser. SIGSPATIAL '12. ACM, 2012, pp. 482-485.</p>
+			<p>[8] V. Frias-Martinez, V. Soto, H. Hohwald, and E. Frias-Martinez, "Sensing urban
+			land use with twitter activity," 2013.
+			[<a href="http://www.enriquefrias-martinez.info/yahoo site admin/assets/docs/socialcom20121.17131525.pdf">
+			Online</a>].</p>
+                        <p>[9] Y. Qu and J. Zhang, "Regularly visited patches in human mobility," in <i>Proceedings of the
+                        SIGCHI Conference on Human Factors in Computing Systems</i>, ser. CHI '13. ACM, 2013, pp. 395-398.</p>
+                        <p>[10] S. Isaacman, R. Becker, R. Caceres, S. Kobourov, M. Martonosi, J. Rowland, and
+                        A. Varshavsky, "Identifying important places in people's lives from cellular network data,"
+                        in <i>Pervasive Computing</i>, ser. Lecture Notes in Computer Science, K. Lyons,
+                        J. High- tower, and E. M. Huang, Eds. Springer Berlin Heidelberg, 2011, no. 6696, pp. 133-151.</p>
+                        <p>[11] Wood, J. "Identifying Mountains with GIS". In Heywood, I., Cornelius, S. and Carver, S.
+                        <I>An Introduction to Geographical Information Systems</I>. 2011. Prentice Hall</p>
+                        <p>[12] M. Birkin, K. Harland, and N. Malleson, "The classification of space-time behaviour patterns
+                        in a british city from crowd-sourced data," in <i>Computational Science and Its Applications - ICCSA 2013</i>
+                        , ser. Lecture Notes in Computer Science, B. Murgante, S. Misra, M. Carlini, C. M. Torre, H.-Q. Nguyen,
+                        D. Taniar, B. O. Apduhan, and O. Gervasi, Eds. Springer Berlin Heidelberg, 2013, no. 7974, pp. 179-192.</p>
+                        <p>[13] Malleson, N and M. Andresen. "The impact of using social media data in crime rate calculations:
+                        shifting hot spots and changing spatial patterns.<i>Cartography and Geographical Information Society
+                        (CaGIS)</i>.</p>
+		    </div>
+		</section>
+                
+                <section class="title" id="Thankyou">
+                    <h3>Thank you</h3>
+                    <h4 style="border-bottom: 1px solid #BFBFBF; border-top: 1px solid #BFBFBF; padding: 5px 20px 5px 20px;">
+                    <strong>Dr Nick Malleson, Prof. Mark Birkin</strong><br/> School of Geography, University of Leeds
+                    </h4>
+                    
+                    <h5><a style="color: inherit;" href="http://nickmalleson.co.uk/">http://nickmalleson.co.uk/</a></h5>
+                        
+                    <h5><a style="color: inherit;" href="http://www.geog.leeds.ac.uk/people/n.malleson">
+                        http://www.geog.leeds.ac.uk/people/n.malleson</a></h5>
+                    
+                    <hr/>
+                    
+		    <h5>Slides:</h5>
+                    <h5><a href="http://nickmalleson.co.uk/html/presentations/2014-05-BigData/">
+                        http://nickmalleson.co.uk/html/presentations/2014-05-BigData/</a>
+                    </h5>
+                    
+                    
+                </section>
+          
+            
+            </div> <!-- class=slides -->
+            <!-- **** Slides finish here **** -->
+            
+            <script src="./reveal.js/lib/js/head.min.js"></script>
+            <script src="./reveal.js/js/reveal.min.js"></script>
+
+            <script>
+
+                    // Full list of configuration options available here:
+                    // https://github.com/hakimel/reveal.js#configuration
+                    Reveal.initialize({
+                            controls: true,
+                            progress: true,
+                            slideNumber: true,
+                            history: true,
+                            center: true,
+                            previewLinks: true,  // Opens links in an iframe preview overlay
+
+                            theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                            transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+                            // Parallax scrolling
+                            // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                            // parallaxBackgroundSize: '2100px 900px',
+                            
+                            // Ptresentation size
+                            width: 960,
+                            height: 700,
+                        
+                            // Factor of the display size that should remain empty around the content
+                            margin: 0.05,
+                        
+                            // Bounds for smallest/largest possible scale to apply to content
+                            minScale: 0.2,
+                            maxScale: 1.0,
+
+                            // Optional libraries used to extend on reveal.js
+                            dependencies: [
+                                    { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                                    { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                                    { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                                    { src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+                                    { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+                            ]
+                    });
+
+            </script>
+
+	</body>
+</html>
+

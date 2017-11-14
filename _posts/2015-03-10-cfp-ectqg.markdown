@@ -1,0 +1,47 @@
+---
+author: nick
+comments: false
+date: 2015-03-10 12:04:58+00:00
+layout: post
+link: http://nickmalleson.co.uk/2015/03/cfp-ectqg/
+slug: cfp-ectqg
+title: 'CfP: Computational human geography in the digital world - new data, methods,
+  challenges and opportunities'
+wordpress_id: 765
+categories:
+- conference
+---
+
+## Call for Papers, 19th European Colloquium on Theoretical and Quantitative Geography (ECTQG2015), Bari (Italy), 3-7/9/2015
+
+
+
+
+## **Computational human geography in the digital world: new data, methods, challenges and opportunities**
+
+
+In an age where all manner of personal data are emerging from the digitisation of natural social interactions, geographers’ reliance on traditional data collection methods diminishes. However, new data require new methods in order to gain insight into underlying socio-spatial processes. Too often, methods fail to rigorously answer questions from ‘big’ data sources, and research subsequently promises more than it can deliver.
+
+We invite methodological, theoretical and empirical papers that discuss the use of new data to inform critical social problems such as health, transport, retailing, crime and sustainability. We are particularly interested in new methods to address current limitations in research with ‘big’ data.
+
+Topics include, but are not limited to:
+
+
+
+	
+  * Deriving insight into urban dynamics from geo-located crowd sourced data (e.g. social media, mobile phone data, etc.)
+
+	
+  * Using new data sources to better understand and reduce measurement and reporting error in survey data;
+
+	
+  * The marriage of traditional data sources with ‘big’ data;
+
+	
+  * The ethics of using publicly available personal data in geographical research;
+
+	
+  * Dynamic data assimilation for modelling.
+
+
+_If you are interested in submitting a paper to the session, please email your abstract to [Michelle Morris](mailto:m.morris@leeds.ac.uk) or [Nick Malleson](mailto:n.s.malleson@leeds.ac.uk) (copying _[ectqg2015@gmail.com](mailto:ectqg2015@gmail.com)).The [ECTQG 2015](http://10times.com/ectqg) conference organisers will review all abstracts.

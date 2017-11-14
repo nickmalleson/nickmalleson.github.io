@@ -1,0 +1,22 @@
+---
+author: nick
+comments: true
+date: 2013-02-18 14:27:21+00:00
+layout: post
+link: http://nickmalleson.co.uk/2013/02/pirates/
+slug: pirates
+title: Pirates!
+wordpress_id: 350
+categories:
+- mapping / GIS
+- visualisation
+---
+
+I have just come across this interesting data from the National Geospatial-Intelligence Agency (NGIA). They have a big database on anti-shipping (piracy) locations, available for download [here](http://msi.nga.mil/NGAPortal/MSI.portal?_nfpb=true&_pageLabel=msi_portal_page_65).
+
+The map below shows areas that have received the largest numbers of anti-shipping alerts.
+
+<figure >
+  <img src="{{site.url}}/{{site.baseurl}}/wp-content/uploads/2013/02/pirates_3d.jpg" />
+  <figcaption>3D map of anti-piracy locations</figcaption>
+</figure>

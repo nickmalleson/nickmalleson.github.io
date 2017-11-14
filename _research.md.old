@@ -1,0 +1,65 @@
+---
+author: nick
+comments: false
+date: 2012-01-21 14:50:04+00:00
+layout: page
+link: http://nickmalleson.co.uk/research/
+slug: research
+title: Research
+wordpress_id: 4
+---
+
+My main research interest is in developing spatial computer models of social phenomena and my focus, in particular, has been on crime simulation. I am currently working on the following projects.
+
+
+### [surf](http://surf.leeds.ac.uk/) - Simulating Urban Flows
+
+
+[caption id="attachment_480" align="alignleft" width="300"][![message_density](http://nickmalleson.co.uk/wp-content/uploads/2012/01/message_density-300x212.png)](http://nickmalleson.co.uk/wp-content/uploads/2012/01/message_density.png) The density of messages posted posted to social media over a 12 month period in Leeds.[/caption]
+
+To truly understand a city we need a clear picture of the behaviour of the people who inhabit and use it on a daily basis. This means understanding know who visits different areas, where they have come from, why they go there, where they travel to afterwards, etc. With this knowledge we would have a much clearer picture of how a city is really used by society. However, finding this type of information is extremely difficult. Traditional surveys (like the census or travel surveys) either use very small samples of the population or do not include enough detail to answer the questions above.
+
+This research will make use of new 'Big Data' that are created by the public and include information about their spatial location. Sources include photos posted on Flickr, messages on Twitter, foursquare checkins, etc. The project will develop computer simulations of peoples' movements around cities, to create a virtual urban environment. Using this combination of computer modelling and data analytics it will be possible to build a clearer picture of the spatio-temporal behavioural patterns across the city as a whole will have considerable impact on our understanding of urban dynamics, human behaviour and society more generally.
+
+For more information, see: [http://surf.leeds.ac.uk/](http://surf.leeds.ac.uk/)
+
+
+### Agent-Based Modelling of Crime
+
+
+[![Simulated movements of two virtual burglars](http://nickmalleson.co.uk/wp-content/uploads/2012/01/geotime_movements-300x208.jpg)](http://nickmalleson.co.uk/wp-content/uploads/2012/01/geotime_movements.jpg)Crime is an extremely complex phenomenon which is driven by a wide range of environmental and human factors. Traditional techniques that use statistical methods to investigate crime have difficulties including the highly detailed, low-level factors which will determine whether or not a crime is likely to occur. These factors include the design of buildings, the structure of the road network and the behaviour of individual people going about their daily business (whether they are possible offenders, victims, or people who might prevent a crime).
+
+This research uses agent-based modelling which is a type of computer simulation that simulates the behaviour of _individuals_ (virtual people in this case). By incorporating detailed information about human behaviour into a simulation consisting of many "intelligent" agents it might be possible to better understand how people behave in the real world, which factors determine their movements, and where crimes are ultimately most likely to be committed.
+
+The product of the work will be an application which could be used by local authorities to predict the effects of new environmental developments or policies. Specifically, the model will be used to experiment with the effects that a major development project will have on rates of residential burglary in Leeds. For more information, see the [CrimeSim](http://crimesim.blogspot.com) blog. Here is a video of the model running:
+
+http://www.youtube.com/watch?v=5ySbS075MyA
+
+
+## Other Projects
+
+
+I have also worked on the following projects, but not at the moment.
+
+
+### [GeoCrimeData](http://geocrimedata.blogspot.com/): Exploring Geospatial Data for Crime Analysis
+
+
+[![GeoCrimeData logo](http://nickmalleson.co.uk/wp-content/uploads/2012/01/logo_full-small-300x65.jpg)](http://nickmalleson.co.uk/?attachment_id=74)
+
+The work of crime analysts and modellers could benefit substantially from the use of new spatial data sets that are becoming more readily available. Examples include road networks (e.g. Open Street Map), building boundary datasets (e.g Ordnance Survey MasterMap) as well as under-utilised social network data (e.g. Twitter) or other volunteered sources. The _GeoCrimeData_ Project is exploring many novel data sources and manipulating them using geographical routines in order to generate new forms of spatial intelligence that can help to add value to the interpretation of recorded crime data.
+
+
+### Infrastructure Transitions Research Consortium
+
+
+[![](http://nickmalleson.co.uk/wp-content/uploads/2012/01/ITRCLogo.png)](http://nickmalleson.co.uk/home/itrclogo/)I am currently employed on the The UK Infrastructure Transitions Research Consortium ([ITRC)](http://www.itrc.org.uk/) project to generate household-level demographic projections over the next 80 years.The project will inform the analysis, planning and design of national infrastructure, through the development and demonstration of new decision support tools, and working with partners in government and industry.
+
+
+### A National e-Infastructure for Social Science (NeISS)**
+**
+
+
+The NeISS project involves developing tools and techniques to enable reserchers to publish social-science models. It will build a generic social simulation e-Infrastructure that covers the whole social simulation lifecycle.
+
+
