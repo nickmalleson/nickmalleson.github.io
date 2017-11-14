@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: main-withside
 title : Blog
 header : Blog
 group: navigation

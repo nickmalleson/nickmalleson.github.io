@@ -5,7 +5,7 @@ date: 2017-01-22 15:26:09+00:00
 layout: post
 link: http://nickmalleson.co.uk/2017/01/lectureship-leeds-lecturer-teaching-scholarship-in-consumer-analytics/
 slug: lectureship-leeds-lecturer-teaching-scholarship-in-consumer-analytics
-title: 'Lectureship @ Leeds: Lecturer (Teaching & Scholarship) in Consumer Analytics'
+title: 'Lectureship @ Leeds in Consumer Analytics'
 wordpress_id: 1014
 categories:
 - big data

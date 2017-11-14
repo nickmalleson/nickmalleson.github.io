@@ -12,7 +12,11 @@ categories:
 - big data
 ---
 
-<a href="https://erc.europa.eu/news/erc-2017-starting-grants-highlighted-projects"><img alt="image of a digital city, from the ERC press website" style="float:right;"  src="https://erc.europa.eu/sites/default/files/content/pages/images/DUST_illustration_copyright-Shutterstock.jpg"/></a>
+<figure class="right">
+	<a href="https://erc.europa.eu/news/erc-2017-starting-grants-highlighted-projects">
+	<img alt="image of a digital city, from the ERC press website"   src="https://erc.europa.eu/sites/default/files/content/pages/images/DUST_illustration_copyright-Shutterstock.jpg"/>
+	</a>
+</figure>
 
 I'm delighted to have recently been awarded funding of €1.5M from the European Research Council to fund a 5-year project entitled **Data Assimilation for Agent-Based Models: Applications to Civil Emergencies (DUST)**.
 

@@ -30,4 +30,6 @@ To organise a session, you will need to submit a session title, abstract, and th
 
 If you would like to organise a session, please email Michelle Morris (M.Morris@leeds.ac.uk) or Nick Malleson (n.s.malleson@leeds.ac.uk) with the session title, abstract, and paper titles.
 
-[![](http://www.geog.leeds.ac.uk/ectqg17/assets/images/pic01.jpg)](http://www.geog.leeds.ac.uk/ectqg17/)
+<figure>
+	<img src="http://www.geog.leeds.ac.uk/ectqg17/assets/images/pic01.jpg"/>
+</figure>

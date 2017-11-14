@@ -7,22 +7,15 @@ tagline:
 <!-- Main -->
 <div id="main" class="wrapper style1">
     <section class="container">
-        <!--
-        <header class="major">
-            <h2>Nulla luctus eleifend</h2>
-            <span class="byline">Mauris vulputate dolor sit amet nibh</span>
-        </header>
-        -->
+
         <div class="row">
-            
    
-            
             <!-- Content -->
             <div class="4u">
                 <ul class="style">
                     <li>
                         <img src="./assets/images/nick.jpg" alt="Picture of Nick" 
-                             style="width:250px; border-radius:10px;"/>
+                             style="width:100%; border-radius:10px;"/>
                     </li>
                 </ul>
             </div>
@@ -104,12 +97,12 @@ tagline:
                 </ul>
             </div>
         
-            <div class="8u">
+            <div class="4u">
                 <ul class="style">
                     <li>
                         <a href="http://geog.leeds.ac.uk/people/n.malleson/"><span class="fa fa-user "></span></a>
                         <h3><a href="http://geog.leeds.ac.uk/people/n.malleson/">Contact</a></h3>
-                        <p>For contact information, please see my <a href="http://geog.leeds.ac.uk/people/n.malleson/">School of Geography</a> page</p>
+                        
                     </li>
 
                 </ul>
@@ -119,5 +112,33 @@ tagline:
 
         </div>
     </section>
+    
+   
+    <!-- Recent posts -->
+    
+    
+    
+    <section class="container">
+        
+        
+
+        <header class="major">
+            <h2>Recent posts</h2>
+        </header>
+        
+        
+        <div class="row">
+
+            {% for post in site.posts offset: 0 limit: 6 %}
+            <div class="4u">
+                <a href="{{ post.url }}">{{ post.title }}</a><br/>
+                {{ post.date | date: "%-d %B %Y"  }}
+                
+            </div>		
+            {% endfor %}
+
+        </div>
+    </section>
+    
 </div>
 
