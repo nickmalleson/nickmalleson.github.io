@@ -1,0 +1,67 @@
+---
+layout: default
+---
+
+<!-- main-withside.html -->
+
+<!-- Header -->
+<div id="header">
+    <div class="container">
+        <!-- Logo -->
+		
+        <!--<h1><a href="#" id="logo">{{ page.title }}</a></h1>-->
+        
+        <h1><a href="{{ site.baseurl }}/index.html" id="logo">Nick Malleson's Homepage</a></h1>
+        <!--<h1><a href="{{ site.baseurl }}/home.html" id="logo">7-11 Sept, York, UK.</a></h1>-->
+        
+        {% include nav.html %}
+
+    </div>
+</div>
+
+<!-- Main (withside) -->
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <div class="row">
+            
+            <!-- Sidebar -->
+            
+            <div id="sidebar" class="3u sidebar">
+                
+            {% include sidebar.html %}
+                
+            </div>
+
+            <!-- Optional next and previous links (only if this is a blog poast -->
+            
+            <!-- Doesn't work at the moment 
+            <div class="3u">
+                <a href="{{ blog.previous_article }}" class="btn" style="float: left">Previous Post</a>         
+            </div>
+            <div class="3u">
+                <a href="{{ blog.next_article }}" class="btn" style="float: right">Next Post</a>
+            </div>
+            -->
+            
+
+            <!-- Content -->
+            <div id="content" class="8u skel-cell-important">            
+            
+                <section>
+                    <header class="major">
+                        <h2>{{ page.title }}</h2>
+                        {% if page.tagline %}
+                        <span class="byline">{{ page.tagline }}</span>
+                        {% endif %}
+                    </header>
+
+                    {{content}}
+
+
+                </section>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
