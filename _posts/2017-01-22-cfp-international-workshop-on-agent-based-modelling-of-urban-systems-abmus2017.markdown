@@ -16,7 +16,12 @@ categories:
 
 **The [ABMUS2017](http://modelling-urban-systems.com/) workshop on Agent-based modelling of urban systems will be held at the [AAMAS2017](http://aamas2017.org/) conference in Sao Paulo, Brazil on 8-9 May 2017.**
 
-[![](https://4.bp.blogspot.com/-I5mTNZOefec/WG_sghAfpVI/AAAAAAAAKBc/ppJmKduVYBA5MJVZmmnMLKN5ceCSzNciACLcB/s1600/top-01.jpeg)](http://aamas2017.org/)
+<figure>
+<a href="http://aamas2017.org/">
+<img src="https://4.bp.blogspot.com/-I5mTNZOefec/WG_sghAfpVI/AAAAAAAAKBc/ppJmKduVYBA5MJVZmmnMLKN5ceCSzNciACLcB/s1600/top-01.jpeg)" />
+</a>
+
+</figure>
 
 Researchers and practitioners who use agent-based models and agent systems to understand, explore, and manage cities and urban infrastructure systems are invited to submit papers to ABMUS2017. The overarching theme for the workshop is data for agent-based models. Data is essential for building, calibrating, and validating agent-based city and urban infrastructure models. But which approaches are optimal for what purposes? We invite presentations that describe data collection and data management approaches in agent-based models, as well as the use of data sets and methodologies that can be translated and re-used between researchers, sectors and countries.
 

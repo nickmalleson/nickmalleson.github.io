@@ -1,5 +1,5 @@
 ---
-layout: main
+layout: main-withside
 title: Teaching
 tagline: Courses and other modules that I am (or have been) involved in teaching
 ---

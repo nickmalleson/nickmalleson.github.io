@@ -17,7 +17,7 @@ tagline: Current and completed research projects that I am involved with
                 <h3><a href="http://dust.leeds.ac.uk/">DUST (<i>starting soon</i>)</a></h3>
                 Data Assimilation for Agent-Based Models: Applications to Civil Emergencies
             </li>
-            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based models.</li>
+            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based modelss.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -50,7 +50,7 @@ tagline: Current and completed research projects that I am involved with
                 <h3><a href="http://cdrc.ac.uk/">CDRC</a></h3>
                 Consumer Data Research Centre
             </li>
-            <li style="font-size: small; line-height: 20px;">The CDRC is working with organisations to open up their data to trusted researchers to provide solutions that drive economic growth and improve our society.</li>
+            <li style="font-size: small; line-height: 20px;">The aim of the CDRC is to work with organisations to open up their data to our trusted researchers to provide solutions that drive economic growth and improve our society.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -90,6 +90,17 @@ tagline: Current and completed research projects that I am involved with
                 Infrastructure Technology Research Consortium
             </li>
             <li style="font-size: small; line-height: 20px;">ITRC is a consortium of seven leading UK universities, investigating ways to improve the performance of infrastructure systems in the UK and around the world. Our research is helping businesses and policymakers to explore the risk of infrastructure failure and the long term benefits of investments and policies to improve infrastructure systems.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="http://www.law.leeds.ac.uk/research/projects/an-exploratory-knowledge-platform-for-policing"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="http://www.law.leeds.ac.uk/research/projects/an-exploratory-knowledge-platform-for-policing">KEOS</a></h3>
+                An Exploratory Knowledge Exchange Platform for Policing
+            </li>
+            <li style="font-size: small; line-height: 20px;">This collaborative project will draw together a large dataset of over 10 years police recorded crime data and conduct a large-scale spatio-temporal data analysis in an attempt to identify clusters and explain differences in the distribution of acquisitive crimes across cities in West Yorkshire.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
