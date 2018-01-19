@@ -145,13 +145,13 @@ Crooks, A.T., Heppenstall, A. and Malleson, N. (under review). Agent-based Model
 
 Birkin, M. and **N. Malleson** (2015) Modelling and Simulation. In Halfpenny, P. and Procter, R. (Eds) _Innovations in Digital Research Methods_, Chapter 6\. SAGE Publications Ltd. [[URL](http://www.uk.sagepub.com/books/9781446203095#tabview=toc)]
 
+**Malleson, N.** and A. Evans (2014) Agent-Based Models to Predict Crime at Places. In G. Bruinsma and D. Weisburd (Eds) [_Encyclopedia of Criminology and Criminal Justice_](http://link.springer.com/referencework/10.1007/978-1-4614-5690-2) pp 41-48 . Springer. [[PDF](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2013-crim_enc-abm.pdf)]
+
+**Malleson, N.** (2014) Calibration of Simulation Models. In G. Bruinsma and D. Weisburd (Eds) [_Encyclopedia of Criminology and Criminal Justice_](http://link.springer.com/referencework/10.1007/978-1-4614-5690-2) pp 243 – 252 . Springer. [[PDF](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2013-crim_enc-calibration.pdf)]
+
 **Malleson, N.**, L. See, A. Evans, A. Heppenstall (2014) Optimising an Agent-Based Model to Explore the Behaviour of Simulated Burglars. _Theories and Simulations of Complex Social Systems_. Volume 52 of Intelligent Systems Reference Library, pp 179-204\. Springer. [[URL](http://dx.doi.org/10.1007/978-3-642-39149-1_12)] [[PDF](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2014-simcompsys.pdf)]
 
 Birkin, M. and **N. Malleson** (2014) An investigation of the sensitivity of a dynamic microsimulation model of urban neighbourhood dynamics. In Dekkers G., Keegan, M. and O’Donoghue, C. (eds) _[New pathways in microsimulation](http://www.gowerpublishing.com/isbn/9781409469315)._ Ashgate.
-
-**Malleson, N.** and A. Evans (2013) Agent-Based Models to Predict Crime at Places. In G. Bruinsma and D. Weisburd (Eds) [_Encyclopedia of Criminology and Criminal Justice_](http://link.springer.com/referencework/10.1007/978-1-4614-5690-2) pp 41-48 . Springer. [[PDF](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2013-crim_enc-abm.pdf)]
-
-**Malleson, N.** (2013) Calibration of Simulation Models. In G. Bruinsma and D. Weisburd (Eds) [_Encyclopedia of Criminology and Criminal Justice_](http://link.springer.com/referencework/10.1007/978-1-4614-5690-2) pp 243 – 252 . Springer. [[PDF](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2013-crim_enc-calibration.pdf)]
 
 Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analysis. In M. Leitner (ed.) _Crime Modeling and Mapping Using Geospatial Technologies_. Volume 8 of Geotechnologies and the Environment. New York, NY: Springer.
 
