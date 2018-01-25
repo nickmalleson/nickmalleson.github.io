@@ -137,6 +137,9 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+
+**Malleson, N.**, Alison Heppenstall and Andrew Crooks (2018) Place-Based Simulation Modeling: Agent-Based Modeling and Virtual Environments. _Oxford Research Encyclopedia of Criminology_. Oxford University Press. [DOI: 10.1093/acrefore/9780190264079.013.319](https://dx.doi.org/10.1093/acrefore/9780190264079.013.319)
+
 Crooks, A.T., **Malleson, N.**, Wise, S. and Heppenstall, A. (2018) Big Data, Agents and the City, in Schintler, L.A. and Chen, Z. (eds.), _Big Data for Urban and Regional Science_, Routledge, New York, NY, pp. 204-213\. [[PDF](https://www.dropbox.com/s/28ojdkpf6tq7ukk/BigData_Agents_Chapter.pdf?dl=0)]
 
 **Malleson, N.** (2017) Spatial Crime Modelling and Analysis. In _The Routledge Companion to Criminological Theory and Concepts_, Avi Brisman, Eamonn Carrabine, Nigel South (Eds). Routledge.
