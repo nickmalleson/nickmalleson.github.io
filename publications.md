@@ -72,6 +72,8 @@ Harris, Richard, David O’Sullivan, Mark Gahegan, Martin Charlton, Lex Comber, 
 
 Andresen, M.A., Linning, S.J., and **Malleson, N.** (2016). Crime at places and spatial concentrations: exploring the spatial stability of property crime in Vancouver BC, 2003-2013\. _Journal of Quantitative Criminology_, 33(2), 255 – 275\. DOI: [10.1007/s10940-016-9295-8](http://dx.doi.org/10.1007/s10940-016-9295-8)
 
+Alotaibi, Nawaf Ibrahim, Andrew J. Evans, Alison J. Heppenstall, and **N. Malleson** (2017) How Well Does Western Environmental Theory Explain Crime in the Arabian Context? The Case Study of Riyadh, Saudi Arabia. _International Criminal Justice Review_. DOI: [10.1177/1057567717709497](https://dx.doi.org/10.1177/1057567717709497).
+
 #### 2016
 
 Ward, J., A. Evans, **N. Malleson** (2016) Dynamic calibration of agent-based models using data assimilation. _Royal Society Open Science._ 3:150703\. (open access) DOI: [https://dx.doi.org/10.1098/rsos.150703](https://dx.doi.org/10.1098/rsos.150703)
