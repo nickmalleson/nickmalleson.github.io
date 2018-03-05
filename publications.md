@@ -172,6 +172,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="workingpapers"></a>Working Papers and Others
 
+**N. Malleson** and A. Hepenstall (2018).  How to make smart cities human again. _The Conversation_. Published 31 January, 2018. Available online: [https://theconversation.com/how-to-make-smart-cities-human-again-88453](https://theconversation.com/how-to-make-smart-cities-human-again-88453). Also published in the _[Club of Amsterdam Journal](http://www.clubofamsterdam.com/press.asp?contentid=991#article01)_.
+
 Heppenstall, A. and **N. Malleson** (2015). How big data and The Sims are helping us to build the cities of the future. _The Conversation_. Published 22 October, 2015 2.38pm BST. Available online: [https://theconversation.com/how-big-data-and-the-sims-are-helping-us-to-build-the-cities-of-the-future-47292](https://theconversation.com/how-big-data-and-the-sims-are-helping-us-to-build-the-cities-of-the-future-47292). Also published by the _[World Economic Forum](https://www.weforum.org/agenda/2017/09/heres-how-big-data-is-building-the-cities-of-the-future)_.
 
 Lovelace, R., **Malleson, N.**, Harland, K., & Birkin, M. (2014). Geotagged tweets to inform a spatial interaction model: a case study of museums. [arXiv preprint](http://arxiv.org/abs/1403.5118).
