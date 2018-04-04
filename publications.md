@@ -78,6 +78,8 @@ Harris, Richard, David O’Sullivan, Mark Gahegan, Martin Charlton, Lex Comber, 
 
 Andresen, M.A., Linning, S.J., and **Malleson, N.** (2016). Crime at places and spatial concentrations: exploring the spatial stability of property crime in Vancouver BC, 2003-2013\. _Journal of Quantitative Criminology_, 33(2), 255 – 275\. DOI: [10.1007/s10940-016-9295-8](http://dx.doi.org/10.1007/s10940-016-9295-8)
 
+Alotaibi, Nawaf Ibrahim, Andrew J. Evans, Alison J. Heppenstall, and **N. Malleson** (2017) How Well Does Western Environmental Theory Explain Crime in the Arabian Context? The Case Study of Riyadh, Saudi Arabia. _International Criminal Justice Review_. DOI: [10.1177/1057567717709497](https://dx.doi.org/10.1177/1057567717709497).
+
 #### 2016
 
 Ward, J., A. Evans, **N. Malleson** (2016) Dynamic calibration of agent-based models using data assimilation. _Royal Society Open Science._ 3:150703\. (open access) DOI: [https://dx.doi.org/10.1098/rsos.150703](https://dx.doi.org/10.1098/rsos.150703)
@@ -143,14 +145,13 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Crooks, A.T., Heppenstall, A. and **Malleson, N.** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
 
 **Malleson, N.**, Alison Heppenstall and Andrew Crooks (2018) Place-Based Simulation Modeling: Agent-Based Modeling and Virtual Environments. _[Oxford Research Encyclopedia of Criminology](http://criminology.oxfordre.com/view/10.1093/acrefore/9780190264079.001.0001/acrefore-9780190264079-e-319)_. Oxford University Press. [DOI: 10.1093/acrefore/9780190264079.013.319](https://dx.doi.org/10.1093/acrefore/9780190264079.013.319)
 
 Crooks, A.T., **Malleson, N.**, Wise, S. and Heppenstall, A. (2018) Big Data, Agents and the City, in Schintler, L.A. and Chen, Z. (eds.), _Big Data for Urban and Regional Science_, Routledge, New York, NY, pp. 204-213\. [[PDF](https://www.dropbox.com/s/28ojdkpf6tq7ukk/BigData_Agents_Chapter.pdf?dl=0)]
 
 **Malleson, N.** (2017) Spatial Crime Modelling and Analysis. In _The Routledge Companion to Criminological Theory and Concepts_, Avi Brisman, Eamonn Carrabine, Nigel South (Eds). Routledge.
-
-Crooks, A.T., Heppenstall, A. and Malleson, N. (under review). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ Elsevier.
 
 Birkin, M. and **N. Malleson** (2015) Modelling and Simulation. In Halfpenny, P. and Procter, R. (Eds) _Innovations in Digital Research Methods_, Chapter 6\. SAGE Publications Ltd. [[URL](http://www.uk.sagepub.com/books/9781446203095#tabview=toc)]
 
@@ -162,7 +163,7 @@ Birkin, M. and **N. Malleson** (2015) Modelling and Simulation. In Halfpenny, P.
 
 Birkin, M. and **N. Malleson** (2014) An investigation of the sensitivity of a dynamic microsimulation model of urban neighbourhood dynamics. In Dekkers G., Keegan, M. and O’Donoghue, C. (eds) _[New pathways in microsimulation](http://www.gowerpublishing.com/isbn/9781409469315)._ Ashgate.
 
-Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analysis. In M. Leitner (ed.) _Crime Modeling and Mapping Using Geospatial Technologies_. Volume 8 of Geotechnologies and the Environment. New York, NY: Springer.
+Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analysis. In M. Leitner (ed.) _[Crime Modeling and Mapping Using Geospatial Technologies](https://www.springer.com/us/book/9789400749962)_. Volume 8 of Geotechnologies and the Environment. New York, NY: Springer.
 
 **N. Malleson** (2012) Using Agent-Based Models to Simulate Crime. In Heppenstall, A.J.; Crooks, A.T.; See, L.M.; Batty, M. (Eds.) _Agent-Based Models of Geographical Systems_. Springer. [[URL]](http://www.springer.com/social+sciences/population+studies/book/978-90-481-8926-7) [[download]](http://nickmalleson.co.uk/wp-content/uploads/2012/03/abm_book_chapter_2012-2.pdf)
 
@@ -175,6 +176,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 **Malleson, N**. and M. Birkin (2013). Estimating Individual Behaviour from Massive Social Data for An Urban Agent-Based Model. In A. Koch and P. Mandl (Eds) _GeoSimulation_: Modeling Social Phenomena in Spatial Context. Germany: Lit Verlag. ISBN: [978-3-643-90345-7](http://www.lit-verlag.de/isbn/3-643-90345-7) [[download (pdf)](http://nickmalleson.co.uk/wp-content/uploads/2012/01/essa.pdf)]
 
 ### <a name="workingpapers"></a>Working Papers and Others
+
+**N. Malleson** and A. Hepenstall (2018).  How to make smart cities human again. _The Conversation_. Published 31 January, 2018. Available online: [https://theconversation.com/how-to-make-smart-cities-human-again-88453](https://theconversation.com/how-to-make-smart-cities-human-again-88453). Also published in the _[Club of Amsterdam Journal](http://www.clubofamsterdam.com/press.asp?contentid=991#article01)_.
 
 Heppenstall, A. and **N. Malleson** (2015). How big data and The Sims are helping us to build the cities of the future. _The Conversation_. Published 22 October, 2015 2.38pm BST. Available online: [https://theconversation.com/how-big-data-and-the-sims-are-helping-us-to-build-the-cities-of-the-future-47292](https://theconversation.com/how-big-data-and-the-sims-are-helping-us-to-build-the-cities-of-the-future-47292). Also published by the _[World Economic Forum](https://www.weforum.org/agenda/2017/09/heres-how-big-data-is-building-the-cities-of-the-future)_.
 
