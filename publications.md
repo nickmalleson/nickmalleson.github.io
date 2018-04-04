@@ -66,6 +66,12 @@ tagline:
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
+#### 2018
+
+Yu, Rui, A.J. Evans, and **N. Malleson** (2018). Quantifying Grazing Patterns Using a New Growth Function Based on MODIS Leaf Area Index. _Remote Sensing of Environment)_ 209: 181–94. DOI:[10.1016/j.rse.2018.02.034](https://doi.org/10.1016/j.rse.2018.02.034).
+
+https://doi.org/10.1016/j.rse.2018.02.034
+
 #### 2017
 
 Harris, Richard, David O’Sullivan, Mark Gahegan, Martin Charlton, Lex Comber, Paul Longley, Chris Brunsdon, **Nick Malleson**, Alison Heppenstall, Alex Singleton, Daniel Arribas-Bel, Andy Evans (2017). More bark than bytes? Reflections on 21+ years of geocomputation. _Environment and Planning B: Urban Analytics and City Science_ 44(4) 598–617\. DOI: [10.1177/2399808317710132](http://dx.doi.org/10.1177%2F2399808317710132).
