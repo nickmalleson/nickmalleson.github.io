@@ -3,7 +3,7 @@ author: nick
 comments: false
 layout: post
 title: "Research Fellow in Calibration and Data Assimilation for Agent-Based Models"
-category: [big data, data assimilation, job]
+category: announce
 tags : [big data, data assimilation, job]
 ---
 
