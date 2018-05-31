@@ -68,7 +68,9 @@ tagline:
 
 #### 2018
 
-**Malleson, N.**, Vanky, A., Hashemian, B., Santi, P., Verma, S.K., Courtney, T.K., Ratti, C.. (2018). The characteristics of asymmetric pedestrian behavior: A preliminary study using passive smartphone location data. _Transactions in GIS_. [https://doi.org/10.1111/tgis.12336](http://dx.doi.org/10.1111/tgis.12336)
+Jumadi, A. Heppenstall, **N. Malleson**, S. Carver, D. Quincey and V. Manville (2018). Modelling Individual Evacuation Decisions during Natural Disasters: A Case Study of Volcanic Crisis in Merapi, Indonesia. _Geosciences_ 8(196). DOI: [10.3390/geosciences8060196](dx.doi.org/10.3390/geosciences8060196)
+
+**Malleson, N.**, Vanky, A., Hashemian, B., Santi, P., Verma, S.K., Courtney, T.K., Ratti, C.. (2018). The characteristics of asymmetric pedestrian behavior: A preliminary study using passive smartphone location data. _Transactions in GIS_. [10.1111/tgis.12336](http://dx.doi.org/10.1111/tgis.12336)
 
 Yu, Rui, A.J. Evans, and **N. Malleson** (2018). Quantifying Grazing Patterns Using a New Growth Function Based on MODIS Leaf Area Index. _Remote Sensing of Environment_ 209: 181–94. DOI:[10.1016/j.rse.2018.02.034](https://doi.org/10.1016/j.rse.2018.02.034).
 
