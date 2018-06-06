@@ -68,7 +68,7 @@ tagline:
 
 #### 2018
 
-Jumadi, A. Heppenstall, **N. Malleson**, S. Carver, D. Quincey and V. Manville (2018). Modelling Individual Evacuation Decisions during Natural Disasters: A Case Study of Volcanic Crisis in Merapi, Indonesia. _Geosciences_ 8(196). DOI: [10.3390/geosciences8060196](dx.doi.org/10.3390/geosciences8060196)
+Jumadi, A. Heppenstall, **N. Malleson**, S. Carver, D. Quincey and V. Manville (2018). Modelling Individual Evacuation Decisions during Natural Disasters: A Case Study of Volcanic Crisis in Merapi, Indonesia. _Geosciences_ 8(196). DOI: [10.3390/geosciences8060196](dx.doi.org/10.3390/geosciences8060196). [http://www.mdpi.com/2076-3263/8/6/196](http://www.mdpi.com/2076-3263/8/6/196)
 
 **Malleson, N.**, Vanky, A., Hashemian, B., Santi, P., Verma, S.K., Courtney, T.K., Ratti, C.. (2018). The characteristics of asymmetric pedestrian behavior: A preliminary study using passive smartphone location data. _Transactions in GIS_. [10.1111/tgis.12336](http://dx.doi.org/10.1111/tgis.12336)
 
