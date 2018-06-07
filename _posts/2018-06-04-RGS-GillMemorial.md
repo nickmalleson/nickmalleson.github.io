@@ -17,7 +17,7 @@ On Monday 4th June 2018 I was absolutely delighted and honoured to have been awa
 
 
 <a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
-<img src="{{site.url}}/{{site.baseurl}}/figures/rgs-gill-1.jpg" style="float:right; width:40%; padding:10px"/></a>
+<img src="{{site.url}}/{{site.baseurl}}/figures/rgs-gill-1.jpg" style="float:right; width:30%; padding:10px"/></a>
 
 <a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
 <img src="{{site.url}}/{{site.baseurl}}/figures/rgs-gill-2.jpg" style="float:left; width:50%; padding:10px"/></a>
