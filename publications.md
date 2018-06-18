@@ -171,6 +171,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conferece Proceedings
 
+**Malleson, N.**, A. Tapper, J. Ward, A. Evans (2017). Forecasting Short-Term Urban Dynamics: Data Assimilation for Agent-Based Modelling. In proceedings of the _[Social Simulation Conference (SSC)](https://www.sim2017.com/about/)_ - the 13th Annual Conference of the European Social Simulation Association (ESSA). 25-29 September 2017, Dublin, Ireland. [[Slides](http://surf.leeds.ac.uk/p/2017-09-26-essa-da.html)] [[PDF]({{site.url}}/{{site.baseurl}}/papers/2017-essa_da-final.pdf)]
+
 **Malleson, N**. and M. Birkin (2014) New Insights into Individual Activity Spaces using Crowd-Sourced Big Data. In: 2_014 ASE BigData/SocialCom/CyberSecurity Conference, Stanford University, May 27-31 2014_. Available online: [http://www.ase360.org/handle/123456789/31](http://www.ase360.org/handle/123456789/31). [[pdf](http://nickmalleson.co.uk/wp-content/uploads/2014/05/bigdata-stanford-final.pdf)] [[presentation slides](http://nickmalleson.co.uk/html/presentations/2014-05-BigData/)] [[URL](http://www.ase360.org/handle/123456789/31)]
 
 **Malleson, N.** and M. Birkin (2014) Generating Individual Behavioural Routines from Massive Social Data for the Simulation of Urban Dynamics. [_Proceedings of the European Conference on Complex Systems 2012_.](http://link.springer.com/book/10.1007/978-3-319-00395-5)[Springer Proceedings in Complexity](http://link.springer.com/bookseries/11637) 2014, pp 849-855 [[pdf](http://nickmalleson.co.uk/wp-content/uploads/2012/01/2013-eccs_paper-for_blog.pdf)]
