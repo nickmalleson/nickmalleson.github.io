@@ -70,13 +70,13 @@ tagline:
 
 Jumadi, A. Heppenstall, **N. Malleson**, S. Carver, D. Quincey and V. Manville (2018). Modelling Individual Evacuation Decisions during Natural Disasters: A Case Study of Volcanic Crisis in Merapi, Indonesia. _Geosciences_ 8(196). DOI: [10.3390/geosciences8060196](dx.doi.org/10.3390/geosciences8060196). [http://www.mdpi.com/2076-3263/8/6/196](http://www.mdpi.com/2076-3263/8/6/196)
 
-**Malleson, N.**, Vanky, A., Hashemian, B., Santi, P., Verma, S.K., Courtney, T.K., Ratti, C.. (2018). The characteristics of asymmetric pedestrian behavior: A preliminary study using passive smartphone location data. _Transactions in GIS_. [10.1111/tgis.12336](http://dx.doi.org/10.1111/tgis.12336)
+**Malleson, N.**, Vanky, A., Hashemian, B., Santi, P., Verma, S.K., Courtney, T.K., Ratti, C.. (2018). The characteristics of asymmetric pedestrian behavior: A preliminary study using passive smartphone location data. _Transactions in GIS_ 22(2): 616-634. [10.1111/tgis.12336](http://dx.doi.org/10.1111/tgis.12336)
 
 Yu, Rui, A.J. Evans, and **N. Malleson** (2018). Quantifying Grazing Patterns Using a New Growth Function Based on MODIS Leaf Area Index. _Remote Sensing of Environment_ 209: 181–94. DOI:[10.1016/j.rse.2018.02.034](https://doi.org/10.1016/j.rse.2018.02.034).
 
 #### 2017
 
-Harris, Richard, David O’Sullivan, Mark Gahegan, Martin Charlton, Lex Comber, Paul Longley, Chris Brunsdon, **Nick Malleson**, Alison Heppenstall, Alex Singleton, Daniel Arribas-Bel, Andy Evans (2017). More bark than bytes? Reflections on 21+ years of geocomputation. _Environment and Planning B: Urban Analytics and City Science_ 44(4) 598–617\. DOI: [10.1177/2399808317710132](http://dx.doi.org/10.1177%2F2399808317710132).
+Harris, Richard, David O’Sullivan, Mark Gahegan, Martin Charlton, Lex Comber, Paul Longley, Chris Brunsdon, **Nick Malleson**, Alison Heppenstall, Alex Singleton, Daniel Arribas-Bel, Andy Evans (2017). More bark than bytes? Reflections on 21+ years of geocomputation. _Environment and Planning B: Urban Analytics and City Science_ 44(4) 598–617\. DOI: [10.1177/2399808317710132](https://doi.org/10.1177/2399808317710132).
 
 Andresen, M.A., Linning, S.J., and **Malleson, N.** (2016). Crime at places and spatial concentrations: exploring the spatial stability of property crime in Vancouver BC, 2003-2013\. _Journal of Quantitative Criminology_, 33(2), 255 – 275\. DOI: [10.1007/s10940-016-9295-8](http://dx.doi.org/10.1007/s10940-016-9295-8)
 
