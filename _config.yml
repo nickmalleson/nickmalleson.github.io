@@ -9,10 +9,6 @@ description: > # this means to ignore newlines until "baseurl:"
 url:      "http://nickmalleson.co.uk/"
 baseurl:  ""
 
-# For github
-#url:      "https://nickmalleson.github.io/ectqg2017/"
-#baseurl:  "/ectqg2017"
-
 # Define how blog permalinks should be constructed
 permalink: /:year/:month/:title.html
 # (the default:)
