@@ -13,7 +13,7 @@ tags : [big data, paper]
 <a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
 <img src="https://www.rgs.org/sitefiles/src/img/logo-rgs.svg" style="float:right; width:20%; padding:10px"/></a>
 
-On Monday 4th June 2018 I was absolutely delighted and honoured to have been awarded the _Gill Memorial Award For outstanding early career research in agent-based social geography [geocomputation]_ from the Royal Geographical Society.
+On Monday 4th June 2018 I was absolutely delighted and honoured to have been awarded the _Gill Memorial Award For outstanding early career research in agent-based social geography [geocomputation]_ from the Royal Geographical Society. For more information see: [https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/](https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/)
 
 
 <a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
