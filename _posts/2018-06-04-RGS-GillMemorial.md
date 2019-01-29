@@ -16,13 +16,9 @@ tags : [big data, paper]
 On Monday 4th June 2018 I was absolutely delighted and honoured to have been awarded the _Gill Memorial Award For outstanding early career research in agent-based social geography [geocomputation]_ from the Royal Geographical Society. For more information see: [https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/](https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/)
 
 
-<a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
-<!-- <img src="{{site.url}}/{{site.baseurl}}/figures/rgs-gill-1.jpg" style="float:right; width:30%; padding:10px"/>-->
-</a>
 
-<a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/">
-<!-- <img src="{{site.url}}/{{site.baseurl}}/figures/rgs-gill-2.jpg" style="float:left; width:50%; padding:10px"/>-->
-<img src="http://www.rgs.org/getattachment/5e37d8c2-c958-4e42-871b-ab8a3d16be17/RGS_Awards_20180604_P5B4447.png?lang=en-GB" style="float:left; width:50%; padding:10px"/>
+<a href="https://www.rgs.org/geography/news/medal-and-award-recipients-receive-their-accolades/" >
+<img src="http://www.rgs.org/getattachment/5e37d8c2-c958-4e42-871b-ab8a3d16be17/RGS_Awards_20180604_P5B4447.png?lang=en-GB" style="float:left; width:50%; padding:10px" />
 </a>
 
 
