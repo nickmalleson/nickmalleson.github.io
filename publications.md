@@ -66,11 +66,17 @@ tagline:
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
+#### 2019 
+
+Yu, Rui, A.J. Evans and **N. Malleson** (2019) An agent-based model for assessing grazing strategies and institutional arrangements in Zeku, China. _Agricultural Systems_ 171: 135–142. [DOI: 10.1016/j.agsy.2019.02.004](https://doi.org/10.1016/j.agsy.2019.02.004). [[PDF](./papers/2019-Rui_ABM_Grazing.pdf)].
+
+
+**Malleson, N** (2019) Building Temporal Dynamism into Applied GIS Research. _Applied Spatial Analysis and Policy_ (Online first). (Introduction to the 2015 GIS Research UK Special Issue). [DOI: 10.1007/s12061-019-09291-w](https://doi.org/10.1007/s12061-019-09291-w). [[PDF](./papers/2019-GIRSUK-ASAP.pdf)]. 
+
 #### 2018
 
 
 Gulma, U.L., A. Evans, A. Heppenstall, **N. Malleson** (2018) Diversity and burglary: Do community differences matter? _Transactions in GIS_ (online first) [DOI: [10.1111/tgis.12511](http://dx.doi.org/10.1111/tgis.12511)] [[PDF](./papers/2018-Diversity-Gulma-TGIS.pdf)]
-
 
 Jumadi, A. Heppenstall, **N. Malleson**, S. Carver, D. Quincey and V. Manville (2018). Modelling Individual Evacuation Decisions during Natural Disasters: A Case Study of Volcanic Crisis in Merapi, Indonesia. _Geosciences_ 8(196). DOI: [10.3390/geosciences8060196](dx.doi.org/10.3390/geosciences8060196). [http://www.mdpi.com/2076-3263/8/6/196](http://www.mdpi.com/2076-3263/8/6/196)
 
