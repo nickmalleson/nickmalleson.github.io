@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "Inventing Future Cities"
-tagline: "New book: 'Inventing Future Cities', by Michael Batty"
+title: "Francis Oloo PhD"
+tagline: PhD Viva, University of Salzburg: Francis Oloo"
 category: announce
-tags: [book, smart cities]
+tags: [phd, gis, abm]
 ---
 
 On Thursday 7 Feb I had the pleasure of travelling to the [Z_GIS Centre of Competence for Geoinformatics](http://zgis.at/) at the University of Salzburg to examine a PhD thesis by [Francis Oloo](https://spatial-simulation.zgis.at/team/). The other examiner was [Andreas Koch](https://www.researchgate.net/profile/Andreas_Koch6) and it was chaired by [Josef Strobl](https://www.linkedin.com/in/josefstrobl/).
