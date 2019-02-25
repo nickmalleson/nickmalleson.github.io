@@ -4,4 +4,4 @@ title: CV
 tagline: 
 ---
  
-_Under construction_
+A PDF copy of my short CV is available [here](./cv.pdf).
