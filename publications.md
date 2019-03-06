@@ -64,6 +64,10 @@ tagline:
             
 <!-- Skip to: [Peer-Reviewed Journal Articles](#papers), [Book Chapters](#chapters), [Articles in Conferece Proceedings](#proceedings), [Working Papers](#workingpapers), [PhD Thesis](#thesis). -->
 
+### Book
+
+Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Modelling and Geographical Information Systems](https://www.abmgis.org/)_. Sage.
+
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
 #### 2019 
@@ -180,6 +184,9 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 **N. Malleson** (2012) Using Agent-Based Models to Simulate Crime. In Heppenstall, A.J.; Crooks, A.T.; See, L.M.; Batty, M. (Eds.) _Agent-Based Models of Geographical Systems_. Springer. [[URL]](http://www.springer.com/social+sciences/population+studies/book/978-90-481-8926-7) [[download]](http://nickmalleson.co.uk/wp-content/uploads/2012/03/abm_book_chapter_2012-2.pdf)
 
 ### <a name="proceedings"></a>Articles in Conferece Proceedings
+
+**Malleson, N.**, Jonathan A. Ward, A. Heppenstall, M. Adcock, D. Tang, J. Coello, and T. Crols. (2018). Understanding Input Data Requirements and Quantifying Uncertainty for Successfully Modelling ‘Smart’ Cities. In _3rd International Workshop on Agent-Based Modelling of Urban Systems_ (ABMUS), of the International Conference on Autonomous Agents and Multiagent Systems ([AAMAS 2018](http://celweb.vuse.vanderbilt.edu/aamas18/home/)). 10-15 July, Stockholm, Sweden. [Full abstract (pdf)](https://urban-analytics.github.io/dust/p/2018-07-15-abmus-da-abstract.pdf). [Slides (html)](https://urban-analytics.github.io/dust/p/2018-07-15-abmus-da.html).
+
 
 **Malleson, N.**, A. Tapper, J. Ward, A. Evans (2017). Forecasting Short-Term Urban Dynamics: Data Assimilation for Agent-Based Modelling. In proceedings of the _[Social Simulation Conference (SSC)](https://www.sim2017.com/about/)_ - the 13th Annual Conference of the European Social Simulation Association (ESSA). 25-29 September 2017, Dublin, Ireland. [[Slides](http://surf.leeds.ac.uk/p/2017-09-26-essa-da.html)] [[PDF]({{site.url}}/{{site.baseurl}}/papers/2017-essa_da-final.pdf)]
 
