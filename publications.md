@@ -64,6 +64,7 @@ tagline:
             
 <!-- Skip to: [Peer-Reviewed Journal Articles](#papers), [Book Chapters](#chapters), [Articles in Conferece Proceedings](#proceedings), [Working Papers](#workingpapers), [PhD Thesis](#thesis). -->
 
+
 ### Book
 
 Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Modelling and Geographical Information Systems](https://www.abmgis.org/)_. Sage.
