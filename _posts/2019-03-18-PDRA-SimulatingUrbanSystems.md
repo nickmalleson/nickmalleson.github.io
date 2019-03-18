@@ -7,7 +7,7 @@ tags: [urban analytics, job, abm]
 ---
 
 <figure style="width:40%;float:right; padding: 1em;" >
-<img src="{{site.url}}{{site.baseurl}}/figures/shutterstock_615414464-small.jpg" alt="London at night with blue shiny lines" />
+<img src="{{site.baseurl}}/figures/shutterstock_615414464-small.jpg" alt="London at night with blue shiny lines" />
 </figure>
 
 I’m delighted to be able to announce a new, 3 year, full time, post-doctoral position in the [Leeds Institute for Data Analytics](http://lida.leeds.ac.uk/) (in the UK) on building agent-based models for simulating urban systems. It’s linked to the ERC-funded '[dust](http://dust.leeds.ac.uk/)' project.
