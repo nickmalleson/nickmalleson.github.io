@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
     "A website about Nick Malleson's research and teaching at the University of Leeds"
 
 # For the web
-url:      "http://nickmalleson.co.uk/"
+url:      "http://www.nickmalleson.co.uk/"
 baseurl:  ""
 
 # Define how blog permalinks should be constructed
