@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Francis Oloo PhD"
-tagline: PhD Viva, University of Salzburg: Francis Oloo"
+tagline: "PhD Viva, University of Salzburg: Francis Oloo"
 category: announce
 tags: [phd, gis, abm]
 ---
