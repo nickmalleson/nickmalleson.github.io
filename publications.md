@@ -73,6 +73,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2019 
 
+Addis, N., A. Evans, and **N. Malleson** (2019) Exploring the Practices of Steal-to-Order Burglars: A Different Brand of Offender? _Security Journal_ (online first). DOI: [10.1057/s41284-019-00174-w](https://doi.org/10.1057/s41284-019-00174-w). [[PDF](./papers/2019-addis-security-steal2order.pdf)]
+
+
 Yu, Rui, A.J. Evans and **N. Malleson** (2019) An agent-based model for assessing grazing strategies and institutional arrangements in Zeku, China. _Agricultural Systems_ 171: 135–142. DOI:[10.1016/j.agsy.2019.02.004](https://doi.org/10.1016/j.agsy.2019.02.004). [[PDF](./papers/2019-Rui_ABM_Grazing.pdf)].
 
 
@@ -210,3 +213,4 @@ Birkin, M., **Malleson, N.**, (2013) Investigating the Behaviour of Twitter User
 ### <a name="thesis"></a>PhD Thesis
 
 **Malleson, N.** (2010). _Agent-Based Modelling of Burglary_. School of Geography, University of Leeds, Leeds, LS2 9JT. [[download](http://www.geog.leeds.ac.uk/fileadmin/documents/peoplepages/n.malleson/thesis-final.pdf)]
+cv.
