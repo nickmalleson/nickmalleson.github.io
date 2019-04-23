@@ -46,6 +46,7 @@ tagline:
 
 ### <a name="presentations"></a>2019
 
+ - [Identifying the appropriate spatial resolution for the analysis of crime patterns]({{site.url}}/{{site.baseurl}}/p/2019-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 23-26 April, Newcastle University. [Abstract (pdf)](./papers/2019-GISRUK-Presentation.pdf).
 
    - [Dynamic Simulation Models, Data Assimilation and Uncertainty](https://urban-analytics.github.io/dust//p/2019-04-10-Newcastle_Blueprint-ABM_Uncertainty.html). Presentation to the workshop '[A Blueprint for Urban Analytics](https://www.turing.ac.uk/events/blueprint-urban-analytics-research)'. Newcastle University, 11-12 April 2019.
 

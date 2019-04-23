@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="crime, GIS, spatial resolution">
+
+		<title>Identifying the appropriate spatial resolution for the analysis of crime patterns</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+        
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                
+                <!--
+                <section data-markdown id="index"
+                         data-background-image="http://surf.leeds.ac.uk/figures/cityscapes/chicago_bw.jpg">
+                -->
+                    
+                <section class="title" id="title" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        <h5>GIS Research UK 2019</h5>
+
+                        <hr/>
+                        <h2>Identifying the appropriate spatial resolution for the analysis of crime patterns</h2>
+                        <hr/>
+                        <h3><a href="http://www.nickmalleson.co.uk/">Nick Malleson*</a>, Wouter Steenbeek and Martin Andresen</h3>
+                        <h4>*School of Geography, University of Leeds, UK</h4>                        
+                        <hr/>
+                        <h4><a href="http://nickmalleson.co.uk">nickmalleson.co.uk</a></h4>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                    </div>
+                </section>
+                
+                
+                  <section id="Overview" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                      <h2>Overview</h2>
+                      <p>XXXX</p>
+                    </div>
+                </section>
+                
+                
+                
+                
+                
+                <section id="moreinformation1" data-transition="fade" data-background-image="https://erc.europa.eu/sites/default/files/content/pages/images/DUST_illustration_copyright-Shutterstock.jpg">
+                    <div class="whitebackground2">
+                        <h2>For more information about what we're doing at Leeds</h2>
+                        <a href="https://erc.europa.eu/">
+                            <img class="right" style="width:100px;" data-src="../figures/LOGO_ERC.jpg" alt="ESRC Logo"/>
+                        </a>
+                        <p>Data Assimilation for Agent-Based Models (<a href="http://dust.leeds.ac.uk">dust</a>)</p>
+                        <p class="l2"><a href="http://dust.leeds.ac.uk/">http://dust.leeds.ac.uk/</a></p>
+                        <p class="l2">Main aim: create new methods for dynamically assimilating data into agent-based models.</p>
+                        <p>Uncertainty in agent-based models for smart city forecasts</p>
+                        <a href="https://www.turing.ac.uk/">
+                            <img class="right" style="width:100px;" data-src="../figures/LOGO_TURING.png" alt="Turing Logo"/>
+                        </a>
+                        <p class="l2"><a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">turing.ac.uk</a></p>
+                        <p class="l2">Developing methods that can be used to better understand uncertainty in individual-level models of cities</p>
+                        
+                        <p>Bringing the Social City to the Smart City</p>
+                        <p class="l2"><a href="https://alisonheppenstall.co.uk/research/bringing-the-social-city-to-the-smart-city/">https://alisonheppenstall.co.uk/research/bringing-the-social-city-to-the-smart-city/</a></p>
+
+                    </div>
+                
+                </section>         
+                
+                <section id="abm-book">
+                                    
+                    <img style="width:50%;"
+                         data-src="../figures/abm_book_cover.png" alt="Cover of the book 'Agent-Based Modelling and Geographical Information Systems" />
+                </section>
+                
+                
+                <section id="summary" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Summary</h2>
+                        <p>Agent-Based Modelling (for Urban Dynamics)</p>
+                        <p>Dynamic City Simulation</p>
+                        <p class="l2">Data assimilation</p>
+                        <p class="l2">Simulating crowds</p>
+                        <p class="l2"> ... and later, cities!</p>
+                    </div>
+                </section>
+                
+                
+
+                <section class="title" id="thanks" data-background-image="../figures/virtual_city.jpeg">
+                    <div class="whitebackground2">
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        <h5>GIS Research UK 2019</h5>
+
+                        <hr/>
+                        <h2>Identifying the appropriate spatial resolution for the analysis of crime patterns</h2>
+                        <hr/>
+                        <h3><a href="http://www.nickmalleson.co.uk/">Nick Malleson*</a>, Wouter Steenbeek and Martin Andresen</h3>
+                        <h4>*School of Geography, University of Leeds, UK</h4>                        
+                        <hr/>
+                        <h4><a href="http://nickmalleson.co.uk">nickmalleson.co.uk</a></h4>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                    </div>
+                </section>
+
+                
+                
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
