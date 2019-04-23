@@ -67,6 +67,124 @@
                 
                 
                 
+                <section id="intro1">
+                    <h2>'Appropriate' Spatial Scale</h2>
+                    <img class="right" src="../figures/paper_figures/crime_resolution_map.png"
+                         alt="Dense and sparse crime hot spots" />
+                    <p>What is the appropriate spatial scale for the analysis of spatial patterns?</p>
+                    <p class="l2">Addresses, streets, neighbourhoods, regions, etc..</p>
+                    
+                    <p>Could be a theoretical choice</p>
+                    <p class="l2">E.g. we know individual houses are important</p>
+                    <p>Or determined empirically</p>
+                    <p class="l2">E.g. we only have data at the neighbourhood level</p>
+                    
+                </section>
+                
+                <section id="intro2">
+                    <h2>'Appropriate' Spatial Scale</h2>
+                    
+                    <p>But in some cases, there might be a need to find an 'appropriate' scale</p>
+                    <p class="l2">In general: <strong>smaller is better</strong></p>
+                    <p class="l2">(events and population are more likely to be homogeneous)</p>
+                    <p>But: <strong>how small is too small</strong></p>
+                    <p class="l2">High-resolution data are hard / expensive to obtain (might be personally disclosive / commercially sensitive</p>
+                    <p class="l2">Small number problems / signal v.s. noise</p>
+                    <p>What is the point at which no further disaggregation provides new information?</p>
+                    <p>Definition of the most appropriate scale:<br/> <strong>that which is as large as possible without causing the underlying spatial units to become heterogeneous with respect to the phenomena under study.</strong></p>
+                    
+                </section>
+                
+                <section id='method'>
+                    <h2>Methods</h2>
+                    <p>Combines and adapts two existing methods:</p>
+                    <p class="l2">Multiple-resolution goodness of fit procedure (Costanza, 1989)</p>
+                    <p class="l2">Test for spatial (dis)similarity (Andresen’s S: Andresen, 2009; Wheeler et al.,2018).</p>
+                    
+                    <ol style="font-size: 90%;">
+                        <li>Choose two similar crime datasets</li>
+                        <p class="l2">Either split one data set into two, or choose two different years (e.g. burglary 2015, burglary 2016)</p>
+                        <p class="l2">Need to be structurally similar; differences due to randomness</p>
+                        <li>Place a regular grid over the two data sets</li>
+                        <li>Count the number of points in each cell from each data set</li>
+                        <li>Remove cells with insufficiently low <i>expected frequency</i></li>
+                        <li>Calculate <i>similarity</i> using Andresen's Global S index</li>
+                        <li>Repeat (2) using a smaller grid <i>N</i> times (until similarity is fairly constant)</li>
+                        <li>Graph the similarity at different resolutions</li>
+                    </ol>
+
+
+                </section>
+                
+                
+                <section id="msea_method">
+                    <img src="../figures/paper_figures/msea_method.png" 
+                         alt="A diagram illustrating the method (from the 'method' slide)" />
+                </section>
+
+                
+                <section id="msea_interpretation1" data-transition="fade">
+                    <h2>Similarity at different resolutions</h2>
+                    <h3>Quiz</h3>
+                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation1.png"
+                         alt="expected behaviour of the msea method - small cells, low similarity" />
+                </section>
+                
+                <section id="msea_interpretation2" data-transition="fade">
+                    <h2>Similarity at different resolutions</h2>
+                    <h3>What I expected</h3>
+                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation2.png"
+                         alt="expected behaviour of the msea method - small cells, low similarity" />
+                </section>
+                
+                <section id="msea_interpretation3" data-transition="fade">
+                    <h2>Similarity at different resolutions</h2>
+                    <h3>WTF?</h3>
+                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation3.png"
+                         alt="actual behaviour of the msea method - small cells, high similarity!" />
+                </section>
+                
+                <section id="msea_interpretation4" data-transition="fade">
+                    <h2>Similarity at different resolutions</h2>
+                    <h3>Explanation</h3>
+                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation4.png"
+                         alt="actual behaviour of the msea method - small cells, high similarity!" />
+                </section>
+
+
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                <section id="XXX">
+                    <h2></h2>
+                    <p></p>
+                </section>
+                
+                
+                
                 
                 
                 <section id="moreinformation1" data-transition="fade" data-background-image="https://erc.europa.eu/sites/default/files/content/pages/images/DUST_illustration_copyright-Shutterstock.jpg">
@@ -97,18 +215,22 @@
                     <img style="width:50%;"
                          data-src="../figures/abm_book_cover.png" alt="Cover of the book 'Agent-Based Modelling and Geographical Information Systems" />
                 </section>
+            
+                <section id="references">
+                    <h2>References</h2>
+                    <p>Please see the GISRUK abstract at: </p>
+                    <p><a href="https://www.nickmalleson.co.uk/papers/2019-GISRUK-Presentation.pdf">
+                        www.nickmalleson.co.uk/papers/2019-GISRUK-Presentation.pdf</a></p>
+                </section>
                 
-                
+                            
                 <section id="summary" data-background-image="../figures/shutterstock_788457058-small.jpg">
                     <div class="whitebackground2">
                         <h2>Summary</h2>
-                        <p>Agent-Based Modelling (for Urban Dynamics)</p>
-                        <p>Dynamic City Simulation</p>
-                        <p class="l2">Data assimilation</p>
-                        <p class="l2">Simulating crowds</p>
-                        <p class="l2"> ... and later, cities!</p>
+                        <p>XXXX</p>
                     </div>
                 </section>
+            
                 
                 
 

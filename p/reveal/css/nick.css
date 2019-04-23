@@ -95,14 +95,28 @@ body {
     color: #555555;
 }
 
+/* For lists: */
+.reveal ul, .reveal ol {
+    margin-top: 0.3em;
+    margin-left: 1.9em;
+    color: rgb(10,10,70);
+}
+
+.reveal li{
+    margin-top: 0.3em; /* just increase the spread a little */
+}
+
 /* 'level2' for lists: */
+/*
 .reveal ul.l2, .reveal ol.l2 {
+    list-style: none;
     margin-top: 0.3em;
     margin-left:0px;
-    padding-left:0px;
+    padding-left:-px;
     font-size: 0.8em;
     color: #555555;
 }
+*/
 
 /* Some text can be two colums (use e.g. in a <div>) */
 .twocol  {
