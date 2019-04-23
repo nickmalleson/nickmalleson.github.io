@@ -69,7 +69,7 @@
                 
                 <section id="intro1">
                     <h2>'Appropriate' Spatial Scale</h2>
-                    <img class="right" src="../figures/paper_figures/crime_resolution_map.png"
+                    <img class="right" data-src="../figures/paper_figures/msea_2018/crime_resolution_map.png"
                          alt="Dense and sparse crime hot spots" />
                     <p>What is the appropriate spatial scale for the analysis of spatial patterns?</p>
                     <p class="l2">Addresses, streets, neighbourhoods, regions, etc..</p>
@@ -118,7 +118,7 @@
                 
                 
                 <section id="msea_method">
-                    <img src="../figures/paper_figures/msea_method.png" 
+                    <img data-src="../figures/paper_figures/msea_2018/msea_method.png" 
                          alt="A diagram illustrating the method (from the 'method' slide)" />
                 </section>
 
@@ -126,65 +126,148 @@
                 <section id="msea_interpretation1" data-transition="fade">
                     <h2>Similarity at different resolutions</h2>
                     <h3>Quiz</h3>
-                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation1.png"
+                    <img data-src="../figures/paper_figures/msea_2018/mesa_interpretation/msea_interpretation1.png"
                          alt="expected behaviour of the msea method - small cells, low similarity" />
                 </section>
                 
                 <section id="msea_interpretation2" data-transition="fade">
                     <h2>Similarity at different resolutions</h2>
                     <h3>What I expected</h3>
-                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation2.png"
+                    <img data-src="../figures/paper_figures/msea_2018/mesa_interpretation/msea_interpretation2.png"
                          alt="expected behaviour of the msea method - small cells, low similarity" />
                 </section>
                 
                 <section id="msea_interpretation3" data-transition="fade">
                     <h2>Similarity at different resolutions</h2>
                     <h3>WTF?</h3>
-                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation3.png"
+                    <img data-src="../figures/paper_figures/msea_2018/mesa_interpretation/msea_interpretation3.png"
                          alt="actual behaviour of the msea method - small cells, high similarity!" />
                 </section>
                 
                 <section id="msea_interpretation4" data-transition="fade">
                     <h2>Similarity at different resolutions</h2>
                     <h3>Explanation</h3>
-                    <img src="../figures/paper_figures/mesa_interpretation/msea_interpretation4.png"
+                    <img data-src="../figures/paper_figures/msea_2018/mesa_interpretation/msea_interpretation4.png"
                          alt="actual behaviour of the msea method - small cells, high similarity!" />
                 </section>
 
 
                 
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
+                <section id="vancouver">
+                    <!-- <img class="right" src="../figures/vancouver-google_earth.png" 
+                         alt="Vancouver using google earth" /> -->
+                    <img data-src="../figures/paper_figures/msea_2018/vancouver-crime_map.png" class="right" 
+                         style="width:55%;"/>
+                    <h2>Case Study - Vancouver</h2>
+                    <p>Publicly-avalilable crime data with good spatial accuracy</p>
+                    <p>Chosen crimes: BNER, BNEC, TFV, TOB</p>
+                    <img class="left" src="../figures/paper_figures/vancouver_crime_data-graph.png"
+                         alt="graphs of crime change in vancouver" style="width:35%;" />
                 </section>
                 
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
+                <section id="grids_map">
+                    <img style="width:60%;" data-src="../figures/paper_figures/msea_2018/msea-grids_map.png"
+                         alt="map of some of the different sized grids used" />
+                </section>
+                                
+
+                
+                <section id="simulated_results">
+                    <h2>Simulated Results</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/simulated_results.png" 
+                         alt="simulated results"/>
                 </section>
                 
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
-                </section>
-                
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
-                </section>
-                
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
-                </section>
-                
-                <section id="XXX">
-                    <h2></h2>
-                    <p></p>
+                <section id="crime_results">
+                    <h2>Crime data results</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/msea_results.png" 
+                         alt="actual results"/>
                 </section>
                 
                 
+                <section id="discussion1">
+                    <h2>Well, what is the most appropriate resolution?</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/msea-results-explanation.png" 
+                         alt="actual results explanation"/>
+                </section>
                 
+
+                <!--
+                <section id="discussion2">
+                    <h2>Well, what is the most appropriate resolution?</h2>
+                    <img class="right" data-src="../figures/paper_figures/msea_2018/msea-results-explanation.png" 
+                         alt="actual results explanation"/>
+                    <p>1 - large cells, many points</p>
+                    <p class="l2">Increase in the proportional difference with increasing number of points</p>
+                    <p class="l2">Cells with large  numbers of points have a statistically significant proportional difference that is not necessarily large in magnitude</p>                    
+                    <p>2 - small cells, few points</p>
+                    <p class="l2">Widening the confidence intervals</p>
+                    <p class="l2">Less likely that there is a significant difference; artificially amplifying the similarity</p>
+                </section> 
+                -->
+                
+                <section id="discussion-bner">
+                    <h2>Discussion: Residential Burglary (BNER)</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/msea_results-bner.png" class="right"
+                         alt="results zoomed in" />
+                    <p>Peak in similarity with cells of ~20 hectares in size </p>
+                    <p class="l2">Twice as large as a dissemination area / OA (smallest census unit))</p>
+                    <p>The most appropriate scale?</p>
+                    <p>Smaller is usually better, but &lt;20ha noise might hide the signal</p>
+                    <p>Note: burglary patterns were somewhat dissimilar</p>
+                </section>
+                
+                <section id="discussion-tfv">
+                    <h2>Discussion: Theft from Vehicle (TFV)</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/msea_results-tfv.png" class="right"
+                         alt="results zoomed in" />
+                    <p>Similarity increases to ~20ha, then plateaus</p>
+                    <p>No disadvantage to using smaller units</p>
+                    <p>Although fewer cells have explanatory power with small cells</p>
+                </section>
+                
+                <section id="discussion-bnec_tob">
+                    <h2>Discussion: Commercial Burglary (BNEC) and Theft of Bike (TOB)</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/msea_results-bnec.png" class="left"
+                         alt="results zoomed in" />
+                    <img data-src="../figures/paper_figures/msea_2018/msea_results-tob.png" class="right"
+                         alt="results zoomed in" />
+
+                    <p>Similarity peaks, then continues to rise</p>
+                    <p>Even with 6ha cells there is still a discernable signal</p>
+                    <p>Very tightly clustered crime pattern</p>
+                    <p class="l2">Has explanatory power even at very small cells (in clustedd areas)</p>
+                </section>
+                
+
+                <section id="similarity_maps">
+                    <img data-src="../figures/paper_figures/msea_2018/similarity-maps.png" style="width:60%;"
+                         alt="maps of the similatiry" />
+                </section>
+
+                
+                <section id="expected_proportion_change">
+                    <h2>What proportion of cells have a sufficient number of events?</h2>
+                    <img data-src="../figures/paper_figures/msea_2018/expected_proportion.png" 
+                         alt="Number of cells with sufficiently high expected count goes down with resolution" />
+                </section>
+                
+                <section id="conclusion" data-background-image="../figures/vancouver-google_earth.png">
+                    <div class="whitebackground2" >
+                        <h2>Conclusion</h2>
+                        <p>Is smaller really better?</p>
+                        <p class="l2">Yes!</p>
+                        <p class="l2">High-quality, disaggregate data are always preferable</p>
+                        <p>Rather, we propose a framework to explore the scale at which
+                        the <i>broader spatial pattern</i> might be overcome by noise</p>
+                        <p class="l2">In cases where <i>space</i> is important for the phenomena</p>
+                        <p>Caveat: Meaningful spatial units</p>
+                        <p class="l2">Grid cells are not meaningful</p>
+                        <p class="l2">Better to use a geography that links to the underlying phenomena</p>
+                        <p class="l3">E.g. illuminating work on street segments</p>
+                        <p class="l2">Future work could explore this</p>
+                    </div>                
+                </section>
                 
                 
                 <section id="moreinformation1" data-transition="fade" data-background-image="https://erc.europa.eu/sites/default/files/content/pages/images/DUST_illustration_copyright-Shutterstock.jpg">
@@ -213,23 +296,16 @@
                 <section id="abm-book">
                                     
                     <img style="width:50%;"
-                         data-src="../figures/abm_book_cover.png" alt="Cover of the book 'Agent-Based Modelling and Geographical Information Systems" />
+                         data-src="../figures/abm_book_cover.jpg" alt="Cover of the book 'Agent-Based Modelling and Geographical Information Systems" />
                 </section>
             
-                <section id="references">
+                <section id="link_to_references">
                     <h2>References</h2>
                     <p>Please see the GISRUK abstract at: </p>
                     <p><a href="https://www.nickmalleson.co.uk/papers/2019-GISRUK-Presentation.pdf">
                         www.nickmalleson.co.uk/papers/2019-GISRUK-Presentation.pdf</a></p>
                 </section>
                 
-                            
-                <section id="summary" data-background-image="../figures/shutterstock_788457058-small.jpg">
-                    <div class="whitebackground2">
-                        <h2>Summary</h2>
-                        <p>XXXX</p>
-                    </div>
-                </section>
             
                 
                 
