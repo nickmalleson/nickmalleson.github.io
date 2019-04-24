@@ -62,7 +62,7 @@
                 <section id="intro1">
                     <h2>'Appropriate' Spatial Scale</h2>
                     <img class="right" data-src="../figures/paper_figures/msea_2018/crime_resolution_map.png"
-                         alt="Dense and sparse crime hot spots" />
+                         alt="Dense and sparse crime hot spots" style="width:40%;"/>
                     <p>What is the appropriate spatial scale for the analysis of spatial patterns?</p>
                     <p class="l2">Addresses, streets, neighbourhoods, regions, etc..</p>
                     
@@ -79,14 +79,13 @@
                     <p>But in some cases, there might be a need to find an 'appropriate' scale</p>
                     <p class="l2">In general: <strong>smaller is better</strong> (homogeneous events and population)</p>
                     <p>But: <strong>how small is too small</strong></p>
-                    <p class="l2">High-resolution data are hard / expensive to obtain (might be personally disclosive / commercially sensitive</p>
+                    <p class="l2">High-resolution data are hard / expensive to obtain (might be personally disclosive / commercially sensitive)</p>
                     <p class="l2">Small number problems / signal v.s. noise</p>
-                    <p>What is the point at which no further disaggregation provides new information?</p>
                     <p>Definition of the most appropriate scale: <strong>that which is as large as possible without causing the underlying spatial units to become heterogeneous with respect to the phenomena under study.</strong></p>
                     
                 </section>
                 
-                <section id='method'>
+                <section id='method1'>
                     <h2>Method</h2>
                     <p>Combines and adapts two existing methods:</p>
                     <p class="l2">Multiple-resolution goodness of fit procedure (Costanza, 1989) and a test for spatial (dis)similarity (Andresen’s S: Andresen, 2009; Wheeler et al.,2018).</p>
@@ -101,8 +100,20 @@
                         <li>Repeat (2) using a smaller grid <i>N</i> times (until similarity is fairly constant)</li>
                         <li>Graph the similarity at different resolutions</li>
                     </ol>
-
-
+                </section>
+                <section id='method2'>
+                    <h2>Method</h2>
+                    <p>Calculating Similarity (Andresen's <i>S</i>)</p>
+                    <p class="l2">For each grid cell, calculate the proportion of events from each cell (<i>p1</i>, <i>p2</i>)</p>
+                    <p class="l2">Use Fisher's exact test to determine whether the proportions are similar</p>
+                    <p class="l3">dissimilar -> 0, similar -> 1</p>
+                    <p class="l2">Provides local (per cell) estimates of similarity ( <i>S<sub>L</sub></i> )</p>
+                    <p class="l2">Global similarity ( <i>S<sub>G</sub></i> ) is the mean of all cells</p>
+                    <p>Removing cells with low count</p>
+                    <p class="l2">What about cells with too few events? Cannot just mark as 'similar'</p>
+                    <p class="l2">Calculate <i>expected</i> number of events</p>
+                    <p class="l3">E = row marginal * column marginal / grand total</p>
+                    <p class="l2">Remove cells with E &lt; 5 (by convention)</p>
                 </section>
                 
                 
@@ -234,12 +245,13 @@
                          alt="maps of the similarity" />
                 </section>
 
-                
+                <!--
                 <section id="expected_proportion_change">
                     <h2>What proportion of cells have a sufficient number of events?</h2>
                     <img data-src="../figures/paper_figures/msea_2018/expected_proportion.png" style="width:80%;"
                          alt="Number of cells with sufficiently high expected count goes down with resolution" />
                 </section>
+                -->
                 
                 <section id="conclusion" data-background-image="../figures/vancouver-google_earth.png">
                     <div class="whitebackground2" >
@@ -266,7 +278,7 @@
                             <img class="right" style="width:100px;" data-src="../figures/LOGO_ERC.jpg" alt="ESRC Logo"/>
                         </a>
                         <p>Data Assimilation for Agent-Based Models (<a href="http://dust.leeds.ac.uk">dust</a>)</p>
-                        <p class="l2"><a href="http://dust.leeds.ac.uk/">http://dust.leeds.ac.uk/</a></p>
+                        <p class="l2"><a href="http://dust.leeds.ac.uk/">dust.leeds.ac.uk</a></p>
                         <p class="l2">Main aim: create new methods for dynamically assimilating data into agent-based models.</p>
                         <p>Uncertainty in agent-based models for smart city forecasts</p>
                         <a href="https://www.turing.ac.uk/">
