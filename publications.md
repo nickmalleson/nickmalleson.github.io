@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2019 
 
+Crols, T., and **N. Malleson** (2019) Quantifying the Ambient Population Using Hourly Population Footfall Data and an Agent-Based Model of Daily Mobility. _GeoInformatica_ (online first). DOI: [10.1007/s10707-019-00346-1](https://doi.org/10.1007/s10707-019-00346-1). [[Open access](https://doi.org/10.1007/s10707-019-00346-1)]. 
+
 Addis, N., A. Evans, and **N. Malleson** (2019) Exploring the Practices of Steal-to-Order Burglars: A Different Brand of Offender? _Security Journal_ (online first). DOI: [10.1057/s41284-019-00174-w](https://doi.org/10.1057/s41284-019-00174-w). [[PDF](./papers/2019-addis-security-steal2order.pdf)]
 
 
