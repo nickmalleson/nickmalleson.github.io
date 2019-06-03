@@ -104,19 +104,19 @@ Alotaibi, Nawaf Ibrahim, Andrew J. Evans, Alison J. Heppenstall, and **N. Malles
 
 #### 2016
 
-Ward, J., A. Evans, **N. Malleson** (2016) Dynamic calibration of agent-based models using data assimilation. _Royal Society Open Science._ 3:150703\. (open access) DOI: [https://dx.doi.org/10.1098/rsos.150703](https://dx.doi.org/10.1098/rsos.150703)
+Ward, J., A. Evans, **N. Malleson** (2016) Dynamic calibration of agent-based models using data assimilation. _Royal Society Open Science._ 3:150703\. (Open access) [https://dx.doi.org/10.1098/rsos.150703](https://dx.doi.org/10.1098/rsos.150703)
 
-**Malleson, N.**, and Andresen, M.A. (2016) Exploring the impact of ambient population measures on London crime hotspots. _Journal of Criminal Justice_ 46 pp 52-63 [DOI: [10.1016/j.jcrimjus.2016.03.002](http://dx.doi.org/10.1016/j.jcrimjus.2016.03.002)] (open access)
+**Malleson, N.**, and Andresen, M.A. (2016) Exploring the impact of ambient population measures on London crime hotspots. _Journal of Criminal Justice_ 46 pp 52-63. (Open access) [http://dx.doi.org/10.1016/j.jcrimjus.2016.03.002)](http://dx.doi.org/10.1016/j.jcrimjus.2016.03.002)
 
-Heppenstall, A., **N. Malleson** and A. Crooks (2016) ‘Space, the Final Frontier’: How Good are Agent-Based Models at Simulating Individuals and Space in Cities? _Systems_ 4(1) 9 [DOI:[10.3390/systems4010009](http://dx.doi.org/10.3390/systems4010009)]
+Heppenstall, A., **N. Malleson** and A. Crooks (2016) ‘Space, the Final Frontier’: How Good are Agent-Based Models at Simulating Individuals and Space in Cities? _Systems_ 4(1) 9 [http://dx.doi.org/10.3390/systems4010009](http://dx.doi.org/10.3390/systems4010009)
 
 #### 2015
 
-**Malleson, N.** and M.A. Andresen (2015a) Spatio-temporal crime hotspots and the ambient population. _Crime Science_ 4(10). [[URL (open access)](http://www.crimesciencejournal.com/content/4/1/10)] [DOI:<span class="pseudotab">[10.1186/s40163-015-0023-8](http://dx.doi.org/10.1186/s40163-015-0023-8)</span>] [[URL (white rose repository](http://eprints.whiterose.ac.uk/88698/)]
+**Malleson, N.** and M.A. Andresen (2015a) Spatio-temporal crime hotspots and the ambient population. _Crime Science_ 4(10). (Open access) [http://dx.doi.org/10.1186/s40163-015-0023-8](http://dx.doi.org/10.1186/s40163-015-0023-8)
 
-Andresen, M.A., and **N. Malleson** (2015). Intra-week spatial-temporal patterns of crime. _Crime Science_. 4(12) [[URL (open access)](http://www.crimesciencejournal.com/content/4/1/12)] [[URL (white rose repository](http://eprints.whiterose.ac.uk/89055/)]
+Andresen, M.A., and **N. Malleson** (2015). Intra-week spatial-temporal patterns of crime. _Crime Science_. 4(12). (Open access) [https://doi.org/10.1186/s40163-015-0024-7](https://doi.org/10.1186/s40163-015-0024-7)) [[URL (white rose repository](http://eprints.whiterose.ac.uk/89055/)]
 
-**Malleson, N.** and M. Andresen (2015b) The impact of using social media data in crime rate calculations: shifting hot spots and changing spatial patterns. _Cartography and Geographic Information Science_ : 42(2) 112-121 [[PDF]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2014/05/CaGIS-AAM.pdf)] [DOI: [10.1080/15230406.2014.905756](http://dx.doi.org/10.1080/15230406.2014.905756)]
+**Malleson, N.** and M. Andresen (2015b) The impact of using social media data in crime rate calculations: shifting hot spots and changing spatial patterns. _Cartography and Geographic Information Science_ : 42(2) 112-121 [[PDF]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2014/05/CaGIS-AAM.pdf)] [http://dx.doi.org/10.1080/15230406.2014.905756](http://dx.doi.org/10.1080/15230406.2014.905756)
 
 #### 2014
 
