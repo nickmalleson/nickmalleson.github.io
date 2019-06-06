@@ -8,13 +8,11 @@ tags: [paper, special issue, abm]
 
 # Special Issue: Spatial Agent-Based Models: Current Practices and Future Trends 
 
-[Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) and [Andrew Crooks](https://www.gisagents.org/) have recently co-editted a special issue of GeoInformatica entitled 'Spatial Agent-Based Models: Current Practices and Future Trends’. 
+[Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) and [Andrew Crooks](https://www.gisagents.org/) have recently co-editted a special issue of GeoInformatica entitled '[Spatial Agent-Based Models: Current Practices and Future Trends](https://link.springer.com/journal/10707/23/2)’. 
 
-<figure style="width:40%;float:right; padding: 1em;" >
+<figure style="width:60%;float:right; padding: 1em;" >
 <img src="{{site.baseurl}}/figures/footfall-individual-sensors.png" alt="Graph showing footfall from an ABM" />
 </figure>
-
-[https://link.springer.com/journal/10707/23/2](https://link.springer.com/journal/10707/23/2)
 
 My colleague, Tomas Crols, and I were fortunate enough to have a paper published as part of the issue:
 
