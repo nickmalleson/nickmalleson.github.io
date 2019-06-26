@@ -60,11 +60,11 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://lida.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
-                <h3><a href="http://lida.leeds.ac.uk/"></a></h3>
-                Understanding Input Data Requirements for Successfully Modelling Cities
+                <a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <h3><a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">ABM Uncertainty</a></h3>
+                Uncertainty in agent-based models for smart city forecasts
             </li>
-            <li style="font-size: small; line-height: 20px;">The aim of this project is to explore the uncertainty associated with an individual-level model of pedestrian movements in a city. Specifically, we want to better understand how much information about the real world is needed to be able to create an accurate model of pedestrian movement. More information coming soon.</li>
+            <li style="font-size: small; line-height: 20px;">This project, funded by the <a href="https://www.turing.ac.uk/">Alan Turing Institute</a> will develop methods that can be used to better understand uncertainty in individual-level models of cities. <a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">More information</a></li>
             <li>&nbsp;</li>
         </ul>
     </div>
