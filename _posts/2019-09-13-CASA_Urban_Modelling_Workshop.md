@@ -10,7 +10,7 @@ tags: [abm, conference]
 
 <img src="https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F69378185%2F46043315771%2F1%2Foriginal.20190821-102933?w=800&auto=compress&rect=0%2C40%2C1280%2C640&s=0f2b117eb7169c264413bc51fb2e7ca6" style="float:Right; width:50%;"/>
 
-I'm delighted to be attending the MacArthur Workshop on Urban Modelling & Complexity Science next week. It will be held in the J Z Young Lecture Theatre, Anatomy Building University College London on **Thursday 19th to Friday 20th September 2019** from 8-45am to 5pm each day.
+I'm delighted to be attending the MacArthur Workshop on Urban Modelling & Complexity Science at [CASA](http://www.casa.ucl.ac.uk/), [UCL](http://ucl.ac.uk/), next week. It will be held in the J Z Young Lecture Theatre, Anatomy Building University College London on **Thursday 19th to Friday 20th September 2019** from 8-45am to 5pm each day.
  
 This event is free but please check the Eventbrite page: [www.eventbrite.co.uk/e/the-macarthur-workshop-on-urban-modelling-complexity-science-tickets-69983794413](www.eventbrite.co.uk/e/the-macarthur-workshop-on-urban-modelling-complexity-science-tickets-69983794413)
 
