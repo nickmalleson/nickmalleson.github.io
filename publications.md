@@ -42,7 +42,7 @@ tagline:
                 <ul class="style">
                     <li>
                         <a href="#workingpapers"><span class="fa fa-book"></span></a>
-                        <h3><a href="#workingpapers">Working Papers</a></h3>
+                        <h3><a href="#workingpapers">Working Papers and Pre-Prints</a></h3>
                     </li>
                     <li>&nbsp;</li>
                 </ul>
@@ -204,7 +204,12 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 **Malleson, N**. and M. Birkin (2013). Estimating Individual Behaviour from Massive Social Data for An Urban Agent-Based Model. In A. Koch and P. Mandl (Eds) _GeoSimulation_: Modeling Social Phenomena in Spatial Context. Germany: Lit Verlag. ISBN: [978-3-643-90345-7](http://www.lit-verlag.de/isbn/3-643-90345-7) [[download (pdf)]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/01/essa.pdf)]
 
-### <a name="workingpapers"></a>Working Papers and Others
+### <a name="workingpapers"></a>Working Papers, Pre-Prints and Others
+
+
+**Malleson, N.**, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew A. West, Alison Heppenstall (2019) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Preprint_: [arXiv:1909.09397 [cs.MA]](https://arxiv.org/abs/1909.09397).
+ 	
+Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019) Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions’. _Preprint_ [arXiv:1908.08288 [cs.MA]](https://arxiv.org/abs/1908.08288).
 
 **N. Malleson** and A. Hepenstall (2018).  How to make smart cities human again. _The Conversation_. Published 31 January, 2018. Available online: [https://theconversation.com/how-to-make-smart-cities-human-again-88453](https://theconversation.com/how-to-make-smart-cities-human-again-88453). Also published in the _[Club of Amsterdam Journal](http://www.clubofamsterdam.com/press.asp?contentid=991#article01)_.
 
