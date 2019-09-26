@@ -73,6 +73,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2019 
 
+Kieu, Le-Minh, D. Ngoduy, **N Malleson**, and E. Chung (2019). A Stochastic Schedule-Following Simulation Model of Bus Routes. _Transportmetrica B: Transport Dynamics_ 7 (1): 1588–1610. DOI: [10.1080/21680566.2019.1670118](https://doi.org/10.1080/21680566.2019.1670118). [[PDF](./papers/2019-BusSimTransportmetrica.pdf)].
+
+
 **Malleson N**, Steenbeek W, Andresen MA (2019) Identifying the appropriate spatial resolution for the analysis of crime patterns. _PLoS ONE_ 14(6): e0218324. DOI: [10.1371/journal.pone.0218324](https://doi.org/10.1371/journal.pone.0218324) (open access).
 
 Crols, T., and **N. Malleson** (2019) Quantifying the Ambient Population Using Hourly Population Footfall Data and an Agent-Based Model of Daily Mobility. _GeoInformatica_ (online first). DOI: [10.1007/s10707-019-00346-1](https://doi.org/10.1007/s10707-019-00346-1). [[Open access](https://doi.org/10.1007/s10707-019-00346-1)]. 
