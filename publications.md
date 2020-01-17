@@ -71,6 +71,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
+
 #### 2020
 
 Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019). Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions’. _Royal Society Open Science_ 7(1): 191074. DOI: [10.1098/rsos.191074](https://doi.org/10.1098/rsos.191074) (open access)
