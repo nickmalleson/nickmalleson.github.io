@@ -1,7 +1,7 @@
 ---
 layout: main
 title: Publications
-tagline: 
+tagline:
 ---
 
  <section class="container">
@@ -26,7 +26,7 @@ tagline:
                     <li>&nbsp;</li>
                 </ul>
             </div>
-            
+
             <div class="4u">
                 <ul class="style">
                     <li>
@@ -36,8 +36,8 @@ tagline:
                     <li>&nbsp;</li>
                 </ul>
             </div>
-            
-            
+
+
             <div class="4u">
                 <ul class="style">
                     <li>
@@ -47,21 +47,21 @@ tagline:
                     <li>&nbsp;</li>
                 </ul>
             </div>
-            
+
             <div class="4u">
                 <ul class="style">
                     <li>
                         <a href="#thesis"><span class="fa fa-book"></span></a>
                         <h3><a href="#thesis">PhD Thesis</a></h3>
                     </li>
-                    <li>&nbsp;</li>	
+                    <li>&nbsp;</li>
                 </ul>
             </div>
 
 
         </div>
 </section>
-            
+
 <!-- Skip to: [Peer-Reviewed Journal Articles](#papers), [Book Chapters](#chapters), [Articles in Conferece Proceedings](#proceedings), [Working Papers](#workingpapers), [PhD Thesis](#thesis). -->
 
 
@@ -71,14 +71,19 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
-#### 2019 
+#### 2020
+
+Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019). Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions’. _Royal Society Open Science_ 7(1): 191074. DOI: [10.1098/rsos.191074](https://doi.org/10.1098/rsos.191074) (open access)
+
+
+#### 2019
 
 Kieu, Le-Minh, D. Ngoduy, **N Malleson**, and E. Chung (2019). A Stochastic Schedule-Following Simulation Model of Bus Routes. _Transportmetrica B: Transport Dynamics_ 7 (1): 1588–1610. DOI: [10.1080/21680566.2019.1670118](https://doi.org/10.1080/21680566.2019.1670118). [[PDF](./papers/2019-BusSimTransportmetrica.pdf)].
 
 
 **Malleson N**, Steenbeek W, Andresen MA (2019) Identifying the appropriate spatial resolution for the analysis of crime patterns. _PLoS ONE_ 14(6): e0218324. DOI: [10.1371/journal.pone.0218324](https://doi.org/10.1371/journal.pone.0218324) (open access).
 
-Crols, T., and **N. Malleson** (2019) Quantifying the Ambient Population Using Hourly Population Footfall Data and an Agent-Based Model of Daily Mobility. _GeoInformatica_ (online first). DOI: [10.1007/s10707-019-00346-1](https://doi.org/10.1007/s10707-019-00346-1). [[Open access](https://doi.org/10.1007/s10707-019-00346-1)]. 
+Crols, T., and **N. Malleson** (2019) Quantifying the Ambient Population Using Hourly Population Footfall Data and an Agent-Based Model of Daily Mobility. _GeoInformatica_ (online first). DOI: [10.1007/s10707-019-00346-1](https://doi.org/10.1007/s10707-019-00346-1). [[Open access](https://doi.org/10.1007/s10707-019-00346-1)].
 
 Addis, N., A. Evans, and **N. Malleson** (2019) Exploring the Practices of Steal-to-Order Burglars: A Different Brand of Offender? _Security Journal_ (online first). DOI: [10.1057/s41284-019-00174-w](https://doi.org/10.1057/s41284-019-00174-w). [[PDF](./papers/2019-addis-security-steal2order.pdf)]
 
@@ -86,7 +91,7 @@ Addis, N., A. Evans, and **N. Malleson** (2019) Exploring the Practices of Steal
 Yu, Rui, A.J. Evans and **N. Malleson** (2019) An agent-based model for assessing grazing strategies and institutional arrangements in Zeku, China. _Agricultural Systems_ 171: 135–142. DOI:[10.1016/j.agsy.2019.02.004](https://doi.org/10.1016/j.agsy.2019.02.004). [[PDF](./papers/2019-Rui_ABM_Grazing.pdf)].
 
 
-**Malleson, N** (2019) Building Temporal Dynamism into Applied GIS Research. _Applied Spatial Analysis and Policy_ (Online first). (Introduction to the 2015 GIS Research UK Special Issue). [DOI: 10.1007/s12061-019-09291-w](https://doi.org/10.1007/s12061-019-09291-w). [[PDF](./papers/2019-GIRSUK-ASAP.pdf)]. 
+**Malleson, N** (2019) Building Temporal Dynamism into Applied GIS Research. _Applied Spatial Analysis and Policy_ (Online first). (Introduction to the 2015 GIS Research UK Special Issue). [DOI: 10.1007/s12061-019-09291-w](https://doi.org/10.1007/s12061-019-09291-w). [[PDF](./papers/2019-GIRSUK-ASAP.pdf)].
 
 #### 2018
 
@@ -211,7 +216,7 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 
 **Malleson, N.**, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew A. West, Alison Heppenstall (2019) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Preprint_: [arXiv:1909.09397 [cs.MA]](https://arxiv.org/abs/1909.09397).
- 	
+
 Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019) Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions’. _Preprint_ [arXiv:1908.08288 [cs.MA]](https://arxiv.org/abs/1908.08288).
 
 **N. Malleson** and A. Hepenstall (2018).  How to make smart cities human again. _The Conversation_. Published 31 January, 2018. Available online: [https://theconversation.com/how-to-make-smart-cities-human-again-88453](https://theconversation.com/how-to-make-smart-cities-human-again-88453). Also published in the _[Club of Amsterdam Journal](http://www.clubofamsterdam.com/press.asp?contentid=991#article01)_.
