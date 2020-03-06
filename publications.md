@@ -220,7 +220,10 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 **Malleson, N.**, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew A. West, Alison Heppenstall (2019) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Preprint_: [arXiv:1909.09397 [cs.MA]](https://arxiv.org/abs/1909.09397).
 
-Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019) Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions’. _Preprint_ [arXiv:1908.08288 [cs.MA]](https://arxiv.org/abs/1908.08288).
+Kieu, Le-Minh, **N. Malleson**, and A. Heppenstall (2019) Dealing with Uncertainty in Agent-Based Models for Short-Term Predictions. _Preprint_ [arXiv:1908.08288 [cs.MA]](https://arxiv.org/abs/1908.08288).
+
+Nik Lomax, **N. Malleson**, Le-Minh Kieu (2019) Point Pattern Processes and Models. _Preprint_ [arXiv:1910.00282v1 [stat.ME]](https://arxiv.org/abs/1910.00282).
+
 
 **N. Malleson** and A. Hepenstall (2018).  How to make smart cities human again. _The Conversation_. Published 31 January, 2018. Available online: [https://theconversation.com/how-to-make-smart-cities-human-again-88453](https://theconversation.com/how-to-make-smart-cities-human-again-88453). Also published in the _[Club of Amsterdam Journal](http://www.clubofamsterdam.com/press.asp?contentid=991#article01)_.
 
