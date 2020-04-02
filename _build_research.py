@@ -33,14 +33,18 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="row">\n""")
                 continue
 
-            l = line.strip().split(',,') # Split on double-comas
-            short_title = l[0].strip()
-            long_title = l[1].strip()
-            url = l[2].strip()
-            desc = l[3].strip()
-            colour = l[4].strip()
-            icon = l[5].strip()
-            img = l[6].strip() if len(l)>6 else ""
+            try:
+                l = line.strip().split(',,') # Split on double-comas
+                short_title = l[0].strip()
+                long_title = l[1].strip()
+                url = l[2].strip()
+                desc = l[3].strip()
+                colour = l[4].strip()
+                icon = l[5].strip()
+                img = l[6].strip() if len(l)>6 else ""
+            except Exception as e:
+                print("Error parsing line {}: {}".format(i, line) )
+                raise e
             
             s = """
     <div class="6u">

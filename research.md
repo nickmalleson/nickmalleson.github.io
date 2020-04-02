@@ -18,20 +18,9 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
             <li>
                 <a href="http://dust.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
                 <h3><a href="http://dust.leeds.ac.uk/">DUST</a></h3>
-                Data Assimilation for Agent-Based Models: Applications to Civil Emergencies
+                Data Assimilation for Agent-Based Models
             </li>
             <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based modelss. <a href="http://dust.leeds.ac.uk/">More information</a>.</li>
-            <li>&nbsp;</li>
-        </ul>
-    </div>
-    <div class="6u">
-        <ul class="style">
-            <li>
-                <a href="http://surf.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
-                <h3><a href="http://surf.leeds.ac.uk/">surf</a></h3>
-                Simulating Urban Flows
-            </li>
-            <li style="font-size: small; line-height: 20px;">The aim of surf is to create a simulation that is capable of modelling the individual movements of people in an urban environment as they undertake their daily routine activities. Ultimately, the results will be used to quantify the impacts of levels of crime and pollution on citizens. <a href="http://surf.leeds.ac.uk/">More information</a>.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -62,9 +51,42 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
             <li>
                 <a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts"><span style="background-color: #009900;" class="fa fa-user"></span></a>
                 <h3><a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">ABM Uncertainty</a></h3>
-                Uncertainty in agent-based models for smart city forecasts
+                Uncertainty in Agent-based Models for Smart City Forecasts
             </li>
             <li style="font-size: small; line-height: 20px;">This project, funded by the <a href="https://www.turing.ac.uk/">Alan Turing Institute</a> will develop methods that can be used to better understand uncertainty in individual-level models of cities. <a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">More information</a></li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="https://urban-analytics.github.io/UTM-Hanoi/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <h3><a href="https://urban-analytics.github.io/UTM-Hanoi/">UTM-Hanoi</a></h3>
+                Urban Transport Modelling for Sustainable Well-Being in Hanoi
+            </li>
+            <li style="font-size: small; line-height: 20px;">This project aims to use computer modelling to look at how, where, and when planned transport policies in Hanoi should be implemented, what the impacts on local communities would be, whether public transport can cope, and whether there are alternatives. <a href="https://urban-analytics.github.io/UTM-Hanoi/">More information</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="https://github.com/Team-RADDISH"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="https://github.com/Team-RADDISH">RADDISH</a></h3>
+                Real-Time Advanced Data assimilation for Digital Simulation of Numerical Twins on HPC (RADDISH)
+            </li>
+            <li style="font-size: small; line-height: 20px;">This project will perform the essential computational groundwork to allow researchers to apply data assimilation methods to coupled human-environmental systems. <i>More information coming soon</i>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href=""><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="">Flexible Energy</a></h3>
+                Towards A Flexible, Sustainable Urban Energy System
+            </li>
+            <li style="font-size: small; line-height: 20px;">The principal objective of this proposed project is to develop a city-scale energy demand model that is derived through spatial microsimulation models (MSMs) and agent-based models (ABMs) of people’s presence and their daily activities (e.g. commuting, shopping, education, leisure, etc.) at high resolution. <i>More information coming soon</i>.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -74,6 +96,17 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
 <section class="container">
     <div class="row">
 
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="http://surf.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <h3><a href="http://surf.leeds.ac.uk/">surf</a></h3>
+                Simulating Urban Flows
+            </li>
+            <li style="font-size: small; line-height: 20px;">The aim of surf is to create a simulation that is capable of modelling the individual movements of people in an urban environment as they undertake their daily routine activities. Ultimately, the results will be used to quantify the impacts of levels of crime and pollution on citizens. <a href="http://surf.leeds.ac.uk/">More information</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
     <div class="6u">
         <ul class="style">
             <li>
