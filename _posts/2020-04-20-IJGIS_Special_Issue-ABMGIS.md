@@ -8,7 +8,11 @@ tags: [abm, GIS, special issue]
 
 # Special Issue: "Innovations in Agent-Based Modelling of Spatial Systems"
 
-<a href="https://www.mdpi.com/journal/ijgi"> <img style="float:right;" src="https://www.mdpi.com/img/journals/ijgi-logo.png?82202c0ffccce258", alt="journal logo" /></a>
+<figure style="width:40%;float:right; padding: 1em;" >
+<img src="https://www.mdpi.com/img/journals/ijgi-logo.png" alt="journal logo" />
+</figure>
+
+
 We are pleased to announce a new special issue in the [_ISPRS International Journal of Geo-Information_](https://www.mdpi.com/journal/ijgi) on '[Innovations in Agent-Based Modelling of Spatial Systems](https://www.mdpi.com/journal/ijgi/special_issues/innovation_agent)'. We particularly encourage contributions from _early career researchers_ (details below). This special issue call is also available as a [flyer (pdf)](https://www.mdpi.com/journal/ijgi/special_issue_flyer_pdf/innovation_agent/web). Full details are available from the [journal website](https://www.mdpi.com/journal/ijgi/special_issues/innovation_agent).
 
 Agent-Based Modelling is a method that is ideally suited to modelling many social and spatial phenomena, particularly in human-environmental systems where the interactions and behaviours of heterogeneous individuals are key to understanding the wider system-level behaviour. Although it is a relatively new method that understandably receives criticism, significant progress has been made towards: (i) strengthening the reliability of agent-based models through the development of comprehensive **validation methods**; (ii) the use of new **data sources** to better capture observed and simulated patterns at different scales; or  (iii) through closer working with the **‘end users’ of research**, such as policy makers and businesses, so that the uncertainties and limitations of any modelled results are properly understood.
