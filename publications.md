@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2020
 
+**Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation_ 23 (3).  http://jasss.soc.surrey.ac.uk/23/3/3.html DOI: [10.18564/jasss.4266](dx.doi.org/10.18564/jasss.4266) (open access)
+
 Jumadi, J, **N. Malleson**, S. Carver, and D. Quincey (2020). Estimating Spatio-Temporal Risks from Volcanic Eruptions Using an Agent-Based Model’. _Journal of Artificial Societies and Social Simulation_ 23 (2): 2. DOI: [10.18564/jasss.4241](https://doi.org/10.18564/jasss.4241) (open access)
 
 Martin A. Andresen, **N. Malleson**, W. Steenbeek, M. Townsley and C. Vandeviver (2020). Minimum geocoding match rates: an international study of the impact of data and areal unit sizes. _International Journal of Geographical Information Science_ (online first) [10.1080/13658816.2020.1725015](https://doi.org/10.1080/13658816.2020.1725015) ([pdf](./papers/2020-IJGIS-Geocoding.pdf))
