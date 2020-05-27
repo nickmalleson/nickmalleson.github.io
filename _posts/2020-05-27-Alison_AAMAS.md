@@ -9,7 +9,7 @@ tags: [abm, data assimilation, slime mould]
 
 # Building Cities from Slime Mould, Agents and Quantum Field Theory
 
-<figure style="float:right; width:30%;" >
+<figure style="float:right; width:30%; padding:10px;"" >
 <img src="https://cpb-ap-se2.wpmucdn.com/blogs.auckland.ac.nz/dist/d/603/files/2019/05/aamas_logov3.png"
 alt="AAMAS 2020 logo"/>
 </figure>
