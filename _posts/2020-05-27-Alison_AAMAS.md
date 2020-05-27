@@ -9,9 +9,8 @@ tags: [abm, data assimilation, slime mould]
 
 # Building Cities from Slime Mould, Agents and Quantum Field Theory
 
-<figure style="float:right; width:30%; padding:10px;"" >
-<img src="https://cpb-ap-se2.wpmucdn.com/blogs.auckland.ac.nz/dist/d/603/files/2019/05/aamas_logov3.png"
-alt="AAMAS 2020 logo"/>
+<figure style="float:right; width:30%; padding:10px;" >
+<img src="https://cpb-ap-se2.wpmucdn.com/blogs.auckland.ac.nz/dist/d/603/files/2019/05/aamas_logov3.png" alt="AAMAS 2020 logo"/>
 </figure>
 
 My colleague [Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) was recently invited to present our work as a keynote speaker at the International Conference on Autonomous Agents and Multi-Agent Systems ([AAMAS](https://aamas2020.conference.auckland.ac.nz/)) entitled [Building Cities from Slime Mould, Agents and Quantum Field Theory](https://aamas2020.conference.auckland.ac.nz/alison-heppenstall/). The full paper is available <a href="{{site.baseurl}}/papers/2020-AAMAS-Heppenstall.pdf">here</a> and the abstract is:
