@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2020
 
+Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, agents and quantum field theory. AAMAS 2020 (in press). [Abstract (pdf)]({{site.baseurl}}/papers/2020-AAMAS-Heppenstall.pdf). [Presentation](https://underline.io/lecture/60-building-cities-from-slime-mould,-agents-and-quantum-field-theory).
+
 **Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation_ 23 (3).  http://jasss.soc.surrey.ac.uk/23/3/3.html DOI: [10.18564/jasss.4266](dx.doi.org/10.18564/jasss.4266) (open access)
 
 Jumadi, J, **N. Malleson**, S. Carver, and D. Quincey (2020). Estimating Spatio-Temporal Risks from Volcanic Eruptions Using an Agent-Based Model’. _Journal of Artificial Societies and Social Simulation_ 23 (2): 2. DOI: [10.18564/jasss.4241](https://doi.org/10.18564/jasss.4241) (open access)
