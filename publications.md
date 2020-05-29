@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2020
 
+Johnson, P., M. A. Andresen, and **N. Malleson** (2020). Cell Towers and the Ambient Population: A Spatial Analysis of Disaggregated Property Crime’. _European Journal on Criminal Policy and Research_ (in press). DOI: [10.1007/s10610-020-09446-3](https://doi.org/10.1007/s10610-020-09446-3). [[PDF](./2020-Cell_Towers_Crime.pdf)]
+
 **Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation_ 23 (3).  http://jasss.soc.surrey.ac.uk/23/3/3.html DOI: [10.18564/jasss.4266](dx.doi.org/10.18564/jasss.4266) (open access)
 
 Jumadi, J, **N. Malleson**, S. Carver, and D. Quincey (2020). Estimating Spatio-Temporal Risks from Volcanic Eruptions Using an Agent-Based Model’. _Journal of Artificial Societies and Social Simulation_ 23 (2): 2. DOI: [10.18564/jasss.4241](https://doi.org/10.18564/jasss.4241) (open access)
@@ -208,7 +210,7 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conferece Proceedings
 
-Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, agents and quantum field theory. AAMAS 2020 (in press). [Abstract (pdf)]({{site.baseurl}}/papers/2020-AAMAS-Heppenstall.pdf). [Presentation](https://underline.io/lecture/60-building-cities-from-slime-mould,-agents-and-quantum-field-theory). [DOI: 10.5555/3398761.3398765](https://dl.acm.org/doi/abs/10.5555/3398761.3398765).
+Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, agents and quantum field theory. In [Proceedings of AAMAS 2020](http://www.ifaamas.org/Proceedings/aamas2020/). [Abstract (pdf)]({{site.baseurl}}/papers/2020-AAMAS-Heppenstall.pdf). [Presentation](https://underline.io/lecture/60-building-cities-from-slime-mould,-agents-and-quantum-field-theory). [DOI: 10.5555/3398761.3398765](https://dl.acm.org/doi/abs/10.5555/3398761.3398765).
 
 **Malleson, N.**, Jonathan A. Ward, A. Heppenstall, M. Adcock, D. Tang, J. Coello, and T. Crols. (2018). Understanding Input Data Requirements and Quantifying Uncertainty for Successfully Modelling ‘Smart’ Cities. In _3rd International Workshop on Agent-Based Modelling of Urban Systems_ (ABMUS), of the International Conference on Autonomous Agents and Multiagent Systems ([AAMAS 2018](http://celweb.vuse.vanderbilt.edu/aamas18/home/)). 10-15 July, Stockholm, Sweden. [Full abstract (pdf)](https://urban-analytics.github.io/dust/p/2018-07-15-abmus-da-abstract.pdf). [Slides (html)](https://urban-analytics.github.io/dust/p/2018-07-15-abmus-da.html).
 
