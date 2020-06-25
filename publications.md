@@ -76,7 +76,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 Johnson, P., M. A. Andresen, and **N. Malleson** (2020). Cell Towers and the Ambient Population: A Spatial Analysis of Disaggregated Property Crime’. _European Journal on Criminal Policy and Research_ (in press). DOI: [10.1007/s10610-020-09446-3](https://doi.org/10.1007/s10610-020-09446-3). [[PDF](./papers/2020-Cell_Towers_Crime.pdf)]
 
-**Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation_ 23 (3).  http://jasss.soc.surrey.ac.uk/23/3/3.html DOI: [10.18564/jasss.4266](dx.doi.org/10.18564/jasss.4266) (open access)
+**Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation (JASSS)_ 23 (3).  [http://jasss.soc.surrey.ac.uk/23/3/3.html](http://jasss.soc.surrey.ac.uk/23/3/3.html) DOI: [10.18564/jasss.4266](https://dx.doi.org/10.18564/jasss.4266) (open access)
 
 Jumadi, J, **N. Malleson**, S. Carver, and D. Quincey (2020). Estimating Spatio-Temporal Risks from Volcanic Eruptions Using an Agent-Based Model’. _Journal of Artificial Societies and Social Simulation_ 23 (2): 2. DOI: [10.18564/jasss.4241](https://doi.org/10.18564/jasss.4241) (open access)
 
