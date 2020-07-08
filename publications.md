@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2020
 
+Halford, E., A. Dixon, G. Farrell, **N. Malleson** and N. Tilley (2020) Crime and coronavirus: social distancing, lockdown, and the mobility elasticity of crime. _Crime Science_ 9 (11). DOI: [10.1186/s40163-020-00121-w](https://doi.org/10.1186/s40163-020-00121-w) (open access)
+
 Johnson, P., M. A. Andresen, and **N. Malleson** (2020). Cell Towers and the Ambient Population: A Spatial Analysis of Disaggregated Property Crime’. _European Journal on Criminal Policy and Research_ (in press). DOI: [10.1007/s10610-020-09446-3](https://doi.org/10.1007/s10610-020-09446-3). [[PDF](./papers/2020-Cell_Towers_Crime.pdf)]
 
 **Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation (JASSS)_ 23 (3).  [http://jasss.soc.surrey.ac.uk/23/3/3.html](http://jasss.soc.surrey.ac.uk/23/3/3.html) DOI: [10.18564/jasss.4266](https://dx.doi.org/10.18564/jasss.4266) (open access)
@@ -209,6 +211,10 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 **N. Malleson** (2012) Using Agent-Based Models to Simulate Crime. In Heppenstall, A.J.; Crooks, A.T.; See, L.M.; Batty, M. (Eds.) _Agent-Based Models of Geographical Systems_. Springer. [[URL]](http://www.springer.com/social+sciences/population+studies/book/978-90-481-8926-7) [[download]]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/03/abm_book_chapter_2012-2.pdf)
 
 ### <a name="proceedings"></a>Articles in Conferece Proceedings
+
+R. Clay, Le-Minh Kieu, J. A. Ward, A. Heppenstall, **N. Malleson** (2020) Towards Real-Time Crowd Simulation Under Uncertainty Using an Agent-Based Model and an Unscented Kalman Filter. In Demazeau Y., Holvoet T., Corchado J., Costantini S. (eds) _Advances in Practical Applications of Agents, Multi-Agent Systems, and Trustworthiness. The PAAMS Collection. PAAMS 2020._ Lecture Notes in Computer Science, vol 12092. Springer. [DOI: 10.1007/978-3-030-49778-1_6](https://doi.org/10.1007/978-3-030-49778-1_6) [Paper (pdf)]({{site.baseurl}}/papers/2020-PAAMS-UKF.pdf)
+
+D. Birks, A. Heppenstall and **N. Malleson** (2020). Towards the Development of Societal Twins. 24th European Conference on Artificial Intelligence - ECAI 2020. PDF: [ecai2020.eu/papers/1162_paper.pdf](http://ecai2020.eu/papers/1162_paper.pdf)
 
 Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, agents and quantum field theory. In [Proceedings of AAMAS 2020](http://www.ifaamas.org/Proceedings/aamas2020/). [Abstract (pdf)]({{site.baseurl}}/papers/2020-AAMAS-Heppenstall.pdf). [Presentation](https://underline.io/lecture/60-building-cities-from-slime-mould,-agents-and-quantum-field-theory). [DOI: 10.5555/3398761.3398765](https://dl.acm.org/doi/abs/10.5555/3398761.3398765).
 
