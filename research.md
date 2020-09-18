@@ -90,6 +90,17 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
             <li>&nbsp;</li>
         </ul>
     </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="https://covid19-crime.com/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="https://covid19-crime.com/">covid19-crime</a></h3>
+                Reducing the Unanticipated Crime Harms of COVID-19 Policies
+            </li>
+            <li style="font-size: small; line-height: 20px;">This project will analyse emerging crime data to better understsand the impact that COVID-19-related policies are having on crime rates. For more details see the <a href="https://covid19-crime.com/about/">project website</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
     </div>
 </section>
 <h2>Completed Projects</h2>
