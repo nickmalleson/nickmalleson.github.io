@@ -1,7 +1,7 @@
 ---
-layout: main
+layout: main-withside
 title: CV
-tagline: 
+tagline:
 ---
 
 My webpage CV is under construction. In the meantime:
