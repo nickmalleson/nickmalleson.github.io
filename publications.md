@@ -76,6 +76,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 Halford, E., A. Dixon, G. Farrell, **N. Malleson** and N. Tilley (2020) Crime and coronavirus: social distancing, lockdown, and the mobility elasticity of crime. _Crime Science_ 9 (11). DOI: [10.1186/s40163-020-00121-w](https://doi.org/10.1186/s40163-020-00121-w) (open access)
 
+Alotaibi, M., G. Clarke, and **N. Malleson (2020). Optimal Service Planning in a Temporary City. _Journal of Service Science and Management_ 13(05): 709–28. DOI: [10.4236/jssm.2020.135045](https://doi.org/10.4236/jssm.2020.135045).
+
 Johnson, P., M. A. Andresen, and **N. Malleson** (2020). Cell Towers and the Ambient Population: A Spatial Analysis of Disaggregated Property Crime’. _European Journal on Criminal Policy and Research_ (in press). DOI: [10.1007/s10610-020-09446-3](https://doi.org/10.1007/s10610-020-09446-3). [[PDF](./papers/2020-Cell_Towers_Crime.pdf)]
 
 **Malleson, N.**, K. Minors, Le-Minh Kieu , J. A. Ward , A. West and A. Heppenstall (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Journal of Artificial Societies and Social Simulation (JASSS)_ 23 (3).  [http://jasss.soc.surrey.ac.uk/23/3/3.html](http://jasss.soc.surrey.ac.uk/23/3/3.html) DOI: [10.18564/jasss.4266](https://dx.doi.org/10.18564/jasss.4266) (open access)
