@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2020
 
+ Heppenstall, A., A. Crooks, **N. Malleson**, E. Manley, J. Ge, and M. Batty (2020). Future Developments in Geographical Agent‐Based Models: Challenges and Opportunities. _Geographical Analysis_. DOI: [10.1111/gean.12267](https://doi.org/10.1111/gean.12267) (open access)
+
 Halford, E., A. Dixon, G. Farrell, **N. Malleson** and N. Tilley (2020) Crime and coronavirus: social distancing, lockdown, and the mobility elasticity of crime. _Crime Science_ 9 (11). DOI: [10.1186/s40163-020-00121-w](https://doi.org/10.1186/s40163-020-00121-w) (open access)
 
 Alotaibi, M., G. Clarke, and **N. Malleson** (2020). Optimal Service Planning in a Temporary City. _Journal of Service Science and Management_ 13(05): 709–28. DOI: [10.4236/jssm.2020.135045](https://doi.org/10.4236/jssm.2020.135045) (open access).
