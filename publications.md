@@ -196,6 +196,8 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Tether, V.,  **N. Malleson**, W. Steenbeek and D. Birks (2021). Using Agent-Based Models to Investigate the Presence of Edge Effects Around Crime Generators and Attractors. In C. Gerritsen and H. Elffers (eds) _Agent-Based Modelling for Criminological Theory Testing and Development_. Routledge. [[URL](https://www.routledge.com/Agent-Based-Modelling-for-Criminological-Theory-Testing-and-Development/Gerritsen-Elffers/p/book/9780367228521)]
+
 Crooks, A.T., Heppenstall, A. and **Malleson, N.** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
 
 **Malleson, N.**, Alison Heppenstall and Andrew Crooks (2018) Place-Based Simulation Modeling: Agent-Based Modeling and Virtual Environments. _[Oxford Research Encyclopedia of Criminology](http://criminology.oxfordre.com/view/10.1093/acrefore/9780190264079.001.0001/acrefore-9780190264079-e-319)_. Oxford University Press. [DOI: 10.1093/acrefore/9780190264079.013.319](https://dx.doi.org/10.1093/acrefore/9780190264079.013.319)
