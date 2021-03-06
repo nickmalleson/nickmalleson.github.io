@@ -76,7 +76,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 A. Whipp, **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambient Population: Assessing the Utility of Conventional and Novel Data Sources. _International Journal of Geo-Information_ 10(3), 131 (early access). DOI: [10.3390/ijgi10030131](https://doi.org/10.3390/ijgi10030131)
 
-Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. [DOI: 10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
+Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. DOI: [10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
 
 #### 2020
 
