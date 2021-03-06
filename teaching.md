@@ -18,4 +18,4 @@ tagline: Courses and other modules that I am (or have been) involved in teaching
 **Other links:**
 
  - [Festival NetLogo practicals](http://www.geog.leeds.ac.uk/courses/level3/geog3150/netlogo_festival) (part of GEOG3150 undergraduate course).
- - [Agent-Based Modelling for Smart Cities](http://mass.leeds.ac.uk/html/slides/Lipari2014/) (Lipari Summer School, on MASS website)
+ - [Agent-Based Modelling for Smart Cities](https://www.nickmalleson.co.uk/html/Lipari2014/) (Lipari Summer School)
