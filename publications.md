@@ -74,7 +74,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2021
 
-Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. [DOI: 10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
+A. Whipp, **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambient Population: Assessing the Utility of Conventional and Novel Data Sources. _International Journal of Geo-Information_ 10(3), 131 (early access). DOI: [10.3390/ijgi10030131](https://doi.org/10.3390/ijgi10030131)
+
+Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. DOI: [10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
 
 #### 2020
 
@@ -195,6 +197,8 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 
 ### <a name="chapters"></a>Book Chapters
+
+Tether, V.,  **N. Malleson**, W. Steenbeek and D. Birks (2021). Using Agent-Based Models to Investigate the Presence of Edge Effects Around Crime Generators and Attractors. In C. Gerritsen and H. Elffers (eds) _Agent-Based Modelling for Criminological Theory Testing and Development_. Routledge. [[URL](https://www.routledge.com/Agent-Based-Modelling-for-Criminological-Theory-Testing-and-Development/Gerritsen-Elffers/p/book/9780367228521)]
 
 Crooks, A.T., Heppenstall, A. and **Malleson, N.** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
 
