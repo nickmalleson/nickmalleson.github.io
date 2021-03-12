@@ -38,17 +38,6 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://n8prp.org.uk/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
-                <h3><a href="http://n8prp.org.uk/">N8 PRP</a></h3>
-                N8 Policing Research Partnership: Data Analytics
-            </li>
-            <li style="font-size: small; line-height: 20px;">The Data Analytics strand will collaborate with police and academic partners to support data sharing, analysis, and use. <a href="http://n8prp.org.uk/">More information</a>.</li>
-            <li>&nbsp;</li>
-        </ul>
-    </div>
-    <div class="6u">
-        <ul class="style">
-            <li>
                 <a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts"><span style="background-color: #009900;" class="fa fa-user"></span></a>
                 <h3><a href="https://www.turing.ac.uk/research/research-projects/uncertainty-agent-based-models-smart-city-forecasts">ABM Uncertainty</a></h3>
                 Uncertainty in Agent-based Models for Smart City Forecasts
@@ -107,6 +96,17 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
 <section class="container">
     <div class="row">
 
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="http://n8prp.org.uk/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="http://n8prp.org.uk/">N8 PRP</a></h3>
+                N8 Policing Research Partnership: Data Analytics
+            </li>
+            <li style="font-size: small; line-height: 20px;">The Data Analytics strand will collaborate with police and academic partners to support data sharing, analysis, and use. <a href="http://n8prp.org.uk/">More information</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
     <div class="6u">
         <ul class="style">
             <li>
