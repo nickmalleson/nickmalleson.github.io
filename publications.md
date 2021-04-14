@@ -78,6 +78,9 @@ A. Whipp, **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambi
 
 Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. DOI: [10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
 
+Roxburgh, N., A. Evans, R. K. Gc, **N. Malleson**, A. Heppenstall, and L. Stringer (2021) An Empirically Informed Agent-Based Model of a Nepalese Smallholder Village. _MethodsX_ 101276. [[DOI: 10.1016/j.mex.2021.101276](https://doi.org/10.1016/j.mex.2021.101276)].
+
+
 #### 2020
 
  Heppenstall, A., A. Crooks, **N. Malleson**, E. Manley, J. Ge, and M. Batty (2020). Future Developments in Geographical Agent‐Based Models: Challenges and Opportunities. _Geographical Analysis_. DOI: [10.1111/gean.12267](https://doi.org/10.1111/gean.12267) (open access)
