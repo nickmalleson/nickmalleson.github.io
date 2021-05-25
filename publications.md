@@ -78,6 +78,9 @@ A. Whipp, **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambi
 
 Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. DOI: [10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
 
+Roxburgh, N., A. Evans, R. K. Gc, **N. Malleson**, A. Heppenstall, and L. Stringer (2021) An Empirically Informed Agent-Based Model of a Nepalese Smallholder Village. _MethodsX_ 101276. [[DOI: 10.1016/j.mex.2021.101276](https://doi.org/10.1016/j.mex.2021.101276)].
+
+
 #### 2020
 
  Heppenstall, A., A. Crooks, **N. Malleson**, E. Manley, J. Ge, and M. Batty (2020). Future Developments in Geographical Agent‐Based Models: Challenges and Opportunities. _Geographical Analysis_. DOI: [10.1111/gean.12267](https://doi.org/10.1111/gean.12267) (open access)
@@ -198,15 +201,18 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Crooks, A.T., A. Heppenstall, **N. Malleson**, and Ed Manley (2021) Agent-Based Modeling and the City: A Gallery of Applications. In _Urban Informatics_, edited by Wenzhong Shi, Michael F. Goodchild, Michael Batty, Mei-Po Kwan, and Anshu Zhang, 885–910. The Urban Book Series. Springer. 
+[[DOI:doi.org/10.1007/978-981-15-8983-6_46](https://doi.org/10.1007/978-981-15-8983-6_46)].
+	
 Odiari, E. , M. Birkin, S. Grant-Muller and **N. Malleson** (2021) Spatial microsimulation models for rail travel: a West Yorkshire case study. Chapter 17 of _Big Data Applications in Geography and Planning: An Essential Companion_. Edited by Mark Birkin, Graham Clarke, Jonathan Corcoran and Robert Stimson. [SBN: 978 1 78990 978 4](https://www.e-elgar.com/shop/gbp/big-data-applications-in-geography-and-planning-9781789909784.html)
 
 Tether, V.,  **N. Malleson**, W. Steenbeek and D. Birks (2021). Using Agent-Based Models to Investigate the Presence of Edge Effects Around Crime Generators and Attractors. In C. Gerritsen and H. Elffers (eds) _Agent-Based Modelling for Criminological Theory Testing and Development_. Routledge. [[URL](https://www.routledge.com/Agent-Based-Modelling-for-Criminological-Theory-Testing-and-Development/Gerritsen-Elffers/p/book/9780367228521)]
 
-Crooks, A.T., Heppenstall, A. and **Malleson, N.** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
+Crooks, A.T., Heppenstall, A. and **N. Malleson** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
 
 **Malleson, N.**, Alison Heppenstall and Andrew Crooks (2018) Place-Based Simulation Modeling: Agent-Based Modeling and Virtual Environments. _[Oxford Research Encyclopedia of Criminology](http://criminology.oxfordre.com/view/10.1093/acrefore/9780190264079.001.0001/acrefore-9780190264079-e-319)_. Oxford University Press. [DOI: 10.1093/acrefore/9780190264079.013.319](https://dx.doi.org/10.1093/acrefore/9780190264079.013.319)
 
-Crooks, A.T., **Malleson, N.**, Wise, S. and Heppenstall, A. (2018) Big Data, Agents and the City, in Schintler, L.A. and Chen, Z. (eds.), _Big Data for Urban and Regional Science_, Routledge, New York, NY, pp. 204-213\. [[PDF](https://www.dropbox.com/s/28ojdkpf6tq7ukk/BigData_Agents_Chapter.pdf?dl=0)]
+Crooks, A.T., **N. Malleson**, Wise, S. and Heppenstall, A. (2018) Big Data, Agents and the City, in Schintler, L.A. and Chen, Z. (eds.), _Big Data for Urban and Regional Science_, Routledge, New York, NY, pp. 204-213\. [[PDF](https://www.dropbox.com/s/28ojdkpf6tq7ukk/BigData_Agents_Chapter.pdf?dl=0)]
 
 **Malleson, N.** (2017) Spatial Crime Modelling and Analysis. In _The Routledge Companion to Criminological Theory and Concepts_, Avi Brisman, Eamonn Carrabine, Nigel South (Eds). Routledge.
 
