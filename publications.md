@@ -198,6 +198,8 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Odiari, E. , M. Birkin, S. Grant-Muller and **N. Malleson** (2021) Spatial microsimulation models for rail travel: a West Yorkshire case study. Chapter 17 of _Big Data Applications in Geography and Planning: An Essential Companion_. Edited by Mark Birkin, Graham Clarke, Jonathan Corcoran and Robert Stimson. [SBN: 978 1 78990 978 4](https://www.e-elgar.com/shop/gbp/big-data-applications-in-geography-and-planning-9781789909784.html)
+
 Tether, V.,  **N. Malleson**, W. Steenbeek and D. Birks (2021). Using Agent-Based Models to Investigate the Presence of Edge Effects Around Crime Generators and Attractors. In C. Gerritsen and H. Elffers (eds) _Agent-Based Modelling for Criminological Theory Testing and Development_. Routledge. [[URL](https://www.routledge.com/Agent-Based-Modelling-for-Criminological-Theory-Testing-and-Development/Gerritsen-Elffers/p/book/9780367228521)]
 
 Crooks, A.T., Heppenstall, A. and **Malleson, N.** (2018). Agent-based Modelling, in Huang, B. (ed), _Comprehensive Geographic Information Systems,_ pp 218–243. Elsevier. [[URL](https://www.sciencedirect.com/science/article/pii/B9780124095489097049)].
