@@ -74,6 +74,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2021
 
+Rosés, R., C. Kadar, **N. Malleson** (2021) A data-driven agent-based simulation to predict crime patterns in an urban environment. _Computers, Environment and Urban Systems_ 89: 101660 DOI:[10.1016/j.compenvurbsys.2021.101660](https://doi.org/10.1016/j.compenvurbsys.2021.101660). [[PDF](./papers/2021-Raquel-CEUS.pdf)].
+
 Cui, N., **N. Malleson**, V. Houlden, and A. Comber (2021) Using VGI and Social Media Data to Understand Urban Green Space: A Narrative Literature Review. _ISPRS International Journal of Geo-Information_ 10(7): 425. DOI: [10.3390/ijgi10070425](https://doi.org/10.3390/ijgi10070425) (open access)
 
 Whipp, A., **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambient Population: Assessing the Utility of Conventional and Novel Data Sources. _International Journal of Geo-Information_ 10(3), 131 (early access). DOI: [10.3390/ijgi10030131](https://doi.org/10.3390/ijgi10030131) (open access)
