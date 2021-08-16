@@ -74,11 +74,16 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2021
 
+Li An, Volker Grimm, Abigail Sullivan, B.L. Turner II, **N Malleson**, Alison Heppenstall, Christian Vincenot, Derek Robinson, Xinyue Ye, Jianguo Liu, Emilie Lindkvist, Wenwu Tang (2021) Challenges, tasks, and opportunities in modeling agent-based complex systems, _Ecological Modelling_ 457(1):109685. DOI: [10.1016/j.ecolmodel.2021.109685](https://doi.org/10.1016/j.ecolmodel.2021.109685)
+
+Clay, Robert, J. A. Ward, P. Ternes, Le-Minh Kieu, **N. Malleson** (2021) Real-time agent-based crowd simulation with the Reversible Jump Unscented Kalman Filter. _Simulation Modelling Practice and Theory_ 113 (102386) DOI: [10.1016/j.simpat.2021.102386](https://doi.org/10.1016/j.simpat.2021.102386). [[PDF](./papers/2021-UKF-SIMPAT)].
+
+
 Rosés, R., C. Kadar, **N. Malleson** (2021) A data-driven agent-based simulation to predict crime patterns in an urban environment. _Computers, Environment and Urban Systems_ 89: 101660 DOI:[10.1016/j.compenvurbsys.2021.101660](https://doi.org/10.1016/j.compenvurbsys.2021.101660). [[PDF](./papers/2021-Raquel-CEUS.pdf)].
 
 Cui, N., **N. Malleson**, V. Houlden, and A. Comber (2021) Using VGI and Social Media Data to Understand Urban Green Space: A Narrative Literature Review. _ISPRS International Journal of Geo-Information_ 10(7): 425. DOI: [10.3390/ijgi10070425](https://doi.org/10.3390/ijgi10070425) (open access)
 
-Whipp, A., **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambient Population: Assessing the Utility of Conventional and Novel Data Sources. _International Journal of Geo-Information_ 10(3), 131 (early access). DOI: [10.3390/ijgi10030131](https://doi.org/10.3390/ijgi10030131) (open access)
+Whipp, A., **N. Malleson**, J. Ward, A. Heppenstall (2021). Estimates of the Ambient Population: Assessing the Utility of Conventional and Novel Data Sources. _International Journal of Geo-Information_ 10(3), 131 (open access). DOI: [10.3390/ijgi10030131](https://doi.org/10.3390/ijgi10030131) (open access)
 
 Roxburgh, N., L. C. Stringer, A. Evans, R. K. Gc, **N. Malleson**, and A. J. Heppenstall (2021). Impacts of Multiple Stressors on Mountain Communities: Insights from an Agent-Based Model of a Nepalese Village. _Global Environmental Change_ 66:102203. DOI: [10.1016/j.gloenvcha.2020.102203](https://doi.org/10.1016/j.gloenvcha.2020.102203) (open access)
 
