@@ -44,6 +44,8 @@ tagline:
 
 ## Conference Presentations
 
+For the most recent presentations, see the [DUST](https://urban-analytics.github.io/dust/presentations.html) project.
+
 ### <a name="presentations"></a>2019
 
   - [Identifying the appropriate spatial resolution for the analysis of crime patterns]({{site.url}}/{{site.baseurl}}/p/2019-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 23-26 April, Newcastle University. [Abstract (pdf)](./papers/2019-GISRUK-Presentation.pdf).
