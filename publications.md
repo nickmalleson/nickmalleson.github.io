@@ -76,7 +76,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 Spooner, F., J.F. Abrams, K. Morrissey, G. Shaddick M. Batty, R. Milton, A. Dennett, N. Lomax, **N. Malleson**, N. Nelissen, A. Coleman, J. Nur, Y. Jin, R. Greig, C. Shenton, M. Birkin (2021) A dynamic microsimulation model for epidemics. _Social Science & Medicine_ 291, 114461. DOI: [10.1016/j.socscimed.2021.114461](https://doi.org/10.1016/j.socscimed.2021.114461)
 
-Ternes, P., J.A. Ward, A. Heppenstall, V. Kumar, L.-M. Kieu, **N. Malleson** (2021) Data assimilation and agent-based modelling: towards the incorporation of categorical agent parameters. _Open Research Europe_ 1, 131. DOI:[doi.org/10.12688/openreseurope.14144.1](https://doi.org/10.12688/openreseurope.14144.1)
+Ternes, P., J.A. Ward, A. Heppenstall, V. Kumar, L.-M. Kieu, **N. Malleson** (2021) Data assimilation and agent-based modelling: towards the incorporation of categorical agent parameters. _Open Research Europe_ 1, 131. DOI:[10.12688/openreseurope.14144.1](https://doi.org/10.12688/openreseurope.14144.1)
 
 
 Li An, Volker Grimm, Abigail Sullivan, B.L. Turner II, **N Malleson**, Alison Heppenstall, Christian Vincenot, Derek Robinson, Xinyue Ye, Jianguo Liu, Emilie Lindkvist, Wenwu Tang (2021) Challenges, tasks, and opportunities in modeling agent-based complex systems, _Ecological Modelling_ 457(1):109685. DOI: [10.1016/j.ecolmodel.2021.109685](https://doi.org/10.1016/j.ecolmodel.2021.109685)
