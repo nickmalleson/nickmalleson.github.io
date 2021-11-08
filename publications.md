@@ -97,7 +97,7 @@ Roxburgh, N., A. Evans, R. K. Gc, **N. Malleson**, A. Heppenstall, and L. String
 
 #### 2020
 
- Heppenstall, A., A. Crooks, **N. Malleson**, E. Manley, J. Ge, and M. Batty (2020). Future Developments in Geographical Agent‐Based Models: Challenges and Opportunities. _Geographical Analysis_. DOI: [10.1111/gean.12267](https://doi.org/10.1111/gean.12267) (open access)
+ Heppenstall, A., A. Crooks, **N. Malleson**, E. Manley, J. Ge, and M. Batty (2020). Future Developments in Geographical Agent‐Based Models: Challenges and Opportunities. _Geographical Analysis_ 53: 76-91. DOI: [10.1111/gean.12267](https://doi.org/10.1111/gean.12267) (open access)
 
 Halford, E., A. Dixon, G. Farrell, **N. Malleson** and N. Tilley (2020) Crime and coronavirus: social distancing, lockdown, and the mobility elasticity of crime. _Crime Science_ 9 (11). DOI: [10.1186/s40163-020-00121-w](https://doi.org/10.1186/s40163-020-00121-w) (open access)
 
