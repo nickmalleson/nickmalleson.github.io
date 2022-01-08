@@ -265,6 +265,9 @@ Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, ag
 
 ### <a name="workingpapers"></a>Working Papers, Pre-Prints and Others
 
+A. Whipp, **N. Malleson**, Jonathan Ward, Alison Heppenstall (2021). Towards a Comprehensive Measure of the Ambient Population: Building Estimates Using Geographically Weighted Regression _Preprint_: [10.31235/osf.io/pquvy](https://doi.org/10.31235/osf.io/pquvy).
+
+
 Neto-Bradley, A., **N. Malleson**, P. Ternes, R. Choudhary (2021) Why people in some parts of England pay far more than others to heat their homes. _The Conversation_. Published 29 November 2021, 3.40pm GMT. Available online: [https://theconversation.com/why-people-in-some-parts-of-england-pay-far-more-than-others-to-heat-their-homes-172559](https://theconversation.com/why-people-in-some-parts-of-england-pay-far-more-than-others-to-heat-their-homes-172559)
 
 **Malleson, N.**, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew A. West, Alison Heppenstall (2019) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. _Preprint_: [arXiv:1909.09397 [cs.MA]](https://arxiv.org/abs/1909.09397).
