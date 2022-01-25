@@ -46,6 +46,10 @@ tagline:
 
 ### <a name="presentations"></a>2021
 
+
+ - [Urban Data Science for Sustainable Transport Policies in Emerging Economies]({{site.dusturl}}/p/
+2021-09-28-GIScience.html) GIScience, 27-30 September 2021, Poznan (online). DOI: [10.25436/E28G6D](https://doi.org/10.25436/E28G6D). [PDF](https://escholarship.org/content/qt5zt0p1ft/qt5zt0p1ft.pdf?t=r0am2f).
+
   - [Quantifying the uncertainty in agent-based models]({{site.dusturl}}/p/2021-09-23-Turing-MAS-Uncertainty-DA.html).  Invited presentation by [Josie McCulloch](https://environment.leeds.ac.uk/geography/staff/9706/dr-josie-mcculloch), [Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) and [Nick Malleson](https://www.nickmalleson.co.uk/) for the [Alan Turing Institute](https://turing.ac.uk) [Multi-agent systems group](https://www.turing.ac.uk/research/interest-groups/multi-agent-systems), 23rd September 2021.
 
   - [Simulating Society with Agent-Based Modelling and Microsimulation]({{site.dusturl}}/p/2021-09-14-ABM_DWP_Sparkle.html). DWP 'Sparkle Talk', 14th September, 2021.
