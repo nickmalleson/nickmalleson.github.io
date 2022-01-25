@@ -44,26 +44,52 @@ tagline:
 
 ## Conference Presentations
 
-For the most recent presentations, see the [DUST](https://urban-analytics.github.io/dust/presentations.html) project.
+### <a name="presentations"></a>2021
 
-### <a name="presentations"></a>2019
+  - [Quantifying the uncertainty in agent-based models]({{site.dusturl}}/p/2021-09-23-Turing-MAS-Uncertainty-DA.html).  Invited presentation by [Josie McCulloch](https://environment.leeds.ac.uk/geography/staff/9706/dr-josie-mcculloch), [Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) and [Nick Malleson](https://www.nickmalleson.co.uk/) for the [Alan Turing Institute](https://turing.ac.uk) [Multi-agent systems group](https://www.turing.ac.uk/research/interest-groups/multi-agent-systems), 23rd September 2021.
+
+  - [Simulating Society with Agent-Based Modelling and Microsimulation]({{site.dusturl}}/p/2021-09-14-ABM_DWP_Sparkle.html). DWP 'Sparkle Talk', 14th September, 2021.
+
+  - [Quantifying the uncertainty in agent-based models]({{site.dusturl}}/p/2021-03-17-ESSA_SocSimFest.html).  Keynote presentation by [Alison Heppenstall](https://environment.leeds.ac.uk/geography/staff/1046/professor-alison-heppenstall) and [Nick Malleson](https://www.nickmalleson.co.uk/) at the [ESSA Social Simulation Festival 2021](https://www.socsimfest21.eu/), 17th March 2021.
+
+  -  [Ambient populations: Developing robust estimates]({{site.dusturl}}/p/2021-03-03-Ambient_Pop_Bristol.pdf). Presentation by Annabel Whipp and Nick Malleson as part of the [Engineering Mathematics Seminar Series](https://seis.bristol.ac.uk/~nb14397/seminars.html) at the [Department of Engineering Mathematics, University of Bristol](https://www.bristol.ac.uk/engineering/departments/engineering-mathematics/), 3rd March 2021. [[PDF]({{site.dusturl}}/p/2021-03-03-Ambient_Pop_Bristol.pdf)]
+
+
+### 2020
+
+  - [Simulating the City with Agent-Based Modelling]({{site.dusturl}}/p/2020-09-Turing_AIUK_SimulatingTheCity.html). Invited presentation to [AI UK - Smart cities](https://www.turing.ac.uk/events/ai-uk-smart-cities) at the [Alan Turing Institute](https://www.turing.ac.uk/). 28 September 2020. Also presented at the [Digital Catapult](https://www.digicatapult.org.uk/) seminar on [Agent-Based Modelling for Policy](https://www.eventbrite.co.uk/e/agent-based-modelling-for-policy-webinar-registration-100107141154) (slides [here]({{site.dusturl}}/p/2020-10-05-DigitalCatapult-SimulatingTheCity.html)), 5th October 2020.
+
+  - [Reducing Uncertainty in Agent-Based Simulations through Real-Time Data Assimilation]({{site.dusturl}}/p/2020-01-24-VVUQ-Turing.html). Presentation to the [Reliability and Reproducibility in Computational Science](https://www.turing.ac.uk/events/reliability-and-reproducibility-computational-science) workshop at the [Alan Turing Institute](https://www.turing.ac.uk/), London, 24 Jan 2020.
+
+
+### 2019
 
   - [Identifying the appropriate spatial resolution for the analysis of crime patterns]({{site.url}}/{{site.baseurl}}/p/2019-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 23-26 April, Newcastle University. [Abstract (pdf)](./papers/2019-GISRUK-Presentation.pdf).
 
-  - [Dynamic Simulation Models, Data Assimilation and Uncertainty](https://urban-analytics.github.io/dust//p/2019-04-10-Newcastle_Blueprint-ABM_Uncertainty.html). Presentation to the workshop '[A Blueprint for Urban Analytics](https://www.turing.ac.uk/events/blueprint-urban-analytics-research)'. Newcastle University, 11-12 April 2019.
+  - [Quantifying Uncertainty in Agent-Based Models for Smart City Forecasts](https://www.slideshare.net/NickMalleson/quantifying-uncertainty-in-agentbased-models-for-smart-city-forecasts). Presentation by Robert Clay to the [Alan Turing Institute](https://www.turing.ac.uk/), London, 24 September 2019.
 
-  - [Dynamic Simulation Models & Data Assimilation](https://urban-analytics.github.io/dust//p/2019-03-14-Birmingham-Dynamic_City_Simulation.html). Keynote presentation for the DREAM CDT Symposium, University of Birmingham. 19-21 March 2019.
+  - [Simulating Pedestrian Systems in Real Time using Agent-Based Models]({{site.dusturl}}/p/2019-09-20-Crowd_Simulation-CASA.html). Presentation to the the [MacArthur Workshop on Urban Modelling & Complexity Science](https://www.eventbrite.co.uk/e/the-macarthur-workshop-on-urban-modelling-complexity-science-tickets-69983794413), [Centre for Advanced Spatial Analysis](http://www.casa.ucl.ac.uk/), [UCL](http://www.casa.ucl.ac.uk/), 19-20 September 2019.
+
+  - [Dynamic Simulation Models and Digital Twins of Urban Systems]({{site.dusturl}}/p/2019-06-18-URBAIN-AI_For_Cities.html). Presentation to the [Artificial Intelligence for Cities](https://cp.catapult.org.uk/events/artificial-intelligence-for-cities/) workshop. University of Leeds (Nexus), 18th June 2019.
+
+  - [Simulating Crowds in Real-Time with Agent-Based Modelling and a Particle Filter]({{site.dusturl}}/p/2019-04-k.minors-gisruk.pdf). Presentation to the 27th GIS Research UK ([GISRUK](http://www.gisruk.org/)), Newcastle, 23rd-26th April 2019. [Proceedings](http://newcastle.gisruk.org/proceedings/).
+
+  - [Dynamic Simulation Models, Data Assimilation and Uncertainty]({{site.dusturl}}/p/2019-04-10-Newcastle_Blueprint-ABM_Uncertainty.html). Presentation to the workshop '[A Blueprint for Urban Analytics](https://www.turing.ac.uk/events/blueprint-urban-analytics-research)'. Newcastle University, 11-12 April 2019.
+
+  - [Dynamic Simulation Models & Data Assimilation]({{site.dusturl}}/p/2019-03-14-Birmingham-Dynamic_City_Simulation.html). Keynote presentation for the DREAM CDT Symposium, University of Birmingham. 19-21 March 2019.
+
 
 
 ### 2018
 
-  - [Simulating cities with streaming data and a suite of (agent-based?) models](https://urban-analytics.github.io/dust//p/2018-12-04-virtuociy.html). Presentation to the Virtuocity workshop, Leeds, 4 Dec 2018.
 
-  - [Simulating cities with streaming (big?) data and agent-based modelling](https://urban-analytics.github.io/dust//p/2018-09-11-lida-simulating-cities.html). Presentation at the Leeds Institute for Data Analytics ([LIDA](https://lida.leeds.ac.uk/)) research showcase. 13th September 2018.
+  - [Simulating cities with streaming data and a suite of (agent-based?) models]({{site.dusturl}}/p/2018-12-04-virtuociy.html). Presentation to the Virtuocity workshop, Leeds, 4 Dec 2018.
+
+  - [Simulating cities with streaming (big?) data and agent-based modelling]({{site.dusturl}}/p/2018-09-11-lida-simulating-cities.html). Presentation at the Leeds Institute for Data Analytics ([LIDA](https://lida.leeds.ac.uk/)) research showcase. 13th September 2018.
 
    - Simulating Urban Flows of Daily Routines of Commuters. Presentation to the 3rd International Workshop on Agent-Based Modelling of Urban Systems ([ABMUS](http://modelling-urban-systems.com/abmus2018)), part of the International Conference on Autonomous Agents and Multiagent Systems ([AAMAS 2018](http://celweb.vuse.vanderbilt.edu/aamas18/home/)). 10-15 July, Stockholm. [Full abstract (pdf)](http://surf.leeds.ac.uk/p/2018-07-15-commuters-abstract.pdf). [Slides (pdf)](http://surf.leeds.ac.uk/p/2018-07-15-commuters-slides.pdf).
    
-   - [Understanding Input Data Requirements and Quantifying Uncertainty for Successfully Modelling 'Smart' Cities](http://urban-analytics.github.io/dust/p/2018-07-15-abmus-da.html). Presentation to the 3rd International Workshop on Agent-Based Modelling of Urban Systems ([ABMUS](http://modelling-urban-systems.com/abmus2018)), part of the International Conference on Autonomous Agents and Multiagent Systems ([AAMAS 2018](http://celweb.vuse.vanderbilt.edu/aamas18/home/)). [Full abstract (pdf)](http://urban-analytics.github.io/dust/p/2018-07-15-abmus-da-abstract.pdf).
+  - [Understanding Input Data Requirements and Quantifying Uncertainty for Successfully Modelling 'Smart' Cities]({{site.dusturl}}/p/2018-07-15-abmus-da.html). Presentation to the 3rd International Workshop on Agent-Based Modelling of Urban Systems ([ABMUS](http://modelling-urban-systems.com/abmus2018)), part of the International Conference on Autonomous Agents and Multiagent Systems ([AAMAS 2018](http://celweb.vuse.vanderbilt.edu/aamas18/home/)). 10-15 July, Stockholm. [Full abstract (pdf)]({{site.dusturl}}/p/2018-07-15-abmus-da-abstract.pdf).
 
   - [Agent-Based Models](http://surf.leeds.ac.uk/p/2018-06-13-ITS-ABM.html). Presentation to the [Institute for Transport Studies](https://its.leeds.ac.uk/), University of Leeds.
 
