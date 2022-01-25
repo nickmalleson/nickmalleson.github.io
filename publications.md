@@ -244,7 +244,11 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 **N. Malleson** (2012) Using Agent-Based Models to Simulate Crime. In Heppenstall, A.J.; Crooks, A.T.; See, L.M.; Batty, M. (Eds.) _Agent-Based Models of Geographical Systems_. Springer. [[URL]](http://www.springer.com/social+sciences/population+studies/book/978-90-481-8926-7) [[download]]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/03/abm_book_chapter_2012-2.pdf)
 
-### <a name="proceedings"></a>Articles in Conferece Proceedings
+### <a name="proceedings"></a>Articles in Conference Proceedings
+
+Comber, A., **N. Malleson**, Hang Nguyen Thi Thuy, Thanh Bui Quang, Minh Kieu, Hoang Huu Phe and Paul Harris (2021) Multiscale Geographically Weighted Discriminant Analysis. _GIScience 2021_, 27-30 September, Poznan (online), Short Paper Proceedings. DOI: [10.25436/E2PP4F](https://doi.org/10.25436/E2PP4F). [PDF](https://escholarship.org/content/qt41t46420/qt41t46420.pdf?t=r0am1r).
+
+**Malleson, N.**, Hang Nguyen Thi Thuy, Thanh Bui Quang, Minh Kieu, Phe Hoang Huu and Alexis Comber (2021) Urban Data Science for Sustainable Transport Policies in Emerging Economies. _GIScience 2021_, 27-30 September, Poznan (online), Short Paper Proceedings. DOI: [10.25436/E28G6D](https://doi.org/10.25436/E28G6D). [PDF](https://escholarship.org/content/qt5zt0p1ft/qt5zt0p1ft.pdf?t=r0am2f). [Slides]({{site.dusturl}}/p/2021-09-28-GIScience.html)
 
 R. Clay, Le-Minh Kieu, J. A. Ward, A. Heppenstall, **N. Malleson** (2020) Towards Real-Time Crowd Simulation Under Uncertainty Using an Agent-Based Model and an Unscented Kalman Filter. In Demazeau Y., Holvoet T., Corchado J., Costantini S. (eds) _Advances in Practical Applications of Agents, Multi-Agent Systems, and Trustworthiness. The PAAMS Collection. PAAMS 2020._ Lecture Notes in Computer Science, vol 12092. Springer. [DOI: 10.1007/978-3-030-49778-1_6](https://doi.org/10.1007/978-3-030-49778-1_6) [Paper (pdf)]({{site.baseurl}}/papers/2020-PAAMS-UKF.pdf)
 
