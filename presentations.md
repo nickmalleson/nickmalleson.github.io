@@ -44,8 +44,14 @@ tagline:
 
 ## Conference Presentations
 
-### <a name="presentations"></a>2021
+### <a name="presentations"></a>2022
 
+  - [Up-scaling a Spatial Survey with Propensity Score Matching:
+Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 5-8 April, Liverpool University. [Abstract (pdf)](./papers/2022-GISRUK-PSM.pdf).
+
+ - 
+
+### 2021
 
  - [Urban Data Science for Sustainable Transport Policies in Emerging Economies]({{site.dusturl}}/p/
 2021-09-28-GIScience.html) GIScience, 27-30 September 2021, Poznan (online). DOI: [10.25436/E28G6D](https://doi.org/10.25436/E28G6D). [PDF](https://escholarship.org/content/qt5zt0p1ft/qt5zt0p1ft.pdf?t=r0am2f).
