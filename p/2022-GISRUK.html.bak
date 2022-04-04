@@ -6,7 +6,7 @@
         <meta name="author" content="Nick Malleson">
         <meta name="keywords" content="propensity score matching; population synthesis; microsimulation; transport policy; Hanoi">
 
-		<title>Up-scaling a Spatial Survey with Propensity Score Matching: Implications of a Motorbike Ban in Hanoi</title>
+		<title>Upscaling a Spatial Survey with Propensity Score Matching: Implications of a Motorbike Ban in Hanoi</title>
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
 		<link rel="stylesheet" href="reveal/css/theme/white.css">
@@ -45,7 +45,7 @@
                         <h5>GIS Research UK 2022</h5>
 
                         <hr/>
-                        <h2 style="font-size: 150%">Up-scaling a Spatial Survey with Propensity Score Matching:<br/>
+                        <h2 style="font-size: 150%">Upscaling a Spatial Survey with Propensity Score Matching:<br/>
                             Implications of a Motorbike Ban in Hanoi</h2>
                         <hr/>
                         <h3>Nick Malleson, et al.</h3>
@@ -83,15 +83,15 @@
                 </section>
                 
                 <section>
-                    <h2>Up-scaling a Spatial Survey</h2>
-                    <img class="right" data-src="../figures/hanoi/hanoi_bikes.jpg" alt="Motorbikes in Hanoi" />
+                    <h2>Upscaling a Spatial Survey</h2>
+                    <img class="right" data-src="../figures/hanoi/hanoi_bikes.jpg" alt="Motorbikes in hanoi" />
                     <p>Data</p>
-                    <p class="l2">Bespoke travel survey</p>
+                    <p class="l2">Beskpoke travel survey</p>
                     <p class="l3">30,000 responses</p>
-                    <p class="l3">Ask about demographics, travel behaviour (main journeys), (aspirational) vehicle ownership, <b>potential motorbike ban</b>.</p>
+                    <p class="l3">Ask about demographics, travel behaviour (main journeys), (aspirational) vehicle ownership, <b>potential morotbike ban</b>.</p>
                     <p class="l2">Vietnam Census (sample of micro-data)</p>
                     <p>Aims</p>
-                    <p class="l2">Upscale the survey to make it more representative (larger sample and less bias)</p>
+                    <p class="l2">Upsale the survey to make it more representative (larger sample and less bias)</p>
                     <p class="l2">Use propensity score matching</p>
                     <p class="l2">Better understand the possible implications of a motorbike ban</p>
                 </section>
@@ -151,7 +151,7 @@
                     <h3>Opinion on the possible ban</h3>
                     <figure style="width:80%;">
                         <img data-src="../figures/paper_figures/2022-gisruk-psm/mbike_ban-opinion.png"
-                             alt="Map showing the opinion of people towards the possible motorbike ban">
+                             alt="Map showing the opion of people towards the possible motorbike ban">
                         <figcaption>Mean opinion on the motorbike ban (lower numbers mean less 
                             favourable opinion)</figcaption>
                     </figure>
@@ -186,7 +186,7 @@
                         <h5>GIS Research UK 2022</h5>
 
                         <hr/>
-                        <h2 style="font-size: 150%">Up-scaling a Spatial Survey with Propensity Score Matching:<br/>
+                        <h2 style="font-size: 150%">Upscaling a Spatial Survey with Propensity Score Matching:<br/>
                             Implications of a Motorbike Ban in Hanoi</h2>
                         <hr/>
                         <h3>Nick Malleson, et al.</h3>
