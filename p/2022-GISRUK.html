@@ -49,6 +49,7 @@
                             Implications of a Motorbike Ban in Hanoi</h2>
                         <hr/>
                         <h3>Nick Malleson, et al.</h3>
+                        <h4>Professor of Spatial Science</h4>
                         <h4>School of Geography, University of Leeds, UK</h4>                        
                         <hr/>
                         <h4><a href="http://www.nickmalleson.co.uk">www.nickmalleson.co.uk</a></h4>
@@ -59,12 +60,10 @@
                 
                 <section id="acknowledgements" data-background-image="../figures/hanoi/intro-bg.jpg">
                     <div class="whitebackground2">
-                        <h2>UTM-Hanoi</h2>
-                        <h3>Urban Transport Modelling for Sustainable Well-Being in Hanoi</h3>
+                        <h2>Co-authors</h2>
                         <p>Lex Comber, Kristina Bratkova, Phe Hoang Huu, Minh Kieu, Thanh Bui Quang, 
                             Hang Nguyen Thi Thuy, and Eric Wanjau</p>
                         <p>University of Leeds; University of Auckland; Vietnam National University; R&amp;D Consultants</p>
-                        <p><a href="https://urban-analytics.github.io/UTM-Hanoi/">urban-analytics.github.io/UTM-Hanoi</a></p>
                     </div>
                 </section>                
                 
@@ -76,9 +75,11 @@
                     <p class="l2">Causing issues of congestion and pollution</p>
                     <p class="l2">`Non-western' transport behaviours, e.g. 90% motorbikes</p>
                     <p class="l2">Implications for Urban Data Science and traditional transport models</p>
-                    <p>UTM-Hanoi project</p>
+                    <p>Urban Transport Modelling for Sustainable Well-Being in Hanoi (UTM-Hanoi)</p>
                     <p class="l2">2+ year project funded by the British Academy</p>
-                    <p class="l2">Aim: new data collection and analysis/modelling to inform transport policy</p>                   
+                    <p class="l2">Aim: new data collection and analysis/modelling to inform transport policy</p>
+                    <p class="l2">Project website: <a href="https://urban-analytics.github.io/UTM-Hanoi/">
+                            https://urban-analytics.github.io/UTM-Hanoi</a></p>
                 </section>
                 
                 <section id="kristina">
@@ -125,7 +126,8 @@
                     </figure>
                     <p>Following <a href="https://doi.org/10.1068%2Fb130054p">Morrissey et al (2015)</a> and 
                         <a href="https://doi.org/10.1016/j.socscimed.2021.114461">Spooner (2021)</a></p>
-                    <p>1: Calculate the <i>propensity score</i></p>
+                    <p>1: Assign <i>treatment</i> (census) and <i>control</i> (survey) groups</p>
+                    <p>2: Calculate the <i>propensity score</i></p>
                     <p class="l2">"probability of treatment assignment conditional on observed baseline characteristics" 
                         (<a href="https://dx.doi.org/10.1080%2F00273171.2011.568786">Austin 2011</a>) 
                     <p class="l2">"most often estimated using a logistic regression model, in which treatment status is regressed on observed baseline characteristics"</p>
@@ -140,7 +142,7 @@
                         <figcaption>Using PSM to identify individuals in the census and our survey who share
                         similar characteristics</figcaption>
                     </figure>
-                    <p>2: Nearest-neighbour algorithm selects individuals in the survey who are close to those in the census</p>
+                    <p>3: Nearest-neighbour algorithm selects individuals in the survey who are close to those in the census</p>
                     <p class="l2">Using scikit-learn NearestNeighbors class.</p>
                     <p>Current linking attributes: sex, age (6 groups), house ownership (owned, rented, other)</p>
                     <p>Future work: additional variables, and <i>geography</i></p>
@@ -184,7 +186,7 @@
                 <section data-background-image="../figures/hanoi/banner-bg.jpg">
                     <div class="whitebackground2">
                         <h2>Summary / Conclusions</h2>
-                        <p>Better understand residents transport opinions and behaviours</p>
+                        <p>Better understand residents' transport opinions and behaviours</p>
                         <p>Use propensity score matching to up-scale a travel survey</p>
                         <p>Explore awareness and opinion on a motorbike ban</p>
                         <p><b>CAVEAT:</b> Currently too few factors considered, links between the 
@@ -216,7 +218,7 @@
                             Implications of a Motorbike Ban in Hanoi</h2>
                         <hr/>
                         <h3>Nick Malleson, et al.</h3>
-                        <h4>School of Geography, University of Leeds, UK</h4>                        
+                        <h4>School of Geography, University of Leeds, UK</h4>
                         <hr/>
                         <h4><a href="http://www.nickmalleson.co.uk">www.nickmalleson.co.uk</a></h4>
                         <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
