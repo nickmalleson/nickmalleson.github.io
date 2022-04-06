@@ -107,33 +107,43 @@
                 </section>
                 
                 <section>
+                    <h2>Propensity Score</h2>
+                    <p>Common in medicine</p>
+                    <p>Converts <i>observational</i> studies (with non-random sampling) to <i>experimental</i> studies</p>
+                    <p>Tries to balance two groups &#151; 'control' and 'treatment' &#151; so that they have
+                    similar characteristics.</p>
+                    <p>Allows differences to be attributed to the effect of the treatment, rather
+                    than to differences in the two groups</p>
+                </section>
+            
+                <section id="psm1">
                     <h2>Propensity Score Matching (PSM)</h2>
                     <figure class="right">
                         <img data-src="../figures/paper_figures/2022-gisruk-psm/psm.png" />
                         <figcaption>Using PSM to identify individuals in the census and our survey who share
                         similar characteristics</figcaption>
                     </figure>
-                    <p>Common in medicine</p>
-                    <p>Converts <i>observational</i> studies (with non-random sampling) to <i>experimental</i> studies</p>
-                    <p>Divides the population into two groups &#151; 'control' and 'treatment' &#151; with
-                    similar characteristics.</p>
-                    <p>Allows differences to be attributed to the effect of the treatment, rather
-                    than to differences in the two groups</p>
-                </section>
-            
-                <section>
-                    <h2>Propensity Score Matching (PSM)</h2>
-		    <p>Following <a href="https://doi.org/10.1068%2Fb130054p">Morrissey et al (2015)</a> and 
-		    <a href="https://doi.org/10.1016/j.socscimed.2021.114461">Spooner (2021)</a></p>
-                    <p>1: Calculate a <i>propensity score</i></p>
+                    <p>Following <a href="https://doi.org/10.1068%2Fb130054p">Morrissey et al (2015)</a> and 
+                        <a href="https://doi.org/10.1016/j.socscimed.2021.114461">Spooner (2021)</a></p>
+                    <p>1: Calculate the <i>propensity score</i></p>
                     <p class="l2">"probability of treatment assignment conditional on observed baseline characteristics" 
-		    (<a href="https://dx.doi.org/10.1080%2F00273171.2011.568786">Austin 2011</a>) 
-			      using a logistic classifier in scikit-learn 
-			      (<a href="https://towardsdatascience.com/propensity-score-matching-a0d373863eec">Luvsandorj, Z., 2021</a>).</p> 
+                        (<a href="https://dx.doi.org/10.1080%2F00273171.2011.568786">Austin 2011</a>) 
+                    <p class="l2">"most often estimated using a logistic regression model, in which treatment status is regressed on observed baseline characteristics"</p>
+                    <p class="l2">Here we use a logistic classifier in scikit-learn 
+                        (<a href="https://towardsdatascience.com/propensity-score-matching-a0d373863eec">Luvsandorj, Z., 2021</a>).</p> 
+                </section>
+                
+                <section id="psm2">
+                    <h2>Propensity Score Matching (PSM)</h2>
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2022-gisruk-psm/psm.png" />
+                        <figcaption>Using PSM to identify individuals in the census and our survey who share
+                        similar characteristics</figcaption>
+                    </figure>
                     <p>2: Nearest-neighbour algorithm selects individuals in the survey who are close to those in the census</p>
                     <p class="l2">Using scikit-learn NearestNeighbors class.</p>
                     <p>Current linking attributes: sex, age (6 groups), house ownership (owned, rented, other)</p>
-                    <p>Future work: consider <i>geography</i></p>
+                    <p>Future work: additional variables, and <i>geography</i></p>
                 </section>
                 
                 <section>
