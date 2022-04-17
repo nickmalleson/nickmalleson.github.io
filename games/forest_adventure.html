@@ -43,6 +43,8 @@ You can see a couple of old sleeping bags but no people sleeping in them. There&
 * [[leave the campsite|leave]]</tw-passagedata><tw-passagedata pid="4" name="run" tags="" position="734,414" size="100,100">You leap up and dash from the campsite. Something is following you; you can hear its terrible breathing and the pounding of its feet.
 You daren&#39;t look behind you, but as you dash through the trees you can feel the monster getting closer. 
 It is only a few meters away now.
+You feel its stale breath on the back of your kneck.
+It&#39;s jaws are only inches away.
 It is going to [[catch you]]</tw-passagedata><tw-passagedata pid="5" name="open the chest" tags="" position="509,441" size="100,100">Seriously?!? You opened the chest?!? Well that was silly. Did you not read the sign? The sign that said, in capital letters, &quot;DO NOT OPEN!&quot;
 Despite the clear warnings, you gingerly begin to lift the lid on the chest ... 
 You immediately realise that you have made a terrible mistake as a pair of monstrous red eyes glare out at you and a terrifying growl echoes from the confines of the chest. 
@@ -57,7 +59,41 @@ It&#39;s a medium size cooking pot in quite good condition with the remains of a
 What now?
 * [[open the chest]]
 * [[leave the campsite|leave]]
-(if:$has_knife is false)[* [[pick up the knife|knife]] ]</tw-passagedata><tw-passagedata pid="8" name="leave" tags="" position="503,632" size="100,100">You decide to leave the camp site, and not a moment too soon as you hear a monstorous, terryfying howl from the nearby bushes. [[RUN!|run]]</tw-passagedata><tw-passagedata pid="9" name="catch you" tags="" position="734,564" size="100,100">...</tw-passagedata></tw-storydata>
+(if:$has_knife is false)[* [[pick up the knife|knife]] ]</tw-passagedata><tw-passagedata pid="8" name="leave" tags="" position="503,632" size="100,100">You decide to leave the camp site, and not a moment too soon as you hear a monstorous, terryfying howl from the nearby bushes. [[RUN!|run]]</tw-passagedata><tw-passagedata pid="9" name="catch you" tags="" position="734,564" size="100,100">Just as the monster launches itself at you for the kill, you dodge off to the side and ... 
+* [[leap for an overhanging vine|vine]]
+* [[dive into a small hole|cave]]</tw-passagedata><tw-passagedata pid="10" name="vine" tags="" position="659,714" size="100,100">You jump as high as you can and manage to grab on to an overhanging vine. You pull yourself up with all your might, lifting your foot out of reach mere seconds before the monster&#39;s terrible jaws close on it.
+You climb higher up into the tree and make it on to a branch.
+You&#39;re safe [[for now|vine2]]</tw-passagedata><tw-passagedata pid="11" name="cave" tags="" position="809,714" size="100,100">You launch youself head-first down into a small hole beneath some tree roots.
+As you dive into the hole, you upset the dead leaves that litter the ground nearby and they fall over you to make a nice, leafy blanket.
+You can hear the monster scrabbling around beyond your hiding place, but it can&#39;t see you under all the leaves. 
+You&#39;re safe, [[for now|cave1]]</tw-passagedata><tw-passagedata pid="12" name="vine2" tags="" position="659,864" size="100,100">You rest for a few minutes and get your breath back. You can hear the monster scrabbling around below, but you are quite high up in the tree and can&#39;t see it through the leaves. 
+Luckily the monster cannot climb trees.
+Eventually, the wheezing, snuffling sounds fade.
+
+* It&#39;s probably safe now, you decide to [[climb down out of the tree|forest]]
+* Better safe than sorry, you [[wait in the tree|vinewait1]]</tw-passagedata><tw-passagedata pid="13" name="forest" tags="" position="1132,1090" size="100,100">... to be continued ... </tw-passagedata><tw-passagedata pid="14" name="vinewait1" tags="" position="661,1013" size="100,100">The minutes pass, but you don&#39;t hear any sign of the monster.
+
+* It&#39;s probably safe now, you decide to [[climb down out of the tree|forest]]
+* Still best to be sure, so you [[wait in the tree|vinewait2]]</tw-passagedata><tw-passagedata pid="15" name="vinewait2" tags="" position="661,1163" size="100,100">Hours have passed now and you still don&#39;t hear any sign of the monster.
+
+* It&#39;s probably safe now, you decide to [[climb down out of the tree|forest]]
+* You have a sore bottom now from sitting on the branch for so long, but definitely don&#39;t want to see the monester again, so you [[wait in the tree|vinewait3]]</tw-passagedata><tw-passagedata pid="16" name="vinewait3" tags="" position="661,1313" size="100,100">This is getting really boring.
+
+* Please [[climb down out of the tree|forest]]. I promise the monster has really gone.
+* Better safe than sorry, you continue to [[wait in the tree|vinewait4]]</tw-passagedata><tw-passagedata pid="17" name="vinewait4" tags="" position="661,1463" size="100,100">OK. Enough&#39;s enough. It&#39;s definitely safe now. So you [[climb down out of the tree|forest]]</tw-passagedata><tw-passagedata pid="18" name="cave1" tags="" position="809,863" size="100,100">You rest for a few minutes and get your breath back. You can hear the monster scrabbling around, but it can&#39;t find you.
+Eventually, the wheezing, snuffling sounds fade.
+
+* It&#39;s probably safe now, you decide to [[climb out of the hole|forest]]
+* Better safe than sorry, you [[wait in the hole|cavewait1]]</tw-passagedata><tw-passagedata pid="19" name="cavewait1" tags="" position="814,1011" size="100,100">Hours have passed now and you still don&#39;t hear any sign of the monster.
+
+* It&#39;s probably safe now, you decide to [[climb out of the hole|forest]]
+* This is actually quite comfortable, so you continue to [[wait in the hole|cavewait2]]</tw-passagedata><tw-passagedata pid="20" name="cavewait2" tags="" position="814,1161" size="100,100">Hours have passed now and you still don&#39;t hear any sign of the monster.
+
+* It&#39;s probably safe now, you decide to [[climb out of the hole|forest]]
+* Nah, you are still a bit scared of the monster, so you [[wait in the hole|cavewait3]]</tw-passagedata><tw-passagedata pid="21" name="cavewait3" tags="" position="814,1311" size="100,100">This is getting really boring.
+
+* Please [[get out of the hole|forest]]. I promise the monster has really gone.
+* Better safe than sorry, you continue to [[wait in the hole|cavewait4]]</tw-passagedata><tw-passagedata pid="22" name="cavewait4" tags="" position="814,1461" size="100,100">OK. Enough&#39;s enough. It&#39;s definitely safe now. So you [[climb out of the hole|forest]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
