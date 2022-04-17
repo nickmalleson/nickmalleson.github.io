@@ -24,7 +24,7 @@ a:hover {
   color: crimson;
   text-decoration: none;
   border-bottom: 4px solid crimson;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="Wake up" tags="" position="347,194" size="100,100">(set: $has_knife to false)
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-passagedata pid="1" name="start" tags="" position="347,194" size="100,100">(set: $has_knife to false)
 (set: $has_pot to false)
 What just happened? You wake up in a cold, dark wood. You seem to be in a small camp site, but there is no one else around. You have no idea how you got here. Come to think of it, you can&#39;t even remember who you are! 
 What should you do now?
@@ -71,7 +71,12 @@ Luckily the monster cannot climb trees.
 Eventually, the wheezing, snuffling sounds fade.
 
 * It&#39;s probably safe now, you decide to [[climb down out of the tree|forest]]
-* Better safe than sorry, you [[wait in the tree|vinewait1]]</tw-passagedata><tw-passagedata pid="13" name="forest" tags="" position="1132,1090" size="100,100">... to be continued ... </tw-passagedata><tw-passagedata pid="14" name="vinewait1" tags="" position="661,1013" size="100,100">The minutes pass, but you don&#39;t hear any sign of the monster.
+* Better safe than sorry, you [[wait in the tree|vinewait1]]</tw-passagedata><tw-passagedata pid="13" name="forest" tags="" position="1132,1090" size="100,100">The forset is quiet, and it&#39;s dark underneath the overhanging branches.
+You can&#39;t just stand here, but don&#39;t know which way to go.
+* Go [[north|forest2]]
+* Go [[east|forest2]]
+* Go [[south|forest2]]
+* Go [[west|forest2]]</tw-passagedata><tw-passagedata pid="14" name="vinewait1" tags="" position="661,1013" size="100,100">The minutes pass, but you don&#39;t hear any sign of the monster.
 
 * It&#39;s probably safe now, you decide to [[climb down out of the tree|forest]]
 * Still best to be sure, so you [[wait in the tree|vinewait2]]</tw-passagedata><tw-passagedata pid="15" name="vinewait2" tags="" position="661,1163" size="100,100">Hours have passed now and you still don&#39;t hear any sign of the monster.
@@ -93,7 +98,30 @@ Eventually, the wheezing, snuffling sounds fade.
 * Nah, you are still a bit scared of the monster, so you [[wait in the hole|cavewait3]]</tw-passagedata><tw-passagedata pid="21" name="cavewait3" tags="" position="814,1311" size="100,100">This is getting really boring.
 
 * Please [[get out of the hole|forest]]. I promise the monster has really gone.
-* Better safe than sorry, you continue to [[wait in the hole|cavewait4]]</tw-passagedata><tw-passagedata pid="22" name="cavewait4" tags="" position="814,1461" size="100,100">OK. Enough&#39;s enough. It&#39;s definitely safe now. So you [[climb out of the hole|forest]]</tw-passagedata></tw-storydata>
+* Better safe than sorry, you continue to [[wait in the hole|cavewait4]]</tw-passagedata><tw-passagedata pid="22" name="cavewait4" tags="" position="814,1461" size="100,100">OK. Enough&#39;s enough. It&#39;s definitely safe now. So you [[climb out of the hole|forest]]</tw-passagedata><tw-passagedata pid="23" name="forest2" tags="" position="1132,1240" size="100,100">You start walking. 
+The forest is still and quiet. All you can hear are the muffled sounds of your footsteps on the soft earth, and the melancoly singing of the birds overhead. 
+The hours pass and the sun starts to set. You worry that you might have to spend the night in the forst with that monster roaming about.
+But then through the trees you catch the glimmer of sunlight. There must be a clearing. You [[run towards it|meadow]]</tw-passagedata><tw-passagedata pid="24" name="meadow" tags="" position="1132,1389" size="100,100">You burst out of the trees on to a wide grassy meadow. 
+In the distance you make out a magnificant castle.
+It will be dark soon and you are not sure you will be able to get to the castle before nightfall. You really don&#39;t want to get caught in the open by that monster. What do you do?
+
+* [[Run for the castle|castlerun]]
+* [[Climb up into a tree for the night]]</tw-passagedata><tw-passagedata pid="25" name="castlerun" tags="" position="1056,1539" size="100,100">You dash towards the castle at full speed.
+Just as you think you might make it, you hear a terrible, ragged breathing and the sound of something running after you.
+You don&#39;t need to look behind you to know what it is.
+There is no way that you will make it to the castle in time so you turn to [[face the monster]].</tw-passagedata><tw-passagedata pid="26" name="Climb up into a tree for the night" tags="" position="1207,1539" size="100,100">You climb up the first big tree that you find. Right up into the top branches. 
+And not a moment too soon! As you reach the top you hear that awful snuffling noise again and know that the monster is just below. You can&#39;t see the monster very well, but notice a strange golden collar glittering in the sunlight as it roots around looking for you.
+You make yourself comfortable (well, kind of) and settle in for what will be a very long, cold, [[sleepless night]].</tw-passagedata><tw-passagedata pid="27" name="sleepless night" tags="" position="1207,1689" size="100,100">Despite the cold, you must have drifed off because the next thing you know it&#39;s morning.
+You gingerly make your way down out of the tree but don&#39;t see any sign of the monster. 
+You make your way across the meadow [[towards the castle|castle]]</tw-passagedata><tw-passagedata pid="28" name="face the monster" tags="" position="1055,1689" size="100,100">As you turn, the monster leaps up at you.
+(if:$has_knife is false)[You try to fight back but you are helpless without any weapons. You smell the beast&#39;s awful breath and see rows of deadly teeth as it&#39;s jaws close over your face. Everything goes dark 
+[[Try again?|start]]]
+(if:$has_knife is true)[You lash out at the monster with your knife, catching it on one of its front legs. The monster yowls in pain and runs back towards the woods. As it retreats you notice a golden colar about its neck. You have fought off the monster, [[for now|castle]]]
+
+
+
+</tw-passagedata><tw-passagedata pid="29" name="castle" tags="" position="1087,1839" size="100,100">You approach the castle, heading for the massive wooden doors set in to the front wall. 
+...to be continued...</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">"use strict";var _slicedToArray=function(){return function(e,t){if(Array.isArray(e))return e;if(Symbol.iterator in Object(e))return function(e,t){var n=[],r=!0,a=!1,i=void 0;try{for(var o,s=e[Symbol.iterator]();!(r=(o=s.next()).done)&&(n.push(o.value),!t||n.length!==t);r=!0);}catch(e){a=!0,i=e}finally{try{!r&&s.return&&s.return()}finally{if(a)throw i}}return n}(e,t);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e};function _defineProperty(e,t,n){return t in e?Object.defineProperty(e,t,{value:n,enumerable:!0,configurable:!0,writable:!0}):e[t]=n,e}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,n=Array(e.length);t<e.length;t++)n[t]=e[t];return n}return Array.from(e)}!function(){
 /**
  * @license almond 0.3.3 Copyright jQuery Foundation and other contributors.
