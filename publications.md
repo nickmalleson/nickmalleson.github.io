@@ -254,6 +254,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conference Proceedings
 
+Comber, A., P. Harris, K. Bratkova, H. H. Phe, M. Kieu, Q. T. Bui, T. T. H. Nguyen, E. Wanjau, and **N. Malleson** (2022) Handling the MAUP: Methods for Identifying Appropriate Scales of Aggregation Based on Measures on Spatial and Non-Spatial Variance. _AGILE: GIScience Series 3_ (2022): 30. DOI: [10.5194/agile-giss-3-30-2022](https://doi.org/10.5194/agile-giss-3-30-2022).
+
 Comber, A., **N. Malleson**, Hang Nguyen Thi Thuy, Thanh Bui Quang, Minh Kieu, Hoang Huu Phe and Paul Harris (2021) Multiscale Geographically Weighted Discriminant Analysis. _GIScience 2021_, 27-30 September, Poznan (online), Short Paper Proceedings. DOI: [10.25436/E2PP4F](https://doi.org/10.25436/E2PP4F). [PDF](https://escholarship.org/content/qt41t46420/qt41t46420.pdf?t=r0am1r).
 
 **Malleson, N.**, Hang Nguyen Thi Thuy, Thanh Bui Quang, Minh Kieu, Phe Hoang Huu and Alexis Comber (2021) Urban Data Science for Sustainable Transport Policies in Emerging Economies. _GIScience 2021_, 27-30 September, Poznan (online), Short Paper Proceedings. DOI: [10.25436/E28G6D](https://doi.org/10.25436/E28G6D). [PDF](https://escholarship.org/content/qt5zt0p1ft/qt5zt0p1ft.pdf?t=r0am2f). [Slides]({{site.dusturl}}/p/2021-09-28-GIScience.html)
