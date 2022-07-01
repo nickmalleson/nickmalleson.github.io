@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2022
 
+Comber, A., Callaghan, M., Harris, P., Lu, B., **Malleson, N.**, Brunsdon, C. (2022) `gwverse`: A Template for a New Generic Geographically Weighted R Package. _Geographical Analysis_ (online first). DOI: [10.1111/gean.12337](http://doi.org/10.1111/gean.12337)
+
 Tang, D. and **N. Malleson** (2022). Data assimilation with agent-based models using Markov chain sampling. _Open Research Europe_ 2(70). DOI: [10.12688/openreseurope.14800.1](https://doi.org/10.12688/openreseurope.14800.1) (open access)
 
 Kieu, M., H. Nguyen, J.A. Ward and **N. Malleson** (2022). Towards real-time predictions using emulators of agent-based models. _Journal of Simulation_ 1–18. DOI: [10.1080/17477778.2022.2080008](https://doi.org/10.1080/17477778.2022.2080008). [[PDF](./papers/2022-06-Emulators_Minh.pdf)].
