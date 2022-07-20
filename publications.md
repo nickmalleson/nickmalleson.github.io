@@ -254,6 +254,9 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conference Proceedings
 
+Cui, N., **N. Malleson**, V. Houlden and A. Comber (2022). Using social media data to understand the impact of the COVID-19 pandemic on urban green space use. _Urban Forestry & Urban Greening_ 74 (127677).
+DOI: [10.1016/j.ufug.2022.127677](https://doi.org/10.1016/j.ufug.2022.127677).
+
 Comber, A., P. Harris, K. Bratkova, H. H. Phe, M. Kieu, Q. T. Bui, T. T. H. Nguyen, E. Wanjau, and **N. Malleson** (2022) Handling the MAUP: Methods for Identifying Appropriate Scales of Aggregation Based on Measures on Spatial and Non-Spatial Variance. _AGILE: GIScience Series 3_ (2022): 30. DOI: [10.5194/agile-giss-3-30-2022](https://doi.org/10.5194/agile-giss-3-30-2022).
 
 Comber, A., **N. Malleson**, Hang Nguyen Thi Thuy, Thanh Bui Quang, Minh Kieu, Hoang Huu Phe and Paul Harris (2021) Multiscale Geographically Weighted Discriminant Analysis. _GIScience 2021_, 27-30 September, Poznan (online), Short Paper Proceedings. DOI: [10.25436/E2PP4F](https://doi.org/10.25436/E2PP4F). [PDF](https://escholarship.org/content/qt41t46420/qt41t46420.pdf?t=r0am1r).
