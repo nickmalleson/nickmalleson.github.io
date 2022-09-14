@@ -223,6 +223,9 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Heppenstall, A., A. Crooks, E. Manley and **N. Malleson** (2022) Simulating geographical systems using cellular automata and agent-based models. In _[Handbook of Spatial Analysis in the Social Sciences](https://www.e-elgar.com/shop/gbp/handbook-of-spatial-analysis-in-the-social-sciences-9781789903935.html)_, edited by Sergio J. Rey and Rachel S.Franklin, Chapter 8. Edward Elgar Publishing.
+
+
 Crooks, A.T., A. Heppenstall, **N. Malleson**, and Ed Manley (2021) Agent-Based Modeling and the City: A Gallery of Applications. In _Urban Informatics_, edited by Wenzhong Shi, Michael F. Goodchild, Michael Batty, Mei-Po Kwan, and Anshu Zhang, 885–910. The Urban Book Series. Springer. 
 [[DOI:doi.org/10.1007/978-981-15-8983-6_46](https://doi.org/10.1007/978-981-15-8983-6_46)].
 	
