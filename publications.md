@@ -73,6 +73,10 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2022
 
+**N. Malleson**, Birkin, M., Birks, D., Ge, J., Heppenstall, A., Manley, E., McCulloch, J., Ternes, P. (2022) Agent-based modelling for Urban Analytics: State of the art and challenges. _AI Communications_ 35, 393–406. DOI:
+[10.3233/AIC-220114](https://doi.org/10.3233/AIC-220114) [[PDF]](./papers/2022-09-AIC_ABM.pdf)
+
+
 Comber, A., Callaghan, M., Harris, P., Lu, B., **Malleson, N.**, Brunsdon, C. (2022) `gwverse`: A Template for a New Generic Geographically Weighted R Package. _Geographical Analysis_ (online first). DOI: [10.1111/gean.12337](http://doi.org/10.1111/gean.12337)
 
 Tang, D. and **N. Malleson** (2022). Data assimilation with agent-based models using Markov chain sampling. _Open Research Europe_ 2(70). DOI: [10.12688/openreseurope.14800.1](https://doi.org/10.12688/openreseurope.14800.1) (open access)
@@ -84,7 +88,7 @@ McCulloch, J., J. Ge, J.A. Ward, A. Heppenstall, J.G. Polhill, **N. Malleson** (
 
 #### 2021
 
-Spooner, F., J.F. Abrams, K. Morrissey, G. Shaddick M. Batty, R. Milton, A. Dennett, N. Lomax, **N. Malleson**, N. Nelissen, A. Coleman, J. Nur, Y. Jin, R. Greig, C. Shenton, M. Birkin (2021) A dynamic microsimulation model for epidemics. _Social Science & Medicine_ 291, 114461. DOI: [10.1016/j.socscimed.2021.114461](https://doi.org/10.1016/j.socscimed.2021.114461)
+Spooner, F., J.F. Abrams, K. Morrissey, G. Shaddick M. Batty, R. Milton, A. Dennett, N. Lomax, **N. Malleson**, N. Nelissen, A. Coleman, J. Nur, Y. Jin, R. Greig, C. Shenton, M. Birkin (2021) A dynamic microsimulation model for epidemics. _Social Science & Medicine_ 291, 114461. DOI: [10.1016/j.socscimed.2021.114461](https://doi.org/10.1016/j.socscimed.2021.114461) (open access)
 
 Ternes, P., J.A. Ward, A. Heppenstall, V. Kumar, L.-M. Kieu, **N. Malleson** (2021) Data assimilation and agent-based modelling: towards the incorporation of categorical agent parameters. _Open Research Europe_ 1, 131. DOI:[10.12688/openreseurope.14144.1](https://doi.org/10.12688/openreseurope.14144.1) (open access)
 
