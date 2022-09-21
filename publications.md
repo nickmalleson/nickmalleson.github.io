@@ -229,6 +229,9 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 ### <a name="chapters"></a>Book Chapters
 
+Heppenstall, A., A. Crooks, E. Manley and **N. Malleson** (2022) Simulating geographical systems using cellular automata and agent-based models. In _[Handbook of Spatial Analysis in the Social Sciences](https://www.e-elgar.com/shop/gbp/handbook-of-spatial-analysis-in-the-social-sciences-9781789903935.html)_, edited by Sergio J. Rey and Rachel S.Franklin, Chapter 8. Edward Elgar Publishing.
+
+
 Crooks, A.T., A. Heppenstall, **N. Malleson**, and Ed Manley (2021) Agent-Based Modeling and the City: A Gallery of Applications. In _Urban Informatics_, edited by Wenzhong Shi, Michael F. Goodchild, Michael Batty, Mei-Po Kwan, and Anshu Zhang, 885–910. The Urban Book Series. Springer. 
 [[DOI:doi.org/10.1007/978-981-15-8983-6_46](https://doi.org/10.1007/978-981-15-8983-6_46)].
 	
@@ -259,6 +262,9 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 **N. Malleson** (2012) Using Agent-Based Models to Simulate Crime. In Heppenstall, A.J.; Crooks, A.T.; See, L.M.; Batty, M. (Eds.) _Agent-Based Models of Geographical Systems_. Springer. [[URL]](http://www.springer.com/social+sciences/population+studies/book/978-90-481-8926-7) [[download]]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/03/abm_book_chapter_2012-2.pdf)
 
 ### <a name="proceedings"></a>Articles in Conference Proceedings
+
+Cui, N., **N. Malleson**, V. Houlden and A. Comber (2022). Using social media data to understand the impact of the COVID-19 pandemic on urban green space use. _Urban Forestry & Urban Greening_ 74 (127677).
+DOI: [10.1016/j.ufug.2022.127677](https://doi.org/10.1016/j.ufug.2022.127677).
 
 Comber, A., P. Harris, K. Bratkova, H. H. Phe, M. Kieu, Q. T. Bui, T. T. H. Nguyen, E. Wanjau, and **N. Malleson** (2022) Handling the MAUP: Methods for Identifying Appropriate Scales of Aggregation Based on Measures on Spatial and Non-Spatial Variance. _AGILE: GIScience Series 3_ (2022): 30. DOI: [10.5194/agile-giss-3-30-2022](https://doi.org/10.5194/agile-giss-3-30-2022).
 
