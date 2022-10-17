@@ -74,7 +74,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 #### 2022
 
 **N. Malleson**, Birkin, M., Birks, D., Ge, J., Heppenstall, A., Manley, E., McCulloch, J., Ternes, P. (2022) Agent-based modelling for Urban Analytics: State of the art and challenges. _AI Communications_ 35, 393–406. DOI:
-[10.3233/AIC-220114](https://doi.org/10.3233/AIC-220114) [[PDF]](./papers/2022-09-AIC_ABM.pdf)
+[10.3233/AIC-220114](https://doi.org/10.3233/AIC-220114).  [[PDF (open access)](https://arxiv.org/abs/2210.06955)]
 
 
 Comber, A., Callaghan, M., Harris, P., Lu, B., **Malleson, N.**, Brunsdon, C. (2022) `gwverse`: A Template for a New Generic Geographically Weighted R Package. _Geographical Analysis_ (online first). DOI: [10.1111/gean.12337](http://doi.org/10.1111/gean.12337)
