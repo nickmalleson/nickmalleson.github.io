@@ -73,6 +73,10 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2022
 
+
+Jumadi, Jumadi, V.N. Fikriyah, H.Z. Hadibasyir, M.I.T. Sunariya, K.D. Priyono, N.A. Setiyadi, S.J. Carver, P.D. Norman, **N. Malleson**, A. Rohman, A. Lotfata (2022). Spatiotemporal Accessibility of COVID-19 Healthcare Facilities in Jakarta, Indonesia. _Sustainability_ 14 (21): 14478. DOI: [10.3390/su142114478.](https://doi.org/10.3390/su142114478)
+
+
 **N. Malleson**, Birkin, M., Birks, D., Ge, J., Heppenstall, A., Manley, E., McCulloch, J., Ternes, P. (2022) Agent-based modelling for Urban Analytics: State of the art and challenges. _AI Communications_ 35, 393–406. DOI:
 [10.3233/AIC-220114](https://doi.org/10.3233/AIC-220114).  [[PDF (open access)](https://arxiv.org/abs/2210.06955)]
 
