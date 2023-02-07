@@ -71,8 +71,11 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
-#### 2022
+#### 2023 
 
+Kieu, M., E. Wanjau, A. Comber, K. Bratkova, H. N. T. Thuy, T. B. Quang, P. H. Huu, **N. Malleson** (2023). Factors affecting perceptions in transport -- A deep dive into the motorbike ban in Hanoi, Vietnam. _Case Studies on Transport Policy_ 11: 100958. DOI: [10.1016/j.cstp.2023.100958](https://doi.org/10.1016/j.cstp.2023.100958)
+
+#### 2022
 
 Jumadi, Jumadi, V.N. Fikriyah, H.Z. Hadibasyir, M.I.T. Sunariya, K.D. Priyono, N.A. Setiyadi, S.J. Carver, P.D. Norman, **N. Malleson**, A. Rohman, A. Lotfata (2022). Spatiotemporal Accessibility of COVID-19 Healthcare Facilities in Jakarta, Indonesia. _Sustainability_ 14 (21): 14478. DOI: [10.3390/su142114478.](https://doi.org/10.3390/su142114478)
 
