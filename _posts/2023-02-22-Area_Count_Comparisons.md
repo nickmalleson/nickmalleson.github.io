@@ -34,6 +34,34 @@ $$
 
 Another similar approach is to calculate a confidence interval for the _difference_ in population proportions. If the confidence interval does not contain 0 then it is likely that there is a 'true' difference in the two proportions. [This website](https://www.statology.org/confidence-interval-difference-in-proportions/) has a good worked example. 
 
+## Confidence Interval around the Mean Distance
+
+This method looks at the difference itself, rather than the distrubtions of the events. 
+In short, for each area you calculate the difference in the number of events and then calculate the z-scores for the difference. Any area with a difference of $z>x$ (i.e. where $x=2$ you are identifying areas with a difference that is 2 standard deviations above the mean) could be statistically significant. The following R code helpfully shows this (thanks Lex!).
+
+```R
+# Make some data with poisson distibution (counts)
+# I would suggest that these could be convereted to rates with something per 1000 people / hopuses etc
+# BUT because you have 2 of them they should approximate to a normal distributiuon when compared
+
+events_yr1 = rpois(500, lambda = 3)
+events_yr2 = rpois(500, lambda = 3)
+# calculate difference - shoudl have a normal-ish distribution
+dif = events_yr1-events_yr2
+hist(dif)
+# now z-scores
+dif_z = as.vector(scale(dif))
+hist(dif_z)
+
+# now find signioficant changes
+# combine to a df
+df = data.frame(e1 = events_yr1, e2 = events_yr2, dif = dif, dif_z = dif_z)
+head(df)
+big_change = which(df$dif_z > 2 | df$dif_z < -2)
+big_change
+df[big_change, ]
+```
+
 
 ## Paired Poisson Counts 
 
