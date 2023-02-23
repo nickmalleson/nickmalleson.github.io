@@ -298,7 +298,9 @@ Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, ag
 
 ### <a name="workingpapers"></a>Working Papers, Pre-Prints and Others
 
-Tang, D. and N. Malleson (2022). Data assimilation with agent-based models using Markov chain sampling. _Preprint_: [arXiv:2205.01616 [cs.MA]](https://doi.org/10.48550/arXiv.2205.01616).
+Oswald, Y., N. Malleson, K. Suchak (2023). An agent-based model of the 2020 international policy diffusion in response to the COVID-19 pandemic with particle filter.  _Preprint_: [arXiv:2302.11277 [cs.MA]](https://doi.org/10.48550/arXiv.2302.11277)
+
+Tang, D. and N. Malleson (2022). Data assimilation with agent-based models using Markov chain sampling. _Preprint_: [arXiv:2205.01616 [cs.MA]](https://doi.org/10.48550/arXiv.2205.01616)
 
 A. Whipp, **N. Malleson**, Jonathan Ward, Alison Heppenstall (2021). Towards a Comprehensive Measure of the Ambient Population: Building Estimates Using Geographically Weighted Regression _Preprint_: [10.31235/osf.io/pquvy](https://doi.org/10.31235/osf.io/pquvy).
 
