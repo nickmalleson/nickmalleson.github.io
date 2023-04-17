@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="propensity score matching; population synthesis; microsimulation; transport policy; Hanoi">
+
+		<title>
+			Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi
+		</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+        
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+ 
+                    
+                <section class="title" id="title" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" 
+                                 data-src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" 
+                                 data-src="../figures/uol_logo.gif"/>
+                        </a>
+                        <h5>GIS Research UK 2022</h5>
+
+                        <hr/>
+                        <h2 style="font-size: 150%">
+							Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi
+						</h2>
+                        <hr/>
+                        <h3>Nick Malleson, et al.</h3>
+                        <h4>Professor of Spatial Science</h4>
+                        <h4>School of Geography, University of Leeds, UK</h4>                        
+                        <hr/>
+                        <h4><a href="http://www.nickmalleson.co.uk">www.nickmalleson.co.uk</a></h4>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                        <p style="font-size: 14pt; text-align: center">This work has received funding from the British Academy under the Urban Infrastructures of Well-Being programme [grant number UWB190190].</p>
+                    </div>
+                </section>
+                
+                <section id="acknowledgements" data-background-image="../figures/hanoi/intro-bg.jpg">
+                    <div class="whitebackground2">
+                        <h2>Co-authors</h2>
+                        <p>Lex Comber, Kristina Bratkova, Phe Hoang Huu, Minh Kieu, Thanh Bui Quang, 
+                            Hang Nguyen Thi Thuy, and Eric Wanjau</p>
+                        <p>University of Leeds; University of Auckland; Vietnam National University; R&amp;D Consultants</p>
+                    </div>
+                </section>                
+                
+                <section>
+                    <img class="right" data-src="../figures/hanoi/hanoi_skyline2.jpg" alt="Smoggy skyline"/>
+                    <h2>Context</h2>
+                    <p>Transport in <i>H&#225; N&#7897;i</i></p>
+                    <p class="l2">City (8M people) growing faster than transport infrastructure</p>
+                    <p class="l2">Causing issues of congestion and pollution</p>
+                    <p class="l2">`Non-western' transport behaviours, e.g. 90% motorbikes</p>
+                    <p class="l2">Implications for Urban Data Science and traditional transport models</p>
+                    <p>Urban Transport Modelling for Sustainable Well-Being in Hanoi (UTM-Hanoi)</p>
+                    <p class="l2">2+ year project funded by the British Academy</p>
+                    <p class="l2">Aim: new data collection and analysis/modelling to inform transport policy</p>
+                    <p class="l2">Project website: <a href="https://urban-analytics.github.io/UTM-Hanoi/">
+                            https://urban-analytics.github.io/UTM-Hanoi</a></p>
+                </section>
+                
+                <section id="kristina">
+                    <img data-src="../figures/paper_figures/2022-gisruk-psm/poster_kristina.png"
+                         alt="Poster by Kristina: Let the Data Speak for Itself: Developing a New Data Dashboard for a Hanoi Transport Survey"/>
+                </section>
+                
+                <section id="eric">
+                    <img data-src="../figures/paper_figures/2022-gisruk-psm/poster_eric.png"
+                         alt="Poster by Eric: SPATIAL INTERACTION MODELLING BY TRANSPORT MODE: A GLIMPSE INTO THE IMPACTS OF A MOTORBIKE BAN IN HANOI"/>
+                </section>
+                
+                
+                <section>
+                    <h2>Up-scaling a Spatial Survey</h2>
+                    <img class="right" data-src="../figures/hanoi/hanoi_bikes.jpg" alt="Motorbikes in Hanoi" />
+                    <p>Data</p>
+                    <p class="l2">Bespoke travel survey</p>
+                    <p class="l3">30,000 responses</p>
+                    <p class="l3">Ask about demographics, travel behaviour (main journeys), (aspirational) vehicle ownership, <b>potential motorbike ban</b>.</p>
+                    <p class="l2">Vietnam Census (sample of micro-data)</p>
+                    <p>Aims</p>
+                    <p class="l2">Upscale the survey to make it more representative (larger sample and less bias)</p>
+                    <p class="l2">Use propensity score matching</p>
+                    <p class="l2">Better understand the possible implications of a motorbike ban</p>
+                </section>
+                
+                <section>
+                    <h2>Propensity Score</h2>
+                    <p>Common in medicine</p>
+                    <p>Converts <i>observational</i> studies (with non-random sampling) to <i>experimental</i> studies</p>
+                    <p>Tries to balance two groups &#151; 'control' and 'treatment' &#151; so that they have
+                    similar characteristics.</p>
+                    <p>Allows differences to be attributed to the effect of the treatment, rather
+                    than to differences in the two groups</p>
+                </section>
+            
+                <section id="psm1">
+                    <h2>Propensity Score Matching (PSM)</h2>
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2022-gisruk-psm/psm.png" />
+                        <figcaption>Using PSM to identify individuals in the census and our survey who share
+                        similar characteristics</figcaption>
+                    </figure>
+                    <p>Following <a href="https://doi.org/10.1068%2Fb130054p">Morrissey et al (2015)</a> and 
+                        <a href="https://doi.org/10.1016/j.socscimed.2021.114461">Spooner (2021)</a></p>
+                    <p>1: Assign <i>treatment</i> (census) and <i>control</i> (survey) groups</p>
+                    <p>2: Calculate the <i>propensity score</i></p>
+                    <p class="l2">"probability of treatment assignment conditional on observed baseline characteristics" 
+                        (<a href="https://dx.doi.org/10.1080%2F00273171.2011.568786">Austin 2011</a>) 
+                    <p class="l2">"most often estimated using a logistic regression model, in which treatment status is
+                        regressed on observebaseline characteristics"
+                        (<a href="https://dx.doi.org/10.1080%2F00273171.2011.568786">Austin 2011</a>) </p>
+                    <p class="l2">Here we use a logistic classifier in scikit-learn 
+                        (<a href="https://towardsdatascience.com/propensity-score-matching-a0d373863eec">Luvsandorj, Z., 2021</a>).</p> 
+                </section>
+                
+                <section id="psm2">
+                    <h2>Propensity Score Matching (PSM)</h2>
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2022-gisruk-psm/psm.png" />
+                        <figcaption>Using PSM to identify individuals in the census and our survey who share
+                        similar characteristics</figcaption>
+                    </figure>
+                    <p>3: Nearest-neighbour algorithm selects individuals in the survey who are close to those in the census</p>
+                    <p class="l2">Using scikit-learn NearestNeighbors class.</p>
+                    <p>Current linking attributes: sex, age (6 groups), house ownership (owned, rented, other)</p>
+                    <p>Future work: additional variables, and <i>geography</i></p>
+                </section>
+                
+                <section>
+                    <h2>Propensity Score Matching (PSM)</h2>
+                    <h3>How well did it work?</h3>
+                    <p>Comparing the propensity scores of the treatment (census) and  control (survey) groups.</p>
+                    <img data-src="../figures/paper_figures/2022-gisruk-psm/propensity_score_desity1.png"
+                         class="left"
+                         alt="Comparing the propensity score densities of the treatment and control groups" />
+                    <img data-src="../figures/paper_figures/2022-gisruk-psm/propensity_score_desity2.png"
+                         class="right"
+                         alt="Comparing the propensity score densities of the treatment and control groups" />
+                </section>
+                
+                
+                <section>
+                    <h2>Preliminary Results</h2>
+                    <h3>Awareness of a possible motorbike ban</h3>
+                    <figure style="width:80%;">
+                        <img data-src="../figures/paper_figures/2022-gisruk-psm/mbike_ban-aware.png"
+                             alt="Map showing the proportion of people who are aware of a possible motorbike ban">
+                        <figcaption>The proportion of (synthetic) individuals who are aware of 
+                            a possible motorbike ban</figcaption>
+                    </figure>
+                </section>
+                
+                <section>
+                    <h2>Preliminary Results</h2>
+                    <h3>Opinion on the possible ban</h3>
+                    <figure style="width:80%;">
+                        <img data-src="../figures/paper_figures/2022-gisruk-psm/mbike_ban-opinion.png"
+                             alt="Map showing the opinion of people towards the possible motorbike ban">
+                        <figcaption>Mean opinion on the motorbike ban (lower numbers mean less 
+                            favourable opinion)</figcaption>
+                    </figure>
+                </section>
+                
+                <section data-background-image="../figures/hanoi/banner-bg.jpg">
+                    <div class="whitebackground2">
+                        <h2>Summary / Conclusions</h2>
+                        <p>Better understand residents' transport opinions and behaviours</p>
+                        <p>Use propensity score matching to up-scale a travel survey</p>
+                        <p>Explore awareness and opinion on a motorbike ban</p>
+                        <p><b>CAVEAT:</b> Currently too few factors considered, links between the 
+                        census and the survey are not sufficiently nuanced </p>
+                        <p>Next steps:</p>
+                        <p class="l2">Improve census-survey link to be more detailed</p>
+                        <p class="l2">Take spatial location into account</p>
+			<p class="l2">Other features of the survey to explore: e.g. aspirational vehicle ownership,
+			journeys, public transport, etc.</p>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="title" id="thanks" data-background-image="../figures/shutterstock_788457058-small.jpg">
+					<div class="whitebackground2">
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" 
+                                 data-src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" 
+                                 data-src="../figures/uol_logo.gif"/>
+                        </a>
+                        <h5>GIS Research UK 2022</h5>
+
+                        <hr/>
+                        <h2 style="font-size: 150%">
+							Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi
+						</h2>
+                        <hr/>
+                        <h3>Nick Malleson, et al.</h3>
+                        <h4>Professor of Spatial Science</h4>
+                        <h4>School of Geography, University of Leeds, UK</h4>                        
+                        <hr/>
+                        <h4><a href="http://www.nickmalleson.co.uk">www.nickmalleson.co.uk</a></h4>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                        <p style="font-size: 14pt; text-align: center">This work has received funding from the British Academy under the Urban Infrastructures of Well-Being programme [grant number UWB190190].</p>
+                    </div>
+                </section>
+
+                
+                
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
