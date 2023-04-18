@@ -33,7 +33,9 @@
 			<div class="slides">
  
                     
-                <section class="title" id="title" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                <section class="title" id="title" 
+                         data-background-image="../figures/shutterstock_788457058-small.jpg"
+                         >
                     <div class="whitebackground2">
                         <a href="https://europa.eu/european-union/index_en">
                             <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" 
@@ -44,7 +46,7 @@
                             <img style="float:right;padding:10px;width:150px; height:auto;" 
                                  data-src="../figures/uol_logo.gif"/>
                         </a>
-                        <h5>GIS Research UK 2022</h5>
+                        <h5>GIS Research UK 2023</h5>
 
                         <hr/>
                         <h2 style="font-size: 150%">
@@ -69,6 +71,8 @@
                         <p>Lex Comber, Kristina Bratkova, Phe Hoang Huu, Minh Kieu, Thanh Bui Quang, 
                             Hang Nguyen Thi Thuy, and Eric Wanjau</p>
                         <p>University of Leeds; University of Auckland; Vietnam National University; R&amp;D Consultants</p>
+                        <h2>Full paper</h2>
+                        <p>Kieu, M., E. Wanjau, A. Comber, K. Bratkova, H. N. T. Thuy, T. B. Quang, P. H. Huu, N. Malleson (2023). Factors affecting perceptions in transport – A deep dive into the motorbike ban in Hanoi, Vietnam. <em>Case Studies on Transport Policy</em> 11: 100958. DOI: <a href="https://doi.org/10.1016/j.cstp.2023.100958">10.1016/j.cstp.2023.100958</a></p>
                     </div>
                 </section>                
                 
@@ -81,19 +85,15 @@
                     <p class="l2">City (8M people) growing faster than transport infrastructure</p>
                     <p class="l2">Motorbikes have replaced bicycles</p>
                     <p class="l3">"almost constant buzzing and honking" (<a href="https://dx.doi.org/10.4324/9781315762302-37">Hansen, 2022</a>)</p>
-                    <p class="l2">Causing issues of congestion and pollution</p>
-                    <p>Urban Transport Modelling for Sustainable Well-Being in Hanoi (UTM-Hanoi)</p>
-                    <p class="l2">2+ year project funded by the British Academy (finished in Dec 2022)</p>
-                    <p class="l2">Aim: new data collection and analysis/modelling to inform transport policy</p>
-                    <p class="l2">Project website: <a href="https://urban-analytics.github.io/UTM-Hanoi/">
-                            https://urban-analytics.github.io/UTM-Hanoi</a></p>
+                    <p class="l3">2nd most polluted city in South East Asia in 2018 (<a href="https://doi.org/10.3390/su13105577">Huu et al., 2021</a>).</p>
+                    <p class="l2">Serious issues of congestion and pollution</p>
                 </section>
                 
                 <section id="hanoi_honking">
                     
                      <!--<video width="320" height="240" controls>-->
                     <video controls muted autoplay>
-                        <source src="../videos/hanoi_honking.webm" type="video/webm">
+                        <source data-src="../videos/hanoi_honking.webm" type="video/webm">
                         <!--<source src="../videos/hanoi_honking.mp4" type="video/mp4">-->
                          Your browser does not support the video tag. 
                     </video> 
@@ -104,11 +104,29 @@
                 
             
                 
+
+                <section id="mbkie_ban">
+                    <img class="right" data-src="../figures/hanoi/hanoi_bikes.jpg" 
+                         alt="Motorbikes in Hanoi" />
+                    <h2>Motorbike Ban</h2>
+                    <p>Potential policy to reduce congestion &amp; pollution</p>
+                    <p>But motorbikes are "absolutely vital" (<a href="https://dx.doi.org/10.4324/9781315762302-37">Hansen, 2022</a>) for residents</p>
+                    <p>Ban risks "mobility injustice" 
+                        (<a href="https://doi.org/10.1016/j.jtrangeo.2020.102728">Turner, 2020</a>)
+                        or inadvertently increasing car use 
+                        (<a href="https://doi.org/10.11175/eastpro.2009.0.335.0.">Van et al., 2009</a>)
+                    </p>
+                    
+                </section>
                 
-                
-                <section id="survey">
-                    <h2>Household Travel Survey</h2>
-                    <img class="right" data-src="../figures/hanoi/hanoi_bikes.jpg" alt="Motorbikes in Hanoi" />
+                <section id="utm-hanoi">
+                    <h2>UTM-HANOI</h2>
+                    <p>Urban Transport Modelling for Sustainable Well-Being in Hanoi</p>
+                    <p class="l2">2+ year project funded by the British Academy (finished in Dec 2022)</p>
+                    <p class="l2">Aim: new data collection and analysis/modelling to inform transport policy</p>
+                    <p class="l2">Project website: <a href="https://urban-analytics.github.io/UTM-Hanoi/">
+                            https://urban-analytics.github.io/UTM-Hanoi</a></p>
+
                     <p>Bespoke travel survey</p>
                     <p class="l2">~30,000 responses</p>
                     <p class="l2">Ask about demographics, travel behaviour (main journeys), (aspirational) vehicle ownership, <b>potential motorbike ban</b>.</p>
@@ -124,27 +142,146 @@
                 
                 </section>
                 
-                
-                <section>
-                    <p>XXXX HERE. Go through paper adding slides.</p>
+                <section id="aims">
+                    <h2>Aims &amp; Method</h2>
+                    
+                    <p>Develop ML model (XGBoost decision tree classification) to:</p>
+                    <p class="l2">Predict how sentiment towards the ban might change if:</p>
+                    <p class="l3">People better informed about the ban</p>
+                    <p class="l3">Public transport more readily available</p>
+                    <p class="l2">Find characteristics of respondents most strongly associated with positive/negative opinion of the ban (<i>feature importance</i>; not discussed here)</p>
+                    <p>Inputs: responses to the survey</p>
+                    <p>Output: probability of 'accepting' the ban</p>
+                    <p>70% data used for training</p>
                 </section>
                 
+                <section id="aims2">
+                    <h2>Aims &amp; Method</h2>
+                    
+                    <p>Cannot adjust parameters to make predictions (non-parametric)</p>
+                    <p>To simulate changes:</p>
+                    <p class="l2">Systematically modify testing dataset to simulate a change in one particular variable</p>
+                    <p class="l2">All other variables constant</p>
+                    <p class="l2">Use trained XGBoost model to make predictions on the simulated data</p>
+                    <p class="l2">Compare output before/after change</p>
+                    
+                    <aside class="notes">
+                         We systematically modify the testing dataset to simulate a change in one particular vari- able, while keeping all other variables consistent, and then use the trained XGBoost model to make predictions. By comparing the model output (the individual probability of accepting the motorbike ban) before and after the change in one variable, we will be able to understand the impact of that change to individual’s opinion to the ban.
+                    </aside>
+                </section>
                 
+
                 
+                <section id="results1a" class="title"
+                         data-background-image="../figures/hanoi/banner-bg.jpg">
+                    <div class="whitebackground2">
+                        <h2>Results (i)<br/>
+                            What happens if more people become aware of the ban?</h2>
+                    </div>
+                </section>
+                
+                <section id="results1b">
+                                    
+                    <figure>
+                        <img data-src="../figures/paper_figures/2023-GISRUK-MBike_Ban/awareness1.png" 
+                             alt="Graph shows the percentage of people who accept the ban increases 
+                                  as we make more people aware of it"
+                             style="width: 100%;"/>
+                        <figcaption>
+                            Awareness of the motorbike ban. Median probability of acceptance increases as a
+                            proportion of people (M) are changed from 'unaware' to 'aware'.
+                        </figcaption>
+                    </figure>
+                    
+                    <aside class="notes">
+                        Modifier, M, changes people from being 'unaware' or 'do not care' to 'aware'
+                        E.g. If M=0.5 then 50% changed to aware
+                        As more people become aware, the overall acceptance probability increases.
+                        This seems obvious, but no reason to think that being aware of the ban will make someone more likely to support it. 
+                        Suggests positive government messaging may help.
+                    </aside>
+                </section>
+
+                
+                <section id="results2a" class="title"
+                         data-background-image="../figures/hanoi/banner-bg.jpg">
+                    <div class="whitebackground2">
+                        <h2>Results (ii)<br/>
+                            What happens if the distance to public transport is reduced?</h2>
+                    </div>
+                </section>
+                
+                <section id="results2b">
+                    <p>Change percentage: change of someone being chosen</p>
+                    <p>Modifier: multiplies distance to nearest transport</p>
+                    <p>As distance to public transport increases, the probability of accepting the ban decreases.</p>
+                    <figure>
+                        <img class="left"
+                             data-src="../figures/paper_figures/2023-GISRUK-MBike_Ban/policy_dist2pub.png"
+                             alt="Graph showing that as distance to transport increases, probability
+                                  of accepting the ban decrases" />                        
+                        <img class="right"
+                             data-src="../figures/paper_figures/2023-GISRUK-MBike_Ban/policy_dist2pub_2D.png"
+                             alt="Graph showing that as distance to transport increases, probability
+                                  of accepting the ban decrases" />
+                        <!--
+                        <figcaption>
+                            As distance to public transport increases, the probability of accepting the ban decreases.
+                        </figcaption>
+                        -->
+                    </figure>
+                    
+                    <aside class="notes">
+                        If public transport is a suitable mobility option, people are more open to a potential motorbike ban.
+                        BUT reducing public transport increases acceptance marginally and increasing it reduces acceptance substantially.
+                        If the nearest stop is too far away then public transport becomes inaccessible.
+                        Important for urban sprawl if public transport does not keep pace.
+                    </aside>
+                
+                </section>
+                
+                <section id="results2c">
+                    
+                    <img data-src="../figures/paper_figures/2023-GISRUK-MBike_Ban/policy_dist2pub.png"/>
+                    <figcaption>
+                        Probability of accepting with varying change percentage (C) and modifier (M)
+                    </figcaption>
+                    
+                </section>
+                
+                <section id="results2d">
+                    
+                    <figure>
+                        <img data-src="../figures/paper_figures/2023-GISRUK-MBike_Ban/policy_dist2pub_2D.png"/>
+                        <figcaption>
+                            Change percentage fixed at C=100%
+                        </figcaption>
+                    </figure>
+                    
+                    
+                    
+                    
+                </section>
                 
                 
                 
                 <section data-background-image="../figures/hanoi/banner-bg.jpg">
                     <div class="whitebackground2">
                         <h2>Summary / Conclusions</h2>
-                        <p>XXXX</p>
+                        <p>UTM-Hanoi</p>
+                        <p class="l2">Large (N=~30,000) household travel survey</p>
+                        <p>XGBoost to explore propensity to support a motorbike ban</p>
+                        <p>Policy implications to improve acceptance of a ban:</p>
+                        <p class="l2">Positive public awareness campaigns (seems obvious, but not necessarily)</p>
+                        <p class="l2">Decrease distance to public transport (or, at least, don't allow it to increase</p>
                     </div>
                 </section>
                 
                 
                 
                 
-                <section class="title" id="thanks" data-background-image="../figures/shutterstock_788457058-small.jpg">
+                <section class="title" id="thanks" 
+                         data-background-image="../figures/shutterstock_788457058-small.jpg">
                     <div class="whitebackground2">
                         <a href="https://europa.eu/european-union/index_en">
                             <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" 
@@ -155,7 +292,7 @@
                             <img style="float:right;padding:10px;width:150px; height:auto;" 
                                  data-src="../figures/uol_logo.gif"/>
                         </a>
-                        <h5>GIS Research UK 2022</h5>
+                        <h5>GIS Research UK 2023</h5>
 
                         <hr/>
                         <h2 style="font-size: 150%">
