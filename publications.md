@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2023 
 
+Molly Asher, Nik Lomax, Karyn Morrissey, Fiona Spooner, **Nick Malleson** (2023). Dynamic calibration with approximate Bayesian computation for a microsimulation of disease spread. _Nature Scientific Reports_ 13:8637. DOI: [10.1038/s41598-023-35580-z](https://dx.doi.org/10.1038/s41598-023-35580-z).
+
 Kieu, M., E. Wanjau, A. Comber, K. Bratkova, H. N. T. Thuy, T. B. Quang, P. H. Huu, **N. Malleson** (2023). Factors affecting perceptions in transport -- A deep dive into the motorbike ban in Hanoi, Vietnam. _Case Studies on Transport Policy_ 11: 100958. DOI: [10.1016/j.cstp.2023.100958](https://doi.org/10.1016/j.cstp.2023.100958)
 
 #### 2022
