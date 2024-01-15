@@ -48,15 +48,21 @@ For most of my recent presentations please see the [Data Assimilation for Agent-
 
 ### <a name="presentations"></a>2023
 
+ - [Agent-Based Modelling]({{site.url}}/{{site.baseurl}}/p/2024-01-17-ABM_AQM.html). Invited presentation to the [White Rose Social Sciences Doctoral Training Partnership](https://wrdtp.ac.uk/) [Advanced Methods Showcase](https://wrdtp.ac.uk/events/advanced-methods-showcase-2024/), 17th January 2024.
+
+
+### 2023
+
  - [Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2023-GISRUK_Hanoi_MBikeBan.html). Presentation to GIS Research UK ([GISRUK '23](https://gisruk.org/gisruk-2023/)), University of Glasgow, 19-21 April 2023.
 
-
+ - 
 
 ### 2022
 
  - [Up-scaling a Spatial Survey with Propensity Score Matching:
 Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 5-8 April, Liverpool University. [Abstract (pdf)](./papers/2022-GISRUK-PSM.pdf).
 
+ - 
 
 ### 2021
 
