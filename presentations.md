@@ -55,14 +55,14 @@ For most of my recent presentations please see the [Data Assimilation for Agent-
 
  - [Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2023-GISRUK_Hanoi_MBikeBan.html). Presentation to GIS Research UK ([GISRUK '23](https://gisruk.org/gisruk-2023/)), University of Glasgow, 19-21 April 2023.
 
- - 
+ - &nbsp;
 
 ### 2022
 
  - [Up-scaling a Spatial Survey with Propensity Score Matching:
 Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-GISRUK.html). Presentation to GIS Research UK ([GISRUK](http://gis.geos.ed.ac.uk/gisruk/gisruk.html)), 5-8 April, Liverpool University. [Abstract (pdf)](./papers/2022-GISRUK-PSM.pdf).
 
- - 
+ - &nbsp;
 
 ### 2021
 
