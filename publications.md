@@ -71,6 +71,11 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
+#### 2024
+
+Kieu, M., H. Nguyen, J. A. Ward, and **N. Malleson** (2024). Towards Real-Time Predictions Using Emulators of Agent-Based Models. _Journal of Simulation_ 18 (1): 29–46. DOI: [10.1080/17477778.2022.2080008](https://doi.org/10.1080/17477778.2022.2080008)
+
+
 #### 2023 
 
 Molly Asher, Nik Lomax, Karyn Morrissey, Fiona Spooner, **Nick Malleson** (2023). Dynamic calibration with approximate Bayesian computation for a microsimulation of disease spread. _Nature Scientific Reports_ 13:8637. DOI: [10.1038/s41598-023-35580-z](https://dx.doi.org/10.1038/s41598-023-35580-z).
