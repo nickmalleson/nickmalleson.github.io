@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2024
 
+Seyidoglu, H., G. Farrell, A. Dixon, J. Pina-Sánchez, **N Malleson** (2024). Post-pandemic crime trends in England and Wales. _Crime Science_ 13, 6. DOI: [10.1186/s40163-024-00201-1](https://doi.org/10.1186/s40163-024-00201-1)
+
 Kieu, Minh, Alexis Comber, Hang Nguyen Thi Thuy, Thanh Bui Quang, Phe Hoang Huu, and **N. Malleson** (2024). An Open Dataset on Individual Perceptions of Transport Policies. _Nature Scientific Data_ 11 (1): 104. DOI: [10.1038/s41597-024-02950-9](https://doi.org/10.1038/s41597-024-02950-9)
 
 Kieu, M., H. Nguyen, J. A. Ward, and **N. Malleson** (2024). Towards Real-Time Predictions Using Emulators of Agent-Based Models. _Journal of Simulation_ 18 (1): 29–46. DOI: [10.1080/17477778.2022.2080008](https://doi.org/10.1080/17477778.2022.2080008)
