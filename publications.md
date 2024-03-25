@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2024
 
+Y. Oswald, **N. Malleson** and K. Suchak (2024). An Agent-Based Model of the 2020 International Policy Diffusion in Response to the COVID-19 Pandemic with Particle Filter. _Journal of Artificial Societies and Social Simulation_ 27(2) 3. [https://www.jasss.org/27/2/3.html](https://www.jasss.org/27/2/3.html). DOI: [10.18564/jasss.5342](https://dx.doi.org/10.18564/jasss.5342)
+
 Seyidoglu, H., G. Farrell, A. Dixon, J. Pina-Sánchez, **N Malleson** (2024). Post-pandemic crime trends in England and Wales. _Crime Science_ 13, 6. DOI: [10.1186/s40163-024-00201-1](https://doi.org/10.1186/s40163-024-00201-1)
 
 Kieu, Minh, Alexis Comber, Hang Nguyen Thi Thuy, Thanh Bui Quang, Phe Hoang Huu, and **N. Malleson** (2024). An Open Dataset on Individual Perceptions of Transport Policies. _Nature Scientific Data_ 11 (1): 104. DOI: [10.1038/s41597-024-02950-9](https://doi.org/10.1038/s41597-024-02950-9)
