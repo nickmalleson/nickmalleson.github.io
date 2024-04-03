@@ -1,0 +1,11 @@
+<figure class="right">
+    <img src="./figures/attribution/Melbourne_Skyline_at_night.png" alt="Melbourne skyline at night" />
+    <figcaption><p>Photo attributed to <ahref="https://flickr.com/photos/75483412@N08/30944560643">
+        bobarcpics</a> (<ahref="http://creativecommons.org/licenses/by/2.0/">
+        CC BY 2.0</a>)</p></figcaption>
+</figure>
+
+
+
+
+Melbourne_Skyline_at_night
