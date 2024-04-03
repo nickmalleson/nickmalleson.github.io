@@ -46,12 +46,13 @@ tagline:
 
 For most of my recent presentations please see the [Data Assimilation for Agent-Based Modelling (DUST)](https://urban-analytics.github.io/dust/presentations.html) project.
 
-### <a name="presentations"></a>2023
+### <a name="presentations"></a>2024
 
- - [Agent-Based Modelling]({{site.url}}/{{site.baseurl}}/p/2024-01-17-ABM_AQM.html). Invited presentation to the [White Rose Social Sciences Doctoral Training Partnership](https://wrdtp.ac.uk/) [Advanced Methods Showcase](https://wrdtp.ac.uk/events/advanced-methods-showcase-2024/), 17th January 2024.
-
+ - [Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis]({{site.url}}/{{site.baseurl}}/p/2024-GISRUK-PCA_Ped_Flows.html). Presentation to GIS Research UK ([GISRUK '24](https://2024.gisruk.org/)), University of Leeds, 9-12 April 2024.
 
 ### 2023
+
+ - [Agent-Based Modelling]({{site.url}}/{{site.baseurl}}/p/2024-01-17-ABM_AQM.html). Invited presentation to the [White Rose Social Sciences Doctoral Training Partnership](https://wrdtp.ac.uk/) [Advanced Methods Showcase](https://wrdtp.ac.uk/events/advanced-methods-showcase-2024/), 17th January 2024.
 
  - [Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2023-GISRUK_Hanoi_MBikeBan.html). Presentation to GIS Research UK ([GISRUK '23](https://gisruk.org/gisruk-2023/)), University of Glasgow, 19-21 April 2023.
 
