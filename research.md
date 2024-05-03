@@ -16,11 +16,11 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://dust.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
-                <h3><a href="http://dust.leeds.ac.uk/">DUST</a></h3>
-                Data Assimilation for Agent-Based Models
+                <a href="https://urban-analytics.github.io/integrate/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <h3><a href="https://urban-analytics.github.io/integrate/">INTEGRATE</a></h3>
+                Integrated Analysis of Social Media and Hedonic House Prices for Neighbourhood Change
             </li>
-            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based modelss. <a href="http://dust.leeds.ac.uk/">More information</a>.</li>
+            <li style="font-size: small; line-height: 20px;">This research project aims to explore neighborhood changes over time and space by integrating social media data with house price models in three global case studies (UK, New Zealand, and Vietnam), focusing on the detection of housing bubbles, gentrification, and cross-cultural differences as reflected in social media and analyzed through text engineering and natural language processing.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -32,6 +32,23 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
                 Consumer Data Research Centre
             </li>
             <li style="font-size: small; line-height: 20px;">The aim of the CDRC is to work with organisations to open up their data to our trusted researchers to provide solutions that drive economic growth and improve our society. <a href="http://cdrc.ac.uk/">More information</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    </div>
+</section>
+<h2>Completed Projects</h2>
+<section class="container">
+    <div class="row">
+
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="http://dust.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <h3><a href="http://dust.leeds.ac.uk/">DUST</a></h3>
+                Data Assimilation for Agent-Based Models
+            </li>
+            <li style="font-size: small; line-height: 20px;">This 5-year research project, which is being funded by the European Research Council, will develop dynamic data assimilation methods for use in agent-based modelss. <a href="http://dust.leeds.ac.uk/">More information</a>.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -90,12 +107,6 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
             <li>&nbsp;</li>
         </ul>
     </div>
-    </div>
-</section>
-<h2>Completed Projects</h2>
-<section class="container">
-    <div class="row">
-
     <div class="6u">
         <ul class="style">
             <li>
