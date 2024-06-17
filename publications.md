@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2024
 
+**Malleson, N.**, R. Franklin, D. Arribas-Bel, T. Cheng, and M. Birkin (2024). Digital Twins on Trial: Can They Actually Solve Wicked Societal Problems and Change the World for Better? _Environment and Planning B: Urban Analytics and City Science_ (_online first_). DOI: [10.1177/23998083241262893](https://doi.org/10.1177/23998083241262893)
+
 Kieu, M., R. Ozaki, P. Ternes, **N. Malleson** (2024). Evaluating Public Sentiment Towards Transport Policies: A causal analysis of the motorbike ban in Hanoi. _Case Studies on Transport Policy_. DOI: [10.1016/j.cstp.2024.101203](https://doi.org/10.1016/j.cstp.2024.101203)
 
 Y. Oswald, **N. Malleson** and K. Suchak (2024). An Agent-Based Model of the 2020 International Policy Diffusion in Response to the COVID-19 Pandemic with Particle Filter. _Journal of Artificial Societies and Social Simulation_ 27(2) 3. [https://www.jasss.org/27/2/3.html](https://www.jasss.org/27/2/3.html). DOI: [10.18564/jasss.5342](https://dx.doi.org/10.18564/jasss.5342)
