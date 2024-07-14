@@ -44,11 +44,12 @@ tagline:
 
 ## Conference Presentations
 
-For most of my recent presentations please see the [Data Assimilation for Agent-Based Modelling (DUST)](https://urban-analytics.github.io/dust/presentations.html) project.
-
 ### <a name="presentations"></a>2024
 
  - [Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis]({{site.url}}/{{site.baseurl}}/p/2024-GISRUK-PCA_Ped_Flows.html). Presentation to GIS Research UK ([GISRUK '24](https://2024.gisruk.org/)), University of Leeds, 9-12 April 2024.
+
+ - &nbsp;
+
 
 ### 2023
 
@@ -56,20 +57,21 @@ For most of my recent presentations please see the [Data Assimilation for Agent-
 
  - [Using Machine Learning to Predict Perceptions of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2023-GISRUK_Hanoi_MBikeBan.html). Presentation to GIS Research UK ([GISRUK '23](https://gisruk.org/gisruk-2023/)), University of Glasgow, 19-21 April 2023.
 
- - Presentations from the [dust]({{site.dusturl}}) project to the _Sustainable and equitable cities and regions for a net zero world_ conference, University of St Andrews and the Alan Turing Institute. 17-18 October, St Andrews, UK.
-   - Yanhua Xu: [Time Series Clustering for Analysing Pedestrian Footfall Patterns]({{site.dusturl}}/p/2023-10-StAndrews/Yanhua.pptx).
-   - Molly Asher: [Predicting Pedestrian Counts using Machine Learning]({{site.dusturl}}/p/2023-10-StAndrews/Molly.pptx).
-   - Jayita Chakraborty: [Impact of demand-supply dynamics on the empty travel distance of ridesourcing drivers in an urban environment]({{site.dusturl}}/p/2023-10-StAndrews/Jayita.pptx).
-   - Keiran Suchak. [Real-Time Pedestrian Simulation](https://ksuchak1990.github.io/presentations/2023/turing_presentation/Turing_presentation.html)
-   - Jack Liddle: [Melbourne Pedestrian Counts. What do have? What can we do with this?]({{site.dusturl}}/p/2023-10-StAndrews/Jack.pptx).
-   - Nick Malleson: [Real-Time Forecasting of Uncertian ABMs with Approximate Bayesian Computation]({{site.dusturl}}/p/2023-10-StAndrews/Nick.pptx).
+ - Presentations from the [dust]({{site.dusturl}}) project to the _Sustainable and equitable cities and regions for a net zero world_ conference, University of St Andrews and the Alan Turing Institute. 17-18 October, St Andrews, UK:
+   - 1. Yanhua Xu: [Time Series Clustering for Analysing Pedestrian Footfall Patterns]({{site.dusturl}}/p/2023-10-StAndrews/Yanhua.pptx).
+   - 2. Molly Asher: [Predicting Pedestrian Counts using Machine Learning]({{site.dusturl}}/p/2023-10-StAndrews/Molly.pptx).
+   - 3. Jayita Chakraborty: [Impact of demand-supply dynamics on the empty travel distance of ridesourcing drivers in an urban environment]({{site.dusturl}}/p/2023-10-StAndrews/Jayita.pptx).
+   - 4. Keiran Suchak. [Real-Time Pedestrian Simulation](https://ksuchak1990.github.io/presentations/2023/turing_presentation/Turing_presentation.html)
+   - 5. Jack Liddle: [Melbourne Pedestrian Counts. What do have? What can we do with this?]({{site.dusturl}}/p/2023-10-StAndrews/Jack.pptx).
+   - 6. Nick Malleson: [Real-Time Forecasting of Uncertian ABMs with Approximate Bayesian Computation]({{site.dusturl}}/p/2023-10-StAndrews/Nick.pptx).
+
+ - &nbsp;
 
  - Using Approximate Bayesian Computation to Infer Disease Parameter Uncertainty in a COVID-19 Microsimulation. Presentation to the [18th Social Simulation Conference](https://ssc23-sphsu.online/), 4-8 September, University of Glasgow, UK. [Slides (pdf)]({{site.dusturl}}/p/2023-09-SSC.pdf). Full paper: [https://www.nature.com/articles/s41598-023-35580-z](https://www.nature.com/articles/s41598-023-35580-z).
 
  - Economic prediction in real-time? Or an agent-based model with Ensemble Kalman Filter for the US wealth distribution. Presentation to the [Ninth Meeting of the German Network for New Economic Dynamics (GENED)](https://www.uni-bamberg.de/en/econ-rtg/events/ninth-meeting-of-the-german-network-for-new-economic-dynamics-gened/), 4th-6th October, Bamberg. [Slides (pdf)]({{site.dusturl}}/p/2023-10-GENED.pdf).
 
  - Predicting Pedestrian Counts using Machine Learning. Presentation to the Association of Geographic Information Laboratories in Europe (AGILE) annual conference. Delft, the Netherlands, 13-16 June 2023. [Slides (pdf)]({{site.dusturl}}/p/2023-07-AGILE_ML.pdf). DOI: [10.5194/agile-giss-4-18-2023](https://doi.org/10.5194/agile-giss-4-18-2023)
-
 
  - [Virtual Mirrors or Smoke and Mirrors? Can Urban Digital Twins Make Cities Better?]({{site.dusturl}}/p/2023-04-GISRUK_Keynote.html). Keynote presentation to GIS Research UK ([GISRUK '23](https://gisruk.org/gisruk-2023/)), University of Glasgow, 19-21 April 2023. (Shorter version also presented at the [CDRC Data Partner Forum on 23rd October 2013]({{site.dusturl}}/p/2023-10-CDRC-Data_Partner_Forum.html)).
 
