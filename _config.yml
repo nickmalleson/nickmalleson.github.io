@@ -1,7 +1,7 @@
 # Site settings
 title: Nick Malleson's Homepage
 tagline: "A website about Nick Malleson's research and teaching at the University of Leeds"
-keywords: GIS, geography, ABM, data science
+keywords: GISc, geography, ABM, data science
 description: > # this means to ignore newlines until "baseurl:"
     "A website about Nick Malleson's research and teaching at the University of Leeds"
 
