@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2024
 
+Oswald, Y., K. Suchak, and **N Malleson** (2025). Agent-Based Models of the United States Wealth Distribution with Ensemble Kalman Filter. _Journal of Economic Behavior & Organization_ 229:106820. DOI: [10.1016/j.jebo.2024.106820](https://doi.org/10.1016/j.jebo.2024.106820)
+
 **Malleson, N.**, R. Franklin, D. Arribas-Bel, T. Cheng, and M. Birkin (2024). Digital Twins on Trial: Can They Actually Solve Wicked Societal Problems and Change the World for Better? _Environment and Planning B: Urban Analytics and City Science_ (_online first_). DOI: [10.1177/23998083241262893](https://doi.org/10.1177/23998083241262893)
 
 Kieu, M., R. Ozaki, P. Ternes, **N. Malleson** (2024). Evaluating Public Sentiment Towards Transport Policies: A causal analysis of the motorbike ban in Hanoi. _Case Studies on Transport Policy_. DOI: [10.1016/j.cstp.2024.101203](https://doi.org/10.1016/j.cstp.2024.101203)
