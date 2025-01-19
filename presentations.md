@@ -46,6 +46,8 @@ tagline:
 
 ### <a name="presentations"></a>2024
 
+ - [Integrated Analysis of Social Media and Hedonic House Prices for Neighbourhood Change (INTEGRATE)]({{site.url}}/{{site.baseurl}}/p/2024-11-Turing_UA-Glasgow.pdf). Presentation to the Alan Turing Institute Urban Analytics Programme All Hands Meeting '[Transforming Urban Living with AI and Digital Twins](https://www.turing.ac.uk/events/transforming-urban-living-ai-and-digital-twins)', 11-13 Nov, University of Glasgow, UK.
+
  - [Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis]({{site.url}}/{{site.baseurl}}/p/2024-GISRUK-PCA_Ped_Flows.html). Presentation to GIS Research UK ([GISRUK '24](https://2024.gisruk.org/)), University of Leeds, 9-12 April 2024.
 
  - &nbsp;
