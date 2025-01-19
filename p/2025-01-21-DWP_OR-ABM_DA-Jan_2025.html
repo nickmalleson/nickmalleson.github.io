@@ -1,0 +1,740 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="ABM, microsimulation, simulation">
+
+		<title>Real-time Agent-Based Modelling with Data Assimilation</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Pr,inting and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+                <!--
+                <section data-markdown id="index"
+                         data-background-image="http://surf.leeds.ac.uk/figures/cityscapes/chicago_bw.jpg">
+                -->
+
+                <section class="title"  id="index" data-background-image="../figures/virtual_city.jpeg">
+                    <div class="whitebackground2">
+
+                        <h5>Presentation to the Government Operational Research Service</h5>
+
+                        <h1 style="font-size: 55px;">Real-time Agent-Based Modelling with Data Assimilation</h1>
+                        <hr/>
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a></h2>
+                        <h4>University of Leeds, UK</h4>
+                        <h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <h4><a href="http://dust.leeds.ac.uk">dust.leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:25px">Slides available at: <br/><a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></p>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:left;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:center;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.turing.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a>
+                    </div>
+
+                </section>
+                
+<!-- 
+Individual-level modelling techniques, such as microsimulation and agent-based modelling, 
+are commonly used to simulate complex systems. The nature of these systems means that, even 
+with a perfect model and accurate starting conditions, the simulation and the real system 
+will diverge over time. Data assimilation (DA) is a technique commonly used in weather forecasting 
+that can be used to incorporate up-to-date data into models so that they remain more closely 
+aligned to the current state of the underlying system. However, DA techniques have been designed 
+for continuous systems and hence their application to individual-level models is non-trivial.
+
+This presentation will discuss recent progress in the development of DA techniques that can be 
+applied to agent-based models. It will discuss key methodological issues and explore three case 
+studies in particular: (i) pedestrian crowding in busy public places; (ii) international policy 
+diffusion; and (iii) the dynamics of household wealth distribution. 
+-->
+
+
+
+
+                <!-- ************************************************************
+                *********************** INTRO **********************************
+                ************************************************************ -->
+
+                
+                
+                <section data-background-video="../videos/trafalgar_timelapse-1280×720.mp4"
+                         data-background-video-loop="loop"
+                         id="Intro">
+                    <div class="whitebackground2 fragment">
+                    
+                        <h2>Overview</h2>
+
+                        <p>Introduction to ABM</p>
+                        <p>Divergence and Data Assimilation</p>
+                        <p>Case Studies</p>
+                        <p class="l2">Pedestrian crowding in busy public places</p>
+                        <p class="l2">International policy diffusion</p>
+                        <p class="l2">The dynamics of household wealth distributions</p>
+                        <p>Discussion</p>
+                    </div>
+                    
+                    
+                    <!-- Agent based modelling (ABM) is a modelling technique which simulates the actions of individuals (agents) and has been proven to be a very powerful tool within the social sciences. Nick Malleson from Leeds University has been using agent based modelling to: simulate citizen daily mobility in a UK town; predict areas with high risk of crime; simulate bus routes and more. For this Sparkle Talk, Nick will explain to us how ABMs work and he will show us ABM and microsimulation in action!
+ 
+                    Reference: https://urban-analytics.github.io/dust/
+                    Paper: https://link.springer.com/article/10.1007%2Fs10707-019-00346-1 
+                    -->
+
+                
+                </section>
+                
+                
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** Intro to ABM **********************************
+                ************************************************************ -->
+                
+                <section id="IntroToABM" >
+                    <img class="right" data-src="../figures/regression.png"
+                         alt="Diagram of regression" />
+                    <h2>Introduction to ABM</h2>
+                    <h3>Aggregate v.s. Individual</h3>
+                    <p>'Traditional' modelling methods work at an aggregate level, from the <i>top-down</i></p>
+                    <p class="l2">E.g. Regression, spatial interaction modelling, location-allocation, etc.</p>
+                    <p>Aggregate models work very well in some situations</p>
+                    <p class="l2">Homogeneous individuals</p>
+                    <p class="l2">Interactions not important</p>
+                    <p class="l2">Very large systems (e.g. pressure-volume gas relationship)</p>
+                </section>
+                
+
+                <section id="IntroToABM2" >
+                    <img class="right" data-src="../figures/regression.png"
+                         alt="Diagram of regression" />
+                    <h2>Introduction to ABM</h2>
+                    <h3>Aggregate v.s. Individual</h3>
+                    <p>But they miss some important things:</p>
+                    <p class="l2">Low-level dynamics, i.e. “smoothing out” (Batty, 2005)</p>
+                    <p class="l2">Interactions and emergence</p>
+                    <p class="l2">Individual heterogeneity</p>
+                    <p>Unsuitable for modelling <i>complex systems</i></p>
+
+                </section>
+                
+                <section id="IntroToABM4" data-background-video="../videos/skylines_mov-long.mp4"
+                         data-background-video-loop="loop">
+                    <div class="whitebackground2 fragment">
+                        <img class="right" style="width:40%" data-src="../figures/sims.png"
+                         alt="Diagram of the sims" />
+                        <h2>Introduction to ABM</h2>
+                        <p>Systems are driven by individuals</p>
+                        <p class="l2">(cars, people, ants, trees, whatever)</p>
+                        <p>Bottom-up modelling</p>
+                        <p class="l2">An alternative approach to modelling</p>
+                        <p class="l2">Rather than controlling from the top, try to represent the individuals</p>
+                        <p class="l2">Account for system behaviour directly</p>
+                        <p>Autonomous, interacting agents</p>
+                        <p>Represent individuals or groups</p>
+                        <p>Situated in a virtual environment</p>
+                    </div>
+                    
+                </section>
+                
+                <section id="Emergence">
+                    <figure class="right" style="width:40%;">
+                        <img data-src="../figures/attribution/termite_mound.jpg" />
+                        <figcaption>A termite mound.<br/>Attribution: <a href="http://www.flickr.com/people/93452909@N00">JBrew</a> (<a href="http://creativecommons.org/licenses/by-sa/2.0/deed.en">CC BY-SA 2.0</a>).</figcaption>
+                    </figure>
+                    <h2>Why ABM?</h2>
+                    <h3>Emergence</h3>                    
+                    <p>"The whole is greater than the sum of its parts." (Aristotle?)</p>
+                        <p class="l2">Simple rules &#8594; complex outcomes</p>
+                        <p class="l2">E.g. who plans the air-conditioning in termite mounds?</p>
+                    <p>Hard to anticipate, and cannot be deduced from analysis of an <i>individual</i></p>
+                    <p>ABM uses simulation to (try to) understand how macro-level patterns emerge from micro-level behaviours</p>
+
+                
+                </section>
+
+                <section id="BetterTheory">
+                    <h2>Why ABM?</h2>                    
+                    <h3>Better Representations of Theory</h3>
+                    <p>Example: Crime theories emphasise importance of ... </p>
+                    <p class="l2">Individual behaviour (offenders, victims, guardians)</p>
+                    <p class="l2">Individual geographical awareness</p>
+                    <p class="l2">Environmental backcloth</p>
+                    <img data-src="../figures/crime_theories.png"/>
+                </section>                
+            
+                <section id="BetterSpace">
+                    <h2>Why ABM?</h2>                    
+                    
+                    <h3>Better Representations of Space</h3>
+                    <img class="right" data-src="../figures/mastermap_topography.png" alt="Example of GIS data" />
+                    <p>Micro-level environment is very important</p>
+                    <p>Can richly define the space that agents inhabit</p>
+                    
+                    <h3>More Natural Description of a System</h3>
+                    <p>Describe the entities <i>directly</i>, rather than using aggregate equations</p>
+                </section>
+                
+                <section id="History">
+                    <img class="right" style="width:50%" data-src="../figures/burglar_behaviour-geotime.jpg"/>
+                    <h2>Why ABM?</h2>                    
+                    <h3>History of the Model Evolution</h3>
+                    <p>Rather than returning a single result, the model <i>evolves</i></p>
+                    <p>The evolution itself can be interesting</p>
+                    <p>Analyse <i>why</i> certain events occurred</p>
+                </section>
+                
+                <section id="ABM-Complexity" >
+                    <img data-src="../figures/abm_complexity_chart.png" 
+                         alt="Diagram illustrating different ABM applications by behavioural and system/environment complexity" />
+                </section>
+           
+
+                <section id="AgentBehaviour" data-background-image="../figures/attribution/human_brain.png">
+
+                    <div class="whitebackground fragment">
+                        <h2>Modelling agent behaviours</h2>
+                        <p>Many behaviours are hard / impossible to model</p>
+                        <p class="l2">Choose those that are the most important. 
+                            <strong>Cannot include everything!</strong></p>
+                        <p>Some can be very simple - e.g. threshold-based rules (Kennedy, 2012)</p>
+                        <p class="l2"><code style="font-size:80%; text-align:left;">
+                            IF hunger IS ABOVE hunger_threshold THEN search_for_food<br/>
+                            OTHERWISE do_something_else
+                            </code></p>
+                        <p class="l2">These are the most common (Birks et al. 2012, 2013; 
+                            Dray et al. 2008; Groff 2007a,b; Hayslett-McCall, 2008)</p>
+                        <p>More advanced cognitive frameworks exist</p>
+                        <p class="l2">Beliefs, Desires, Intentions (Bratman et al., 1988)</p>
+                        <p class="l2">PECS (Schmidt, 2000). </p>
+                    </div>
+                </section>
+                
+                <section data-background-video="../videos/sim.mp4,../videos/sim.webm"
+                         data-background-video-loop="loop"
+                         id="abm-example-awareness_test"
+                          data-transition="fade">
+                     <div class="fragment" >
+                        <h2 style="background-color: white;">ABM Example</h2>
+                        <h3 style="background-color: white;">Indivudla awareness spaces</h3>
+                     </div>
+                    <figure class="fragment">
+                        <img  style="width:70%" data-src="../figures/transport_results.png" />
+                    </figure>
+                </section>
+
+                
+                <section id="abm-Disadvantages">
+                    <h2>Agent-Based Modelling - Difficulties</h2>
+                    <figure class="right" >
+                        <img data-src="../figures/jacobs_choice.png" />
+                        <figcaption>Will I play with the truck, or the duck?<br/><br/>
+                            (<i>actually he played with his trains...</i>)</figcaption>
+                    </figure>
+                    
+                    <p>Tendency towards minimal behavioural complexity</p>
+                    <p>Stochasticity</p>
+                    <p>Computationally expensive (not amenable to optimisation)</p>
+                    <p class="l2">Complicated agent decisions, lots of decisions, multiple model runs</p>
+                    <p>Modelling "soft" human factors</p>
+                    <p class="l2">Need detailed, high-resolution, individual-level data</p>
+                    <p>Individual-level data</p>
+                </section>
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** DA **********************************
+                ************************************************************ -->
+                
+                   
+                <section id="dust" data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg" >
+                    <div class="whitebackground2">
+                        <figure class="right" style="width:30%;">
+                            <a href="https://europa.eu/european-union/index_en">
+                                <img data-src="../figures/LOGO_EU.jpg" />
+                            </a>
+                        </figure>
+                        <h2>Data Assimilation for Agent-Based Modelling</h2>
+                        <p><a href="https://dust.leeds.ac.uk/">dust.leeds.ac.uk/</a></p>
+                        <h3>Thanks</h3>
+                        <p>Josie McCulloch, Alison Heppenstall, Keiran Suchak, Minh Kieu, Molly Asher,
+                            Kevin Minors, Andrew West, Dan Tang, Yannick Oswald, Robert Clay, 
+                            Annabel Whipp, Jon Ward, Thomas Crols</p>
+                    </div>
+                </section>
+
+                
+            <section id="prob-divergence" data-background-video="../videos/starlings1-short.mp4"
+                data-background-video-muted data-background-video-loop="loop">
+
+                <div class="whitebackground fragment">
+                    <h2>Why we need Data Assimilation</h2>
+                    <p>Complex models will always diverge</p>
+                    <p class="l2">(due to inherent uncertainties in inputs, parameter values, model structure, etc.)</p>
+                    <p>Possible Solution: Data Assimilation</p>
+                    <p>Used in meteorology and hydrology to bring models closer to reality. Combines:</p>
+                    <p class="l2">Noisy, real-world observations</p>
+                    <p class="l2">Model estimates of the system state</p>
+                </div>
+            </section>
+            
+            <section id="dda-vs-calibration">
+                
+                <h2>Data assimilation v.s. calibration</h2>
+                
+                <img data-src="../figures/data-assimilation2.png" style="width:70%;"
+                     alt="Example of optimising the model state using observations and data assimilation"/>
+                
+            </section>
+
+
+            <section id="abm-dda-overview">
+                <img data-src="../figures/paper_figures/dda.jpg" alt="Diagram of data assimilation and an ABM" />
+            </section>
+
+
+            <section id="da-challenges">
+
+                <h2>Challenges for using DA with ABMs</h2>
+                
+                <p>Model size</p>
+                <p class="l2">10,000 agents * 5 variables = 50,000 distinct parameters</p>
+                <p>Agent behaviour</p>
+                <p class="l2">Agent's have goals, needs, etc., so can't be arbitrarily adjusted</p>
+                <p>Assumptions and parameter types</p>
+                <p class="l2">Maths typically developed for continuous parameters and 
+                    assume normal distributions</p>
+                <p>... but, at least, many of these problems are shared by climate models</p>
+
+            </section>
+
+                
+            <section>
+                
+                <h2>Some DA Methods</h2>
+                <p>Basic idea: estimate the <em>posterior</em> model state (i.e. after incorporation
+                of up-to-date data).</p>
+                <p>Particle Filter</p>
+                <p class="l2">Create loads of individual model 'particles' run
+                    them simultaneously.</p>
+                <p class="l2">Remove those that don't represent the observations well; 
+                    duplicate those that do</p>
+                <p class="l2">Advantage: very few assumptions (Gaussian distributions etc.)</p>
+                <p>Kalman Filter</p>
+                <p class="l2">Many flavours: Ensemble, Unscented, ... </p>
+                <p class="l2">Maintain a smaller ensemble and update the particles more intelligently</p>
+                <p class="l2">Efficient but has stronger assumptions (although they might
+                work OK anyway...)</p>
+                <p>4DVar</p>
+                <p class="l2">This is popular in meteorology but I don't know anything about it...</p>
+                
+            </section>
+
+
+
+
+
+            <!-- ************************************************************
+                ***************** REAL TIME CROWD MODELLING ****************
+                ************************************************************ -->
+
+            
+            <section id="real-time-crowd-modelling">
+
+                <h2>Case study 1:</h2>
+                <h3>Real Time Crowd Modelling</h3>
+                <img class="right" data-src="../figures/train_station_pedestrian.jpg"
+                    alt="Image of escalators in a train station" />
+                <p>XXXX HERE - CONSIDER REPLACING THESE SLIDES WITH KEIRAN'S</p>
+            </section>
+
+            <section id="pf-experiments">
+                <h2>Data assimilation with a Particle Filter</h2>
+
+                <img data-src="../figures/PF_flowchart3.png"
+                    alt="Flowchart of the experimental design. Lots of models ('particles') are run simultaneously." />
+
+            </section>
+
+
+            <section id="pf-station-experiments">
+                <h3>Particle Filter & Crowd Simulation</h3>
+
+                <img style="width:80%" data-src="../figures/pf_overview.png" alt="Station PF experimental design." />
+
+            </section>
+
+            <section id="pf-stationsim2-b" data-transition="fade">
+                <h2>Crowd Simulation with a Particle Filter</h2>
+                <img data-src="../figures/pf_animation.gif"
+                    alt="Animation of a crowding model with data assimilation" />
+            </section>
+
+            <section id="pf-results-median_error">
+
+                <h2>Preliminary Particle Filter Results</h2>
+                <h3>Box Environment: More particles = lower error</h3>
+                <figure>
+                    <img style="width:60%"
+                        data-src="../figures/paper_figures/2018-ParticleFilterFigs/median_abs_error.png" alt="median absolute error change with number of agents and particles: greater
+                              complexity caused by larger numbers of agents can be mitigated by increasing
+                              the numbers of particles." />
+                </figure>
+                <figcaption>
+                    Malleson, Nick, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew West, and Alison Heppenstall.
+                    (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. <i>Journal
+                        of Artificial Societies and Social Simulation</i> 23(3) DOI: <a
+                        href="https://doi.org/10.18564/jasss.4266">10.18564/jasss.4266</a>.
+                </figcaption>
+            </section>
+
+            <section id="pf-results-wiggle-count">
+                <h2>Difficulties (I)</h2>
+                <h3>Exponential increase in complexity</h3>
+                <figure>
+
+                    <img style="width:60%;" data-src="../figures/paper_figures/2018-ParticleFilterFigs/wiggle_count.png"
+                        alt="Number of collisions increases exponentially with number of agents" />
+                    <figcaption>
+                        N. Malleson, K. Minors, Le-Minh Kieu, J. A. Ward, A. West and Alison Heppenstall (2020).
+                        Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter.
+                        <i>Journal of Artificial Societies and Social Simulation (JASSS)</i>
+                        <a href="http://jasss.soc.surrey.ac.uk/23/3/3.html">23(3), 3</a>.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <!-- ************************************************************
+            **********************  Grand Central Station ********************
+            ************************************************************ -->
+
+            <section id="gcs" data-background-video="../videos/grandcentral-short.mp4" data-background-video-muted
+                data-background-video-loop="loop">
+
+                <div class="whitebackground2 fragment">
+                    <h2>Grand Central Terminal (New York)</h2>
+
+                    <p>Pedestrian traces</p>
+                    <p class="l2">B. Zhou, X. Wang and X. Tang. (2012) Understanding Collective Crowd Behaviors:
+                        Learning a Mixture Model of Dynamic Pedestrian-Agents. In <i>Proceedings of IEEE Conference on
+                            Computer Vision and Pattern Recognition (CVPR)</i> 2012</p>
+                    <p class="l2"><a href="http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html">
+                            http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html</a></p>
+
+
+                    <img class="left" , style="width:50%"
+                        data-src="../figures/paper_figures/2020-PhilTrans-GrandCentralStation/grand_central_floorplan.png"
+                        alt="Grand Central Terminal floor plan with entrances around the sides and an obstruction in the centre." />
+
+                    <img class="right" style="width:30%"
+                        data-src="../figures/paper_figures/2020-PhilTrans-GrandCentralStation/trajectories-structure.png"
+                        alt="Pedestrian trajectories estimated from the video" />
+
+
+                </div>
+            </section>
+
+            <!-- ************************************************************
+            ********************  GCS: ORE Particle Filter ******************
+            ************************************************************ -->
+
+            <section id="pf_results-gcs-worse-1">
+
+                <h2>Preliminary Particle Filter Results</h2>
+                <h3>Grand Central Station: Filtering makes it worse! </h3>
+                <p>Entrance gate is known; speed and exit gate are unknown</p>
+                <figure>
+                    <img style="width:100%;"
+                        data-src="../figures/paper_figures/2020-PhilTrans-GrandCentralStation/exp2_versus_exp4.png" />
+                    <figcaption>Distance between agent and real trajectory (Pedestrian time).
+                        <br /><br />Ternes, P., J. Ward, A. Heppenstall, V. Kumar, Le-Minh Kieu, N. Malleson (2022)
+                        Data assimilation and agent-based modelling: towards the incorporation of categorical agent
+                        parameters.
+                        <i>Open Research Europe</i>
+                        <a href="https://doi.org/10.12688/openreseurope.14144.2">1(131)</a>.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="pf_dynimic">
+                <h2>Particle Filter & Categorical Parameters</h2>
+                <video data-autoplay controls loop width="100%" height="auto" alt="Trafalgar square before COVID: busy">
+                    <source data-src="../videos/20_particles_sirPF.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <p class="l2"><a href="https://urban-analytics.github.io/dust/videos/20_particles_sirPF.mp4">(video)</a></p>
+            </section>
+
+            <section id="pf-difficultiesII">
+                <h2>Difficulties (II)</h2>
+                <ul>
+                    <li>Exponential increase in complexity</li>
+                    <li>Categorical Parameters</li>
+                    <li>Non-linear trajectories (change in categorical parameters)</li>
+                </ul>
+            </section>
+
+            <!-- ************************************************************
+            ******************  GCS: Noise Particle Filter ******************
+            ************************************************************ -->
+
+            <section id="noise-pf-overview">
+                <h2>Categorical-Noise PF Step</h2>
+                <h3>Overview</h3>
+                <figure>
+                    <img style="width:100%;" accesskey="" data-src="../figures/CCPF-Flowchart.png"
+                        alt="Shows that some pedestrian trajectories are linear, others very curved" />
+                    <figcaption>
+                        Ternes, P., R. Clay, A. Heppenstall, N. Malleson.
+                        Assimilating realistic data into agent-based models in real-time with a categorical-noise
+                        particle filter step.
+                        <i>Under Production</i>.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="noise-pf-results">
+                <h2>Categorical-Noise PF Step</h2>
+                <h3>Results</h3>
+                <figure>
+                    <img style="width:30%;" accesskey="" data-src="../figures/noise-pf.png"
+                        alt="Shows that some pedestrian trajectories are linear, others very curved" />
+                    <img style="width:60%;" accesskey="" data-src="../figures/noise-pf-map.png"
+                        alt="Shows that some pedestrian trajectories are linear, others very curved" />
+                    <figcaption>
+                        Ternes, P., R. Clay, A. Heppenstall, N. Malleson.
+                        Assimilating realistic data into agent-based models in real-time with a categorical-noise
+                        particle filter step.
+                        <i>Under Production</i>.
+                    </figcaption>
+                </figure>
+            </section>
+                
+                
+                
+                
+                
+                
+
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- ************************************************************
+                ******************* International Policy Diffusion *****************************
+                ************************************************************ -->
+                
+                <section id="PolicyDiffusion-Overview" >
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2023-Covid_Policy_Response/cover.png"
+                         alt="Cover image of the paper" />
+                        <!--<figcaption><p style="font-size: smaller">Y. Oswald, N. Malleson and K. Suchak (2024). 
+                        An Agent-Based Model of the 2020 International Policy Diffusion in Response to the 
+                        COVID-19 Pandemic with Particle Filter.
+                        <i>Journal of Artificial Societies and Social Simulation</i> 27(2) 3. DOI: 
+                        <a href="https://dx.doi.org/10.18564/jasss.5342">10.18564/jasss.5342</a></p></figcaption>-->
+                    </figure>
+                    <h2>Case Study 2:</h2>
+                    <h3>International Policy Diffusion</h3>
+                    <p>ABM simulates COVID-19 policy diffusion via peer mimicry</p>
+                    <p>Particle filter enhances prediction accuracy with real-time data.</p>
+                    <p>Frequent filtering improve results.</p>
+                    <p>&nbsp;</p>
+                    <p style="font-size: small">Y. Oswald, N. Malleson and K. Suchak (2024). 
+                        An Agent-Based Model of the 2020 International Policy Diffusion in Response to the 
+                        COVID-19 Pandemic with Particle Filter.
+                        <i>Journal of Artificial Societies and Social Simulation</i> 27(2) 3. DOI: 
+                        <a href="https://dx.doi.org/10.18564/jasss.5342">10.18564/jasss.5342</a></p>
+                </section>
+                
+                <section id="PolicyDiffusion-Intro" >
+                    
+                    <figure class="right" >
+                        <img src="../figures/paper_figures/2023-Covid_Policy_Response/data_properties-vertical.png"
+                             alt="Two subplots showing the progression of COVID-19 policy adoption across countries in March 2020. Panel (a) depicts the number of countries implementing school closures at four levels of stringency (level 0 to level 3) over time, with a rapid transition to level 3 (complete school closures) around mid-March. Panel (b) compares the adoption of various policies, including school closures, workplace closures, event cancellations, stay-at-home orders, domestic travel restrictions, and international travel restrictions, all measured by the number of countries. School closures exhibit the fastest and most widespread adoption, closely followed by event cancellations, with other policies showing slower adoption."
+                            style="width:80%;" />
+                        <figcaption>Adoption of school closure policies by governments worldwide. Data source: 
+                            <a href="https://ourworldindata.org/coronavirus">Our World In Data</a>.</figcaption>
+                    </figure>
+                    <h2>International Policy Diffusion</h2>
+                    <p>Global challenges hinge on international coordination of policy</p>
+                    <p>COVID-19 lockdown: compelling example of almost unanimous global response</p>
+                    <!--<p>Limitted research on policy diffusion focussing on international, rapid diffusion mechanisms and integration with simulation-based methods.</p>-->
+                    <p>Aim: Develop an ABM to explore mechanisms of international lockdown diffusion and 
+                        improve prediction accuracy through <em>data assimilation</em>.</p>
+                </section>
+                
+                
+                <section id="PolicyDiffusion-Methods">
+                    <h2>Methods</h2>
+                    <p>Agent-Based Model (ABM)</p>
+                    <p class="l2">Agents: <em>countries</em>, with binary lockdown states ("lockdown" or "not in lockdown").</p>
+                    <p class="l2">Behviour: Peer mimicry based on similarity (income, democracy index, geography).</p>
+                    <p class="l2">Secondary mechanism: Autonomous lockdown adoption based on internal thresholds (e.g., population density).</p>
+                    <p>Calibration</p>
+                    <p class="l2">Based on real-world lockdown data (March 2020) and parameters like social thresholds, peer group size, and adoption probabilities.</p>
+                    <p>Data assimilation with a particle filter</p>
+                    <p class="l2">Updates model predictions in real time using observed data (e.g., lockdown status of countries).</p>
+                    <p class="l2">Improves model alignment with real-world dynamics by filtering poorly performing simulations.</p>
+                </section>
+                
+                <section id="PolicyDiffusion-Results">
+                    <h2>Results</h2>
+                    <p>Base model performance is adequate, but large variance, especially during 'critical' phase
+                    (when most countries are going in to lockdown).</p>
+                    XXXX INSERT FIGURE 4 HERE
+  <p class="l2">- <strong>High accuracy</strong>: Predicts macro-level trends well (e.g., total countries in lockdown, correlation > 0.99).</p>
+  <p class="l2">- <strong>Micro-level challenges</strong>: Struggles with individual country trajectories.</p>
+  <p>- <strong>Impact of Particle Filter</strong>:</p>
+  <p class="l2">- <strong>Improved prediction</strong>: Reduces mean-squared error (MSE) by up to 75% during critical phases.</p>
+  <p class="l2">- <strong>Enhanced reliability</strong>: Narrows confidence intervals, especially during rapid adoption phases.</p>
+  <p>- <strong>Sensitivity Analysis</strong>:</p>
+  <p class="l2">- Higher particle numbers and more frequent data updates lead to better performance.</p>
+  <p class="l2">- Optimal performance achieved with 1000 particles and frequent filtering (e.g., every 2-5 days).</p>
+</section>
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** WealthDistributions **********************************
+                ************************************************************ -->
+                
+                <section id="WealthDistributions" >
+                    <img class="right" data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/cover.png"
+                         alt="Cover image of the paper" />
+                    <h2>Case Study 3</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p style="font-size: smaller">Oswald, Y., K. Suchak, and N Malleson (2025). 
+                        Agent-Based Models of the United States Wealth Distribution with Ensemble Kalman Filter. 
+                        <i>Journal of Economic Behavior &amp; Organization</i> 229:106820. 
+                        DOI: <a href="https://doi.org/10.1016/j.jebo.2024.106820">10.1016/j.jebo.2024.106820</a></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </section>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** Discussion **********************************
+                ************************************************************ -->
+                
+                <section id="Discussion" >
+                    <img class="right" data-src="../figures/regression.png"
+                         alt="Diagram of regression" />
+                    <h2>XXXX</h2>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </section>
+                
+                
+                
+                
+
+
+
+
+                <section class="title"  id="thanks" data-background-image="../figures/virtual_city.jpeg">
+                    <div class="whitebackground2">
+
+                        <h5>Presentation to the Government Operational Research Service</h5>
+
+                        <h1 style="font-size: 55px;">Real-time Agent-Based Modelling with Data Assimilation</h1>
+                        <hr/>
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a></h2>
+                        <h4>University of Leeds, UK</h4>
+                        <h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <h4><a href="http://dust.leeds.ac.uk">dust.leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:25px">Slides available at: <br/><a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></p>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:left;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:center;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.turing.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a>
+                    </div>
+
+                </section>
+
+
+
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
