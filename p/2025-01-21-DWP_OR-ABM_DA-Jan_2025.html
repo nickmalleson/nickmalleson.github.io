@@ -618,20 +618,36 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 </section>
                 
                 <section id="PolicyDiffusion-Results">
+                        <img class= "right"
+                             data-src="../figures/paper_figures/2023-Covid_Policy_Response/fig4_5-Vertical.png"
+                             alt="“Two panels comparing the percentage of countries in lockdown predicted by the base model and particle filter. Top panel: Base model ensemble run with 100 simulations, showing the mean prediction (black line) closely following observed data (red dashed line) with wide confidence intervals. Bottom panel: Particle filter with 1000 particles, showing improved alignment with observed data and narrower confidence intervals compared to the base model."
+                             style="width:35%"/>
                     <h2>Results</h2>
                     <p>Base model performance is adequate, but large variance, especially during 'critical' phase
                     (when most countries are going in to lockdown).</p>
-                    XXXX INSERT FIGURE 4 HERE
-  <p class="l2">- <strong>High accuracy</strong>: Predicts macro-level trends well (e.g., total countries in lockdown, correlation > 0.99).</p>
-  <p class="l2">- <strong>Micro-level challenges</strong>: Struggles with individual country trajectories.</p>
-  <p>- <strong>Impact of Particle Filter</strong>:</p>
-  <p class="l2">- <strong>Improved prediction</strong>: Reduces mean-squared error (MSE) by up to 75% during critical phases.</p>
-  <p class="l2">- <strong>Enhanced reliability</strong>: Narrows confidence intervals, especially during rapid adoption phases.</p>
-  <p>- <strong>Sensitivity Analysis</strong>:</p>
-  <p class="l2">- Higher particle numbers and more frequent data updates lead to better performance.</p>
-  <p class="l2">- Optimal performance achieved with 1000 particles and frequent filtering (e.g., every 2-5 days).</p>
-</section>
+                    <p>Macro performance better than macro performance</p>
+                    <p class="l2">An accurate lockdown percentage doesn't mean the right countries are in lockdown</p>
+                    <p>Particle filter narrows confidence intervals and reduces MSE by up to 75%; upto 40% in the critical phase</p>
+                </section>
+            
+                <!--
+                <section id="PolicyDiffusion-Results2">
+                    <img data-src="../figures/paper_figures/2023-Covid_Policy_Response/fig4_5.png"
+                         style="width:60%"/>
+                </section>
+                -->
                 
+                <section id="PolicyDiffusion-Conclusions">
+                    <h2>Conclusions</h2>
+                    <h3>International Policy Diffusion</h3>
+                    <p>Proof-of-concept: social / political A-B diffusion models can be combined 
+                        with data assimilation.</p>
+                    <p>Particle filter improves lockdown predictions, particularly in the 'critical phase'</p>
+                    <p>But the model still incorrectly predicts many countries</p>
+                    <p class="l2">Undoubtedly need a more nuanced model to improve predictions further
+                        (beyond peer mimicry).</p>
+                    
+                </section>
                 
                 
                 
@@ -654,10 +670,28 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <p></p>
                 </section>
                 
+                <section id="WealthDistributions-Context">
+                    <h2>Wealth Diffusion: Context</h2>
+                    
+                    <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig1.png"
+                         alt="XX"
+                    />
                 
                 
+                </section>
                 
                 
+                <section id="WealthDistributions-Results">
+                    <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig4.png"
+                         alt="Results of Experiment 1 Part A: illustrating the error of models 1 and 2 under Ensemble Kalman Filter (EnKF) optimization with 100 ensemble members compared to the real data. The filter is applied every 20 time steps (months). Panels (A–D) depict the wealth share of the different economic groups (top 1%, top 10%–1%, middle 40%, bottom 50%) over time. Panels (A) and (B) present the archetypal behaviour of a single model run, illustrating how the EnKF influences the model behaviour. Panels (C) and (D) show the mean EnKF prediction and uncertainty across all ensemble members. Panel (E) depicts the Mean Absolute Error (MAE) from Eq. (7) of the two models, with and without the EnKF. It is clear that"
+                         class="right"
+                         style="width:65%;"
+                    />
+                    <h2>Results</h2>
+                    <p>XXXX</p>
+                
+                
+                </section>
                 
                 
                 
