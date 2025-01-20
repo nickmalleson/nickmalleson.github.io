@@ -25,6 +25,12 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+        
+        <!-- For the EnKF formula -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
 	</head>
 	<body>
 		<div class="reveal">
@@ -158,7 +164,6 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                          alt="Diagram of the sims" />
                         <h2>Introduction to ABM</h2>
                         <p>Systems are driven by individuals</p>
-                        <p class="l2">(cars, people, ants, trees, whatever)</p>
                         <p>Bottom-up modelling</p>
                         <p class="l2">An alternative approach to modelling</p>
                         <p class="l2">Rather than controlling from the top, try to represent the individuals</p>
@@ -217,10 +222,11 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <p>Analyse <i>why</i> certain events occurred</p>
                 </section>
                 
+                <!--
                 <section id="ABM-Complexity" >
                     <img data-src="../figures/abm_complexity_chart.png" 
                          alt="Diagram illustrating different ABM applications by behavioural and system/environment complexity" />
-                </section>
+                </section>-->
            
 
                 <section id="AgentBehaviour" data-background-image="../figures/attribution/human_brain.png">
@@ -339,16 +345,16 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 <p>Assumptions and parameter types</p>
                 <p class="l2">Maths typically developed for continuous parameters and 
                     assume normal distributions</p>
-                <p>... but, at least, many of these problems are shared by climate models</p>
+                <p class="l2">Categorical parameters can be a big problem
+                <p>... but, at least, some of these problems are shared by climate models</p>
 
             </section>
 
                 
-            <section>
+            <section id=da-methods>
                 
                 <h2>Some DA Methods</h2>
-                <p>Basic idea: estimate the <em>posterior</em> model state (i.e. after incorporation
-                of up-to-date data).</p>
+                <p>Basic idea: estimate the <em>posterior</em> model state</p>
                 <p>Particle Filter</p>
                 <p class="l2">Create loads of individual model 'particles' run
                     them simultaneously.</p>
@@ -376,67 +382,18 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
             
             <section id="real-time-crowd-modelling">
 
+                
+                <img class="right" data-src="../figures/train_station_pedestrian.jpg"
+                     style="width: 40%;"
+                    alt="Image of escalators in a train station" />
                 <h2>Case study 1:</h2>
                 <h3>Real Time Crowd Modelling</h3>
-                <img class="right" data-src="../figures/train_station_pedestrian.jpg"
-                    alt="Image of escalators in a train station" />
-                <p>XXXX HERE - CONSIDER REPLACING THESE SLIDES WITH KEIRAN'S</p>
-            </section>
-
-            <section id="pf-experiments">
-                <h2>Data assimilation with a Particle Filter</h2>
-
-                <img data-src="../figures/PF_flowchart3.png"
-                    alt="Flowchart of the experimental design. Lots of models ('particles') are run simultaneously." />
-
-            </section>
-
-
-            <section id="pf-station-experiments">
-                <h3>Particle Filter & Crowd Simulation</h3>
-
-                <img style="width:80%" data-src="../figures/pf_overview.png" alt="Station PF experimental design." />
-
-            </section>
-
-            <section id="pf-stationsim2-b" data-transition="fade">
-                <h2>Crowd Simulation with a Particle Filter</h2>
-                <img data-src="../figures/pf_animation.gif"
-                    alt="Animation of a crowding model with data assimilation" />
-            </section>
-
-            <section id="pf-results-median_error">
-
-                <h2>Preliminary Particle Filter Results</h2>
-                <h3>Box Environment: More particles = lower error</h3>
-                <figure>
-                    <img style="width:60%"
-                        data-src="../figures/paper_figures/2018-ParticleFilterFigs/median_abs_error.png" alt="median absolute error change with number of agents and particles: greater
-                              complexity caused by larger numbers of agents can be mitigated by increasing
-                              the numbers of particles." />
-                </figure>
-                <figcaption>
-                    Malleson, Nick, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew West, and Alison Heppenstall.
-                    (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. <i>Journal
-                        of Artificial Societies and Social Simulation</i> 23(3) DOI: <a
-                        href="https://doi.org/10.18564/jasss.4266">10.18564/jasss.4266</a>.
-                </figcaption>
-            </section>
-
-            <section id="pf-results-wiggle-count">
-                <h2>Difficulties (I)</h2>
-                <h3>Exponential increase in complexity</h3>
-                <figure>
-
-                    <img style="width:60%;" data-src="../figures/paper_figures/2018-ParticleFilterFigs/wiggle_count.png"
-                        alt="Number of collisions increases exponentially with number of agents" />
-                    <figcaption>
-                        N. Malleson, K. Minors, Le-Minh Kieu, J. A. Ward, A. West and Alison Heppenstall (2020).
-                        Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter.
-                        <i>Journal of Artificial Societies and Social Simulation (JASSS)</i>
-                        <a href="http://jasss.soc.surrey.ac.uk/23/3/3.html">23(3), 3</a>.
-                    </figcaption>
-                </figure>
+                <p>We can track individuals (anonymously?) as they move through busy
+                public spaces</p>
+                <p>We can simulate crowds quite well, but our simulated crowd will inevitably
+                diverge from the real one</p>
+                <p>Scenario: can we use data assimmilathion to update our crowd model in response to real-time data?</p>
+                <p>Lots of potential applications for crowd management etc.</p>
             </section>
 
             <!-- ************************************************************
@@ -473,7 +430,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
             ********************  GCS: ORE Particle Filter ******************
             ************************************************************ -->
 
-            <section id="pf_results-gcs-worse-1">
+            <!--<section id="pf_results-gcs-worse-1">
 
                 <h2>Preliminary Particle Filter Results</h2>
                 <h3>Grand Central Station: Filtering makes it worse! </h3>
@@ -489,33 +446,25 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                         <a href="https://doi.org/10.12688/openreseurope.14144.2">1(131)</a>.
                     </figcaption>
                 </figure>
-            </section>
+            </section>-->
 
             <section id="pf_dynimic">
-                <h2>Particle Filter & Categorical Parameters</h2>
+                <h2>Particle Filter &amp; Categorical Parameters</h2>
+                <h3>Filtering makes it worse! </h3>
                 <video data-autoplay controls loop width="100%" height="auto" alt="Trafalgar square before COVID: busy">
-                    <source data-src="../videos/20_particles_sirPF.mp4" type="video/mp4" />
+                    <source src="../videos/20_particles_sirPF-web.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 <p class="l2"><a href="https://urban-analytics.github.io/dust/videos/20_particles_sirPF.mp4">(video)</a></p>
             </section>
-
-            <section id="pf-difficultiesII">
-                <h2>Difficulties (II)</h2>
-                <ul>
-                    <li>Exponential increase in complexity</li>
-                    <li>Categorical Parameters</li>
-                    <li>Non-linear trajectories (change in categorical parameters)</li>
-                </ul>
-            </section>
-
-            <!-- ************************************************************
-            ******************  GCS: Noise Particle Filter ******************
-            ************************************************************ -->
+                
+            
+            <!-- FOllowing show that adding noise to the categorical parameter can help. But for this presentation
+                I am skipping over to show the EnKF. -->
 
             <section id="noise-pf-overview">
-                <h2>Categorical-Noise PF Step</h2>
-                <h3>Overview</h3>
+                <h2>Solution 1</h2>
+                <h3>Categorical-Noise PF Step</h3>
                 <figure>
                     <img style="width:100%;" accesskey="" data-src="../figures/CCPF-Flowchart.png"
                         alt="Shows that some pedestrian trajectories are linear, others very curved" />
@@ -529,8 +478,8 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
             </section>
 
             <section id="noise-pf-results">
-                <h2>Categorical-Noise PF Step</h2>
-                <h3>Results</h3>
+                <h2>Solution 1</h2>
+                <h3>Categorical-Noise PF Step</h3>
                 <figure>
                     <img style="width:30%;" accesskey="" data-src="../figures/noise-pf.png"
                         alt="Shows that some pedestrian trajectories are linear, others very curved" />
@@ -546,15 +495,39 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
             </section>
                 
                 
+            <section id="pedestrian-enkf">
+                <h2>Solution 2: Use an EnKF</h2>
+                <p>Ensemble Kalman Filter is more complicated, and susceptible to problems with non-Gaussian distributions, 
+                but can update the model state (including categorical parameters) directly</p>
+                <p>
+                        \( \hat{X} = X + K \left( D - H X \right) \)
+                </p>
+                <p class="l2">Current state estimate (\(X\)) updated with new information to improve accuracy (\(\hat{X}\))</p>
+                <p class="l2">\(K\) is the "Kalman gain," which determines how much weight to give to the new data (\(D\)) compared to the current prediction.</p>
+                <p class="l2">\(H X\) represents the prediction transformed into the same space as the observed data for comparison.</p>              
+                
+            </section>
                 
                 
+            <section id="enkf_results">
+                <h2>Pedestrian simulation: EnKF Results</h2>
+                <figure>
+                    <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/updating_state2.png" 
+                         style="width:50%;"
+                         alt="Figure illustrates that, after DA, the posterior estimates of two agents' locations are much closer to their corresponding positions in the data (observation)" />
+                    <figcaption>Figure 9: Comparison of prior and posterior positions (in blue and pink, 
+                        two agents (‘A’ and ‘B’) in all ensemble member models. After DA the positional estimates of
+                    the agents' locations are much more accurate and have lower variability.</figcaption>
+                </figure>
                 
                 
-
+            </section>
                 
+            <section id="enkf_results-interactive">
+                <iframe width="1200" height="1000" src="../other/enkf_animation.html"
+                        title="Ensemble Kalman Filter"></iframe>
                 
-                
-                
+            </section>
                 
                 
                 
@@ -577,7 +550,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <h3>International Policy Diffusion</h3>
                     <p>ABM simulates COVID-19 policy diffusion via peer mimicry</p>
                     <p>Particle filter enhances prediction accuracy with real-time data.</p>
-                    <p>Frequent filtering improve results.</p>
+                    <p>Frequent filtering improves results.</p>
                     <p>&nbsp;</p>
                     <p style="font-size: small">Y. Oswald, N. Malleson and K. Suchak (2024). 
                         An Agent-Based Model of the 2020 International Policy Diffusion in Response to the 
@@ -591,7 +564,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <figure class="right" >
                         <img src="../figures/paper_figures/2023-Covid_Policy_Response/data_properties-vertical.png"
                              alt="Two subplots showing the progression of COVID-19 policy adoption across countries in March 2020. Panel (a) depicts the number of countries implementing school closures at four levels of stringency (level 0 to level 3) over time, with a rapid transition to level 3 (complete school closures) around mid-March. Panel (b) compares the adoption of various policies, including school closures, workplace closures, event cancellations, stay-at-home orders, domestic travel restrictions, and international travel restrictions, all measured by the number of countries. School closures exhibit the fastest and most widespread adoption, closely followed by event cancellations, with other policies showing slower adoption."
-                            style="width:80%;" />
+                            style="width:70%;" />
                         <figcaption>Adoption of school closure policies by governments worldwide. Data source: 
                             <a href="https://ourworldindata.org/coronavirus">Our World In Data</a>.</figcaption>
                     </figure>
