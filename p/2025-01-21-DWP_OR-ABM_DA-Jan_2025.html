@@ -496,15 +496,23 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 
                 
             <section id="pedestrian-enkf">
+                <figure class="right" style="width:35%;">
+                    <img src="../figures/paper_figures/2023-EnKF_Location_Estimation/cover.png"
+                         alt="Front page of the published paper" />
+                    <figcaption style="font-size: small">Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and N. Malleson (2024), 
+                        Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling. 
+                        <em>Royal Society Open Science 11</em> (4): 231553. 
+                        DOI: <a href="https://doi.org/10.1098/rsos.231553">10.1098/rsos.231553</a>.</figcaption>
+                </figure>
                 <h2>Solution 2: Use an EnKF</h2>
-                <p>Ensemble Kalman Filter is more complicated, and susceptible to problems with non-Gaussian distributions, 
-                but can update the model state (including categorical parameters) directly</p>
+                <p>More complicated, and has stronger assuptions, but can update the model state (including categorical parameters) directly</p>
                 <p>
                         \( \hat{X} = X + K \left( D - H X \right) \)
                 </p>
-                <p class="l2">Current state estimate (\(X\)) updated with new information to improve accuracy (\(\hat{X}\))</p>
-                <p class="l2">\(K\) is the "Kalman gain," which determines how much weight to give to the new data (\(D\)) compared to the current prediction.</p>
-                <p class="l2">\(H X\) represents the prediction transformed into the same space as the observed data for comparison.</p>              
+                <p class="l2">Current state estimate (\(X\)) updated with new information (\(\hat{X}\))</p>
+                <p class="l2">\(K\) (Kalman gain) balances importance of new data (\(D\)) v.s. current prediction.</p>
+                <p class="l2">\(H X\): prediction transformed into the same space as the observed data 
+                (e.g. arrregate observations and individual agents)</p> 
                 
             </section>
                 
