@@ -249,7 +249,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                           data-transition="fade">
                      <div class="fragment" >
                         <h2 style="background-color: white;">ABM Example</h2>
-                        <h3 style="background-color: white;">Indivudla awareness spaces</h3>
+                        <h3 style="background-color: white;">Individual awareness spaces</h3>
                      </div>
                     <figure class="fragment">
                         <img  style="width:70%" data-src="../figures/transport_results.png" />
@@ -599,7 +599,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <p>Global challenges hinge on international coordination of policy</p>
                     <p>COVID-19 lockdown: compelling example of almost unanimous global response</p>
                     <!--<p>Limitted research on policy diffusion focussing on international, rapid diffusion mechanisms and integration with simulation-based methods.</p>-->
-                    <p>Aim: Develop an ABM to explore mechanisms of international lockdown diffusion and 
+                    <p>Aim: Develop a parsimonious ABM to explore mechanisms of international lockdown diffusion and 
                         improve prediction accuracy through <em>data assimilation</em>.</p>
                 </section>
                 
@@ -608,7 +608,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <h2>Methods</h2>
                     <p>Agent-Based Model (ABM)</p>
                     <p class="l2">Agents: <em>countries</em>, with binary lockdown states ("lockdown" or "not in lockdown").</p>
-                    <p class="l2">Behviour: Peer mimicry based on similarity (income, democracy index, geography).</p>
+                    <p class="l2">Behaviour: Peer mimicry based on similarity (income, democracy index, geography).</p>
                     <p class="l2">Secondary mechanism: Autonomous lockdown adoption based on internal thresholds (e.g., population density).</p>
                     <p>Calibration</p>
                     <p class="l2">Based on real-world lockdown data (March 2020) and parameters like social thresholds, peer group size, and adoption probabilities.</p>
@@ -623,11 +623,12 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                              alt="“Two panels comparing the percentage of countries in lockdown predicted by the base model and particle filter. Top panel: Base model ensemble run with 100 simulations, showing the mean prediction (black line) closely following observed data (red dashed line) with wide confidence intervals. Bottom panel: Particle filter with 1000 particles, showing improved alignment with observed data and narrower confidence intervals compared to the base model."
                              style="width:35%"/>
                     <h2>Results</h2>
-                    <p>Base model performance is adequate, but large variance, especially during 'critical' phase
+                    <p>After calibration, base model performance is adequate, but exhibits large variance, especially during 'critical' phase
                     (when most countries are going in to lockdown).</p>
                     <p>Macro performance better than macro performance</p>
                     <p class="l2">An accurate lockdown percentage doesn't mean the right countries are in lockdown</p>
-                    <p>Particle filter narrows confidence intervals and reduces MSE by up to 75%; upto 40% in the critical phase</p>
+                    <p>Particle filter narrows confidence intervals and reduces MSE by up to 75%; up to 40% in the critical phase</p>
+                    <p class="l2">Performance during the critical few days is crucial if the model is going to be useful</p>
                 </section>
             
                 <!--
@@ -656,41 +657,86 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 ************************************************************ -->
                 
                 <section id="WealthDistributions" >
-                    <img class="right" data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/cover.png"
-                         alt="Cover image of the paper" />
-                    <h2>Case Study 3</h2>
-                    <h3>Wealth Diffusion with an EnKF</h3>
-                    <p style="font-size: smaller">Oswald, Y., K. Suchak, and N Malleson (2025). 
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/cover.png"
+                         alt="Cover image of the paper" />    
+                        <figcaption style="font-size: small">Oswald, Y., K. Suchak, and N Malleson (2025). 
                         Agent-Based Models of the United States Wealth Distribution with Ensemble Kalman Filter. 
                         <i>Journal of Economic Behavior &amp; Organization</i> 229:106820. 
-                        DOI: <a href="https://doi.org/10.1016/j.jebo.2024.106820">10.1016/j.jebo.2024.106820</a></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                        DOI: <a href="https://doi.org/10.1016/j.jebo.2024.106820">10.1016/j.jebo.2024.106820</a>
+                        </figcaption>
+                    </figure>
+                    <h2>Case Study 3</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Significant wealth inequality in the U.S.</p>
+                    <p class="l2">The top 1% hold ~35% of wealth, while the bottom 50% hold almost none.</p>
+                    <p>(Near) real-time predictions are essential, particularly during crises</p>
+                    <p>Paper explores the integration of ABMs with data assimilation to improve prediction accuracy.</p>
                 </section>
                 
                 <section id="WealthDistributions-Context">
                     <h2>Wealth Diffusion: Context</h2>
                     
-                    <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig1.png"
-                         alt="XX"
-                    />
+                    <figure>
+                        <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig1.png"
+                         alt="Wealth distribution among different wealth groups in the U.S. The 50% poorest people lost significant wealth during the 2008 financial crisis. The data are from https://realtimeinequality.org/ with details in Blanchet et al. (2022)." />
+                        <figcaption>Wealth distribution in the U.S. D from <a href="https://realtimeinequality.org/">realtimeinequality.org</a> 
+                            with details in Blanchet et al. (2022).</figcaption>
+                    </figure>
+                </section>
                 
+                <section id="WealthDistributions-Methods1">
+                    <h2>Methods (i)</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Developed two agent-based models of U.S. wealth distribution:</p>
+                    <p>Model 1:</p>
+                    <p class="l2">Adapted from literature, focused on wealth accumulation through proportional allocation of growth.</p>
+                    <p class="l2">Agents' wealth grows as a function of their initial wealth, reflecting the compounding effect of wealth.</p>
+                    <p class="l2">Limited agent interaction; growth is largely independent of network effects.</p>
+                    <p>Model 2:</p>
+                    <p class="l2">Developed from scratch, includes network-based agent interactions and adaptive behaviours
+                        (more akin to a '<em>true</em>' ABM)</p>
+                    <!--<p class="l2">Wealth exchange occurs through trades with neighbours, influenced by agents' risk tolerance and network position.</p>
+                    <p class="l2">Adaptive behavior: agents adjust their willingness-to-risk (WTR) based on trade outcomes, making them dynamic.</p>
+                    <p class="l2">Captures non-linear dynamics and emergent patterns in wealth distribution.</p>-->
+                </section>
                 
+                <section id="WealthDistributions-Methods2">
+                    <img class="right" style="width: 20%;"
+                         src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
+                        alt="Flowchart illustrating the particle filter process. It begins with generating an ensemble of models, followed by predictions. At each time step, the algorithm checks if filtering is required (t = k). If yes, the predictions are compared to observations, optimal synthesis is computed, and ensemble members are updated. The process repeats for subsequent time steps." />
+                    <h2>Methods (ii)</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Integrated the ABMs with an Ensemble Kalman Filter (EnKF):</p>
+                    <p class="l2">EnKF adjusted agent-specific variables (e.g., wealth per agent) dynamically to match observed data.</p>
+                    <p>Calibrated to U.S. wealth data (1990–2022) and tested them against real-time wealth estimates.</p>
                 </section>
                 
                 
                 <section id="WealthDistributions-Results">
                     <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig4.png"
-                         alt="Results of Experiment 1 Part A: illustrating the error of models 1 and 2 under Ensemble Kalman Filter (EnKF) optimization with 100 ensemble members compared to the real data. The filter is applied every 20 time steps (months). Panels (A–D) depict the wealth share of the different economic groups (top 1%, top 10%–1%, middle 40%, bottom 50%) over time. Panels (A) and (B) present the archetypal behaviour of a single model run, illustrating how the EnKF influences the model behaviour. Panels (C) and (D) show the mean EnKF prediction and uncertainty across all ensemble members. Panel (E) depicts the Mean Absolute Error (MAE) from Eq. (7) of the two models, with and without the EnKF. It is clear that"
+                         alt="Results of Experiment 1 Part A: illustrating the error of models 1 and 2 under Ensemble Kalman Filter (EnKF) optimisation with 100 ensemble members compared to the real data. The filter is applied every 20 time steps (months). Panels (A–D) depict the wealth share of the different economic groups (top 1%, top 10%–1%, middle 40%, bottom 50%) over time. Panels (A) and (B) present the archetypal behaviour of a single model run, illustrating how the EnKF influences the model behaviour. Panels (C) and (D) show the mean EnKF prediction and uncertainty across all ensemble members. Panel (E) depicts the Mean Absolute Error (MAE) from Eq. (7) of the two models, with and without the EnKF. It is clear that"
                          class="right"
-                         style="width:65%;"
+                         style="width:50%;"
                     />
                     <h2>Results</h2>
-                    <p>XXXX</p>
+                    <p>EnKF improved model accuracy significantly (20–50% error reduction).</p>
+                    <p>Corrected disparities in predicted wealth shares for different economic groups (<em>observe the jagged lines</em>).</p>
+                    <p>Filter still exhibited some unexpected behaviour</p>
+                </section>
                 
-                
+                <section id="WealthDistributions-Discussion">
+                    <img class="right" src="../figures/paper_figures/2025-ABM_Wealth_Distribution/paper_chatgpt_image.jpg"
+                         alt="Image to liven up slide showing abstract people and a network"
+                         style="width: 30%"
+                         />
+                    <h2>Wealth Diffusion with an EnKF: Discussion</h2>
+                    <p>We show that a marco-economic ABM can be optimised with an EnKF</p>
+                    <p class="l2">Improved short-term predictions, especially during a crisis</p>
+                    <p class="l2">Models cannot include everything</p>
+                    <p>Additional opportunity for improved <em>understanding</em></p>
+                    <p class="l2">E.g. through examining evolution of the Kalman Gain matrix and contrasting the
+                    observation v.s. model weights -- which become more or less certain over time?</p>
                 </section>
                 
                 
@@ -701,17 +747,39 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 *********************** Discussion **********************************
                 ************************************************************ -->
                 
-                <section id="Discussion" >
-                    <img class="right" data-src="../figures/regression.png"
-                         alt="Diagram of regression" />
-                    <h2>XXXX</h2>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                <section id="Challenges" >
+                    <h2>Summary and Challenges</h2>
+                    <p>This talk has outlined some of the opportunities offered by DA for improving empirical ABMs</p>
+                    <p>Case studies: crowding; international policy response; wealth dynamics</p>
+                    <p>Computational complexity</p>
+                    <p class="l2">Examples here use models that are parsimonious. 
+                        Will it be possible with more complex models, e.g. those use to to build <em>city digital twins??</em></p>
+                    <p>Methodological</p>
+                    <p class="l2">Non-trivial to adapt meteorological methods, e.g. handling categorical parameters</p>
+                    <p>Data</p>
+                    <p class="l2">Availability of high-quality, high-resolution data</p>
+                    <p class="l2">Privacy &amp; ethical issues</p>
                     <p></p>
                 </section>
                 
                 
+                <section id="Opportunities" data-background-image="../figures/shutterstock_615414464-small.jpg">
+                    <div class="whitebackground2 fragment">
+                        <h2>Opportunities</h2>
+                        <p>We know that some model uncertainty will always be present, DA helps to
+                        reduce these</p>
+                        <p>Transformative potential of "live" (Swarup and Mortveit, 2020) simulations</p>
+                        <p class="l2">Combine up-to-date, diverse datasets and create accurate predictions using
+                        "all the available information" (Talagrand, 1991)</p>
+                        <p></p>
+                        <p>Using the update step to estimate latent variables -- the filter helps the model to 'learn' 
+                            its internal dynamics from data</p>
+                        <p>Transferring information from data rich areas to data poor ones</p>
+                        <p></p>
+                    </div>
+                </section>
+                
+
                 
                 
 
