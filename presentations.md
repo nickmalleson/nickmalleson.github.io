@@ -44,7 +44,11 @@ tagline:
 
 ## Conference Presentations
 
-### <a name="presentations"></a>2024
+### <a name="presentations"></a>2025
+
+ - [Real-time Agent-Based Modelling with Data Assimilation]({{site.url}}/{{site.baseurl}}/p/2025-01-21-DWP_OR-ABM_DA-Jan_2025.html). Presentation to the [Government Operational Research Service](https://www.gov.uk/government/organisations/civil-service-government-operational-research-service), 21st January 2025.
+
+### 2024
 
  - [Integrated Analysis of Social Media and Hedonic House Prices for Neighbourhood Change (INTEGRATE)]({{site.url}}/{{site.baseurl}}/p/2024-11-Turing_UA-Glasgow.pdf). Presentation to the Alan Turing Institute Urban Analytics Programme All Hands Meeting '[Transforming Urban Living with AI and Digital Twins](https://www.turing.ac.uk/events/transforming-urban-living-ai-and-digital-twins)', 11-13 Nov, University of Glasgow, UK.
 
