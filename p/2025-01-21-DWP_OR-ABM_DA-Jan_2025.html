@@ -447,6 +447,14 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     </figcaption>
                 </figure>
             </section>-->
+                
+            <section id="pf_diagram">
+                <h2>Attempt 1: Particle Filter</h2>
+                <img src="../figures/PF_flowchart.png"
+                     al="Flowchart showing particle filter operation"
+                     />
+            </section>
+                
 
             <section id="pf_dynimic">
                 <h2>Particle Filter &amp; Categorical Parameters</h2>
@@ -497,13 +505,12 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 
             <section id="pedestrian-enkf">
                 <figure class="right" style="width:35%;">
-                    <img src="../figures/paper_figures/2023-EnKF_Location_Estimation/cover.png"
-                         alt="Front page of the published paper" />
-                    <figcaption style="font-size: small">Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and N. Malleson (2024), 
-                        Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling. 
-                        <em>Royal Society Open Science 11</em> (4): 231553. 
-                        DOI: <a href="https://doi.org/10.1098/rsos.231553">10.1098/rsos.231553</a>.</figcaption>
+                    <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
+                         style="width: 60%;"
+                         alt="Flowchart illustrating the particle filter process. It begins with generating an ensemble of models, followed by predictions. At each time step, the algorithm checks if filtering is required (t = k). If yes, the predictions are compared to observations, optimal synthesis is computed, and ensemble members are updated. The process repeats for subsequent time steps." 
+                         />
                 </figure>
+                
                 <h2>Solution 2: Use an EnKF</h2>
                 <p>More complicated, and has stronger assuptions, but can update the model state (including categorical parameters) directly</p>
                 <p>
@@ -519,13 +526,20 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                 
             <section id="enkf_results">
                 <h2>Pedestrian simulation: EnKF Results</h2>
-                <figure>
+                <figure class="left" style="width:50%;">
                     <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/updating_state2.png" 
-                         style="width:50%;"
                          alt="Figure illustrates that, after DA, the posterior estimates of two agents' locations are much closer to their corresponding positions in the data (observation)" />
-                    <figcaption>Figure 9: Comparison of prior and posterior positions (in blue and pink, 
+                    <figcaption>Figure 9: Comparison of prior and posterior positions of
                         two agents (‘A’ and ‘B’) in all ensemble member models. After DA the positional estimates of
                     the agents' locations are much more accurate and have lower variability.</figcaption>
+                </figure>
+                <figure class="right" style="width:35%;">
+                    <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/cover.png"
+                         alt="Front page of the published paper" />
+                    <figcaption style="font-size: small">Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and N. Malleson (2024), 
+                        Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling. 
+                        <em>Royal Society Open Science 11</em> (4): 231553. 
+                        DOI: <a href="https://doi.org/10.1098/rsos.231553">10.1098/rsos.231553</a>.</figcaption>
                 </figure>
                 
                 
@@ -536,7 +550,17 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                         title="Ensemble Kalman Filter"></iframe>
                 
             </section>
-                
+            
+                <section id="Crowding-Conclusions">
+                    <h2>Conclusions</h2>
+                    <h3>Real Time Crowd Modelling</h3>
+                    <p>Particle filter struggled (so many agents with so many destination choices)</p>
+                    <p class="l2">But there is an opportunity to develop more neuanced filters</p>
+                    <p>EnKF performed very well</p>
+                    <p>Next steps: scale up to larger/more complicated crowds and use a more advanced
+                    crowd model.</p>
+                    
+                </section>
                 
                 
                 
@@ -698,7 +722,7 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                     <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig4.png"
                          alt="Results of Experiment 1 Part A: illustrating the error of models 1 and 2 under Ensemble Kalman Filter (EnKF) optimisation with 100 ensemble members compared to the real data. The filter is applied every 20 time steps (months). Panels (A–D) depict the wealth share of the different economic groups (top 1%, top 10%–1%, middle 40%, bottom 50%) over time. Panels (A) and (B) present the archetypal behaviour of a single model run, illustrating how the EnKF influences the model behaviour. Panels (C) and (D) show the mean EnKF prediction and uncertainty across all ensemble members. Panel (E) depicts the Mean Absolute Error (MAE) from Eq. (7) of the two models, with and without the EnKF. It is clear that"
                          class="right"
-                         style="width:50%;"
+                         style="width:60%;"
                     />
                     <h2>Results</h2>
                     <p>EnKF improved model accuracy significantly (20–50% error reduction).</p>
@@ -711,10 +735,11 @@ diffusion; and (iii) the dynamics of household wealth distribution. 
                          alt="Image to liven up slide showing abstract people and a network"
                          style="width: 30%"
                          />
-                    <h2>Wealth Diffusion with an EnKF: Discussion</h2>
+                    <h2>Conclusions</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
                     <p>We show that a marco-economic ABM can be optimised with an EnKF</p>
                     <p class="l2">Improved short-term predictions, especially during a crisis</p>
-                    <p class="l2">Models cannot include everything</p>
+                    <p class="l2">Essential during crises; models cannot include everything</p>
                     <p>Additional opportunity for improved <em>understanding</em></p>
                     <p class="l2">E.g. through examining evolution of the Kalman Gain matrix and contrasting the
                     observation v.s. model weights -- which become more or less certain over time?</p>
