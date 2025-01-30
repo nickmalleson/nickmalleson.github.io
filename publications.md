@@ -73,6 +73,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2025 
 
+Birks, D., E. R. Groff, and **N. Malleson** (2025) Agent-Based Modeling in Criminology. _Annual Review of Criminology_ 8: 75–95. DOI: [10.1146/annurev-criminol-022222-033905](https://doi.org/10.1146/annurev-criminol-022222-033905)
+
+
 Oswald, Y., K. Suchak, and **N Malleson** (2025). Agent-Based Models of the United States Wealth Distribution with Ensemble Kalman Filter. _Journal of Economic Behavior & Organization_ 229:106820. DOI: [10.1016/j.jebo.2024.106820](https://doi.org/10.1016/j.jebo.2024.106820)
 
 #### 2024
