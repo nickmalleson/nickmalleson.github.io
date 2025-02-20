@@ -73,6 +73,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2025 
 
+Asher, M., Y. Oswald, and *N. Malleson* (2025). Understanding Pedestrian Dynamics Using Machine Learning with Real-Time Urban Sensors. _Environment and Planning B: Urban Analytics and City Science_. Online first. DOI: [/10.1177/2399808325131905](https://doi.org/10.1177/23998083251319058)
+
+
 Birks, D., E. R. Groff, and **N. Malleson** (2025) Agent-Based Modeling in Criminology. _Annual Review of Criminology_ 8: 75–95. DOI: [10.1146/annurev-criminol-022222-033905](https://doi.org/10.1146/annurev-criminol-022222-033905)
 
 
