@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2025 
 
+Alotaibi, M., **N. Malleson**, and G. Clarke (2025) Location Models to Improve Health and Safety at a Major Temporary City: The Case of the Hajj _Regional Science Policy & Practice_ 17 (5): 100179. DOI:[10.1016/j.rspp.2025.100179](https://doi.org/10.1016/j.rspp.2025.100179)
+
 Asher, M., Y. Oswald, and *N. Malleson* (2025). Understanding Pedestrian Dynamics Using Machine Learning with Real-Time Urban Sensors. _Environment and Planning B: Urban Analytics and City Science_. Online first. DOI: [/10.1177/2399808325131905](https://doi.org/10.1177/23998083251319058)
 
 
