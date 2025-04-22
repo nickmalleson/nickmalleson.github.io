@@ -164,31 +164,33 @@
                 
                 <section id="llm-prompt">
                     <h2>LLM prompt</h2>
-                    <p style="font-size: smaller">
+					<div style="font-size: 70%;">
+                    <p>
                         You are an expert in urban studies with a deep understanding of gentrification
                         and how it is discussed in public discourse. I will provide you with some
                         Airbnb listings. Your task is to analyse their text and determine the extent
                         to which they suggest that the neighbourhood or area referenced is experiencing
                         gentrification. Specifically:</p>
-                    <p class="l2" style="font-size: smaller">Read the listings closely and identify any words, phrases, or implications
+                    <p class="l2" >Read the listings closely and identify any words, phrases, or implications
                         that might indicate signs of gentrification, such as mentions of new luxury
                         developments, rising rents, displacement of long-time residents, upscale amenities
                         (e.g., artisanal coffee shops, craft breweries), changing demographics, or
                         neighbourhood ‘revitalisation’.</p>
-                    <p class="l2" style="font-size: smaller">Consider both explicit and implicit cues. Explicit cues directly mention
+                    <p class="l2">Consider both explicit and implicit cues. Explicit cues directly mention
                         new businesses or rising prices, while implicit cues might reflect subtle
                         neighbourhood changes.</p>
-                    <p style="font-size: smaller">
+                    <p>
                         Assign a score from 1 to 5, where 1 means not suggestive of gentrification
                         and 5 means highly suggestive.</p>
-                    <p style="font-size: smaller">
+					<p>
                         Explain your reasoning in 1-2 sentences, referencing the specific words or
                         phrases in the tweet that led you to your conclusion.</p>
-                    <p style="font-size: smaller">
+					<p >
                         Provide your answer strictly in the format ‘1. Score. Reasoning’, ‘2. Score. 
                         Reasoning’, ‘3. Score. Reasoning’, etc., without any additional explanation
                         or commentary.
                     </p>
+					</div>
                 </section>
                 
                 <section id="results">
@@ -196,6 +198,7 @@
                     <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/listing_scores.png"
                          alt="Map of listing gentrification scores. Higher scores tend to be 
                               in the centre of the city"
+						 style="width:60%;"
                          />
                 </section>
                 
@@ -217,12 +220,18 @@
                     <p class="l2">We are interested in 'emerging' gentrification, not in
                         areas that have already gentrified</p>
                     <p>Next: New prompt and a more nuanced definition of gentrification</p>
-                    <p class="l2">Undeveloped, Emerging, Gentrifying, Established</p>
+                    <p class="l2">Undeveloped, Emerging, Gentrifying, Established, NA</p>
+                </section>
+
+				<section id="future-gentrification2">
+                    <h2>Immediate future work (1)</h2>
+                    <h3>Defining gentrification</h3>
                     <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification.jpg"
                          alt="Map showing distribution of 'new' gentrification score"
                          style="width: 80%"
                          />
                 </section>
+
                 
                 <section id="future-validation">
                     <h2>Immediate future work (2)</h2>
