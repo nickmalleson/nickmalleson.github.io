@@ -46,6 +46,8 @@ tagline:
 
 ### <a name="presentations"></a>2025
 
+ - [Using Large Language Models to Predict Neighbourhood Change]({{site.url}}/{{site.baseurl}}/p/2025-GISRUK-INTEGRATE_LLM.html). Presentation to GIS Research UK ([GISRUK '25](https://gisruk.github.io/)), University of Bristol, 23-25 April 2025.
+
  - [Real-time Agent-Based Modelling with Data Assimilation]({{site.url}}/{{site.baseurl}}/p/2025-01-21-DWP_OR-ABM_DA-Jan_2025.html). Presentation to the [Government Operational Research Service](https://www.gov.uk/government/organisations/civil-service-government-operational-research-service), 21st January 2025.
 
 ### 2024
