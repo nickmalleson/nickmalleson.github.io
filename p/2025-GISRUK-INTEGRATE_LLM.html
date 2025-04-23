@@ -140,7 +140,7 @@
                     <p>Download listings from Inside Airbnb</p>
                     <p>Prompt the LLM to read the text and estimate how 'suggestive' the descriptions
                     are of gentrification</p>
-                    <p>LLM outputs a number for each listing (and an 'explanation' for its score)</p>
+                    <p>LLM returns a number (the score) for each listing (and an 'explanation' for its score)</p>
                     <p>Analyse the gentrification scores...</p>
                 </section>
                 
@@ -193,8 +193,9 @@
 					</div>
                 </section>
                 
-                <section id="results">
-                    <h2>Preliminary Results</h2>
+                <section id="results1">
+                    <h2>Preliminary Results (1)</h2>
+                    <h3>Spatial distribution of the gentrification scores</h3>
                     <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/listing_scores.png"
                          alt="Map of listing gentrification scores. Higher scores tend to be 
                               in the centre of the city"
@@ -202,14 +203,25 @@
                          />
                 </section>
                 
+                <section id="results2">
+                    <h2>Preliminary Results (2)</h2>
+                    <h3>LLM's 'explanation' of the scores</h3>
+                    <p>The LLM is asked to explain why it gives its chosen score</p>
+                    <p>Basically the explanations seem reasonable</p>
+                    <p>BUT: not clear whether alternative explanations for different scores
+                    will also appear reasonable.</p>
+                    <p class="l2">(More on validation later..)</p>
+                </section>
+                
                 <section id="stochasticity">
-                    <h2>Stochasticity</h2>
+                    <h2>Preliminary Results (3)</h2>
+                    <h3>Stochasticity</h3>
                     <p>The LLM is probabilistic: its output can vary randomly</p>
                     <p>To test this we run the estimation procedure 3 times with identical
                     LLM parameters</p>
                     <p>Fleiss Kappa statistic well suited to estimate annotator variability where
                     there are more than two annotators</p>
-                    <p>Score = 0.74 suggests "substantial" agreement</p>
+                    <p>Score = 0.74 suggests "substantial" agreement across the three runs</p>
                 </section>
                 
                 <section id="future-gentrification">
@@ -226,9 +238,9 @@
 				<section id="future-gentrification2">
                     <h2>Immediate future work (1)</h2>
                     <h3>Defining gentrification</h3>
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification.jpg"
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification.png"
                          alt="Map showing distribution of 'new' gentrification score"
-                         style="width: 80%"
+                         style="width: 90%"
                          />
                 </section>
 
@@ -241,6 +253,14 @@
                     <p>Are the underlying demographics consistent with our estimates of gentrification?</p>
                     <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams.png"
                          alt="Rose diagrams showing the preliminary classification results"
+                         />
+                    <p>(But: which is <i>right</i>?)</p>
+                </section>
+                
+                <section id="future-validation2">
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams2.png"
+                         alt="Rose diagrams showing the preliminary classification results"
+                         style="width: 60%;"
                          />
                 </section>
                 
