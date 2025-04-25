@@ -8,14 +8,15 @@ tags: [special issue, CEUS, Digital Twins, AI]
 
 # Digital Twins and AI for Healthy and Sustainable Cities
 
-<figure style="float:right; width:60%; padding:10px;" >
+<figure style="width:100%; padding:10px;" >
 <img src="{{site.baseurl}}/figures/2025-04-25-CEUS-SI-DT_AI.jpg"
   alt="Special Issue flier"/>
 </figure>
 
 
 ## Call for Papers – [Digital Twins and AI for Healthy and Sustainable Cities](https://www.sciencedirect.com/special-issue/320947/digital-twins-and-ai-for-healthy-and-sustainable-cities)
-## Special Issue of Computers Environment and Urban Systems CEUS)  
+
+**Special Issue of Computers Environment and Urban Systems CEUS)**
 
 🔗 [Submit your paper](https://www.editorialmanager.com/ceus/default.aspx)
 
