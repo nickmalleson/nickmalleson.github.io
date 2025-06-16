@@ -4,10 +4,10 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <meta name="author" content="Nick Malleson">
-        <meta name="keywords" content="Urban Data Science; Footfall; Principal Component Analysis (PCA); Pedestrian Dyamics.">
+        <meta name="keywords" content="Principal Component Analysis; Footfall; Urban Dynamics; Geographic Information Science.">
 
 		<title>
-			Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis
+			Extracting Key Urban Footfall Signatures using Principal Component Analysis
 		</title>
 
 		<link rel="stylesheet" href="reveal/css/reveal.css">
@@ -46,15 +46,16 @@
                             <img style="float:right;padding:10px;width:150px; height:auto;" 
                                  data-src="../figures/uol_logo.gif"/>
                         </a>
-                        <h5>GIS Research UK 2024</h5>
+                        <h5>CUPUM 2025</h5>
 
                         <hr/>
                         <h2 style="font-size: 150%">
-							Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis
+							Extracting Key Urban Footfall Signatures using Principal Component Analysis
 						</h2>
                         <hr/>
-                        <h3>Nick Malleson and Jack Liddle</h3>
+                        <h3>Jack Liddle, Wenhua Jiang and Nick Malleson</h3>
                         <h4 style="font-size: 90%">School of Geography, University of Leeds</h4>
+                        <h4 style="font-size: 90%">The Alan Turing Institute</h4>
                         <hr/>
                         <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
                         <p style="font-size: 14pt; text-align: center">This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No. 757455)</p>
@@ -81,11 +82,27 @@
                     <h2>Overview</h2>
                     <p>Context: A better understanding of urban dynamics through the analysis of footfall data</p>
                     <p>Principal Component Analysis to isolate key temporal patterns at various urban locations</p>
-                    <p>Identify surprisingly clear pattens:</p>
-                    <p class="l2">general busyness</p>
-                    <p class="l2">commuting behaviour</p>
-                    <p class="l2">lunchtime activities</p>
+                    <p>Identify surprisingly clear patterns</p>
+                    <p>Better understand evolution of urban footfall dynamics</p>
                     
+                </section>
+                
+                <section id="publication">
+                    <h2>Paper recently published</h2>
+                    <p>For full details see:</p>
+                    <p>Liddle, J., W. Jiang, and N. Malleson (2025). 
+                        Leveraging Principal Component Analysis to Uncover Urban Pedestrian Dynamics.
+                        <i>Journal of Geographical Systems</i> 
+                        DOI: <a href="https://doi.org/10.1007/s10109-025-00469-0">10.1007/s10109-025-00469-0</a>
+                    </p>
+                    <p>XXXX IMAGE OF PAPER FRONT PAGE</p>
+                
+                </section>
+                
+                <section id="temporal_patterns">
+                    <h2>Context: Footfall Dynamics</h2>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/temporal_signature-cupum.png"
+                         alt="Hypothetical example of footfall dynamics: graph showing peaks for commuting" />
                 </section>
                 
                 <section id="data">
@@ -93,29 +110,33 @@
                     <h2>Data</h2>
                     
                     <figure class="right">
-                        <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/MapMelbourne.jpg"
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/AvailabilityDays.png"
+                         alt="Graph showing when the different sensors were available" />
+                        <figcaption>Availability of the different sensors over time</figcaption>
+                    </figure>
+                    
+                    <h3>Melbourne Footfall Counters</h3>
+                    <p>Fantastic data available through the <a href="https://data.melbourne.vic.gov.au/pages/home/">Melbourne Open Data Portal</a></p>
+                    <p>Footfall counters</p>
+                    <p class="l2">94 sensors counting hourly footfall, some date back to 2009</p>
+                    <p>We use 24 months of data (all of 2018 and 2019, avoiding COVID)</p>
+                </section>
+                
+                <section id="sensors_locs">
+                    
+                    <figure >
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/map.png"
                          alt="Map of sensor locations in Melbourne" />
                         <figcaption>Locations of the Melbourne footfall sensors</figcaption>
                     </figure>
                     
                     
-                    <h3>Melbourne Footfall Counters</h3>
-                    <p>Fantastic data available through the <a href="https://data.melbourne.vic.gov.au/pages/home/">Melbourne Open Data Portal</a></p>
-                    <p>Footfall counters</p>
-                    <p class="l2">94 sensors counting hourly footfall</p>
-                    <p class="l2">Some date back to 2009</p>
-                    <p>We use 24 months of data (all of 2018 and 2019, avoiding COVID)</p>
                 </section>
 
                 <section id="footfall_example">
                     <h2>Footfall examples</h2>
-                    <img class="left"
-                         data-src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/AverageDays_for_GIRSUK.png"
-                         alt="An example of daily footfall" />
-                    
-                    <img class="right"
-                         data-src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/AverageWeeks_for_GIRSUK.png"
-                         alt="An example of weekly footfall" />
+                    <h3>Mean daily and weekly footfall counts</h3>
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/AverageDays_Weeks.png" />
                     
                 </section>
 
@@ -130,7 +151,7 @@
                 <section id="pca-num_components">
                     <h2>How many principal components?</h2>
                     <h3>Proportion of explained variance</h3>
-                    <img data-src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/CumulativeExplainedVariance-for_GISRUK.png"
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/CumulativeExplainedVariance.png"
                          alt="Cumulative explained variance - shows number of components needed to explain
                               the variance in the footfall trands" 
                          style="width: 80%;"/>
@@ -166,14 +187,15 @@
                     
                 </section>
                 
-                <section id="results-trends">
-                    <h2>Results (ii): Temporal Trends</h2>
-                    <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/Weekly_Comps_for_GIRSUK.png"
-                         alt="Change in the weekly components over time "
-                         style="width: 60%;"
+                <section id="results-component_loadings">
+                    
+                    <h2>Results (ii) Component Loadings</h2>
+                    <h3>Examples: Southern Cross Station and Southbank</h3>
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/DailyComps.png"
+                         alt="Graph showing how the component loadings vary by day and location"
                          />
                 </section>
-                
+                                
                 <section id="results-3d">
                     <h2>Results (iii): Component Interactions</h2>
                     <iframe src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/UrbanUsageSpaceDemoDays.html" 
@@ -183,7 +205,25 @@
                     <a href="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/UrbanUsageSpaceDemoDays.html"
                        target="_blank">UrbanUsageSpaceDemoDays.html</a>
                 </section>
-   
+                
+                <section id="results-3d-b">
+                    <h2>Results (iii): Component Interactions</h2>
+                    <p>XXXX INCLUDE DIAGRAM OF COMPONENT PATTERN CLUSTERING</p>
+                    
+                </section>
+                
+                <section id="results-temporal_change">
+                    <h2>Results (iv): Evolution of Urban Usage Patterns</h2>
+                    <p>XXXX EXPLAIN</p>
+                </section>
+                
+                
+                <section id="results-temporal_change2">
+                    <h2>Evolution of Urban Usage Patterns</h2>
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Weekly_Comps_comparison.png"
+                         alt = "Example of how usage patterns in locations change over time"
+                         />
+                </section>
                 
                 
                 
@@ -204,7 +244,7 @@
                 
                 
                 
-               <section class="title" id="thanks" 
+                <section class="title" id="thanks" 
                          data-background-image="../figures/shutterstock_788457058-small.jpg"
                          >
                     <div class="whitebackground2">
@@ -217,19 +257,26 @@
                             <img style="float:right;padding:10px;width:150px; height:auto;" 
                                  data-src="../figures/uol_logo.gif"/>
                         </a>
-                        <h5>GIS Research UK 2024</h5>
+                        <h5>CUPUM 2025</h5>
 
                         <hr/>
                         <h2 style="font-size: 150%">
-							Interrogating the Spatio-Temporal Dynamics of Urban Footfall using Principal Component Analysis
+							Extracting Key Urban Footfall Signatures using Principal Component Analysis
 						</h2>
                         <hr/>
-                        <h3>Nick Malleson and Jack Liddle</h3>
+                        <h3>Jack Liddle, Wenhua Jiang and Nick Malleson</h3>
                         <h4 style="font-size: 90%">School of Geography, University of Leeds</h4>
+                        <h4 style="font-size: 90%">The Alan Turing Institute</h4>
                         <hr/>
                         <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
                         <p style="font-size: 14pt; text-align: center">This project has received funding from the European Research Council (ERC) under the European Union’s Horizon 2020 research and innovation programme (grant agreement No. 757455)</p>
                     </div>
+                    
+                    <aside class="notes">
+                        As more and more of the world's population move to urban areas, understanding pedestrian dynamics becomes increasingly important. Data sources that measure pedestrian counts offer great potential as a means of interrogating urban flows without needing to track individuals.
+                        
+                        This study attempts to better understand the fundamental spatio-temporal structures that characterise aggregate pedestrian behaviour. It employs Principal Component Analysis to distill the key temporal elements that comprise aggregate daily pedestrian activity across the city. We identify clear, distinct components that represent different types of activities and can be used to characterise different types of neighbourhood.
+                    </aside>
                 </section>
                 
 
