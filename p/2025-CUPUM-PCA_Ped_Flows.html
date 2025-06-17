@@ -69,7 +69,18 @@
                 </section>
                 
                 
+                <section id="publication">
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/paper_front_page.png"
+                         alt="Picture of the journal article front page" 
+                         class="right"/>
+                    <h2>Paper recently published</h2>
+                    <p>Liddle, J., W. Jiang, and N. Malleson (2025). 
+                        Leveraging Principal Component Analysis to Uncover Urban Pedestrian Dynamics.
+                        <i>Journal of Geographical Systems</i> 
+                        DOI: <a href="https://doi.org/10.1007/s10109-025-00469-0">10.1007/s10109-025-00469-0</a>
+                    </p>
                 
+                </section>
                 
                 
                 <section id="overview">
@@ -87,18 +98,7 @@
                     
                 </section>
                 
-                <section id="publication">
-                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/paper_front_page.png"
-                         alt="Picture of the journal article front page" 
-                         class="right"/>
-                    <h2>Paper recently published</h2>
-                    <p>Liddle, J., W. Jiang, and N. Malleson (2025). 
-                        Leveraging Principal Component Analysis to Uncover Urban Pedestrian Dynamics.
-                        <i>Journal of Geographical Systems</i> 
-                        DOI: <a href="https://doi.org/10.1007/s10109-025-00469-0">10.1007/s10109-025-00469-0</a>
-                    </p>
-                
-                </section>
+
                 
                 <section id="temporal_patterns">
                     <h2>Context: Footfall Dynamics</h2>
@@ -135,8 +135,9 @@
                 </section>
 
                 <section id="footfall_example">
-                    <h2>Footfall examples</h2>
+                    <h2>Footfall Data</h2>
                     <h3>Mean daily and weekly footfall counts</h3>
+                    <p>Some regularity but also huge variation</p>
                     <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/AverageDays_Weeks.png" />
                     
                 </section>
@@ -192,7 +193,7 @@
                     
                     <h2>Results (ii) Component Loadings</h2>
                     <h3>Examples: Southern Cross Station and Southbank</h3>
-                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/DailyComps.png"
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/DailyComps.png"
                          alt="Graph showing how the component loadings vary by day and location"
                          />
                 </section>
@@ -209,7 +210,7 @@
                 
                 <section id="results-3d-b">
                     
-                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Plot2DDailyAgg.png"
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Plot2DDailyAgg.png"
                          style="width:70%;"
                          alt="Showing how two clusters interact and form clusters of different
                               urban usage patterns"
@@ -217,15 +218,24 @@
                     
                 </section>
                 
-                <section id="results-temporal_change">
-                    <h2>Results (iv): Evolution of Urban Usage Patterns</h2>
-                    <p>XXXX EXPLAIN</p>
+                <section id="results-temporal_change-southern_cross">
+                    <h2>Results (iv): Evolution of Usage Patterns</h2>
+                    <p>Southern Cross</p>
+                    <p class="l2">Commuting is largest driver of footfall; still lower than pre-pandemic levels</p>
+                    <p class="l2">Additional footfall might be encouraged by making it attractive to commuters</p>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/VisTSWeeks-Southern_Cross_Station.png"
+                         style="width:100%;"
+                         alt = "Example of how usage patterns in locations change over time"
+                         />
                 </section>
                 
-                
-                <section id="results-temporal_change2">
-                    <h2>Evolution of Urban Usage Patterns</h2>
-                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Weekly_Comps_comparison.png"
+                <section id="results-temporal_change-lygton_street">
+                    <h2>Results (iv): Evolution of Usage Patterns</h2>
+                    <p>Lygon St</p>
+                    <p class="l2">Steady decline in busyness, but a gradual increase in commuting?</p>
+                    <p class="l2">Possible transition towards a more commuting-oriented area</p>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/VisTSWeeks-Lygon_St.png"
+                         style="width:100%;"
                          alt = "Example of how usage patterns in locations change over time"
                          />
                 </section>
@@ -237,6 +247,7 @@
                         <h2>Summary / Conclusions</h2>
                         <p>Application of PCA to investigate (spatio-)temporal footfall trends</p>
                         <p>Striking result: the shape of the main components match recognisable footfall patterns</p>
+                        <p>Drawbacks: validation of activities; equity in sensor location</p>
                         <p>Opportunites to:</p>
                         <p class="l2">better understand use of the build environment</p>
                         <p class="l2">explore evolution of activities over time</p>
