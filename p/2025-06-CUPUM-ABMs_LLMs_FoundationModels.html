@@ -1,0 +1,267 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="Agent-based Modelling; Large language model; Geospatial foundation model; Urban Modelling.">
+
+		<title>Enhancing Spatial Reasoning and Behaviour in Urban ABMs with Large-Language Models and Geospatial Foundation Models</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Pr,inting and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+        
+        <!-- For the EnKF formula -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+                
+                <section class="title"  id="index" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+
+                        <h5>CUPUM 2025, UCL, London</h5>
+
+                        <h1 style="font-size: 55px;">Enhancing Spatial Reasoning and Behaviour in Urban ABMs with 
+                            Large-Language Models and Geospatial Foundation Models</h1>
+                        <hr/>
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson<sup></sup></a>, Andrew Crooks, Alison Heppenstall and Ed Manley</h2>
+                        <h4>University of Leeds, UK; University at Buffalo, US; University of Glasgow, UK</h4>
+                        <h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:25px">Slides available at: <br/><a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></p>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:left;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:center;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <!--<a href="http://www.turing.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a>-->
+                    </div>
+                </section>
+                
+                
+                
+                <section id="context">
+                    <h2>Context</h2>
+                    <p>Modelling human behaviour in ABMs is (still!) an ongoing challenge</p>
+                    <p>Behaviour typically implemented with bespoke rules, but even more advanced mathematical approaches are limitted</p>
+                    <p>Can new AI approaches offer a solution?</p>
+                    <p class="l2"><strong>Large Language Models</strong> as they can respond in 'believable', 'human-like' ways</p>
+                    <p class="l2"><strong>Geospatial Foundation Models</strong> capture nuanced, complex associations between spatial objects</p>
+                    <p>This talk: discuss the opportunites offered by LLMs and GSMs as a means of creating more realistic spatial agents.</p>
+                </section>
+                
+                
+                <section id="flexible_behaviour" data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg">
+                    <div class="whitebackground">
+                        <div class="fragment">
+                            <h2>But first, an aside...</h2>
+                        </div>
+                        <div class="fragment">
+                            <p>"all models are great, until you need them"</p>
+                        </div>
+                        <div class="fragment">
+                            <p>It's fine to use models under normal conditions. Very useful.</p>
+                        </div>
+                        <div class="fragment">
+                            <p>Especailly if the system undergoes a fundamental change (COVID? Global financial crash?) -- 
+                                then we <strong>really</strong> need models to help</p>
+                        </div>
+                        <div class="fragment">
+                            <p>But they're totally useless!</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section data-background-video="../videos/sim.mp4,../videos/sim.webm"
+                         data-background-video-loop="loop"
+                         id="abm-example-awareness_test"
+                          data-transition="fade">
+                    <h2>&nbsp;</h2>
+                    <div class="fragment whitebackground2" >
+                        <h2>Example: a burglary ABM</h2>
+                        <h2>&nbsp;</h2>
+                        <h2>Worked great, until COVID...</h2>
+                    </div>
+                    <h2>&nbsp;</h2>
+                </section>
+                
+                <section id="flexible_behaviour3" data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg">
+                    <h2>&nbsp;</h2>
+                    <div class="whitebackground">
+                        <h2>Maybe a model with LLM-backed agents would be 
+                            better able to respond after a catastrophic system change</h2>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section id="llms">
+                    <h2>Large Language Models (LLMs)</h2>
+                </section>
+                
+                
+                
+                
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** Intro to ABM **********************************
+                ************************************************************ -->
+
+
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                
+                <section id="WealthDistributions-Discussion">
+                    <img class="right" src="../figures/paper_figures/2025-ABM_Wealth_Distribution/paper_chatgpt_image.jpg"
+                         alt="Image to liven up slide showing abstract people and a network"
+                         style="width: 30%"
+                         />
+                    <h2>Conclusions</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>We show that a marco-economic ABM can be optimised with an EnKF</p>
+                    <p class="l2">Improved short-term predictions, especially during a crisis</p>
+                    <p class="l2">Essential during crises; models cannot include everything</p>
+                    <p>Additional opportunity for improved <em>understanding</em></p>
+                    <p class="l2">E.g. through examining evolution of the Kalman Gain matrix and contrasting the
+                    observation v.s. model weights -- which become more or less certain over time?</p>
+                </section>
+                
+                
+                
+                
+                
+                <!-- ************************************************************
+                *********************** Discussion **********************************
+                ************************************************************ -->
+                
+                <section id="Challenges" >
+                    <h2>Summary and Challenges</h2>
+                    <p>This talk has outlined some of the opportunities offered by DA for improving empirical ABMs</p>
+                    <p>Case studies: crowding; international policy response; wealth dynamics</p>
+                    <p>Computational complexity</p>
+                    <p class="l2">Examples here use models that are parsimonious. 
+                        Will it be possible with more complex models, e.g. those use to to build <em>city digital twins??</em></p>
+                    <p>Methodological</p>
+                    <p class="l2">Non-trivial to adapt meteorological methods, e.g. handling categorical parameters</p>
+                    <p>Data</p>
+                    <p class="l2">Availability of high-quality, high-resolution data</p>
+                    <p class="l2">Privacy &amp; ethical issues</p>
+                    <p></p>
+                </section>
+                
+                
+                <section id="Opportunities" data-background-image="../figures/shutterstock_615414464-small.jpg">
+                    <div class="whitebackground2 fragment">
+                        <h2>Opportunities</h2>
+                        <p>We know that some model uncertainty will always be present, DA helps to
+                        reduce these</p>
+                        <p>Transformative potential of "live" (Swarup and Mortveit, 2020) simulations</p>
+                        <p class="l2">Combine up-to-date, diverse datasets and create accurate predictions using
+                        "all the available information" (Talagrand, 1991)</p>
+                        <p></p>
+                        <p>Using the update step to estimate latent variables -- the filter helps the model to 'learn' 
+                            its internal dynamics from data</p>
+                        <p>Transferring information from data rich areas to data poor ones</p>
+                        <p></p>
+                    </div>
+                </section>
+                
+
+                
+                
+
+
+
+
+                <section class="title"  id="thanks" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+
+                        <h5>CUPUM 2025, UCL, London</h5>
+
+                        <h1 style="font-size: 55px;">Enhancing Spatial Reasoning and Behaviour in Urban ABMs with 
+                            Large-Language Models and Geospatial Foundation Models</h1>
+                        <hr/>
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson<sup></sup></a>, Andrew Crooks, Alison Heppenstall and Ed Manley</h2>
+                        <h4>University of Leeds, UK<br/>University at Buffalo, US<br/>University of Glasgow, UK</h4>
+                        <h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:25px">Slides available at: <br/><a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></p>
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:left;padding:10px;width:150px; height:auto;" src="../figures/uol_logo.gif"/>
+                        </a>
+                        
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:center;padding:10px 50px 10px 50px;width:70px; height:auto;" src="../figures/LOGO_EU.jpg"/>
+                        </a>
+
+                        <a href="http://www.turing.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a>
+                    </div>
+                </section>
+
+
+
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
