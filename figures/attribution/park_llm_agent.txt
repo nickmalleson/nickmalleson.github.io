@@ -1,0 +1,1 @@
+Park, Joon Sung, Joseph O’Brien, Carrie Jun Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein. 2023. ‘Generative Agents: Interactive Simulacra of Human Behavior’. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 1–22. San Francisco CA USA: ACM. https://doi.org/10.1145/3586183.3606763.

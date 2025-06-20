@@ -70,12 +70,12 @@
                 <section id="context">
                     <h2>Context</h2>
                     <p>Modelling human behaviour in ABMs is (still!) an ongoing challenge</p>
-                    <p>Behaviour typically implemented with bespoke rules, but even more advanced mathematical approaches are limited</p>
+                    <p>Behaviour typically implemented with bespoke rules, but even more advanced mathematical approaches are limitted</p>
                     <p>Can new AI approaches offer a solution?</p>
                     <p class="l2"><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
                     <p class="l2"><strong>Geospatial Foundation Models</strong> capture nuanced, complex associations between spatial objects</p>
-                    <p class="l2"><strong>Multi-modal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p>
-                    <p>This talk: discuss the opportunities offered by LLMs, GSMs and MFMs as a means of creating more realistic spatial agents.</p>
+                    <p class="l2"><strong>Multimodal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p>
+                    <p>This talk: discuss the opportunites offered by LLMs, GSMs and MFMs as a means of creating more realistic spatial agents.</p>
                     
                 </section>
                 
@@ -92,7 +92,7 @@
                             <p>It's fine to use models under normal conditions. Very useful.</p>
                         </div>
                         <div class="fragment">
-                            <p>Especially if the system undergoes a fundamental change (COVID? Global financial crash?) -- 
+                            <p>Especailly if the system undergoes a fundamental change (COVID? Global financial crash?) -- 
                                 then we <strong>really</strong> need models to help</p>
                         </div>
                         <div class="fragment">
@@ -152,16 +152,16 @@
                     <p class="l2">Bias: LLMs very unlikely to be representative 
                         (non-English speakers, cultural bias, digital divide, etc.)</p>
                     <p class="l2">Validation: consistency (i.e. stochasticity), robustness (i.e. sensitivity to prompts),
-                        hallucinations, train/test contamination, and others</p>
+                        halluncinations, train/test contamination, and others</p>
                     <p>Main one for this talk: <strong>the need to interface through text</strong></p>
-                    <p class="l2">Maybe reasoning with language makes sense</p>
-                    <p class="l2">But having to <i>describe</i> the world with text is a huge simplification /
+                    <p class="l2">Maybe reasonning with language makes sense</p>
+                    <p class="l2">But having to <i>describe</i> the world with text is a huge simplificaion /
                         abstraction </p>
                 </section>
                 
                 
                 <section id="fms">
-                    <h2>A solution? Multi-modal and Geospatial Foundation Models</h2>
+                    <h2>A solution? Multimodal and Geospatial Foundation Models</h2>
                     <p>Foundation models: "a machine learning or deep learning model trained on vast datasets so that 
                         it can be applied across a wide range of use cases" (Wikipedia)</p>
                     <p class="l2">LLMs are Foundation models that work with text</p>
@@ -169,7 +169,7 @@
                     <p class="l2">FMs that work with spatial data (street view images, geotagged social media data, 
                         video, GPS trajectories, points-of-interest, etc.) to create rich, multidimensional spatial
                         representations </p>
-                    <p>Multi-modal Foundation Models</p>
+                    <p>Multimodal Foundation Models</p>
                     <p class="l2">FMs that work with diverse data, e.g. text, audio, image, video, etc.</p>
                 </section>
                 
@@ -222,7 +222,7 @@
                     <p>Huge potential to use LLMs to drive agents in an ABM</p>
                     <p class="l2">But need to overcome some huge challenges first</p>
                     <p class="l2">Lots of activity, but very little peer-reviewed</p>
-                    <p>Geospatial (or multi-modal) foundation models could offer a better interface
+                    <p>Geospatial (or multimodal) foundation models could offer a better interface
                     to the environment than text</p>
                     <p>Maybe...</p>
                 </section>

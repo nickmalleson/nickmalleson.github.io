@@ -1,0 +1,5 @@
+
+                        <figcaption>Balsebre, Pasquale, Weiming Huang, Gao Cong, and Yi Li. 2024. ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’. 
+                            In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
+                            DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a>
+                        </figcaption>
