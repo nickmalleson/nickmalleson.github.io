@@ -64,7 +64,7 @@
                     <aside class="notes">
                         As more and more of the world's population move to urban areas, understanding pedestrian dynamics becomes increasingly important. Data sources that measure pedestrian counts offer great potential as a means of interrogating urban flows without needing to track individuals.
                         
-                        This study attempts to better understand the fundamental spatio-temporal structures that characterise aggregate pedestrian behaviour. It employs Principal Component Analysis to distil the key temporal elements that comprise aggregate daily pedestrian activity across the city. We identify clear, distinct components that represent different types of activities and can be used to characterise different types of neighbourhood.
+                        This study attempts to better understand the fundamental spatio-temporal structures that characterise aggregate pedestrian behaviour. It employs Principal Component Analysis to distill the key temporal elements that comprise aggregate daily pedestrian activity across the city. We identify clear, distinct components that represent different types of activities and can be used to characterise different types of neighbourhood.
                     </aside>
                 </section>
                 
@@ -155,14 +155,14 @@
                     <h3>Proportion of explained variance</h3>
                     <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/CumulativeExplainedVariance.png"
                          alt="Cumulative explained variance - shows number of components needed to explain
-                              the variance in the footfall trends" 
+                              the variance in the footfall trands" 
                          style="width: 80%;"/>
                 </section>
                 
                 <section id="results-components1">
                     <h2>Results (i): Most Important Components</h2>
                     <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/Daily_Comps_for_GIRSUK.png"
-                         alt="Shape of the daily components - look like business, commuters, lunch activity"
+                         alt="Shape of the daily components - look like business, commuters, lunch activitiy"
                          style="width: 80%;"
                          />
                 </section>
@@ -171,7 +171,7 @@
                     <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/Daily_Comps_for_GIRSUK-vertical.png"
                          class="right"
                          style="width:20%;"
-                         alt="Shape of the daily components - look like business, commuters, lunch activity"
+                         alt="Shape of the daily components - look like business, commuters, lunch activitiy"
                          />
                     <h3>Most Important Components</h3>
                     <p>Component 1 - <i>busyness</i></p>
@@ -181,10 +181,10 @@
                     
                     <p>Component 2 - <i>commuting</i></p>
                     <p class="l2">Peaks in the morning and afternoon - typical rush hour</p>
-                    <p class="l2">Component loadings represent presence of commuters</p>
+                    <p class="l2">Component loadings represent presense of commuters</p>
                     
-                    <p>Component 3 - <i>lunchtime suppression</i></p>
-                    <p class="l2">Suppresses activity in the middle of the day</p>
+                    <p>Component 3 - <i>lunchtime surpression</i></p>
+                    <p class="l2">Surpresses activity in the middle of the day</p>
                     <p class="l2">Component loadings &lt; 0 will <i>increase</i> lunchtime footfall</p>
                     
                 </section>
@@ -248,7 +248,7 @@
                         <p>Application of PCA to investigate (spatio-)temporal footfall trends</p>
                         <p>Striking result: the shape of the main components match recognisable footfall patterns</p>
                         <p>Drawbacks: validation of activities; equity in sensor location</p>
-                        <p>Opportunities to:</p>
+                        <p>Opportunites to:</p>
                         <p class="l2">better understand use of the build environment</p>
                         <p class="l2">explore evolution of activities over time</p>
                         <p class="l2">cluster places / times based on activity structure</p>
@@ -291,7 +291,7 @@
                     <aside class="notes">
                         As more and more of the world's population move to urban areas, understanding pedestrian dynamics becomes increasingly important. Data sources that measure pedestrian counts offer great potential as a means of interrogating urban flows without needing to track individuals.
                         
-                        This study attempts to better understand the fundamental spatio-temporal structures that characterise aggregate pedestrian behaviour. It employs Principal Component Analysis to distil the key temporal elements that comprise aggregate daily pedestrian activity across the city. We identify clear, distinct components that represent different types of activities and can be used to characterise different types of neighbourhood.
+                        This study attempts to better understand the fundamental spatio-temporal structures that characterise aggregate pedestrian behaviour. It employs Principal Component Analysis to distill the key temporal elements that comprise aggregate daily pedestrian activity across the city. We identify clear, distinct components that represent different types of activities and can be used to characterise different types of neighbourhood.
                     </aside>
                 </section>
                 

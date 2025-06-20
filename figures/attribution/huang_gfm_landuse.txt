@@ -1,0 +1,4 @@
+<figcaption>Huang, Weiming, Jing Wang, and Gao Cong. 2024. ‘Zero-Shot Urban Function Inference with Street View Images through Prompting a Pretrained Vision-Language Model’. 
+<i>International Journal of Geographical Information Science</i> 38 (7): 1414–42. 
+DOI: <a href="https://doi.org/10.1080/13658816.2024.2347322">10.1080/13658816.2024.2347322</a>.
+</figcaption>

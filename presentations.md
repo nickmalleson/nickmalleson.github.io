@@ -46,6 +46,13 @@ tagline:
 
 ### <a name="presentations"></a>2025
 
+ - [Enhancing Spatial Reasoning and Behaviour in Urban ABMs with Large-Language Models and Geospatial Foundation Models]({{site.url}}/{{site.baseurl}}/p/2025-06-CUPUM-ABMs_LLMs_FoundationModels.html). Presentation to the [Computational Urban Planning and Urban Management (CUPUM) 2025 conference](https://www.ucl.ac.uk/bartlett/casa/about/cupum-2025), 24-26 June, CASA, UCL, London. [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-CUPUM-_ABMs_LLMs_FoundationModels.pdf).
+
+ - [Extracting Key Urban Footfall Signatures using Principal Component Analysis]({{site.url}}/{{site.baseurl}}/p/2025-06-CUPUM-PCA_Ped_Flows.html). Presentation to the [Computational Urban Planning and Urban Management (CUPUM) 2025 conference](https://www.ucl.ac.uk/bartlett/casa/about/cupum-2025), 24-26 June, CASA, UCL, London.  [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-CUPUM-PCA.pdf).
+
+
+ - Predicting Pedestrian Counts using Machine Learning. Presentation by Molly Asher to the [Association of Geographic Information Labroatories in Europe (AGILE) conference 2025](https://agile-gi.eu/conference-2025), 10-13 June, Dresden, Germany. [Slides (pdf)]({{site.url}}/{{site.baseurl}}/p/2025-06-AGILE-PCA.pdf).
+
  - [Using Large Language Models to Predict Neighbourhood Change]({{site.url}}/{{site.baseurl}}/p/2025-GISRUK-INTEGRATE_LLM.html). Presentation to GIS Research UK ([GISRUK '25](https://gisruk.github.io/)), University of Bristol, 23-25 April 2025.
 
  - [Real-time Agent-Based Modelling with Data Assimilation]({{site.url}}/{{site.baseurl}}/p/2025-01-21-DWP_OR-ABM_DA-Jan_2025.html). Presentation to the [Government Operational Research Service](https://www.gov.uk/government/organisations/civil-service-government-operational-research-service), 21st January 2025.
