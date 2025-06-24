@@ -129,7 +129,8 @@
                     <figure >
                         <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/map2.jpg"
                          alt="Map of sensor locations in Melbourne" 
-                        style="width:100%" />
+                         style="width:70%"
+						/>
                         <figcaption>Locations of the Melbourne footfall sensors</figcaption>
                     </figure>
                     
@@ -148,7 +149,7 @@
                     <h2>Principal Component Analysis (PCA)</h2>
                     <p>Technique for reducing dimensionality in datasets</p>
                     <p>Isolate significant features; the 'principal components' </p>
-                    <p>Features can be approximated by a linear combination of <i>component loadings</i></p>
+                    <p>Raw data can be approximated by a linear combination of <i>component loadings</i></p>
                     <p>Here: components are vectors of length 24 (or 168 if we look at weeks)</p>
                 </section>
                 
@@ -158,7 +159,7 @@
                     <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/CumulativeExplainedVariance.png"
                          alt="Cumulative explained variance - shows number of components needed to explain
                               the variance in the footfall trends" 
-                         style="width: 80%;"/>
+                         style="width: 70%;"/>
                 </section>
                 
                 <section id="results-components1">
@@ -198,13 +199,14 @@
                     <h3>Examples: Southern Cross Station and Southbank</h3>
                     <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/DailyComps.png"
                          alt="Graph showing how the component loadings vary by day and location"
+						 style="width:80%;"
                          />
                 </section>
                                 
                 <section id="results-3d">
                     <h2>Results (iii): Component Interactions</h2>
                     <iframe src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/UrbanUsageSpaceDemoDays.html" 
-                            style="width:600px%; height:600px; border:2px solid red;"
+                            style="width:500px%; height:500px; border:2px solid red;"
                             title="3D plot of the components">
                     </iframe>
                     <a href="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/UrbanUsageSpaceDemoDays.html"
@@ -214,7 +216,7 @@
                 <section id="results-3d-b">
                     
                     <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Plot2DDailyAgg.png"
-                         style="width:70%;"
+                         style="width:50%;"
                          alt="Showing how two clusters interact and form clusters of different
                               urban usage patterns"
                          />
@@ -249,7 +251,6 @@
                     <div class="whitebackground2">
                         <h2>Summary / Conclusions</h2>
                         <p>Application of PCA to investigate (spatio-)temporal footfall trends</p>
-                        <p>Striking result: the shape of the main components match recognisable footfall patterns</p>
                         <p>Drawbacks: validation of activities; equity in sensor location</p>
                         <p>Opportunities to:</p>
                         <p class="l2">better understand use of the build environment</p>
