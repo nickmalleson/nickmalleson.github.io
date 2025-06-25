@@ -145,6 +145,60 @@
                     
                 </section>
                 
+                <section id="llm-housing-infrastructure">
+                    <h2>Example: Housing ABM and LLM agent integration</h2>
+                    <p>Can we switch the behaviour part of the agents (when to buy, sell or rent houses) from the usual rule based empirically driven method to being driven by LLMs?</p>
+                    <p class="l2">Traditional agents: Decisions rules are clearly defined </p>
+                    <p class="l2">LLM agents: Decision rules are unknown</p>
+                    <img src="../figures/paper_figures/llm_housing_example.png" />
+                    <aside class="notes">
+                        <h2>Housing ABM (Gamal et al., JASSS)</h2>
+
+                      <p>
+                        This housing agent-based model (ABM) is derived from Nigel Gilbert’s 2008 work.  
+                        We explore whether the agents’ behavioural rules—deciding when to buy, sell, or rent—can be
+                        replaced by large-language-model (LLM) reasoning instead of the usual empirically driven,
+                        rule-based approach. Experiments were carried out with several versions of ChatGPT.
+                      </p>
+
+                      <h3>Experiment design</h3>
+                      <p>
+                        The ABM is first run with a sample seed (<em>S</em>) and a <strong>traditional agent</strong>; we then
+                        replace that agent with an <strong>LLM-driven agent</strong> and rerun the model under identical
+                        conditions (same seed&nbsp;<em>S</em>).
+                      </p>
+
+                      <h4>Traditional agent variables</h4>
+                      <ul>
+                        <li>Annual income and capital</li>
+                        <li>Fixed share of income spent on housing: <strong>33 %</strong></li>
+                        <li>With seed&nbsp;<em>S</em>, the agent enters the mortgage market at time-step&nbsp;32  
+                            (red dotted line in the graphs)</li>
+                      </ul>
+
+                      <h4>LLM-driven agent prompts</h4>
+                      <ul>
+                        <li>Annual income and capital</li>
+                        <li>Demographics (e.g.&nbsp;age, number of children) used to infer housing-expenditure share</li>
+                      </ul>
+
+                      <p>
+                        At each time-step the LLM receives the updated income and capital and is asked whether it wishes
+                        to enter the housing market.  
+                        When it chooses to join, it also returns the percentage of income it plans to devote to housing.
+                      </p>
+
+                      <h3>Results</h3>
+                      <ul>
+                        <li><strong>Graph&nbsp;1&nbsp;&mdash;</strong> Time-steps at which the LLM entered the mortgage market.  
+                            GPT-4.1 matched the traditional agent’s decision 50 % of the time.</li>
+                        <li><strong>Graph&nbsp;2&nbsp;&mdash;</strong> Capital levels triggering entry; the pattern mirrors Graph&nbsp;1.</li>
+                        <li><strong>Graph&nbsp;3&nbsp;&mdash;</strong> Reported housing-expenditure shares ranged from 27 % to 30 %,  
+                            close to the 33 % assumption for traditional agents.</li>
+                      </ul>
+                    </aside>
+                </section>
+                
                 <section id="llm_abm_challenges">
                     <h2>LLMs &amp; ABMs: Challenges</h2>
                     <p>Lots of them!</p>
@@ -154,7 +208,7 @@
                     <p class="l2">Validation: consistency (i.e. stochasticity), robustness (i.e. sensitivity to prompts),
                         hallucinations, train/test contamination, and others</p>
                     <p>Main one for this talk: <strong>the need to interface through text</strong></p>
-                    <p class="l2">Maybe reasoning with language makes sense</p>
+                    <p class="l2">Communicating -- and maybe reasoning -- with language makes sense</p>
                     <p class="l2">But having to <i>describe</i> the world with text is a huge simplification /
                         abstraction </p>
                 </section>
@@ -175,7 +229,9 @@
                 
                 <section id="gfms">
                     <h2>Geospatial Foundation Model Example</h2>
-                    <p>XXXX ADD DETAILS -- Huang et al.</p>
+                    <p>Example of a foundation model constructed using OSM data</p>
+                    <p class="l2">Embeddings are remarkably good at predicting things like traffic speed and 
+                        building functionality (zero-shot)</p>
                     <figure>
                         <img src="../figures/attribution/huang_urbanclip.png">
                         <figcaption>Balsebre, Pasquale, Weiming Huang, Gao Cong, and Yi Li. 2024. ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’. 
@@ -223,7 +279,7 @@
                          alt="Conceptual LLM ABM city image, from chatgpt" />
                     <h2>Summary and Outlook</h2>
                     <p>Huge potential to use LLMs to drive agents in an ABM</p>
-                    <p class="l2">But need to overcome some huge challenges first</p>
+                    <p class="l2">But need to overcome some big challenges first</p>
                     <p class="l2">Lots of activity, but very little peer-reviewed</p>
                     <p>Geospatial (or multi-modal) foundation models could offer a better interface
                     to the environment than text</p>
