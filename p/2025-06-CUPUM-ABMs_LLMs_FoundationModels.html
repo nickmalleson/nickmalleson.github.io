@@ -146,11 +146,15 @@
                 </section>
                 
                 <section id="llm-housing-infrastructure">
-                    <h2>Example: Housing ABM and LLM agent integration</h2>
-                    <p>Can we switch the behaviour part of the agents (when to buy, sell or rent houses) from the usual rule based empirically driven method to being driven by LLMs?</p>
+                    <img src="../figures/paper_figures/llm_housing_example.png"
+						 class="right"
+						 style="width:22%;"/>
+                    <h2>Example: Housing ABM with LLM agents</h2>
+                    <p>Can we switch agent behaviour (when to buy, sell or rent houses) from 
+					rule-based empirically-driven method to being driven by LLMs?</p>
                     <p class="l2">Traditional agents: Decisions rules are clearly defined </p>
-                    <p class="l2">LLM agents: Decision rules are unknown</p>
-                    <img src="../figures/paper_figures/llm_housing_example.png" />
+                    <p class="l2">LLM agents: Decision rules are unknown (prompt based on demographics etc.)</p>
+					<p>Decision points aligned with real observations. Possible insight into latent variables.</p>
                     <aside class="notes">
                         <h2>Housing ABM (Gamal et al., JASSS)</h2>
 
@@ -233,7 +237,8 @@
                     <p class="l2">Embeddings are remarkably good at predicting things like traffic speed and 
                         building functionality (zero-shot)</p>
                     <figure>
-                        <img src="../figures/attribution/huang_urbanclip.png">
+                        <img src="../figures/attribution/huang_urbanclip.png"
+						style="width:70%;">
                         <figcaption>Balsebre, Pasquale, Weiming Huang, Gao Cong, and Yi Li. 2024. ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’. 
                             In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
                             DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a>
