@@ -1,0 +1,481 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="digital twins, ABM, data assimilation, city simulation, particle filter, uncertainty">
+
+        <title>Data Assimilation for Agent-Based Models</title>
+
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/white.css">
+
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+        <!-- Pr,inting and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section class="title" id="index"
+                         data-background-video="../videos/city_night.mp4"
+                         data-background-video-loop="loop">
+                    <div class="whitebackground2">
+                        <h5>Calibration of Agent-Based Models. 11th July 2025, Cambridge.</h5>
+                        <hr />
+                        <h1 style="font-size: 45px;">Data Assimilation for Agent-Based Models<br/> 
+                            <div style="font-size: 35px;">(With a sprinkling of ABC and LLMs)</div></h1>
+                        <hr />
+                        <h2 style="font-size: 25px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, University of Leeds, UK</h2>
+                        <!--<h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a>-->
+                        <!--<h4><a href="http://dust.leeds.ac.uk">dust.leeds.ac.uk</a></h4>-->
+                        <hr />
+                        <p style="text-align:center;font-size:20px">Slides available at: <br />
+                            <a href="https://urban-analytics.github.io/dust/presentations.html">https://urban-analytics.github.io/dust/presentations.html</a>
+                        </p>
+                        <hr />
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/LOGO_EU.jpg" />
+                        </a>
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/uol_logo.gif" />
+                        </a>
+                        <!--<a href="https://environment.leeds.ac.uk/geography">
+<img style="float:right;padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
+</a>-->
+                        <!-- <a href="http://www.turing.ac.uk/">
+<img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+</a> -->
+                    </div>
+                </section>
+                
+                <section id="outline">
+                    
+                    <img src="../figures/chatgpt/digital_city_abm.png" class="right"
+                         style="width:30%;"
+                         alt="Nice sunset/sunrise" />
+                    <h2>Outline</h2>
+                    <p>Dynamic re-calibration of a COVID-19 ABM using Approximate Bayesian Computation</p>
+                    <p>Data assimilation for ABMs using Particle Filters and Kalman Filters</p>
+                    <p>For desert: LLM-backed ABMs</p>
+                </section>
+                
+                
+                
+                <!-- ************************************************************
+                    ************************** DYME *****************************
+                    ************************************************************ -->
+                
+                
+                <section id="progress-model_synthesis-dyme">
+                    <figure class="right">
+                        <img src="../figures/paper_figures/2021-03-RAMP/RAMP_Workflow-with_GeoLytics.png"
+                             alt="Diagram of the ramp model components described in the slide text" />
+                        <figcaption>Spooner et al. (2021) A dynamic microsimulation model for epidemics. <em>Social Science &amp; Medicine</em> 291, 114461. DOI: <a href="https://doi.org/10.1016/j.socscimed.2021.114461">10.1016/j.socscimed.2021.114461</a></figcaption>
+                    </figure>
+                    <h2>Model synthesis</h2>
+                    <h3>DyME: Dynamic Model for Epidemics</h3>
+                    <!--<p>Part of the Royal Society Rapid Assistance in Modelling the Pandemic (RAMP) call</p>-->
+                    <p>COVID transmission model with components including:</p>
+                    <p class="l2">dynamic spatial microsimulation, spatial interaction model, data linkage (PSM), ...</p> 
+                    <p>Represents all individuals in a study area with activities: home, shopping, working, schooling</p>
+                    <p>Daily timestep</p>
+
+                </section>
+                
+                
+                <section id="progress-model_synthesis-dyme-method">
+                    <img data-src="../figures/paper_figures/2021-03-RAMP/Dynamic_Workflow.png" 
+                         alt="Figure illustrates the process of COVID spreading as people visit places"/>
+                </section>
+                
+                <section id="progress-model_synthesis-dyme-results">
+                    
+                    <img data-src="../figures/paper_figures/2021-03-RAMP/week_earlier_scenario.png"
+                         att="Results of the model suggest that there would have been 50% fewer COVID cases"/>
+                    
+                    <aside class="notes">
+                        "For the baseline scenario daily infections peaks at 763 (266–1047, 95% CI) people per day, while the experimental (i.e. lockdown one week earlier) scenario shows a peak of 556 (137–718, 95% CI) people per day"
+                        
+                        This is am average 54% decrease across all age groups.
+                    </aside>
+                    
+                </section>
+                
+                
+                <section id="progress-model_synthesis-dyme-data">
+                    <h2>DyME Drawbacks: Data and Latent Variables</h2>
+                    <p>Incredible detailed model!</p>
+                    <p>BUT only data available for validation: COVID cases and hospital deaths</p>
+                    <p class="l2">Only quantify a tiny part of the transmission dynamics</p>
+                    <p class="l2">Huge uncertainties</p>
+                    <p>Can we use dynamic calibration to:</p>
+                    <p class="l2">Infer latent variables</p>
+                    <p class="l2">Make better 'real-time' predictions</p>
+                    
+                    <!--<img data-src="../figures/paper_figures/2021-03-RAMP/Disease_Status_Upates.png"
+                         style="width:80%;"
+                         alt="Different disease stages: susceptible, exposed (pre)(a)symptomatic, removed" />-->
+                </section>
+                
+                <section id='dyme-dynamic_calibration'>
+                    <h2>Dynamic Calibration for DyME</h2>
+                    <p>Use Approximate Bayesian Computation and Bayesian updating ('dynamic re-calibration')</p>
+                    <figure >
+                        <img data-src="../figures/paper_figures/2022-RAMP_DA/model_workflow3.png"
+                         alt="Bayesian updating of the DyME model. The parameter posteriors from one window are
+                              used as priors in the next window"/>
+
+                    </figure>
+                    <p class="l2">Reduce uncertainty and produce more accurate future predictions</p>
+                    <p class="l2">Parameter posteriors might reveal information about the model / system</p>
+                </section>
+
+                <section id='dyme-abc-posteriors'>
+                    <figure>
+                        <img data-src="../figures/paper_figures/2022-RAMP_DA/parameter_evolution.png"
+                             style="width: 70%;"
+                            alt="Posterior parameter estimates for the DyME model"/>
+                        <figcaption>
+                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> (under review)
+                        </figcaption>
+                    </figure>
+                </section>
+
+                <section id='dyme-abc-predictions'>
+                    <figure>
+                        <img data-src="../figures/paper_figures/2022-RAMP_DA/model_predictions.png"
+                             alt="Uncertain predictions made using the DyME parameter posteriors.
+                                  The certainty increases as more data become available."/>
+                        <figcaption>
+                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> (under review)
+                        </figcaption>
+                    </figure>
+                </section>
+                    
+                
+                <section id="progress-computation-dyme">
+                    
+                    <h2>Aside: Computational Efficiency</h2>
+                    <p>Uncertainty quantification, etc., requires many, many model runs</p>
+                    <p>Difficult with computationally-expensive models, like ABMs</p>
+                    <figure class="right">
+                        <img  data-src="../figures/ramp/ramp_gui_1.png" alt="Screenshot of the RAMP GUI" />
+                        <!--<img  data-src="../figures/ramp/ramp_gui_2.png" alt="Screenshot of the RAMP GUI" /> -->
+                    </figure>
+                    <p>DyME (COVID microsimulation)</p>
+                    <p class="l2">A single model run (800,000 individuals, 90 days) took 2 hours</p>
+                    <p class="l2">ABC etc. would be impossible at that speed (need 1000s of runs)</p>
+                    <p class="l2">Big computers can help</p>
+                    <p class="l2">But maybe if I were better at programming ...</p>
+                </section>
+                
+                <section id="progress-computation-dyme-improbable"
+                         data-background-video="../videos/Ramp_UA_2020-08-28 12-29-25.mp4">
+                    <div class="whitebackground2 fragment">
+                        <img src="../figures/LOGO_Improbable.png" class="right" style="width:30%;"
+                             alt="Improbable company logo" />
+                        <p>Re-implemented numpy/pandas model using (py)OpenCL</p>
+                        <p>Run time went from 2 hours to a few seconds!</p>
+                        <p>Transforms the potential uses of the model</p>
+                    </div>
+                
+                </section>
+                
+                
+                
+                
+                <!-- ************************************************************
+                    ******************* DATA ASSIMILATION ***********************
+                    ************************************************************ -->
+
+                <section id="prob-divergence" data-background-video="../videos/starlings1-short.mp4"
+                         data-background-video-muted data-background-video-loop="loop">
+
+                    <div class="whitebackground fragment">
+                        <h2>Why we need Data Assimilation</h2>
+                        <p>Complex models will always diverge</p>
+                        <p class="l2">(due to inherent uncertainties in inputs, parameter values, model structure, etc.)</p>
+                        <p>Possible Solution: Data Assimilation</p>
+                        <p>Used in meteorology and hydrology to bring models closer to reality. Combines:</p>
+                        <p class="l2">Noisy, real-world observations</p>
+                        <p class="l2">Model estimates of the system state</p>
+                    </div>
+                </section>
+
+                <section id="dda-vs-calibration">
+
+                    <h2>Data assimilation v.s. calibration</h2>
+
+                    <img data-src="../figures/data-assimilation2.png" style="width:70%;"
+                         alt="Example of optimising the model state using observations and data assimilation"/>
+
+                </section>
+
+
+                <!--<section id="abm-dda-overview">
+                    <img data-src="../figures/paper_figures/dda.jpg" alt="Diagram of data assimilation and an ABM" />
+                </section>-->
+
+
+                <section id="da-challenges">
+
+                    <h2>Challenges for using DA with ABMs</h2>
+
+                    <p>Model size</p>
+                    <p class="l2">10,000 agents * 5 variables = 50,000 distinct parameters</p>
+                    <p>Agent behaviour</p>
+                    <p class="l2">Agent's have goals, needs, etc., so can't be arbitrarily adjusted</p>
+                    <p>Assumptions and parameter types</p>
+                    <p class="l2">Maths typically developed for continuous parameters and 
+                        assume normal distributions</p>
+                    <p>... but, at least, many of these problems are shared by climate models</p>
+
+                </section>
+
+
+                <!-- ************************************************************
+                    *************************  PARTICLE FILTER **********************
+                    ************************************************************ -->
+
+                <section id="pf-experiments">
+                    <h2>Data assimilation with a Particle Filter</h2>
+                    <img data-src="../figures/PF_flowchart3.png"
+                         alt="Flowchart of the experimental design. Lots of models ('particles') are run simultaneously." />
+                </section>
+
+                <!--<section id="pf-station-experiments">
+                    <h3>Particle Filter &amp; Crowd Simulation</h3>
+                    <img style="width:80%" data-src="../figures/pf_overview.png" alt="Station PF experimental design." />
+                </section> -->
+
+                <section id="pf-stationsim2-b" data-transition="fade">
+                    <h2>Crowd Simulation with a Particle Filter</h2>
+                    <img data-src="../figures/pf_animation.gif"
+                         alt="Animation of a crowding model with data assimilation" />
+                </section>
+
+                <section id="pf-results-median_error">
+
+                    <h2>Particle Filter Results</h2>
+                    <p>Box Environment: More particles = lower error</p>
+                    <p>Exponential increase in complexity</p>
+                    <figure>
+                        <img style="width:60%"
+                             data-src="../figures/paper_figures/2018-ParticleFilterFigs/median_abs_error.png" 
+                             alt="median absolute error change with number of agents and particles: greater
+                                  complexity caused by larger numbers of agents can be mitigated by increasing
+                                  the numbers of particles." />
+                    </figure>
+                    <figcaption>
+                        Malleson, Nick, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew West, and Alison Heppenstall.
+                        (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. <i>Journal
+                        of Artificial Societies and Social Simulation</i> 23(3) DOI: 
+                        <a href="https://doi.org/10.18564/jasss.4266">10.18564/jasss.4266</a>.
+                    </figcaption>
+                </section>
+                
+                
+                <!--<section id="pf-results-wiggle-count">
+                    <h2>Difficulties (I)</h2>
+                    <h3>Exponential increase in complexity</h3>
+                    <figure>
+                        <img style="width:60%;" data-src="../figures/paper_figures/2018-ParticleFilterFigs/wiggle_count.png"
+                             alt="Number of collisions increases exponentially with number of agents" />
+                        <figcaption>
+                            N. Malleson, K. Minors, Le-Minh Kieu, J. A. Ward, A. West and Alison Heppenstall (2020).
+                            Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter.
+                            <i>Journal of Artificial Societies and Social Simulation (JASSS)</i>
+                            <a href="http://jasss.soc.surrey.ac.uk/23/3/3.html">23(3), 3</a>.
+                        </figcaption>
+                    </figure>
+                </section> -->
+                
+                <!-- ************************************************************
+                    *******************************  UKF  ***********************
+                    ************************************************************* -->
+                
+                <!-- UKF
+                <section id="ukf">
+                    <h2>Other DA methods (i)</h2>
+                    <h3>Unscented Kalman Filter (UKF)</h3>
+                    <p>Similar to the (very popular) Ensemble Kalman filter</p>
+                    <p class="l2">Should be more efficient</p>
+                    <p class="l2">But assumes Gaussian distributions</p>
+                    <p>A few <i>sigma points</i> are chosen to represent the model state</p>
+                    <p>Then some complicated maths happens ... </p>
+                </section>
+
+                <section id="ukf-results1">
+                    <h3>Unscented Kalman Filter (UKF)</h3>
+                    <p>Observe a proportion of the agents</p>
+                    <figure>
+                        <img style="width:70%;" data-src="../figures/paper_figures/2019-UKF/ukf_pairs050.png" 
+                             alt="Results of the UKF. Most agent positions are estimated reasonably well."/>
+                        <figcaption>Clay, Robert, J. A. Ward, P. Ternes, Le-Minh Kieu, N. Malleson (2021) Real-time agent-based crowd simulation with the Reversible Jump Unscented Kalman Filter. <i>Simulation Modelling Practice and Theory</i> 113 (102386) DOI: <a href="https://dx.doi.org/10.1016/j.simpat.2021.102386">10.1016/j.simpat.2021.102386</a></figcaption>
+                    </figure>
+                </section>
+                
+                <section id="ukf-results2">
+                    <h3>Unscented Kalman Filter (UKF)</h3>
+                    <p>Observed v.s. Unobserved agents</p>
+                    <figure>
+                        <img class="left" data-src="../figures/paper_figures/2019-UKF/Mixed_Choropleth.png" />
+                        <img class="right" data-src="../figures/paper_figures/2019-UKF/Unobserved_Choropleth.png" 
+                             alt="Results of the UKF (2). For agents who we have no information about ('unobserved'),
+                                  the algorithm is sometimes able to infer their behaviour from that of agents
+                                  who we do have information about."/>
+                        <figcaption>Clay, Robert, J. A. Ward, P. Ternes, Le-Minh Kieu, N. Malleson (2021) Real-time agent-based crowd simulation with the Reversible Jump Unscented Kalman Filter. <i>Simulation Modelling Practice and Theory</i> 113 (102386) DOI: <a href="https://dx.doi.org/10.1016/j.simpat.2021.102386">10.1016/j.simpat.2021.102386</a></figcaption>
+                    </figure>
+                </section>-->
+                
+                
+                <!-- ***********************************************************
+                    *******************  Grand Central Station *****************
+                    ************************************************************ -->
+
+                <section id="gcs" data-background-video="../videos/grandcentral-short.mp4" data-background-video-muted
+                         data-background-video-loop="loop">
+
+                    <div class="whitebackground2 fragment">
+                        <h2>More realistic simulations:<br/>Grand Central Terminal (New York)</h2>
+
+                        <p>Pedestrian traces data</p>
+                        <p>B. Zhou, X. Wang and X. Tang. (2012) Understanding Collective Crowd Behaviors:
+                            Learning a Mixture Model of Dynamic Pedestrian-Agents. In <i>Proceedings of IEEE Conference on
+                            Computer Vision and Pattern Recognition (CVPR)</i> 2012</p>
+                        <p class="l2"><a href="http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html">
+                            http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html</a></p>
+                        <p>Cleaned and prepared by <a href="https://doi.org/10.12688/openreseurope.14144.1">Ternes et al. (2021)</a>.</p>
+
+
+                        <!--
+                        <img class="left" , style="width:50%"
+                             data-src="../figures/paper_figures/2020-PhilTrans-GrandCentralStation/grand_central_floorplan.png"
+                             alt="Grand Central Terminal floor plan with entrances around the sides and an obstruction in the centre." />
+
+                        <img class="right" style="width:30%"
+                             data-src="../figures/paper_figures/2020-PhilTrans-GrandCentralStation/trajectories-structure.png"
+                             alt="Pedestrian trajectories estimated from the video" />
+                        -->
+
+                    </div>
+                </section>
+                
+                 <!-- ************************************************************
+                    ************************* EnKF  ************************
+                    ************************************************************ -->
+                
+                
+                
+                
+                
+                
+                 <!-- ************************************************************
+                    ************************* LLM / ABMs  ************************
+                    ************************************************************ -->
+                
+                
+                
+                <!-- ************************************************************
+                ************** CONCLUSION / ACKNOWLEDGEMENTS ********************
+                ************************************************************ -->
+                
+                
+                
+                <section id="summary">
+                    <h2>Summary</h2>
+                    <figure class="right">
+                        <img src="../figures/skylines-day2.jpg" 
+                             alt="A screenshot of a city building computer game that I like to play" />
+                        
+                    </figure>
+                    <p>XXXX</p>
+                </section>
+                
+
+
+                <section class="title" id="thanks"
+                         data-background-video="../videos/city_night.mp4"
+                         data-background-video-loop="loop">
+                    <div class="whitebackground2">
+                        <h5>Calibration of Agent-Based Models. 11th July 2025, Cambridge.</h5>
+                        <hr />
+                        <h1 style="font-size: 45px;">Data Assimilation for Agent-Based Models<br/> 
+                            <div style="font-size: 35px;">(With a sprinkling of ABC and LLMs)</div></h1>
+                        <hr />
+                        <h2 style="font-size: 25px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, University of Leeds, UK</h2>
+                        <!--<h4><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a>-->
+                        <!--<h4><a href="http://dust.leeds.ac.uk">dust.leeds.ac.uk</a></h4>-->
+                        <hr />
+                        <p style="text-align:center;font-size:20px">Slides available at: <br />
+                            <a href="https://urban-analytics.github.io/dust/presentations.html">https://urban-analytics.github.io/dust/presentations.html</a>
+                        </p>
+                        <hr />
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/LOGO_EU.jpg" />
+                        </a>
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/uol_logo.gif" />
+                        </a>
+                        <!--<a href="https://environment.leeds.ac.uk/geography">
+<img style="float:right;padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
+</a>-->
+                        <!-- <a href="http://www.turing.ac.uk/">
+<img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+</a> -->
+                    </div>
+                </section>
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'reveal/plugin/markdown/marked.js' },
+                    { src: 'reveal/plugin/markdown/markdown.js' },
+                    { src: 'reveal/plugin/notes/notes.js', async: true },
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+
+</html>
