@@ -17,6 +17,12 @@
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+        
+        <!-- For the EnKF formula -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
 
         <!-- Pr,inting and PDF exports -->
         <script>
@@ -384,6 +390,234 @@
                     ************************* EnKF  ************************
                     ************************************************************ -->
                 
+                <section id="enkf">
+                    <h2>Ensemble Kalman Filter (EnKF)</h2>
+                    <p>More complicated, and has stronger assuptions, but can update the model state (including categorical parameters) directly</p>
+                    <p>
+                            \( \hat{X} = X + K \left( D - H X \right) \)
+                    </p>
+                    <p class="l2">Current state estimate (\(X\)) updated with new information (\(\hat{X}\))</p>
+                    <p class="l2">\(K\) (Kalman gain) balances importance of new data (\(D\)) v.s. current prediction.</p>
+                    <p class="l2">\(H X\): prediction transformed into the same space as the observed data 
+                    (e.g. arrregate observations and individual agents)</p> 
+                    <p>Challenges:</p>
+                    <p class="l2">Designed for continuous data -- categorical parameters need converting (non trivial)</p>
+                    <p class="l2">Unpredictable human behaviour</p>
+                    <p class="l2">Problems with numeric scales (struggles with large and small numbers)
+                </section>
+                
+                
+                
+                <section id="enkf_results">
+                    <h2>EnKF for Pedestrian Simulation</h2>
+                    <figure class="left" style="width:50%;">
+                        <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/updating_state2.png" 
+                             alt="Figure illustrates that, after DA, the posterior estimates of two agents' locations are much closer to their corresponding positions in the data (observation)" />
+                        <figcaption>Figure 9: Comparison of prior and posterior positions of
+                            two agents (‘A’ and ‘B’) in all ensemble member models. After DA the positional estimates of
+                        the agents' locations are much more accurate and have lower variability.</figcaption>
+                    </figure>
+                    <figure class="right" style="width:35%;">
+                        <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/cover.png"
+                             alt="Front page of the published paper" />
+                        <figcaption style="font-size: small">Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and N. Malleson (2024), 
+                            Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling. 
+                            <em>Royal Society Open Science 11</em> (4): 231553. 
+                            DOI: <a href="https://doi.org/10.1098/rsos.231553">10.1098/rsos.231553</a>.</figcaption>
+                    </figure>
+
+
+                </section>
+
+                <section id="enkf_results-interactive">
+                    <iframe width="1200" height="1000" src="../other/enkf_animation.html"
+                            title="Ensemble Kalman Filter"></iframe>
+
+                </section>
+                
+                
+                
+                <!-- ************************************************************
+                ******************* International Policy Diffusion *****************************
+                ************************************************************ -->
+                
+                <section id="PolicyDiffusion-Overview" >
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2023-Covid_Policy_Response/cover.png"
+                         alt="Cover image of the paper" />
+                        <!--<figcaption><p style="font-size: smaller">Y. Oswald, N. Malleson and K. Suchak (2024). 
+                        An Agent-Based Model of the 2020 International Policy Diffusion in Response to the 
+                        COVID-19 Pandemic with Particle Filter.
+                        <i>Journal of Artificial Societies and Social Simulation</i> 27(2) 3. DOI: 
+                        <a href="https://dx.doi.org/10.18564/jasss.5342">10.18564/jasss.5342</a></p></figcaption>-->
+                    </figure>
+                    <h2>Case Study 2:</h2>
+                    <h3>International Policy Diffusion</h3>
+                    <p>ABM simulates COVID-19 policy diffusion via peer mimicry</p>
+                    <p>Particle filter enhances prediction accuracy with real-time data.</p>
+                    <p>Frequent filtering improves results.</p>
+                    <p>&nbsp;</p>
+                    <p style="font-size: small">Y. Oswald, N. Malleson and K. Suchak (2024). 
+                        An Agent-Based Model of the 2020 International Policy Diffusion in Response to the 
+                        COVID-19 Pandemic with Particle Filter.
+                        <i>Journal of Artificial Societies and Social Simulation</i> 27(2) 3. DOI: 
+                        <a href="https://dx.doi.org/10.18564/jasss.5342">10.18564/jasss.5342</a></p>
+                </section>
+                
+                <section id="PolicyDiffusion-Intro" >
+                    
+                    <figure class="right" >
+                        <img src="../figures/paper_figures/2023-Covid_Policy_Response/data_properties-vertical.png"
+                             alt="Two subplots showing the progression of COVID-19 policy adoption across countries in March 2020. Panel (a) depicts the number of countries implementing school closures at four levels of stringency (level 0 to level 3) over time, with a rapid transition to level 3 (complete school closures) around mid-March. Panel (b) compares the adoption of various policies, including school closures, workplace closures, event cancellations, stay-at-home orders, domestic travel restrictions, and international travel restrictions, all measured by the number of countries. School closures exhibit the fastest and most widespread adoption, closely followed by event cancellations, with other policies showing slower adoption."
+                            style="width:70%;" />
+                        <figcaption>Adoption of school closure policies by governments worldwide. Data source: 
+                            <a href="https://ourworldindata.org/coronavirus">Our World In Data</a>.</figcaption>
+                    </figure>
+                    <h2>International Policy Diffusion</h2>
+                    <p>Global challenges hinge on international coordination of policy</p>
+                    <p>COVID-19 lockdown: compelling example of almost unanimous global response</p>
+                    <!--<p>Limitted research on policy diffusion focussing on international, rapid diffusion mechanisms and integration with simulation-based methods.</p>-->
+                    <p>Aim: Develop a parsimonious ABM to explore mechanisms of international lockdown diffusion and 
+                        improve prediction accuracy through <em>data assimilation</em>.</p>
+                </section>
+                
+                
+                <section id="PolicyDiffusion-Methods">
+                    <h2>Methods</h2>
+                    <p>Agent-Based Model (ABM)</p>
+                    <p class="l2">Agents: <em>countries</em>, with binary lockdown states ("lockdown" or "not in lockdown").</p>
+                    <p class="l2">Behaviour: Peer mimicry based on similarity (income, democracy index, geography).</p>
+                    <p class="l2">Secondary mechanism: Autonomous lockdown adoption based on internal thresholds (e.g., population density).</p>
+                    <p>Calibration</p>
+                    <p class="l2">Based on real-world lockdown data (March 2020) and parameters like social thresholds, peer group size, and adoption probabilities.</p>
+                    <p>Data assimilation with a particle filter</p>
+                    <p class="l2">Updates model predictions in real time using observed data (e.g., lockdown status of countries).</p>
+                    <p class="l2">Improves model alignment with real-world dynamics by filtering poorly performing simulations.</p>
+                </section>
+                
+                <section id="PolicyDiffusion-Results">
+                        <img class= "right"
+                             data-src="../figures/paper_figures/2023-Covid_Policy_Response/fig4_5-vertical.png"
+                             alt="“Two panels comparing the percentage of countries in lockdown predicted by the base model and particle filter. Top panel: Base model ensemble run with 100 simulations, showing the mean prediction (black line) closely following observed data (red dashed line) with wide confidence intervals. Bottom panel: Particle filter with 1000 particles, showing improved alignment with observed data and narrower confidence intervals compared to the base model."
+                             style="width:35%"/>
+                    <h2>Results</h2>
+                    <p>After calibration, base model performance is adequate, but exhibits large variance, especially during 'critical' phase
+                    (when most countries are going in to lockdown).</p>
+                    <p>Macro performance better than macro performance</p>
+                    <p class="l2">An accurate lockdown percentage doesn't mean the right countries are in lockdown</p>
+                    <p>Particle filter narrows confidence intervals and reduces MSE by up to 75%; up to 40% in the critical phase</p>
+                    <p class="l2">Performance during the critical few days is crucial if the model is going to be useful</p>
+                </section>
+            
+                <!--
+                <section id="PolicyDiffusion-Results2">
+                    <img data-src="../figures/paper_figures/2023-Covid_Policy_Response/fig4_5.png"
+                         style="width:60%"/>
+                </section>
+                -->
+                
+                <section id="PolicyDiffusion-Conclusions">
+                    <h2>Conclusions</h2>
+                    <h3>International Policy Diffusion</h3>
+                    <p>Proof-of-concept: social / political A-B diffusion models can be combined 
+                        with data assimilation.</p>
+                    <p>Particle filter improves lockdown predictions, particularly in the 'critical phase'</p>
+                    <p>But the model still incorrectly predicts many countries</p>
+                    <p class="l2">Undoubtedly need a more nuanced model to improve predictions further
+                        (beyond peer mimicry).</p>
+                    
+                </section>
+                
+                
+                
+                <!-- ************************************************************
+                *********************** WealthDistributions **********************************
+                ************************************************************ -->
+                
+                <section id="WealthDistributions" >
+                    <figure class="right">
+                        <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/cover.png"
+                         alt="Cover image of the paper" />    
+                        <figcaption style="font-size: small">Oswald, Y., K. Suchak, and N Malleson (2025). 
+                        Agent-Based Models of the United States Wealth Distribution with Ensemble Kalman Filter. 
+                        <i>Journal of Economic Behavior &amp; Organization</i> 229:106820. 
+                        DOI: <a href="https://doi.org/10.1016/j.jebo.2024.106820">10.1016/j.jebo.2024.106820</a>
+                        </figcaption>
+                    </figure>
+                    <h2>Case Study 3</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Significant wealth inequality in the U.S.</p>
+                    <p class="l2">The top 1% hold ~35% of wealth, while the bottom 50% hold almost none.</p>
+                    <p>(Near) real-time predictions are essential, particularly during crises</p>
+                    <p>Paper explores the integration of ABMs with data assimilation to improve prediction accuracy.</p>
+                </section>
+                
+                <section id="WealthDistributions-Context">
+                    <h2>Wealth Diffusion: Context</h2>
+                    
+                    <figure>
+                        <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig1.png"
+                         alt="Wealth distribution among different wealth groups in the U.S. The 50% poorest people lost significant wealth during the 2008 financial crisis. The data are from https://realtimeinequality.org/ with details in Blanchet et al. (2022)." />
+                        <figcaption>Wealth distribution in the U.S. D from <a href="https://realtimeinequality.org/">realtimeinequality.org</a> 
+                            with details in Blanchet et al. (2022).</figcaption>
+                    </figure>
+                </section>
+                
+                <section id="WealthDistributions-Methods1">
+                    <h2>Methods (i)</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Developed two agent-based models of U.S. wealth distribution:</p>
+                    <p>Model 1:</p>
+                    <p class="l2">Adapted from literature, focused on wealth accumulation through proportional allocation of growth.</p>
+                    <p class="l2">Agents' wealth grows as a function of their initial wealth, reflecting the compounding effect of wealth.</p>
+                    <p class="l2">Limited agent interaction; growth is largely independent of network effects.</p>
+                    <p>Model 2:</p>
+                    <p class="l2">Developed from scratch, includes network-based agent interactions and adaptive behaviours
+                        (more akin to a '<em>true</em>' ABM)</p>
+                    <!--<p class="l2">Wealth exchange occurs through trades with neighbours, influenced by agents' risk tolerance and network position.</p>
+                    <p class="l2">Adaptive behavior: agents adjust their willingness-to-risk (WTR) based on trade outcomes, making them dynamic.</p>
+                    <p class="l2">Captures non-linear dynamics and emergent patterns in wealth distribution.</p>-->
+                </section>
+                
+                <section id="WealthDistributions-Methods2">
+                    <img class="right" style="width: 20%;"
+                         src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
+                        alt="Flowchart illustrating the particle filter process. It begins with generating an ensemble of models, followed by predictions. At each time step, the algorithm checks if filtering is required (t = k). If yes, the predictions are compared to observations, optimal synthesis is computed, and ensemble members are updated. The process repeats for subsequent time steps." />
+                    <h2>Methods (ii)</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>Integrated the ABMs with an Ensemble Kalman Filter (EnKF):</p>
+                    <p class="l2">EnKF adjusted agent-specific variables (e.g., wealth per agent) dynamically to match observed data.</p>
+                    <p>Calibrated to U.S. wealth data (1990–2022) and tested them against real-time wealth estimates.</p>
+                </section>
+                
+                
+                <section id="WealthDistributions-Results">
+                    <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig4.png"
+                         alt="Results of Experiment 1 Part A: illustrating the error of models 1 and 2 under Ensemble Kalman Filter (EnKF) optimisation with 100 ensemble members compared to the real data. The filter is applied every 20 time steps (months). Panels (A–D) depict the wealth share of the different economic groups (top 1%, top 10%–1%, middle 40%, bottom 50%) over time. Panels (A) and (B) present the archetypal behaviour of a single model run, illustrating how the EnKF influences the model behaviour. Panels (C) and (D) show the mean EnKF prediction and uncertainty across all ensemble members. Panel (E) depicts the Mean Absolute Error (MAE) from Eq. (7) of the two models, with and without the EnKF. It is clear that"
+                         class="right"
+                         style="width:60%;"
+                    />
+                    <h2>Results</h2>
+                    <p>EnKF improved model accuracy significantly (20–50% error reduction).</p>
+                    <p>Corrected disparities in predicted wealth shares for different economic groups (<em>observe the jagged lines</em>).</p>
+                    <p>Filter still exhibited some unexpected behaviour</p>
+                </section>
+                
+                <section id="WealthDistributions-Discussion">
+                    <img class="right" src="../figures/paper_figures/2025-ABM_Wealth_Distribution/paper_chatgpt_image.jpg"
+                         alt="Image to liven up slide showing abstract people and a network"
+                         style="width: 30%"
+                         />
+                    <h2>Conclusions</h2>
+                    <h3>Wealth Diffusion with an EnKF</h3>
+                    <p>We show that a marco-economic ABM can be optimised with an EnKF</p>
+                    <p class="l2">Improved short-term predictions, especially during a crisis</p>
+                    <p class="l2">Essential during crises; models cannot include everything</p>
+                    <p>Additional opportunity for improved <em>understanding</em></p>
+                    <p class="l2">E.g. through examining evolution of the Kalman Gain matrix and contrasting the
+                    observation v.s. model weights -- which become more or less certain over time?</p>
+                </section>
+                
                 
                 
                 
@@ -391,8 +625,158 @@
                 
                  <!-- ************************************************************
                     ************************* LLM / ABMs  ************************
-                    ************************************************************ -->
+                    ************************************************************ --> 
+                <section id="fm-llms0" data-background-image="../figures/desert-jared-evans-Wwg1TzCuV9E-unsplash.jpg">
+                    
+                    <div class="fragment whitebackground">
+                        <h2>For desert:</h2>
+                        <h3>Foundation models and large-language models to drive agent behaviour</h3>
+                    </div>
+                    
+                </section>
                 
+                
+                <section id="fm-llms">
+                    <h2>Foundation-model-backed ABMs</h2>
+                    <p>Modelling human behaviour in ABMs is (still!) an ongoing challenge</p>
+                    <p>Behaviour typically implemented with bespoke rules, but even more advanced mathematical approaches are limited</p>
+                    <p>Can new AI approaches offer a solution?</p>
+                    <p class="l2"><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
+                    <p class="l2"><strong>Geospatial Foundation Models</strong> capture nuanced, complex associations between spatial objects</p>
+                    <p class="l2"><strong>Multi-modal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p>                    
+                </section>
+                
+                
+                <section id="flexible_behaviour" data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg">
+                    <div class="whitebackground">
+                        
+                            <h2>Where might this lead...</h2>
+                        
+                        <div class="fragment">
+                            <p>"All models are great, until you need them"</p>
+                        </div>
+                        <div class="fragment">
+                            <p>It's fine to use models under normal conditions. Very useful.</p>
+                        </div>
+                        <div class="fragment">
+                            <p>Especially if the system undergoes a fundamental change (COVID? Global financial crash?) -- 
+                                then we <strong>really</strong> need models to help</p>
+                        </div>
+                        <div class="fragment">
+                            <p>But then they become totally useless!</p>
+                        </div>
+                    </div>
+                </section>
+    
+                
+                <section id="flexible_behaviour3" data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg">
+                    <h2>&nbsp;</h2>
+                    <div class="whitebackground">
+                        <h2>Foundation-model-backed ABMs</h2>
+                        <p>Maybe a model with LLM-backed agents would be 
+                            better able to respond after a catastrophic system change</p>
+                        <img data-src="../figures/llm_agents.png" style="width:70%;" 
+                             alt="Diagram showing traditional ABM v.s. one where the agents are controlled by LLMs"/>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section id="llms">
+                    <h2>Large Language Models (LLMs)</h2>
+                    <p>Early evidence suggests that large-language models (LLMs) can be used to represent a wide range 
+                        of human behaviours</p>
+                    <p>Already a flurry of activity in LLM-backed ABMs</p>
+                    <p class="l2">E.g. AutoGPT, BabyAGI, Generative Agents, MetaGP ... and others ... </p>
+                    <figure>
+                        <img src="../figures/attribution/park_llm_agent.png"
+                             style="width:50%;"
+                             alt="Image of the ABM created by Park et. al."
+                             />
+                        <figcaption>Park, Joon Sung, Joseph O’Brien, Carrie Jun Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein. 2023. 
+                            ‘Generative Agents: Interactive Simulacra of Human Behavior’. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 1–22. San Francisco CA USA: ACM. 
+                            DOI: <a href="https://doi.org/10.1145/3586183.3606763">10.1145/3586183.3606763</a>.
+                        </figcaption>
+                    
+                    </figure>
+                    
+                </section>
+                
+                
+                <section id="llm_abm_challenges">
+                    <h2>LLMs &amp; ABMs: Challenges</h2>
+                    <p>Lots of them!</p>
+                    <p class="l2">Computational complexity: thousands/millions of LLMs?</p>
+                    <p class="l2">Bias: LLMs very unlikely to be representative 
+                        (non-English speakers, cultural bias, digital divide, etc.)</p>
+                    <p class="l2">Validation: consistency (i.e. stochasticity), robustness (i.e. sensitivity to prompts),
+                        hallucinations, train/test contamination, and others</p>
+                    <p>Main one for this talk: <strong>the need to interface through text</strong></p>
+                    <p class="l2">Communicating -- and maybe reasoning -- with language makes sense</p>
+                    <p class="l2">But having to <i>describe</i> the world with text is a huge simplification /
+                        abstraction </p>
+                </section>
+                
+                
+                <section id="fms">
+                    <h2>A solution? Multi-modal and Geospatial Foundation Models</h2>
+                    <p>Foundation models: "a machine learning or deep learning model trained on vast datasets so that 
+                        it can be applied across a wide range of use cases" (Wikipedia)</p>
+                    <p class="l2">LLMs are Foundation models that work with text</p>
+                    <p>Geospatial Foundation Models</p>
+                    <p class="l2">FMs that work with spatial data (street view images, geotagged social media data, 
+                        video, GPS trajectories, points-of-interest, etc.) to create rich, multidimensional spatial
+                        representations </p>
+                    <p>Multi-modal Foundation Models</p>
+                    <p class="l2">FMs that work with diverse data, e.g. text, audio, image, video, etc.</p>
+                </section>
+                
+                <!--<section id="gfms">
+                    <h2>Geospatial Foundation Model Example</h2>
+                    <p>Example of a foundation model constructed using OSM data</p>
+                    <p class="l2">Embeddings are remarkably good at predicting things like traffic speed and 
+                        building functionality (zero-shot)</p>
+                    <figure>
+                        <img src="../figures/attribution/huang_urbanclip.png"
+						style="width:70%;">
+                        <figcaption>Balsebre, Pasquale, Weiming Huang, Gao Cong, and Yi Li. 2024. ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’. 
+                            In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
+                            DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a>
+                        </figcaption>
+                    </figure>
+                </section>  -->
+                
+                <!-- Weiming land use estimation not quite relevantZ
+                <section id="gfms">
+                    <h2>Geospatial Foundation Model Example</h2>
+                    <p>Huang et al. develop a prompting strategy that allows a vision-language model (CLIP) identify
+                    land use in street view data by <i>comparing text and image embeddings</i></p>
+                    <figure>
+                        <img src="../figures/attribution/huang_urbanclip.jpg">
+                        <figcaption>Huang, Weiming, Jing Wang, and Gao Cong. 2024. ‘Zero-Shot Urban Function Inference with Street View Images through Prompting a Pretrained Vision-Language Model’. 
+                            <i>International Journal of Geographical Information Science</i> 38 (7): 1414–42. 
+                            DOI: <a href="https://doi.org/10.1080/13658816.2024.2347322">10.1080/13658816.2024.2347322</a>.
+                        </figcaption>
+                    </figure>
+                    
+                </section> 
+                -->
+
+                <section id="towards">
+                    <h2>Towards Multi-Modal Foundation Models for ABMs (??)</h2>
+                    <p>GFMs and LLMs: a new generation of ABMs?</p>
+                    <p class="l2">LLMs 'understand' human behaviour and can reason realistically</p>
+                    <p class="l2">GFMs provide nuanced representation of 'space'</p>
+                    <div class="fragment">
+                        <p>How?</p>
+                        <p class="l2"><strike>I've no idea!</strike> Watch this space.</p>
+                        <p class="l2">Insert spatial embeddings directly into the LLM?</p>
+                        <p class="l2">Use an approach like BLIP-2 that trains a small transformer as an
+                        interface between an LLM and a vision-language model</p>
+                        <p class="l2">Suggestions welcome!</p>
+                    </div>
+                </section>
                 
                 
                 <!-- ************************************************************
@@ -402,13 +786,13 @@
                 
                 
                 <section id="summary">
+                    <img class="right"
+                         src="../figures/chatgpt/digital_city_abm.png"
+                         alt="Conceptual LLM ABM city image, from chatgpt" />
                     <h2>Summary</h2>
-                    <figure class="right">
-                        <img src="../figures/skylines-day2.jpg" 
-                             alt="A screenshot of a city building computer game that I like to play" />
-                        
-                    </figure>
-                    <p>XXXX</p>
+                    <p>ABC: dyncmic calibration and inferring latent parameters</p>
+                    <p>Data assimilation for ABMs: Ensemble Kalman Filter worked best</p>
+                    <p>LLMs and foundation models for ABMs! </p>
                 </section>
                 
 
