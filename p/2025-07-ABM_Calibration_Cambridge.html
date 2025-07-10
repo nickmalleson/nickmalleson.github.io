@@ -62,6 +62,7 @@
                         </a>
                         <a href="http://www.leeds.ac.uk/">
                             <img style="float:right;padding:5px;width:auto; height:60px;"
+								 class="whitebackground"
                                  data-src="../figures/uol_logo.gif" />
                         </a>
                         <!--<a href="https://environment.leeds.ac.uk/geography">
@@ -75,7 +76,7 @@
                 
                 <section id="outline">
                     
-                    <img src="../figures/chatgpt/digital_city_abm.png" class="right"
+                    <img data-src="../figures/chatgpt/digital_city_abm.png" class="right"
                          style="width:30%;"
                          alt="Nice sunset/sunrise" />
                     <h2>Outline</h2>
@@ -93,15 +94,14 @@
                 
                 <section id="progress-model_synthesis-dyme">
                     <figure class="right">
-                        <img src="../figures/paper_figures/2021-03-RAMP/RAMP_Workflow-with_GeoLytics.png"
+                        <img data-src="../figures/paper_figures/2021-03-RAMP/RAMP_Workflow-with_GeoLytics.png"
                              alt="Diagram of the ramp model components described in the slide text" />
                         <figcaption>Spooner et al. (2021) A dynamic microsimulation model for epidemics. <em>Social Science &amp; Medicine</em> 291, 114461. DOI: <a href="https://doi.org/10.1016/j.socscimed.2021.114461">10.1016/j.socscimed.2021.114461</a></figcaption>
                     </figure>
-                    <h2>Model synthesis</h2>
                     <h3>DyME: Dynamic Model for Epidemics</h3>
                     <!--<p>Part of the Royal Society Rapid Assistance in Modelling the Pandemic (RAMP) call</p>-->
                     <p>COVID transmission model with components including:</p>
-                    <p class="l2">dynamic spatial microsimulation, spatial interaction model, data linkage (PSM), ...</p> 
+                    <p class="l2">dynamic spatial microsimulation, spatial interaction model, data linkage (PSM), infection model</p> 
                     <p>Represents all individuals in a study area with activities: home, shopping, working, schooling</p>
                     <p>Daily timestep</p>
 
@@ -128,19 +128,24 @@
                 
                 
                 <section id="progress-model_synthesis-dyme-data">
-                    <h2>DyME Drawbacks: Data and Latent Variables</h2>
+					<h2>DyME Drawbacks:<br/> Data and Latent Variables</h2>
                     <p>Incredible detailed model!</p>
                     <p>BUT only data available for validation: COVID cases and hospital deaths</p>
                     <p class="l2">Only quantify a tiny part of the transmission dynamics</p>
+					<p class="l2">Manually calibrated most of the parameters</p>
                     <p class="l2">Huge uncertainties</p>
                     <p>Can we use dynamic calibration to:</p>
                     <p class="l2">Infer latent variables</p>
                     <p class="l2">Make better 'real-time' predictions</p>
                     
-                    <!--<img data-src="../figures/paper_figures/2021-03-RAMP/Disease_Status_Upates.png"
-                         style="width:80%;"
-                         alt="Different disease stages: susceptible, exposed (pre)(a)symptomatic, removed" />-->
                 </section>
+
+
+                <section id="disease_status_updates">
+                    <img data-src="../figures/paper_figures/2021-03-RAMP/Disease_Status_Upates.png"
+                         style="width:80%;"
+                         alt="Different disease stages: susceptible, exposed (pre)(a)symptomatic, removed" />
+				</section>
                 
                 <section id='dyme-dynamic_calibration'>
                     <h2>Dynamic Calibration for DyME</h2>
@@ -155,16 +160,6 @@
                     <p class="l2">Parameter posteriors might reveal information about the model / system</p>
                 </section>
 
-                <section id='dyme-abc-posteriors'>
-                    <figure>
-                        <img data-src="../figures/paper_figures/2022-RAMP_DA/parameter_evolution.png"
-                             style="width: 70%;"
-                            alt="Posterior parameter estimates for the DyME model"/>
-                        <figcaption>
-                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> (under review)
-                        </figcaption>
-                    </figure>
-                </section>
 
                 <section id='dyme-abc-predictions'>
                     <figure>
@@ -172,11 +167,21 @@
                              alt="Uncertain predictions made using the DyME parameter posteriors.
                                   The certainty increases as more data become available."/>
                         <figcaption>
-                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> (under review)
+                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> 13 (1): 8637. DOI: <a href="https://doi.org/10.1038/s41598-023-35580-z">10.1038/s41598-023-35580-z</a>
                         </figcaption>
                     </figure>
                 </section>
                     
+                <section id='dyme-abc-posteriors'>
+                    <figure>
+                        <img data-src="../figures/paper_figures/2022-RAMP_DA/parameter_evolution.png"
+                             style="width: 70%;"
+                            alt="Posterior parameter estimates for the DyME model"/>
+                        <figcaption>
+                            M. Asher, N. Lomax, K. Morrissey, F. Spooner, N. Malleson (2023) Dynamic Calibration with Approximate Bayesian Computation for a Microsimulation of Disease Spread. <i>Nature Scientific Reports</i> 13 (1): 8637. DOI: <a href="https://doi.org/10.1038/s41598-023-35580-z">10.1038/s41598-023-35580-z</a>
+                        </figcaption>
+                    </figure>
+                </section>
                 
                 <section id="progress-computation-dyme">
                     
@@ -197,7 +202,7 @@
                 <section id="progress-computation-dyme-improbable"
                          data-background-video="../videos/Ramp_UA_2020-08-28 12-29-25.mp4">
                     <div class="whitebackground2 fragment">
-                        <img src="../figures/LOGO_Improbable.png" class="right" style="width:30%;"
+                        <img data-src="../figures/LOGO_Improbable.png" class="right" style="width:30%;"
                              alt="Improbable company logo" />
                         <p>Re-implemented numpy/pandas model using (py)OpenCL</p>
                         <p>Run time went from 2 hours to a few seconds!</p>
@@ -467,7 +472,7 @@
                 <section id="PolicyDiffusion-Intro" >
                     
                     <figure class="right" >
-                        <img src="../figures/paper_figures/2023-Covid_Policy_Response/data_properties-vertical.png"
+                        <img data-src="../figures/paper_figures/2023-Covid_Policy_Response/data_properties-vertical.png"
                              alt="Two subplots showing the progression of COVID-19 policy adoption across countries in March 2020. Panel (a) depicts the number of countries implementing school closures at four levels of stringency (level 0 to level 3) over time, with a rapid transition to level 3 (complete school closures) around mid-March. Panel (b) compares the adoption of various policies, including school closures, workplace closures, event cancellations, stay-at-home orders, domestic travel restrictions, and international travel restrictions, all measured by the number of countries. School closures exhibit the fastest and most widespread adoption, closely followed by event cancellations, with other policies showing slower adoption."
                             style="width:70%;" />
                         <figcaption>Adoption of school closure policies by governments worldwide. Data source: 
@@ -581,7 +586,7 @@
                 
                 <section id="WealthDistributions-Methods2">
                     <img class="right" style="width: 20%;"
-                         src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
+                         data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
                         alt="Flowchart illustrating the particle filter process. It begins with generating an ensemble of models, followed by predictions. At each time step, the algorithm checks if filtering is required (t = k). If yes, the predictions are compared to observations, optimal synthesis is computed, and ensemble members are updated. The process repeats for subsequent time steps." />
                     <h2>Methods (ii)</h2>
                     <h3>Wealth Diffusion with an EnKF</h3>
@@ -604,7 +609,7 @@
                 </section>
                 
                 <section id="WealthDistributions-Discussion">
-                    <img class="right" src="../figures/paper_figures/2025-ABM_Wealth_Distribution/paper_chatgpt_image.jpg"
+                    <img class="right" data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/paper_chatgpt_image.jpg"
                          alt="Image to liven up slide showing abstract people and a network"
                          style="width: 30%"
                          />
@@ -639,10 +644,11 @@
                 <section id="fm-llms">
                     <h2>Foundation-model-backed ABMs</h2>
                     <p>Modelling human behaviour in ABMs is (still!) an ongoing challenge</p>
-                    <p>Behaviour typically implemented with bespoke rules, but even more advanced mathematical approaches are limited</p>
+                    <p>Behaviour typically implemented with bespoke rules, or even more advanced mathematical approaches</p>
+					<p>But still very limitted and brittle behaviour</p>
                     <p>Can new AI approaches offer a solution?</p>
                     <p class="l2"><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
-                    <p class="l2"><strong>Geospatial Foundation Models</strong> capture nuanced, complex associations between spatial objects</p>
+                    <p class="l2"><strong>Geospatial Foundation Models</strong> capture nuanced, complex spatial associations </p>
                     <p class="l2"><strong>Multi-modal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p>                    
                 </section>
                 
@@ -675,7 +681,7 @@
                         <h2>Foundation-model-backed ABMs</h2>
                         <p>Maybe a model with LLM-backed agents would be 
                             better able to respond after a catastrophic system change</p>
-                        <img data-src="../figures/llm_agents.png" style="width:70%;" 
+                        <img data-src="../figures/llm_agents.png" style="width:80%;" 
                              alt="Diagram showing traditional ABM v.s. one where the agents are controlled by LLMs"/>
                     </div>
                 </section>
@@ -690,7 +696,7 @@
                     <p>Already a flurry of activity in LLM-backed ABMs</p>
                     <p class="l2">E.g. AutoGPT, BabyAGI, Generative Agents, MetaGP ... and others ... </p>
                     <figure>
-                        <img src="../figures/attribution/park_llm_agent.png"
+                        <img data-src="../figures/attribution/park_llm_agent.png"
                              style="width:50%;"
                              alt="Image of the ABM created by Park et. al."
                              />
@@ -787,7 +793,7 @@
                 
                 <section id="summary">
                     <img class="right"
-                         src="../figures/chatgpt/digital_city_abm.png"
+                         data-src="../figures/chatgpt/digital_city_abm.png"
                          alt="Conceptual LLM ABM city image, from chatgpt" />
                     <h2>Summary</h2>
                     <p>ABC: dyncmic calibration and inferring latent parameters</p>
@@ -821,6 +827,7 @@
                         </a>
                         <a href="http://www.leeds.ac.uk/">
                             <img style="float:right;padding:5px;width:auto; height:60px;"
+								 class="whitebackground"
                                  data-src="../figures/uol_logo.gif" />
                         </a>
                         <!--<a href="https://environment.leeds.ac.uk/geography">
