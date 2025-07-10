@@ -46,6 +46,8 @@ tagline:
 
 ### <a name="presentations"></a>2025
 
+ - [Calibration of Agent-Based Models]({{site.url}}/{{site.baseurl}}/p/2025-07-ABM_Calibration_Cambridge.html). Presentation to the workshop on Calibration for Agent-Based Models. 11th July 2025, University of Cambridge.
+
  - [Enhancing Spatial Reasoning and Behaviour in Urban ABMs with Large-Language Models and Geospatial Foundation Models]({{site.url}}/{{site.baseurl}}/p/2025-06-CUPUM-ABMs_LLMs_FoundationModels.html). Presentation to the [Computational Urban Planning and Urban Management (CUPUM) 2025 conference](https://www.ucl.ac.uk/bartlett/casa/about/cupum-2025), 24-26 June, CASA, UCL, London. [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-CUPUM-_ABMs_LLMs_FoundationModels.pdf).
 
  - [Extracting Key Urban Footfall Signatures using Principal Component Analysis]({{site.url}}/{{site.baseurl}}/p/2025-06-CUPUM-PCA_Ped_Flows.html). Presentation to the [Computational Urban Planning and Urban Management (CUPUM) 2025 conference](https://www.ucl.ac.uk/bartlett/casa/about/cupum-2025), 24-26 June, CASA, UCL, London.  [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-CUPUM-PCA.pdf).
