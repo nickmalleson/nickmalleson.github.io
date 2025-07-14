@@ -159,9 +159,9 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
 
    - [CDRC Research: Modelling Smart Cities](http://surf.leeds.ac.uk//p/2018-04-27-CDRC_Innovation_Fund_Workshop.html). Presentation to the _CDRC Innovation Forum_. 27th April 2017, [Leeds Institute for Data Analytics](http://lida.leeds.ac.uk/).
 
-   - [Calibrating an Agent-Based Model of the Ambient Population using Big Data](http://surf.leeds.ac.uk//p/2018-04-12-aag-surf-tomas.pdf). Presentation to the _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), 10th – 15th April, New Orleans, as part of the Special Sessions on [Innovations in Urban Analytics](http://surf.leeds.ac.uk//announce/2018/04/04/AAG2018-Innovations_in_Urban_Analytics-Sessions.html)_.
+   - [Calibrating an Agent-Based Model of the Ambient Population using Big Data](http://surf.leeds.ac.uk//p/2018-04-12-aag-surf-tomas.pdf). Presentation to the _Association of American Geographers_ ([AAG](http://www.aag.org/cs/annualmeeting)), 10th – 15th April, New Orleans, as part of the Special Sessions on [Innovations in Urban Analytics](http://surf.leeds.ac.uk//announce/2018/04/04/AAG2018-Innovations_in_Urban_Analytics-Sessions.html).
    
-   - [Forecasting Short-Term Urban Dynamics: Emerging Research and Challenges](http://surf.leeds.ac.uk//p/2018-04-12-aag-da.html). Presentation to the _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), 10th – 15th April, New Orleans, as part of the Special Sessions on [Innovations in Urban Analytics](http://surf.leeds.ac.uk//announce/2018/04/04/AAG2018-Innovations_in_Urban_Analytics-Sessions.html)_.
+   - [Forecasting Short-Term Urban Dynamics: Emerging Research and Challenges](http://surf.leeds.ac.uk//p/2018-04-12-aag-da.html). Presentation to the _Association of American Geographers_([AAG](http://www.aag.org/cs/annualmeeting)), 10th – 15th April, New Orleans, as part of the Special Sessions on [Innovations in Urban Analytics](http://surf.leeds.ac.uk//announce/2018/04/04/AAG2018-Innovations_in_Urban_Analytics-Sessions.html).
 
 ### 2017
 
@@ -215,7 +215,8 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
 
 ### 2023
 
-   - Conference organisation: [Geographic Information Science (GIScience) 2023](https://giscience2023.github.io/), 12 - 15 September, 2023. University of Leeds, UK. (Proceedings available [here](https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-277)).
+   - Conference organisation: [Geographic Information Science (GIScience)](https://giscience2023.github.io/), 12 - 15 September, 2023. University of Leeds, UK. (Proceedings available [here](https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-277)).
+   -  &nbsp;
 
 ### 2018
 
@@ -224,7 +225,7 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
  
 ### 2017
 
-   - Conference organisation: [International Conference on GeoComputation (GeoComp) 2017](https://www.geog.leeds.ac.uk/groups/geocomp/2017/conference/), 4-7 September 2017, University of Leeds Leeds, UK 
+   - Conference organisation: [International Conference on GeoComputation (GeoComp)](https://www.geog.leeds.ac.uk/groups/geocomp/2017/conference/), 4-7 September 2017, University of Leeds Leeds, UK 
 
    - Organiser: [Special Sessions on: Geographic Data Science](https://geographicdatascience.com/2016/10/12/special-sessions-on-geographic-data-science-aag-2017-boston/). Sessions organised as part of the _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), Tue 4th - Sun 9th April 2017, Boston._
 
@@ -247,7 +248,7 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
 
 ### 2015
 
-   - Conference organisation: [Geographical Information Science Research UK (GISRUK) 2015](https://figshare.com/articles/journal_contribution/GIS_Research_UK_GISRUK_2015_Proceedings/1491375), University of Leeds, 15-17 April, 2015. 
+   - Conference organisation: [Geographical Information Science Research UK (GISRUK)](https://figshare.com/articles/journal_contribution/GIS_Research_UK_GISRUK_2015_Proceedings/1491375), University of Leeds, 15-17 April, 2015. 
 
 
 ## <a name="others">Other material
