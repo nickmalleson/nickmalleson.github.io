@@ -205,7 +205,17 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
    -  [Agent-Based Modelling, Ambient Populations and Models of Burglar Behaviour](http://surf.leeds.ac.uk//p/2016-09-30-crime_mapping.html). Presentation to the _[N8 Policing Research Partnership](http://n8prp.org.uk/) [Data Analysis, Management and Crime Mapping Workshop](http://n8prp.org.uk/event/data-analysis-management-and-crime-mapping/?instance_id=57), 30 September 2017, Leeds UK_
 
 
-## <a name="conference_sessions">Conference sessions organised / chaired:
+## <a name="conference_sessions">Conferences and conference sessions organised / chaired:
+
+### 2024
+
+   - Conference organisation: [Transforming Urban Living with AI and Digital Twins](https://www.turing.ac.uk/events/transforming-urban-living-ai-and-digital-twins), organised by the Alan Turing Institute, Urban Analytics programme. 11 - 13 November, 2024, University of Glasgow.
+
+   - Resilient & Sustainable Cities, workshop organised as part of the Alan Turing Institute [AIUK 2024](https://www.turing.ac.uk/events/ai-uk-2024) conference.
+
+### 2023
+
+   - Conference organisation: [Geographic Information Science (GIScience) 2023](https://giscience2023.github.io/), 12 - 15 September, 2023. University of Leeds, UK. (Proceedings available [here](https://drops.dagstuhl.de/entities/volume/LIPIcs-volume-277)).
 
 ### 2018
 
@@ -214,11 +224,15 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
  
 ### 2017
 
+   - Conference organisation: [International Conference on GeoComputation (GeoComp) 2017](https://www.geog.leeds.ac.uk/groups/geocomp/2017/conference/), 4-7 September 2017, University of Leeds Leeds, UK 
+
    - Organiser: [Special Sessions on: Geographic Data Science](https://geographicdatascience.com/2016/10/12/special-sessions-on-geographic-data-science-aag-2017-boston/). Sessions organised as part of the _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), Tue 4th - Sun 9th April 2017, Boston._
 
    - Also Chair of [Geographic Data Science](https://geographicdatascience.com/2016/10/12/special-sessions-on-geographic-data-science-aag-2017-boston/) Panel Session. The panelists were: David O'Sullivan; Alex Singleton; Luc Anselin; Daniel Arribas-Bel; Mark Birkin; Cheng Zhong; Andrew Crooks; Ran Wei.
 
    - Symposium on Human Dynamics in Smart and Connected Communities: [Agents - the 'atomic unit' of social systems?](http://nickmalleson.co.uk/2016/10/aag-2017-call-for-papers-agents-the-atomic-unit-of-social-systems.html). Sessions organised as part of the _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), Tue 4th - Sun 9th April 2017, Boston._
+
+   - Conference organisation: [European Colloquium on Theoretical and Quantitative Geography (ECTQG) 2017](https://www.geog.leeds.ac.uk/ectqg17/home.html), 7-11 Sept, York, UK.
 
 
 ### 2016
@@ -230,6 +244,10 @@ Implications of a Motorbike Ban in Hanoi]({{site.url}}/{{site.baseurl}}/p/2022-G
    - [Urban Analytics](http://surf.leeds.ac.uk//announce/2015/09/17/AAG2016-UrbanAnalytics.html). _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), 29th March – 2nd April, San Francisco._
 
    - [Crime / Fear in Space and Time](http://surf.leeds.ac.uk//announce/2015/09/30/AAG2016-CrimeSpaceTime.html). _Association of American Geographers ([AAG](http://www.aag.org/cs/annualmeeting)), 29th March – 2nd April, San Francisco._
+
+### 2015
+
+   - Conference organisation: [Geographical Information Science Research UK (GISRUK) 2015](https://figshare.com/articles/journal_contribution/GIS_Research_UK_GISRUK_2015_Proceedings/1491375), University of Leeds, 15-17 April, 2015. 
 
 
 ## <a name="others">Other material
