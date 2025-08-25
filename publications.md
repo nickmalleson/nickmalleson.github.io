@@ -239,7 +239,7 @@ Birkin, M., K. Harland and **N. Malleson** (2013) The Classification of Space-Ti
 
 Andresen, M.A. and **N. Malleson** (2013). Crime seasonality and its variations across space. _Applied Geography_, 43 25–35\. [[URL](http://www.sciencedirect.com/science/article/pii/S0143622813001410)]
 
-**Malleson, N.**, A. Heppenstall, L. See, A. Evans (2013) Using an agent-based crime simulation to predict the effects of urban regeneration on individual household burglary risk. _Environment and Planning B: Planning and Design_ 40 405-426\. [doi:10.1068/b38057](http://www.envplan.com/abstract.cgi?id=b38057) [[download]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2013/05/EPB-V6-forBlog.pdf)]
+**Malleson, N.**, A. Heppenstall, L. See, A. Evans (2013) Using an agent-based crime simulation to predict the effects of urban regeneration on individual household burglary risk. _Environment and Planning B: Planning and Design_ 40 405-426\. [doi:10.1068/b38057](https://dx.doi.org/10.1068/b38057) [[download]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2013/05/EPB-V6-forBlog.pdf)]
 
 #### 2012
 
@@ -261,7 +261,7 @@ Andresen, M.A. and **N. Malleson** (2011). Testing the stability of crime patter
 
 #### 2009
 
-**Malleson, N.**, A. Evans and T. Jenkins (2009). An agent-based model of Burglary. _Environment and Planning B: Planning and Design_ 36 1103-1123\. [[URL]](http://www.envplan.com/abstract.cgi?id=b35071).
+**Malleson, N.**, A. Evans and T. Jenkins (2009). An agent-based model of Burglary. _Environment and Planning B: Planning and Design_ 36 1103-1123\. [[URL]](https://doi.org/10.1068/b35071).
 
 **Malleson, N.** and P. L. Brantigham (2009). Prototype Burglary Simulations For Crime Reduction and Forecasting. _Crime Patterns and Analysis_ 2(1). [[download]](http://www.eccajournal.org/V2N1S2009/Malleson.pdf)
 
