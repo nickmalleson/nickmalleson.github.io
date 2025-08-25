@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="Large-language model, foundation model, embeddings, ABM">
+
+		<title>
+			Towards the use of Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents
+		</title>
+
+		<link rel="stylesheet" href="reveal/css/reveal.css">
+		<link rel="stylesheet" href="reveal/css/theme/white.css">
+        
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+ 
+                    
+                <section class="title" id="title" 
+                         data-background-image="../figures/chatgpt/digital_city_abm.png"
+                         >
+                    <div class="whitebackground2">
+                        <!--
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="float:left;padding:10px 50px 10px 50px;width:70px; height:auto;" 
+                                 data-src="../figures/LOGO_EU.jpg"/>
+                        </a>
+                        
+
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:10px;width:150px; height:auto;" 
+                                 data-src="../figures/uol_logo.gif"/>
+                        </a>
+                        -->
+                        <h5>Social Simulation Conference (SSC) 2025</h5>
+
+                        <hr/>
+                        <h2 style="font-size: 150%">
+                            Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents
+						</h2>
+                        <hr/>
+                        <h3>Nick Malleson, Ed Manley</h3>
+                        <h4 style="font-size: 90%">School of Geography, University of Leeds, UK</h4>
+                        <hr/>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                        <!--
+                        <p style="font-size: 14pt; text-align: center">
+                            This research is supported by UKRI (ESRC) funding ES/Y006259/1 under the 
+                            Digital Footprints scheme</p>
+                        -->
+                    </div>
+                    
+                    <aside class="notes">
+                        Following the emergence of powerful generative large lan-
+                        guage models (LLMs), there has been a flurry of interest in the use of
+                        LLMs to control agents in agent-based models. Proponents argue that
+                        using the information about humans and human behaviour contained
+                        within an LLM could lead to the creation of agents who exhibit more
+                        complex and nuanced behaviour than those whose actions are driven by
+                        traditional behavioural frameworks. This paper begins to explore the use
+                        of a specific concept that underpins LLMs; that of embeddings. An em-
+                        bedding is a vector-based numerical representation of a piece of text that
+                        captures aspects of its meaning and context. We hypothesise that concep-
+                        tualising agents’ characteristics through embeddings, rather than with
+                        discrete state variables, may offer a more nuanced and expressive foun-
+                        dation for representing agent characteristics and behaviours. We demon-
+                        strate the potential of this approach by recreating the Schelling residen-
+                        tial segregation model using rich text descriptions of household agents
+                        and converting these to embeddings as a means of defining agents. The
+                        results show how agents can self-organise into more diverse and emer-
+                        gent clusters than is possible when they are defined with a small number
+                        of discrete attributes. This offers a path toward mor
+                    </aside>
+                </section>
+                
+                                
+                <section id="outline">
+                    <img data-src="../figures/chatgpt/digital_city_abm.png" 
+                         class="right" style="width:35%;"/>
+                    <h2>Presentation Outline</h2>
+                    <p>Large langauge models (LLMs) and embeddings</p>
+                    <p>Embeddings for nuanced household descriptions</p>
+                    <p>Prototype: Schelling with embeddings</p>
+                    <p>Conclusions</p>
+                    <p>&nbsp;</p>
+                    <h3>Code Availability</h3>
+                    <p>GitHub repository: <a href="https://github.com/nickmalleson/playground/blob/main/llm/schelling_embeddings/schelling_embeddings.ipynb">
+                    github.com/nickmalleson/playground/tree/main/llm/schelling_embeddings</a></p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+                <section id="XXXX">
+                    <h2>XXXX</h2>
+                    <p>XXXX</p>
+                    <p>XXXX</p>
+                    <p class="l2">XXXX</p>
+                    <p class="l2">XXXX</p>
+                </section>
+                
+
+                
+                <section id="llm">
+                    <h2>LLM</h2>
+                    <figure class="right" style="width: 40%;">
+                        <img data-src="../figures/Network server room_Portrait_87108958.jpg"
+                         alt="Picture of a computer server rack" 
+                         />
+                    </figure>
+                    <p>Meta Llama 3.3 70B Instruct Turbo</p>
+                    <p class="l2">Open source and publicly available</p>
+                    <p class="l2">Modern (at the time of writing) and seems to work well for this task</p>
+                    <p class="l2">(more on validation later though!)</p>
+                    <p>Executed using (paid) servers provided by <a href="https://www.together.ai/">
+                        together.ai</a></p>
+                    <p class="l2">Model too large to run locally</p>
+                    <p class="l2">But to parse ~10,000 listings the cost is very cheap 
+                        (only a few £s)</p>
+                </section>
+                
+                <section id="llm-prompt">
+                    <h2>LLM prompt</h2>
+					<div style="font-size: 70%;">
+                    <p>
+                        You are an expert in urban studies with a deep understanding of gentrification
+                        and how it is discussed in public discourse. I will provide you with some
+                        Airbnb listings. Your task is to analyse their text and determine the extent
+                        to which they suggest that the neighbourhood or area referenced is experiencing
+                        gentrification. Specifically:</p>
+                    <p class="l2" >Read the listings closely and identify any words, phrases, or implications
+                        that might indicate signs of gentrification, such as mentions of new luxury
+                        developments, rising rents, displacement of long-time residents, upscale amenities
+                        (e.g., artisanal coffee shops, craft breweries), changing demographics, or
+                        neighbourhood ‘revitalisation’.</p>
+                    <p class="l2">Consider both explicit and implicit cues. Explicit cues directly mention
+                        new businesses or rising prices, while implicit cues might reflect subtle
+                        neighbourhood changes.</p>
+                    <p>
+                        Assign a score from 1 to 5, where 1 means not suggestive of gentrification
+                        and 5 means highly suggestive.</p>
+					<p>
+                        Explain your reasoning in 1-2 sentences, referencing the specific words or
+                        phrases in the tweet that led you to your conclusion.</p>
+					<p >
+                        Provide your answer strictly in the format ‘1. Score. Reasoning’, ‘2. Score. 
+                        Reasoning’, ‘3. Score. Reasoning’, etc., without any additional explanation
+                        or commentary.
+                    </p>
+					</div>
+                </section>
+                
+                <section id="results1">
+                    <h2>Preliminary Results (1)</h2>
+                    <h3>Spatial distribution of the gentrification scores</h3>
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/listing_scores.png"
+                         alt="Map of listing gentrification scores. Higher scores tend to be 
+                              in the centre of the city"
+						 style="width:60%;"
+                         />
+                </section>
+                
+                <section id="results2">
+                    <h2>Preliminary Results (2)</h2>
+                    <h3>LLM's 'explanation' of the scores</h3>
+                    <p>The LLM is asked to explain why it gives its chosen score</p>
+                    <p>Basically the explanations seem reasonable</p>
+                    <p>BUT: not clear whether alternative explanations for different scores
+                    will also appear reasonable.</p>
+                    <p class="l2">(More on validation later..)</p>
+                </section>
+                
+                <section id="stochasticity">
+                    <h2>Preliminary Results (3)</h2>
+                    <h3>Stochasticity</h3>
+                    <p>The LLM is probabilistic: its output can vary randomly</p>
+                    <p>To test this we run the estimation procedure 3 times with identical
+                    LLM parameters</p>
+                    <p>Fleiss Kappa statistic well suited to estimate annotator variability where
+                    there are more than two annotators</p>
+                    <p>Score = 0.74 suggests "substantial" agreement across the three runs</p>
+                </section>
+                
+                <section id="future-gentrification">
+                    <h2>Immediate future work (1)</h2>
+                    <h3>Defining gentrification</h3>
+                    <p>Two problems:</p>
+                    <p class="l2">Five point Likert scale is too simplistic</p>
+                    <p class="l2">We are interested in 'emerging' gentrification, not in
+                        areas that have already gentrified</p>
+                    <p>Next: New prompt and a more nuanced definition of gentrification</p>
+                    <p class="l2">Undeveloped, Emerging, Gentrifying, Established, NA</p>
+                </section>
+
+				<section id="future-gentrification2">
+					<!--
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification.png"
+                         alt="Map showing distribution of 'new' gentrification score"
+                         style="width: 90%"
+                         />
+					-->
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification2.jpg"
+                         alt="Map showing distribution of 'new' gentrification score"
+                         style="width: 60%"
+						 />
+                </section>
+
+                
+                <section id="future-validation">
+                    <h2>Immediate future work (2)</h2>
+                    <h3>Validation</h3>
+                    <p>So many unknowns. What is the LLM classification actually telling us??</p>
+                    <p>One approach: benchmark against the Greater Manchester Gentrification Index</p>
+                    <p>Are the underlying demographics consistent with our estimates of gentrification?</p>
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams.png"
+                         alt="Rose diagrams showing the preliminary classification results"
+                         />
+                </section>
+                
+                <section id="future-validation2">
+                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams2.png"
+                         alt="Rose diagrams showing the preliminary classification results"
+                         style="width: 60%;"
+                         />
+                </section>
+                
+                
+                <section data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Summary / Conclusions</h2>
+                        <p>We are interested in whether the analysis of text data can tell us something
+                        about neighbourhood change and/or gentrification</p>
+                        <p>Use an open-source large language model to try to infer the status of
+                        gentrification processes in neighbourhoods</p>
+                        <p>Results are intriguing, but need proper validation before any insight</p>
+                    </div>
+                </section>
+                
+                
+                
+                
+                <section class="title" id="thanks" 
+                         data-background-image="../figures/chatgpt/digital_city_abm.png"
+                         >
+                    <div class="whitebackground2">
+
+                        <h5>Social Simulation Conference (SSC) 2025</h5>
+
+                        <hr/>
+                        <h2 style="font-size: 150%">
+                            Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents
+						</h2>
+                        <hr/>
+                        <h3>Nick Malleson, Ed Manley</h3>
+                        <h4 style="font-size: 90%">School of Geography, University of Leeds, UK</h4>
+                        <hr/>
+                        <h4 style="text-align:center">These slides: <a href="https://www.nickmalleson.co.uk/presentations.html">www.nickmalleson.co.uk/presentations.html</a></h4>
+                    </div>
+                    
+                </section>
+                
+
+                
+                
+			</div>
+		</div>
+
+		<script src="reveal/lib/js/head.min.js"></script>
+		<script src="reveal/js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'reveal/plugin/markdown/marked.js' },
+					{ src: 'reveal/plugin/markdown/markdown.js' },
+					{ src: 'reveal/plugin/notes/notes.js', async: true },
+					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
