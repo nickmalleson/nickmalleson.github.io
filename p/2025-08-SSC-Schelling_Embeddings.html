@@ -94,12 +94,12 @@
                 <section id="outline">
                     <img data-src="../figures/chatgpt/digital_city_abm.png" 
                          class="right" style="width:35%;"/>
-                    <h2>Presentation Outline</h2>
-                    <p>Aim: Towards more detailed representation of individuals 
+                    <h2>Overview</h2>
+                    <p>Aim: Towards a more detailed representation of individuals 
                         using <i>embeddings</i></p>
-                    <p>Background to large langauge models (LLMs) and embeddings</p>
-                    <p>Embeddings for nuanced household descriptions</p>
-                    <p>Prototype: Schelling with embeddings</p>
+                    <p class="l2">Background to large language models (LLMs) and embeddings</p>
+                    <p class="l2">Embeddings for nuanced household descriptions</p>
+                    <p class="l2">Prototype: Schelling with embeddings</p>
                     <h3>Code Availability</h3>
                     <p>GitHub repository: <a href="https://github.com/nickmalleson/playground/blob/main/llm/schelling_embeddings/schelling_embeddings.ipynb">
                     github.com/nickmalleson/playground/tree/main/llm/schelling_embeddings</a></p>
@@ -109,7 +109,7 @@
                     <h2>Background: Heterogeneity in ABMs</h2>
                     <p>Some agent characteristics can be accurately represented with numeric or 
                         categorical parameters:</p>
-                    <p class="l2">E.g. Age, income, houshold type, level of education etc.</p>
+                    <p class="l2">E.g. Age, income, household type, level of education etc.</p>
                     <p>But other aspects are much more nuanced</p>
                     <p class="l2">E.g. "I like the government's economic policies, but I am
                         nervous about their approach to immigration and the quality of our
@@ -134,7 +134,7 @@
                 <section id="schelling_embeddings">
                     <h2>Overview of the Experiments</h2>
                     <p>Adapt Schelling's model of residential segregation, but embeddings
-                    replace binary houeshold characteristics.</p>
+                    replace binary household characteristics.</p>
                     <p>Process:</p>
                     <p class="l2">1. use an LLM to create 300 hypothetical household descriptions 
                     (in future these could come from surveys etc.).</p>
@@ -165,7 +165,7 @@
                 <section id="household_descriptions-example">
                     <h2>Five household descriptions</h2>
                     <table style="width:100%; border-collapse:collapse;
-                                  font-size: smaller">
+                                  font-size: 60%;">
                       <thead>
                         <tr>
                           <th style="border:1px solid #000; padding:8px; width:6%">ID</th>
@@ -222,7 +222,7 @@
                         (calculated using <i>cosine similarity</i>)</p>
                     <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/similarity_matrix_example%20copy.png"
                          alt="Similarity of the five example embeddings" 
-                         style="width:80%;"
+                         style="width:60%;"
                          />
                 </section>
                 
@@ -242,7 +242,7 @@
                 <section id="results-full">
                     <h2>Final results (300 distinct agent types)</h2>
                     <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/Final_Agent_Locations.png" 
-                         style="width: 80%"
+                         style="width: 60%"
                          alt="The final locations of the agents in the full model"/>
                 </section>
                 
@@ -253,7 +253,7 @@
                     <p>In a Schelling-like model, agents cluster depending on the
                         similarity of their embeddings</p>
                     <p>Challenges:</p>
-                    <p class="l2">Bias in LLMs lead to biassed embeddings? (Resolve with fine-tuning?)</p>
+                    <p class="l2">Bias in LLMs lead to biased embeddings? (Resolve with fine-tuning?)</p>
                     <p class="l2">Computational: if LLMs become more integral to ABMs
                         then the computational requirements explode</p>
                 </section>
@@ -265,9 +265,9 @@
                         but can they also be made <i>multi-modal</i>? (I.e. interpret
                         different types of embeddings, not just text).</p>
                     <p>Dynamic environments</p>
-                    <p class="l2">LLM reasoning may be 'unbounded', but agents are limitted
+                    <p class="l2">LLM reasoning may be 'unbounded', but agents are limited
                         by the simulation environment.</p>
-                    <p class="l2">i.e. what if our schelling agents decide that they would rather
+                    <p class="l2">i.e. what if our Schelling agents decide that they would rather
                         modernise their house than move?</p>
                 </section>
                 
