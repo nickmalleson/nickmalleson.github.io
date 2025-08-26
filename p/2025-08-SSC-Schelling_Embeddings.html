@@ -95,234 +95,183 @@
                     <img data-src="../figures/chatgpt/digital_city_abm.png" 
                          class="right" style="width:35%;"/>
                     <h2>Presentation Outline</h2>
-                    <p>Large langauge models (LLMs) and embeddings</p>
+                    <p>Aim: Towards more detailed representation of individuals 
+                        using <i>embeddings</i></p>
+                    <p>Background to large langauge models (LLMs) and embeddings</p>
                     <p>Embeddings for nuanced household descriptions</p>
                     <p>Prototype: Schelling with embeddings</p>
-                    <p>Conclusions</p>
-                    <p>&nbsp;</p>
                     <h3>Code Availability</h3>
                     <p>GitHub repository: <a href="https://github.com/nickmalleson/playground/blob/main/llm/schelling_embeddings/schelling_embeddings.ipynb">
                     github.com/nickmalleson/playground/tree/main/llm/schelling_embeddings</a></p>
                 </section>
                 
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
+                <section id="background">
+                    <h2>Background: Heterogeneity in ABMs</h2>
+                    <p>Some agent characteristics can be accurately represented with numeric or 
+                        categorical parameters:</p>
+                    <p class="l2">E.g. Age, income, houshold type, level of education etc.</p>
+                    <p>But other aspects are much more nuanced</p>
+                    <p class="l2">E.g. "I like the government's economic policies, but I am
+                        nervous about their approach to immigration and the quality of our
+                        public health system."</p>
+                    <p>Maybe these more nuanced characteristics could be better represented
+                    by <i>embeddings</i>...</p>
                 </section>
                 
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-                <section id="XXXX">
-                    <h2>XXXX</h2>
-                    <p>XXXX</p>
-                    <p>XXXX</p>
-                    <p class="l2">XXXX</p>
-                    <p class="l2">XXXX</p>
-                </section>
-                
-
-                
-                <section id="llm">
-                    <h2>LLM</h2>
-                    <figure class="right" style="width: 40%;">
-                        <img data-src="../figures/Network server room_Portrait_87108958.jpg"
-                         alt="Picture of a computer server rack" 
+                <section id="embedings">
+                    <h2>What are embeddings?</h2>
+                    <p>One of the innovations that underpin large-language models (LLMs)</p>
+                    <p>Long vectors of numbers that represent the <i>characteristics</i> of words</p>
+                    <img data-src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/embeddings_example.png"
+                         style="width:70%;"
+                         alt="Hypothetical word embeddings showing how different words could be
+                              represented as numeric vectors across abstract dimensions"
                          />
+                    <p><i>Transformer</i> architecture uses <i>self attention</i> for dynamic embeddings</p>
+                    <p class="l2">I.e. distinguish 'savings bank' from 'river bank' depending on context</p>
+                </section>
+                
+                <section id="schelling_embeddings">
+                    <h2>Overview of the Experiments</h2>
+                    <p>Adapt Schelling's model of residential segregation, but embeddings
+                    replace binary houeshold characteristics.</p>
+                    <p>Process:</p>
+                    <p class="l2">1. use an LLM to create 300 hypothetical household descriptions 
+                    (in future these could come from surveys etc.).</p>
+                    <p class="l2">2. calculate an embedding for each household and put them into
+                        a regular grid model</p>
+                    <p class="l2">3. in the model, agents move if their embedding is sufficiently
+                        different to the embeddings of their neighbours (use a threshold to decide)</p>
+                    <p class="l2">4. run the model until it reaches equilibrium</p>
+                </section>
+                
+                <section id="household_descriptions">
+                    <h2>Household descriptions</h2>
+                    <p>Three dimensions for each agent: (i) household structure; 
+                        (ii) income; and (iii) political beliefs</p>
+                    <p>Descriptions are generated using an open-source LLM:</p>
+                    <p class="l2"><a href="https://huggingface.co/meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8">
+                        Llama-4-Maverick-17B-128E-Instruct-FP8</a> (accessed the LLM using the <a href="">Together.AI</a>
+                        service -- cheap and makes it easy to access very big models)</p>
+                    <p>Prompt:</p>
+                    <p class="l2" style="font-family: courier">
+                        Produce <i>N</i> one-sentence, anonymous, detailed descriptions of stereotypical
+                        UK households, describing their household structure, income and
+                        political beliefs. Output in CSV format with one line per household description 
+                        and nothing else.</p>
+                </section>
+                
+                
+                <section id="household_descriptions-example">
+                    <h2>Five household descriptions</h2>
+                    <table style="width:100%; border-collapse:collapse;
+                                  font-size: smaller">
+                      <thead>
+                        <tr>
+                          <th style="border:1px solid #000; padding:8px; width:6%">ID</th>
+                          <th style="border:1px solid #000; padding:8px; width:94%">Description</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td style="border:1px solid #000; padding:8px;">0</td>
+                          <td style="border:1px solid #000; padding:8px;">A retired couple living alone in a semi-detached house in a suburban area, relying on state pensions and modest savings, strongly supporting the Conservative party.</td>
+                        </tr>
+                        <tr>
+                          <td style="border:1px solid #000; padding:8px;">1</td>
+                          <td style="border:1px solid #000; padding:8px;">An elderly couple residing in a suburban, semi-detached house, drawing income from their savings and their state pensions, voting for the Conservative party consistently.</td>
+                        </tr>
+                        <tr>
+                          <td style="border:1px solid #000; padding:8px;">2</td>
+                          <td style="border:1px solid #000; padding:8px;">A young, single professional renting a studio flat in a city centre, earning a salary around £35,000 from a career in marketing, voting for the Liberal Democrats and actively campaigning for environmental causes.</td>
+                        </tr>
+                        <tr>
+                          <td style="border:1px solid #000; padding:8px;">3</td>
+                          <td style="border:1px solid #000; padding:8px;">A large, multi-generational family residing in a terraced house, with the patriarch working as a manual labourer on a zero-hours contract, the matriarch a part-time carer, and several children, identifying as Labour supporters and strongly union-backed.</td>
+                        </tr>
+                        <tr>
+                          <td style="border:1px solid #000; padding:8px;">4</td>
+                          <td style="border:1px solid #000; padding:8px;">A single parent with three children, living in a council flat, surviving on a tight budget that includes Universal Credit and Child Tax Credits, and staunchly supporting the Labour party, particularly its more left-wing elements.</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </section>
+                    
+                
+                <section id="household_embeddings">
+                    <h2>Household Embeddings</h2>
+                    <p>Descriptions converted to embeddings using 
+                        <a href="https://huggingface.co/nreimers/MiniLM-L6-H384-uncased">
+                            MiniLM-L6-H384-uncased</a></p>
+                    <p>Process:</p>
+                    <p class="l2">Each text description is tokenised into subword units and passed 
+                        through the transformer, which uses self-attention to generate 
+                        contextualised vector representations for each token</p>
+                    <p class="l2">Word embeddings aggregated into a single 382-element vector
+                        using mean pooling (common approach for creating 'sentence embeddings')</p>
+                    <p>For visualising household types:</p>
+                    <p class="l2">Use Principal Component Analysis (PCA) to reduce the 382-element embeddings
+                        into 3-element vectors and assign these to R,G,B colour components</p>
+                    <p class="l2">(not ideal but OK for demonstrative purposes)</p>
+                    
+                </section>
+                
+                <section id="embedding_similarity">
+                    <h2>Embedding similarity</h2>
+                    <p>Similar household descriptions should have similar embeddings
+                        (calculated using <i>cosine similarity</i>)</p>
+                    <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/similarity_matrix_example%20copy.png"
+                         alt="Similarity of the five example embeddings" 
+                         style="width:80%;"
+                         />
+                </section>
+                
+                <section id="results-test">
+                    <h2>Results: 5 households test</h2>
+                    <p>Run the model with only the five example household types</p>
+                    <figure class="left" style="width: 45%; padding: 0px">
+                        <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/Initial_Agent_Locations-Example.png"/>
+                        <figcaption>Initial agent locations</figcaption>
                     </figure>
-                    <p>Meta Llama 3.3 70B Instruct Turbo</p>
-                    <p class="l2">Open source and publicly available</p>
-                    <p class="l2">Modern (at the time of writing) and seems to work well for this task</p>
-                    <p class="l2">(more on validation later though!)</p>
-                    <p>Executed using (paid) servers provided by <a href="https://www.together.ai/">
-                        together.ai</a></p>
-                    <p class="l2">Model too large to run locally</p>
-                    <p class="l2">But to parse ~10,000 listings the cost is very cheap 
-                        (only a few £s)</p>
+                    <figure class="right" style="width: 45%; padding: 0px">
+                        <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/Final_Agent_Locations-Example.png"/>
+                        <figcaption>Final agent locations</figcaption>
+                    </figure>
                 </section>
                 
-                <section id="llm-prompt">
-                    <h2>LLM prompt</h2>
-					<div style="font-size: 70%;">
-                    <p>
-                        You are an expert in urban studies with a deep understanding of gentrification
-                        and how it is discussed in public discourse. I will provide you with some
-                        Airbnb listings. Your task is to analyse their text and determine the extent
-                        to which they suggest that the neighbourhood or area referenced is experiencing
-                        gentrification. Specifically:</p>
-                    <p class="l2" >Read the listings closely and identify any words, phrases, or implications
-                        that might indicate signs of gentrification, such as mentions of new luxury
-                        developments, rising rents, displacement of long-time residents, upscale amenities
-                        (e.g., artisanal coffee shops, craft breweries), changing demographics, or
-                        neighbourhood ‘revitalisation’.</p>
-                    <p class="l2">Consider both explicit and implicit cues. Explicit cues directly mention
-                        new businesses or rising prices, while implicit cues might reflect subtle
-                        neighbourhood changes.</p>
-                    <p>
-                        Assign a score from 1 to 5, where 1 means not suggestive of gentrification
-                        and 5 means highly suggestive.</p>
-					<p>
-                        Explain your reasoning in 1-2 sentences, referencing the specific words or
-                        phrases in the tweet that led you to your conclusion.</p>
-					<p >
-                        Provide your answer strictly in the format ‘1. Score. Reasoning’, ‘2. Score. 
-                        Reasoning’, ‘3. Score. Reasoning’, etc., without any additional explanation
-                        or commentary.
-                    </p>
-					</div>
+                <section id="results-full">
+                    <h2>Final results (300 distinct agent types)</h2>
+                    <img src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/Final_Agent_Locations.png" 
+                         style="width: 80%"
+                         alt="The final locations of the agents in the full model"/>
                 </section>
                 
-                <section id="results1">
-                    <h2>Preliminary Results (1)</h2>
-                    <h3>Spatial distribution of the gentrification scores</h3>
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/listing_scores.png"
-                         alt="Map of listing gentrification scores. Higher scores tend to be 
-                              in the centre of the city"
-						 style="width:60%;"
-                         />
+                <section id="conclusions1">
+                    <h2>Summary</h2>
+                    <p>Demonstrate that <i>embeddings</i> can be used to create
+                    rich, heterogeneous agents</p>
+                    <p>In a Schelling-like model, agents cluster depending on the
+                        similarity of their embeddings</p>
+                    <p>Challenges:</p>
+                    <p class="l2">Bias in LLMs lead to biassed embeddings? (Resolve with fine-tuning?)</p>
+                    <p class="l2">Computational: if LLMs become more integral to ABMs
+                        then the computational requirements explode</p>
                 </section>
                 
-                <section id="results2">
-                    <h2>Preliminary Results (2)</h2>
-                    <h3>LLM's 'explanation' of the scores</h3>
-                    <p>The LLM is asked to explain why it gives its chosen score</p>
-                    <p>Basically the explanations seem reasonable</p>
-                    <p>BUT: not clear whether alternative explanations for different scores
-                    will also appear reasonable.</p>
-                    <p class="l2">(More on validation later..)</p>
+                <section id="future_work">
+                    <h2>Future work</h2>
+                    <p>Multi-model agents</p>
+                    <p class="l2">Lots of excitement in using LLMs to control agents,
+                        but can they also be made <i>multi-modal</i>? (I.e. interpret
+                        different types of embeddings, not just text).</p>
+                    <p>Dynamic environments</p>
+                    <p class="l2">LLM reasoning may be 'unbounded', but agents are limitted
+                        by the simulation environment.</p>
+                    <p class="l2">i.e. what if our schelling agents decide that they would rather
+                        modernise their house than move?</p>
                 </section>
                 
-                <section id="stochasticity">
-                    <h2>Preliminary Results (3)</h2>
-                    <h3>Stochasticity</h3>
-                    <p>The LLM is probabilistic: its output can vary randomly</p>
-                    <p>To test this we run the estimation procedure 3 times with identical
-                    LLM parameters</p>
-                    <p>Fleiss Kappa statistic well suited to estimate annotator variability where
-                    there are more than two annotators</p>
-                    <p>Score = 0.74 suggests "substantial" agreement across the three runs</p>
-                </section>
-                
-                <section id="future-gentrification">
-                    <h2>Immediate future work (1)</h2>
-                    <h3>Defining gentrification</h3>
-                    <p>Two problems:</p>
-                    <p class="l2">Five point Likert scale is too simplistic</p>
-                    <p class="l2">We are interested in 'emerging' gentrification, not in
-                        areas that have already gentrified</p>
-                    <p>Next: New prompt and a more nuanced definition of gentrification</p>
-                    <p class="l2">Undeveloped, Emerging, Gentrifying, Established, NA</p>
-                </section>
 
-				<section id="future-gentrification2">
-					<!--
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification.png"
-                         alt="Map showing distribution of 'new' gentrification score"
-                         style="width: 90%"
-                         />
-					-->
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/new_gentrification_classification2.jpg"
-                         alt="Map showing distribution of 'new' gentrification score"
-                         style="width: 60%"
-						 />
-                </section>
-
-                
-                <section id="future-validation">
-                    <h2>Immediate future work (2)</h2>
-                    <h3>Validation</h3>
-                    <p>So many unknowns. What is the LLM classification actually telling us??</p>
-                    <p>One approach: benchmark against the Greater Manchester Gentrification Index</p>
-                    <p>Are the underlying demographics consistent with our estimates of gentrification?</p>
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams.png"
-                         alt="Rose diagrams showing the preliminary classification results"
-                         />
-                </section>
-                
-                <section id="future-validation2">
-                    <img data-src="../figures/paper_figures/2025-GISRUK-INTEGRATE_LLM/rose_diagrams2.png"
-                         alt="Rose diagrams showing the preliminary classification results"
-                         style="width: 60%;"
-                         />
-                </section>
-                
-                
-                <section data-background-image="../figures/shutterstock_788458099-small.jpg">
-                    <div class="whitebackground2">
-                        <h2>Summary / Conclusions</h2>
-                        <p>We are interested in whether the analysis of text data can tell us something
-                        about neighbourhood change and/or gentrification</p>
-                        <p>Use an open-source large language model to try to infer the status of
-                        gentrification processes in neighbourhoods</p>
-                        <p>Results are intriguing, but need proper validation before any insight</p>
-                    </div>
-                </section>
-                
-                
                 
                 
                 <section class="title" id="thanks" 
