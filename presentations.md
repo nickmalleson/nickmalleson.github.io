@@ -47,7 +47,7 @@ tagline:
 ### <a name="presentations"></a>2025
 
 
- - [Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents]({{site.url}}/{{site.baseurl}}/p/2025-08-SSC-Schelling_Embeddings.html). Presentation to the [Social Simulation Conferences (SSC) 2025](https://ssc2025.tbm.tudelft.nl/), 25-29 August, Delft.  [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-SSC-Schelling_Embeddings.pdf).
+ - [Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents]({{site.url}}/{{site.baseurl}}/p/2025-08-SSC-Schelling_Embeddings.html). Presentation to the [Social Simulation Conference (SSC) 2025](https://ssc2025.tbm.tudelft.nl/), 25-29 August, Delft.  [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-SSC-Schelling_Embeddings.pdf).
 
  - [Data Assimilation for Agent-Based Models]({{site.url}}/{{site.baseurl}}/p/2025-07-ABM_Calibration_Cambridge.html). Presentation to the workshop on Calibration for Agent-Based Models. 11th July 2025, University of Cambridge.
 
