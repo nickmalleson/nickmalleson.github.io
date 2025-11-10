@@ -98,7 +98,7 @@ Oswald, Y., K. Suchak, and **N Malleson** (2025). Agent-Based Models of the Unit
 Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and **N. Malleson** (2024), Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling. _Royal Society Open Science_ 11 (4): 231553. DOI: [10.1098/rsos.231553](https://doi.org/10.1098/rsos.231553).
 
 
-**Malleson, N.**, R. Franklin, D. Arribas-Bel, T. Cheng, and M. Birkin (2024). Digital Twins on Trial: Can They Actually Solve Wicked Societal Problems and Change the World for Better? _Environment and Planning B: Urban Analytics and City Science_ (_online first_). DOI: [10.1177/23998083241262893](https://doi.org/10.1177/23998083241262893)
+**Malleson, N.**, R. Franklin, D. Arribas-Bel, T. Cheng, and M. Birkin (2024). Digital Twins on Trial: Can They Actually Solve Wicked Societal Problems and Change the World for Better? _Environment and Planning B: Urban Analytics and City Science_ 51(6). DOI: [10.1177/23998083241262893](https://doi.org/10.1177/23998083241262893)
 
 Kieu, M., R. Ozaki, P. Ternes, **N. Malleson** (2024). Evaluating Public Sentiment Towards Transport Policies: A causal analysis of the motorbike ban in Hanoi. _Case Studies on Transport Policy_. DOI: [10.1016/j.cstp.2024.101203](https://doi.org/10.1016/j.cstp.2024.101203)
 
