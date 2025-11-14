@@ -25,9 +25,11 @@ Provides a holistic overview of the topic, explaining ABM as both a conceptual m
 
 ---
 
-**Farmer (2025) Quantitative agent-based models: a promising alternative for macroeconomics. _Oxford Review of Economic Policy_, graf027.** [https://doi.org/10.1093/oxrep/graf027](https://doi.org/10.1093/oxrep/graf027)
+**Farmer (2025) Quantitative agent-based models: a promising alternative for macroeconomics. _Oxford Review of Economic Policy_, graf027.** [https://doi.org/10.1093/oxrep/graf027](https://doi.org/10.1093/oxrep/graf027) 
 
 It has been highly updated and is strongly assertive. ([Pietro Terna](https://www.jiscmail.ac.uk/cgi-bin/wa-jisc.exe?A2=ind2510&L=SIMSOC&D=0&O=D&P=16144)).
+
+
 ---
 
 **Axtell, R.L., Farmer, J.D., 2025. Agent-Based Modeling in Economics and Finance: Past, Present, and Future. _Journal of Economic Literature_ 63, 197–287.** [https://doi.org/10.1257/jel.20221319](https://doi.org/10.1257/jel.20221319)
