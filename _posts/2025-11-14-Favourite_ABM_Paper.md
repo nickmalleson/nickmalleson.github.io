@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What is your favourite ABM paper, and why"
+title: "What is your favourite ABM paper, and why?"
 tagline:
 category: announce
 tags: [ABM]
@@ -38,7 +38,7 @@ Emphasises economics and finance, but has much broader scope and appeal. It give
 
 ---
 
-Jason Thompson also offered this fantastic list from a workshop that took place in Leiden earlier in the year:
+**Jason Thompson also offered this fantastic list from a workshop that took place in Leiden earlier in the year:**
 
 - Templeton, A., Xie, H., Gwynne, S., Hunt, A., Thompson, P. and Köster, G., 2024. Agent-based models of social behaviour and communication in evacuations: A systematic review. *Safety Science*, 176, p.106520.
 
