@@ -14,7 +14,7 @@ On 20th October 2025, I asked the [SIMSOC](https://www.jiscmail.ac.uk/cgi-bin/we
 
 **Edmonds, B., Le Page, C., Bithell, M., Chattoe-Brown, E., Grimm, V., Meyer, R., Montañola-Sales, C., Ormerod, P., Root, H., & Squazzoni, F. (2019). Different Modelling Purposes. [_JASSS_, 22(3)](https://www.jasss.org/22/3/6.html), 6.**
 
-It provides a great overview of the different purposes ABMs can serve, and how we can justify their use depending on those purposes. This paper really changed my view of ABMs and made me feel I was standing on much more solid ground when applying them. It’s also a great starting point for anyone new to the field, as it helps discover related papers connected to the various uses of ABMs.
+It provides a great overview of the different purposes ABMs can serve, and how we can justify their use depending on those purposes. This paper really changed my view of ABMs and made me feel I was standing on much more solid ground when applying them. It’s also a great starting point for anyone new to the field, as it helps discover related papers connected to the various uses of ABMs. ([Vittorio Nespeca](https://www.tudelft.nl/en/tpm/resiliencelab/people/vittorio-nespeca)).
 
 ---
 
