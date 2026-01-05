@@ -44,8 +44,11 @@ tagline:
 
 ## Conference Presentations
 
-### <a name="presentations"></a>2025
+### <a name="presentations"></a>2026
 
+ - [Foundation Models for Nuanced Agent Behaviours]({{site.url}}/{{site.baseurl}}/p/2026-01-ABM_LLM.html). Presentation to the European Social Simulation Association ([ESSA](https://essa.eu.org/)) [LLM4ABM Special Interest Group](https://essa.eu.org/special-interests-groups/), online, 8th January 2026.
+
+### 2025
 
  - [Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents]({{site.url}}/{{site.baseurl}}/p/2025-08-SSC-Schelling_Embeddings.html). Presentation to the [Social Simulation Conference (SSC) 2025](https://ssc2025.tbm.tudelft.nl/), 25-29 August, Delft.  [Abstract (pdf)]({{site.url}}/{{site.baseurl}}/papers/2025-SSC-Schelling_Embeddings.pdf).
 

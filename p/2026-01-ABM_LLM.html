@@ -24,7 +24,7 @@
                 src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
         </script>
 
-        <!-- Pr,inting and PDF exports -->
+        <!-- Printing and PDF exports -->
         <script>
             var link = document.createElement('link');
             link.rel = 'stylesheet';
@@ -129,7 +129,7 @@
                              style="width:100%;"
                              alt="Image of the ABM created by Park et. al."
                              />
-                        <figcaption>Park, Joon Sung, Joseph O’Brien, Carrie Jun Cai, Meredith Ringel Morris, Percy Liang, and Michael S. Bernstein. 2023.
+                        <figcaption>Park e al. (2023)
                             ‘Generative Agents: Interactive Simulacra of Human Behavior’. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 1–22. San Francisco CA USA: ACM.
                             DOI: <a href="https://doi.org/10.1145/3586183.3606763">10.1145/3586183.3606763</a>.
                         </figcaption>
@@ -137,7 +137,7 @@
                     <p>Already a flurry of activity in LLM-backed ABMs</p>
                     <p class="l2">E.g. METAAGENTS, AgentSociety, Shachi, Concordia, MetaGPT ... and others ... </p>
                     <p>But efforts are <i>emerging prototypes</i>.</p>
-                    <p>Limitted peer review</p>
+                    <p>Limited peer review</p>
                 </section>
 
                 <section id="geofm">
@@ -145,9 +145,11 @@
                         <img src="../figures/attribution/huang_urbanclip.png"
                              alt="A diagram showing how UrbanCLIP creates place embeddings from OpenStreetMap data"
                         />
-                        <figcaption>UrbanClip. Balsebre, Pasquale, Weiming Huang, Gao Cong, and Yi Li. 2024. ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’.
+                        <figcaption>UrbanClip: Balsebre et al. (2024) ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’.
                             In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
                             DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a></figcaption>
+
+                        <p></p> <!-- make a bit of space between images-->
 
                         <img data-src="../figures/alpha_earth.jpg"
                              alt="A detailed collage of 20 multi-colored tiles featuring high-resolution satellite imagery of various landscapes, illustrating global mapping data"
@@ -158,9 +160,9 @@
                     <h2>Geospatial Foundation Models</h2>
                     <p>Foundation models trained on spatial data (sometimes including text)</p>
                     <p class="l2">E.g. UrbanCLIP, CityFM, GeoGPT, etc.</p>
-                    <p>Place embeddings capture <i>spatial structure and scale</i> and can be used to
-                        perform advanced spatial reasonning.</p>
                     <p>'Transformers for spatial data'.</p>
+                    <p>Place embeddings capture <i>spatial structure and scale</i> and can be used to
+                        perform advanced spatial reasoning.</p>
 
                 </section>
                 <!--<section id="gfms">
@@ -210,16 +212,18 @@
                     <h3>Agents backed by foundation models</h3>
                     <p><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
                     <p><strong>Geospatial Foundation Models</strong> capture nuanced, complex spatial associations </p>
-                    <p><strong>Multi-modal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p>
+                    <!-- <p><strong>Multi-modal Foundation Models</strong> operate with diverse data (text, video, audio, etc.)</p> -->
                     <p>Together, these models could allow us to create ABMs where agents behave in realistic ways
                         even when faced with unprecedented situations</p>
                 </section>
 
+                <!--
                 <section id="vision4">
                     <h2>Vision</h2>
                     <h3>Agents backed by foundation models</h3>
                     <p>XXXX killer app.. - talk about empirical applications here. Outline what is possible.</p>
                 </section>
+                -->
                 
                 <!-- ************************************************************
                     ************************* Challenges  ************************
@@ -228,22 +232,22 @@
                 <section id="challenges">
                     <h2>(some) Challenges</h2>
                     <p>Environmental adaptability</p>
-                    <p class="l2">Agent reasonning might be unbounded, but their actions are limited by the simulation
+                    <p class="l2">Agent reasoning might be unbounded, but their actions are limited by the simulation
                     environment</p>
                     <p>Environment perception</p>
                     <p class="l2">LLMs can only operate on text. Leads to highly simplified contextual descriptions.</p>
-                    <p>Technical &amp; methodologial challenges</p>
+                    <p>Operational challenges</p>
                     <p class="l2">Computational complexity, validation (data leakage), calibration</p>
                 </section>
 
                 <section id="environmental_adaptability">
                     <h2>Challenge 1: Environment adaptability</h2>
-                    <p>LLM reasonning is 'unbounded'</p>
+                    <p>LLM reasoning is 'unbounded'</p>
                     <p class="l2">Generative agents can articulate any linguistically desirable response</p>
-                    <p>But, in practice, their actions are limitted to a small number of cases that model
+                    <p>But, in practice, their actions are currently limited to a small number of cases that model
                         developers have presupposed.</p>
-                    <p><i>What if my burglar agents wanted to target commercial buildings?</i></p>
-                    <p>Or, <i>what if an agent is lonely during lockdown and wants to get a dog?</i></p>
+                    <p class="l2"><i>What if my burglar agents wanted to target commercial buildings?</i></p>
+                    <p class="l2"><i>What if an agent is lonely during lockdown and wants to get a dog?</i></p>
                     <p>Potential solution: <strong>adaptive simulation environments</strong></p>
                 </section>
 
@@ -268,18 +272,18 @@
                         </figcaption>
                     </figure>
                     <h2>Challenge 2: Environment perception</h2>
-                    <p>Humans integrate numerous sensory cues to conceptualise their surroundings, but
-                        generative agents must have their environments described to them in text</p>
-                    <p>Removes the richness and nuance in an agent's local environmental context</p>
+                    <p>Humans integrate numerous sensory cues to conceptualise their surroundings</p>
+                    <p>But generative agents must have their environments described to them in text</p>
+                    <p>This removes the richness and nuance from the agent's local context</p>
                     <p>Potential solution: <strong>multi-modal agents</strong></p>
                 </section>
 
                 <section id="text_prompting2">
                     <h2>Multi-modal agents</h2>
-                    <p>Couple LLMs (for reasonning) with GeoFMs (for spatial perception).</p>
+                    <p>Couple LLMs (for reasoning) with GeoFMs (for spatial perception).</p>
                     <p>Potential solutions:</p>
                     <p class="l2"><i>Gated cross-attention</i> (e.g. Flamingo)</p>
-                    <p class="l2"><i>Text/image token interlieving</i> (e.g. PaLM-E)</p>
+                    <p class="l2"><i>Text/image token interleaving</i> (e.g. PaLM-E)</p>
                     <p class="l2"><i>A separate, mini transformer</i> (e.g. BLIP-2's Q-Former)</p>
                     <p>Training:</p>
                     <p class="l2">Freeze the main LLM &amp; GeoFM weights and train a subset (computationally feasible)</p>
@@ -287,8 +291,7 @@
                 </section>
 
                 <section id="enabling_methods">
-                    <h2>Challenge 3. Enabling methods</h2>
-                    <h3>Huge technical and methodological barriers</h3>
+                    <h2>Challenge 3: Operational barriers</h2>
                     <p>Computational complexity: thousands/millions of LLMs?</p>
                     <p class="l2">Solutions: cache queries, emulation, prioritise smaller models where possible, ... </p>
                     <p class="l2"><i>This is a problem that is being actively researched by others</i></p>
@@ -299,7 +302,7 @@
                     <p class="l2">LLMs have 'seen' most major historical events, so how can we validate
                         the new approach?</p>
                     <p class="l2">Solutions: use early LLMs and pre-COVID data (e.g. 'The Pile') to test
-                        whether <i>principle</i> of adapting reasonning can emerge</p>
+                        whether <i>principle</i> of adapting reasoning can emerge</p>
                 </section>
 
 
@@ -310,7 +313,13 @@
                 
                <section id="conclusions">
                     <h2>Conclusions</h2>
-                   <p>XXXX</p>
+                   <p>ABMs will struggle to represent agent behaviours in unprecedented situations</p>
+                   <p>Foundation models (LLMs, GeoFMs) offer a potential solution;
+                       allowing agents to behave in reasonable ways in novel situations</p>
+                   <p>Significant technical and methodological challenges remain:</p>
+                   <p class="l2">Environmental adaptability</p>
+                   <p class="l2">Environment perception</p>
+                   <p class="l2">Operational challenges</p>
                </section>
 
 
