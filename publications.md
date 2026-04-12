@@ -73,7 +73,7 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2026
 
-Evans, R. M. Warburton, D. Birks, P. Ternes, M. Mon-Williams, **N. Malleson** (2026) The relationship between school characteristics and students becoming ‘not in education, employment or training. _Royal Society Open Science_ 13 (4): 252154. DOI: [10.1098/rsos.252154](https://doi.org/10.1098/rsos.252154). (Also featured in [The Conversation](https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365)).
+Evans, R., M. Warburton, D. Birks, P. Ternes, M. Mon-Williams, **N. Malleson** (2026) The relationship between school characteristics and students becoming ‘not in education, employment or training. _Royal Society Open Science_ 13 (4): 252154. DOI: [10.1098/rsos.252154](https://doi.org/10.1098/rsos.252154). (Also featured in [The Conversation](https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365)).
 
 Olukan, D., J. Ward, **N. Malleson**, and J. Ge (2026). Heterogeneity in Agent-Based Models. _Journal of Artificial Societies and Social Simulation_ 29(2), 5. [https://www.jasss.org/29/2/5.html](https://www.jasss.org/29/2/5.html). DOI: [10.18564/jasss.5872](https://doi.org/10.18564/jasss.5872)
 
