@@ -71,10 +71,16 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 ### <a name="papers"></a>Peer-Reviewed Journal Articles
 
+#### 2026
+
+Evans, R. M. Warburton, D. Birks, P. Ternes, M. Mon-Williams, **N. Malleson** (2026) The relationship between school characteristics and students becoming ‘not in education, employment or training. _Royal Society Open Science_ 13 (4): 252154. DOI: [10.1098/rsos.252154](https://doi.org/10.1098/rsos.252154). (Also featured in [The Conversation](https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365)).
+
+Olukan, D., J. Ward, **N. Malleson**, and J. Ge (2026). Heterogeneity in Agent-Based Models. _Journal of Artificial Societies and Social Simulation_ 29(2), 5. [https://www.jasss.org/29/2/5.html](https://www.jasss.org/29/2/5.html). DOI: [10.18564/jasss.5872](https://doi.org/10.18564/jasss.5872)
+
 #### 2025
 
 
-Mara, F., D. Altafini, V. Cutini and **N. Malleson.** (2025). Simulation to forecast crime patterns: Comparing space syntax and agent-based models in exploring pedestrian movement and visibility. _Environment and Planning B: Urban Analytics and City Science_, 52(9), 2171-2195. DOI: [10.1177/23998083251324065](https://doi.org/10.1177/23998083251324065). [PDF]({{site.url}}/{{site.baseurl}}/papers/2025-Federico-ABM_SpaceSyntax.pdf). 
+Mara, F., D. Altafini, V. Cutini and **N. Malleson.** (2025). Simulation to forecast crime patterns: Comparing space syntax and agent-based models in exploring pedestrian movement and visibility. _Environment and Planning B: Urban Analytics and City Science_, 52(9), 2171-2195. DOI: [10.1177/23998083251324065](https://doi.org/10.1177/23998083251324065). [PDF]({{site.url}}/{{site.baseurl}}/papers/2025-Federico-ABM_SpaceSyntax.pdf).
 
 Kieu M., A. Comber, T. Bui Quang and **N. Malleson** (2025). Modelling social mobility disruptions and recovery during disasters: A mobile phone data approach. _International Journal of Disaster Risk Reduction_ 130:105812. DOI: [10.1016/j.ijdrr.2025.105812](https://doi.org/10.1016/j.ijdrr.2025.105812)
 
@@ -339,6 +345,8 @@ Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, ag
 **Malleson, N**. and M. Birkin (2013). Estimating Individual Behaviour from Massive Social Data for An Urban Agent-Based Model. In A. Koch and P. Mandl (Eds) _GeoSimulation_: Modeling Social Phenomena in Spatial Context. Germany: Lit Verlag. ISBN: [978-3-643-90345-7](http://www.lit-verlag.de/isbn/3-643-90345-7) [[download (pdf)]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/01/essa.pdf)]
 
 ### <a name="workingpapers"></a>Working Papers, Pre-Prints and Others
+
+Evans, R., M. Warburton and **N. Malleson** (2026) The school you go to affects whether you become NEET. _The Conversation_. Published 2 April 2026. Available online: [https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365](https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365)
 
 Oswald, Y., N. Malleson, K. Suchak (2023). An agent-based model of the 2020 international policy diffusion in response to the COVID-19 pandemic with particle filter.  _Preprint_: [arXiv:2302.11277 [cs.MA]](https://doi.org/10.48550/arXiv.2302.11277)
 
