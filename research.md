@@ -16,7 +16,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="https://urban-analytics.github.io/integrate/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <a href="https://urban-analytics.github.io/integrate/"><span style="background-color: #6ca0e8;" class="fa fa-home"></span></a>
                 <h3><a href="https://urban-analytics.github.io/integrate/">INTEGRATE</a></h3>
                 Integrated Analysis of Social Media and Hedonic House Prices for Neighbourhood Change
             </li>
@@ -27,11 +27,11 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://cdrc.ac.uk/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
-                <h3><a href="http://cdrc.ac.uk/">CDRC</a></h3>
-                Consumer Data Research Centre
+                <a href="https://eo4society.esa.int/projects/spdt-eo-informed-agent-based-models-for-digital-twins-applications/"><span style="background-color: #6ca0e8;" class="fa fa-space-shuttle"></span></a>
+                <h3><a href="https://eo4society.esa.int/projects/spdt-eo-informed-agent-based-models-for-digital-twins-applications/">ESA SPDT</a></h3>
+                Earth Observation-Informed Agent Based Models for Digital Twin Applications
             </li>
-            <li style="font-size: small; line-height: 20px;">The aim of the CDRC is to work with organisations to open up their data to our trusted researchers to provide solutions that drive economic growth and improve our society. <a href="http://cdrc.ac.uk/">More information</a>.</li>
+            <li style="font-size: small; line-height: 20px;">This research project is developing an agent-based model coupled with ESA climate data to estimate household energy use under various policy scenarios and climate projections</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -44,7 +44,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://dust.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <a href="http://dust.leeds.ac.uk/"><span style="background-color: #009900;" class="fa fa-database"></span></a>
                 <h3><a href="http://dust.leeds.ac.uk/">DUST</a></h3>
                 Data Assimilation for Agent-Based Models
             </li>
@@ -66,7 +66,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="https://urban-analytics.github.io/UTM-Hanoi/"><span style="background-color: #009900;" class="fa fa-user"></span></a>
+                <a href="https://urban-analytics.github.io/UTM-Hanoi/"><span style="background-color: #009900;" class="fa fa-bicycle"></span></a>
                 <h3><a href="https://urban-analytics.github.io/UTM-Hanoi/">UTM-Hanoi</a></h3>
                 Urban Transport Modelling for Sustainable Well-Being in Hanoi
             </li>
@@ -77,7 +77,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="https://github.com/Team-RADDISH"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <a href="https://github.com/Team-RADDISH"><span style="background-color: #6ca0e8;" class="fa fa-laptop"></span></a>
                 <h3><a href="https://github.com/Team-RADDISH">RADDISH</a></h3>
                 Real-Time Advanced Data assimilation for Digital Simulation of Numerical Twins on HPC (RADDISH)
             </li>
@@ -88,7 +88,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href=""><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <a href=""><span style="background-color: #6ca0e8;" class="fa fa-battery-half"></span></a>
                 <h3><a href="">Flexible Energy</a></h3>
                 Towards A Flexible, Sustainable Urban Energy System
             </li>
@@ -99,11 +99,22 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="https://covid19-crime.com/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <a href="https://covid19-crime.com/"><span style="background-color: #6ca0e8;" class="fa fa-users"></span></a>
                 <h3><a href="https://covid19-crime.com/">covid19-crime</a></h3>
                 Reducing the Unanticipated Crime Harms of COVID-19 Policies
             </li>
             <li style="font-size: small; line-height: 20px;">This project will analyse emerging crime data to better understsand the impact that COVID-19-related policies are having on crime rates. For more details see the <a href="https://covid19-crime.com/about/">project website</a>.</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
+                <a href="http://cdrc.ac.uk/"><span style="background-color: #6ca0e8;" class="fa fa-shopping-basket"></span></a>
+                <h3><a href="http://cdrc.ac.uk/">CDRC</a></h3>
+                Consumer Data Research Centre
+            </li>
+            <li style="font-size: small; line-height: 20px;">The aim of the CDRC is to work with organisations to open up their data to our trusted researchers to provide solutions that drive economic growth and improve our society. <a href="http://cdrc.ac.uk/">More information</a>.</li>
             <li>&nbsp;</li>
         </ul>
     </div>
@@ -132,7 +143,7 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
-                <a href="http://habitsdata.org/"><span style="background-color: #6ca0e8;" class="fa fa-book"></span></a>
+                <a href="http://habitsdata.org/"><span style="background-color: #6ca0e8;" class="fa fa-car"></span></a>
                 <h3><a href="http://habitsdata.org/">HABITS</a></h3>
                 Improved policy to mitigate pollutant and inactivity related health burdens through new big data
             </li>
