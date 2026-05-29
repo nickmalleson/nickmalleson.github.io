@@ -16,6 +16,17 @@ or otherwise involved in (<span style="background-color: #6ca0e8;" class="fa fa-
     <div class="6u">
         <ul class="style">
             <li>
+                <a href=""><span style="background-color: #6ca0e8;" class="fa fa-map"></span></a>
+                <h3><a href="">Safer Streets</a></h3>
+                From Mapping to Impact: Towards a National Learning System for Hyperlocal Crime Prevention
+            </li>
+            <li style="font-size: small; line-height: 20px;">This project will develop new mapping and spatial analysis capabilities to better understand spatial crime patterns</li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+    <div class="6u">
+        <ul class="style">
+            <li>
                 <a href="https://urban-analytics.github.io/integrate/"><span style="background-color: #6ca0e8;" class="fa fa-home"></span></a>
                 <h3><a href="https://urban-analytics.github.io/integrate/">INTEGRATE</a></h3>
                 Integrated Analysis of Social Media and Hedonic House Prices for Neighbourhood Change
