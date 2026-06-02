@@ -47,10 +47,10 @@
                             <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
                         </p>
                         <hr />
-						<!-- <a href="https://europa.eu/european-union/index_en">
+						<a href="https://https://www.ukri.org/councils/esrc/">
                             <img style="float:left;padding:5px;width:auto; height:60px;"
-							data-src="../figures/LOGO_EU.jpg" />
-							</a> -->
+							data-src="../figures/LOGO_ESRC.jpg" />
+							</a>
                         <a href="http://www.leeds.ac.uk/">
                             <img style="float:right;padding:5px;width:auto; height:60px;"
 								 class="whitebackground"
@@ -78,13 +78,13 @@
                          class="right" style="width:35%;"
                          alt="Sample of street-view images of residential areas"/>
                     <h2>Overview</h2>
-                    <p>Aim: estimate how much neighbourhood <i>deprivation</i> is
+                    <p>Aim: estimate how much neighbourhood <i>material deprivation</i> is
                         recoverable from <i>street-level imagery</i> alone</p>
-                    <p class="l2">Background: deprivation, street view &amp; image embeddings</p>
-                    <p class="l2">Data &amp; methods: Street View + satellite embeddings &rarr; XGBoost</p>
-                    <p class="l2">Results: how well, which scenes, and which domains?</p>
-                    <h3>Paper</h3>
-                    <p class="small">Asher, Comber, Golzari Osguie, Bui Quang, Kieu &amp; Malleson (2026),
+                    <p>Method: Street view image embeddings (CLIP) and Alpha Earth embeddings used to predict
+                        deprivation</p>
+                    <p>Results: Surprisingly good predicions! Pictures of houses seem to have the strongest signal</p>
+                    <p>Paper (in review)</p>
+                    <p class="l2">Asher, Comber, Golzari Osguie, Bui Quang, Kieu &amp; Malleson (2026),
                         <i>Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</i></p>
                 </section>
 
@@ -99,25 +99,25 @@
                         <span class="small">(Townsend, 1987)</span></p>
                     <p>Material deprivation is measured from administrative data &ndash;
                         e.g. the English <b>Indices of Multiple Deprivation</b> (IMD)</p>
-                    <p>But many signs are physically <i>visible</i> in the streetscape:</p>
+                    <p>Many signs are physically <i>visible</i> in the streetscape:</p>
                     <p class="l2">litter, graffiti, disrepair, housing condition &hellip;
                         these co-vary with the conditions that produce deprivation
                         <span class="small">(Sampson &amp; Raudenbush, 1999)</span></p>
+                    <p>But <i>how much</i> deprivation is visible?</p>
                     <p>Could we recover the IMD <i>signal</i> from images of the neighbourhood,
                         rather than from socio-economic data?</p>
                 </section>
 
                 <section id="background-geoai">
                     <h2>GeoAI &amp; image embeddings</h2>
-                    <img data-src="../figures/paper_figures/2025-SSC-Schelling_Embeddings/embeddings_example.png"
-                         class="right" style="width:38%;"
-                         alt="Illustration of embeddings as numeric vectors"/>
                     <p>Vision <i>transformers</i> turn an image into an <i>embedding</i>:
                         a vector where visually/semantically similar images sit close together</p>
                     <p>Pre-trained once, reused across tasks &ndash; no hand-crafted features
                         or task-specific training needed</p>
                     <p>We use <b>CLIP</b> <span class="small">(Radford et al., 2021)</span>, a
                         vision&ndash;language model that aligns images with text</p>
+                    <p class="l2">In further work we start to examine the text associated with
+                        deprivation</p>
                     <p>Prior work links street imagery to crime, income, perceived safety,
                         poverty and disorder &ndash; but mostly in US/China, on proxy
                         indicators, rarely isolating the contribution of <i>images alone</i></p>
@@ -157,6 +157,36 @@
                 </section>
 
                 <section id="methods">
+                    <h2>Methods</h2>
+                    <p>CLIP embeddings calculated for each Street View image (512-dim)</p>
+                    <p>AlphaEarth provides satellite embeddings (64-dim)</p>
+                    <p>Embeddings are median-pooled to the LSOA</p>
+                    <p>XGBoost models predict IMD rank from the embeddings</p>
+                    <p>Street View embeddings are also <i>clusters</i> to compare the predictive
+                        stength of different types of scenes</p>
+
+                </section>
+
+
+
+                <section id="methods-embeddings">
+                   <p>XXXX IMAGE OF STREET VIEW AND ALPHA EARTH ME EMBEDDINGS</p>
+                </section>
+
+
+                <section id="cluster_examples">
+                        <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster3_sample.jpg"
+                             class="right:"
+                             style="width:45%;" alt="Random sample of Cluster 3 images"/>
+
+                        <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster4_sample.jpg"
+                             class="right"
+                             style="width:45%;" alt="Random sample of Cluster 4 images: fronts of houses"/>
+
+                </section>
+
+                <!--
+                <section id="methods">
                     <h2>Method</h2>
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/methodology.png"
                          style="width:78%;"
@@ -164,7 +194,7 @@
                     <p class="small">CLIP embeds each Street View image (512-dim); AlphaEarth gives
                         satellite embeddings (64-dim). Embeddings are median-pooled to the LSOA,
                         then an <b>XGBoost</b> model predicts IMD rank. Performance compared on a held-out test set.</p>
-                </section>
+                </section>-->
 
 
                 <!-- ************************************************************
@@ -172,7 +202,7 @@
                 ************************************************************ -->
 
                 <section id="rq1-result">
-                    <h2>RQ1: Street view &gt;&gt; satellite</h2>
+                    <h2>RQ1: Street view v.s. satellite</h2>
                     <p>How much IMD-rank variance does each source explain?</p>
                     <div style="display:flex; justify-content:space-around; align-items:flex-start;
                                 margin-top:0.4em;">
@@ -187,19 +217,23 @@
                             <p class="small" style="margin:0;">64-dim &middot; test R&sup2;&nbsp;=&nbsp;0.32</p>
                         </div>
                     </div>
-                    <p style="margin-top:0.6em;">Ground-level cues are <i>not</i> readily visible
-                        from above &rarr; remaining analysis uses street view only</p>
-                    <p class="small">(Off-the-shelf CLIP, no fine-tuning for the built environment)</p>
+                    <p>Ground-level cues are <i>not</i> readily visible
+                        from above</p>
+                    <p>Remaining analysis uses street view only</p>
+
                 </section>
 
                 <section id="rq2-clustering">
+                    <img class="right", style="width:20%" src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/street_view_example1.png">
+                    <img class="right", style="width:20%" src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/street_view_example2.png">
+
                     <h2>RQ2: Do some scenes carry more signal?</h2>
+                    <p>Partition the image embeddings into <i>k</i>&nbsp;=&nbsp;5 clusters of
+                        visually similar scenes (<i>k</i>-means)</p>
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/5-cluster_spatial_distribution.png"
                          class="right" style="width:46%;"
                          alt="Spatial distribution of the five image clusters across Greater Manchester"/>
-                    <p>Partition the image embeddings into <i>k</i>&nbsp;=&nbsp;5 clusters of
-                        visually similar scenes (<i>k</i>-means)</p>
-                    <p>Then fit a separate model per cluster</p>
+                    <p>Then fit a separate model per cluster. Clusters look like:</p>
                     <p class="l2">Cluster 1: greenery / rural</p>
                     <p class="l2">Cluster 2: commercial / industrial</p>
                     <p class="l2">Cluster 3: rural roads</p>
@@ -207,11 +241,17 @@
                 </section>
 
                 <section id="rq2-result">
-                    <h2>RQ2: Residential scenes win</h2>
+                    <h2>RQ2: 'Residential' scenes appear to carry the strongest signal</h2>
+
+                    <p>Residential scenes are far more informative (left).</p>
+                    <p>Holds when controlling for sample size (right).</p>
+
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/6-R2_vs_samplesize.png"
-                         class="right" style="width:42%;"
+                         class="right" style="width:45%;"
                          alt="NRMSE versus image subsample size showing residential clusters consistently best"/>
-                    <table style="width:54%; border-collapse:collapse; font-size:75%;">
+
+                    <p>&nbsp;</p> <!-- for layout -->
+                    <table style="width:45%; border-collapse:collapse; font-size:75%;">
                         <thead><tr>
                             <th style="border:1px solid #000; padding:5px;">Cluster (scene)</th>
                             <th style="border:1px solid #000; padding:5px;">R&sup2;</th>
@@ -225,18 +265,18 @@
                             <tr><td style="border:1px solid #000; padding:5px;"><i>Global (all images)</i></td><td style="border:1px solid #000; padding:5px;"><i>0.68</i></td></tr>
                         </tbody>
                     </table>
-                    <p style="clear:both;">Residential scenes are far more informative.
-                        Holds when controlling for sample size <span class="small">(right)</span>.</p>
                 </section>
 
                 <section id="rq3-domain">
-                    <h2>RQ3: Which domains are visible?</h2>
-                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/8-domain_prediction_heatmap.png"
-                         style="width:82%;"
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/8-domain_prediction_heatmap-r2.png"
+                         class="right" style="width:50%;"
                          alt="Heatmap of model performance for each IMD domain, globally and per cluster"/>
-                    <p class="small">Separate models per IMD domain. Most domains predicted
-                        <i>similarly</i> well (R&sup2; ~0.56&ndash;0.65) &ndash; even Education.
-                        Exception: <b>Barriers to Housing &amp; Services</b> (R&sup2;&nbsp;=&nbsp;0.39).</p>
+                    <h2>RQ3: Which deprivation domains are visible?</h2>
+                    <p>Separate models per IMD domain.</p>
+                    <p>Most domains predicted <i>similarly</i> well (R&sup2; ~0.56&ndash;0.65)</p>
+                    <p class="l2">Strong correlation between most domains, even if not 'visible'</p>
+                    <p>Exception: <b>Barriers to Housing &amp; Services</b> (R&sup2;&nbsp;=&nbsp;0.39).</p>
+                    <p class="l2">Possibly because houses more affordable in deprived areas?</p>
                 </section>
 
                 <!-- ************************************************************
@@ -244,13 +284,13 @@
                 ************************************************************ -->
 
                 <section id="discussion">
-                    <h2>Why so consistent across domains?</h2>
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/8-domain_correlation_heatmap.png"
-                         class="right" style="width:40%;"
+                         class="right" style="width:50%;"
                          alt="Correlation heatmap across IMD domains, mostly above 0.8"/>
-                    <p>The IMD domains are highly <i>intercorrelated</i> (mostly r&nbsp;&gt;&nbsp;0.8)</p>
-                    <p>Deprivation is spatially concentrated &amp; mutually reinforcing, so the
-                        visual character of a place acts as a <i>proxy</i> for many domains at once</p>
+                    <h2>Why so consistent across domains?</h2>
+                    <p>The IMD domains are highly correlated</p>
+                    <p>Deprivation is spatially concentrated &amp; mutually reinforcing</p>
+                    <p>Visual character acts as a <i>proxy</i> for many domains</p>
                     <p class="l2">The model needn't &lsquo;see&rsquo; educational attainment &ndash;
                         it co-occurs with visually distinctive built environments</p>
                     <p>Housing &amp; Services is the outlier: affordability may run
@@ -260,21 +300,76 @@
                 <section id="conclusions">
                     <h2>Conclusions</h2>
                     <p>Off-the-shelf CLIP embeddings of Street View explain
-                        <b>~68%</b> of IMD-rank variance &ndash; ~2&times; satellite</p>
-                    <p>Signal is <i>uneven</i>: <b>residential</b> scenes carry far more
+                        <b>~68%</b> of IMD-rank variance, satellites only ~33%</p>
+                    <p>Signal is <i>uneven</i>: scenes that appear residential carry far more
                         than roads, greenery or industry</p>
-                    <p>Broadly <i>consistent</i> across domains (bar Housing &amp; Services)
-                        &rarr; a latent dimension of disadvantage</p>
+                    <p>Broadly consistent across domains (bar Housing &amp; Services)</p>
                     <h3>Future work</h3>
-                    <p class="l2">Finer spatial/temporal resolution than admin indices allow</p>
+                    <p class="l2">Finer spatial/temporal resolution than administrative indices allow</p>
                     <p class="l2">Multimodal foundation model (street + satellite + POIs + &hellip;)</p>
                     <p class="l2">Linking embedding dimensions to visual features via CLIP text prompts</p>
                 </section>
 
 
                 <!-- ************************************************************
+                         ************** Closing ********************
+                ************************************************************ -->
+
+                <section class="title" id="thanks"
+                         data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <h5>GeoAI, 3-6 June 2026, Ghent</h5>
+                        <hr />
+                        <h1 style="font-size: 45px;">Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</h1>
+                        <hr />
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., University of Leeds, UK</h2>
+                        <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:20px">Slides available at: <br />
+                            <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
+                        </p>
+                        <hr />
+                        <a href="https://https://www.ukri.org/councils/esrc/">
+                            <img style="float:left;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/LOGO_ESRC.jpg" />
+                        </a>
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:5px;width:auto; height:60px;"
+                                 class="whitebackground"
+                                 data-src="../figures/uol_logo.gif" />
+                        </a>
+                        <a href="https://environment.leeds.ac.uk/geography">
+                            <img style="padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
+                        </a>
+                        <!-- <a href="http://www.turing.ac.uk/">
+                        <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a> -->
+                    </div>
+                </section>
+
+
+                <!-- ************************************************************
                 ************** Appendix: cluster image samples (backup) ********
                 ************************************************************ -->
+
+                <section id="cluster1-samples">
+                    <h2>Cluster 1 &ndash; greenery <span class="small">(R&sup2;=0.32)</span></h2>
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster1_sample.jpg"
+                         style="width:78%;" alt="Random sample of Cluster 1 images"/>
+                </section>
+
+                <section id="cluster2-samples">
+                    <h2>Cluster 2 &ndash; commercial/industrial <span class="small">(R&sup2;=0.37)</span></h2>
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster2_sample.jpg"
+                         style="width:78%;" alt="Random sample of Cluster 2 images"/>
+                </section>
+
+                <section id="cluster3-samples">
+                    <h2>Cluster 3 &ndash; rural roads <span class="small">(R&sup2;=0.07)</span></h2>
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster3_sample.jpg"
+                         style="width:78%;" alt="Random sample of Cluster 3 images"/>
+                </section>
 
                 <section id="cluster4-samples">
                     <h2>Cluster 4 &ndash; houses <span class="small">(R&sup2;=0.60)</span></h2>
@@ -288,63 +383,11 @@
                          style="width:78%;" alt="Random sample of Cluster 5 images: residential streets"/>
                 </section>
 
-                <section id="cluster2-samples">
-                    <h2>Cluster 2 &ndash; commercial/industrial <span class="small">(R&sup2;=0.37)</span></h2>
-                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster2_sample.jpg"
-                         style="width:78%;" alt="Random sample of Cluster 2 images"/>
-                </section>
-
-                <section id="cluster1-samples">
-                    <h2>Cluster 1 &ndash; greenery <span class="small">(R&sup2;=0.32)</span></h2>
-                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster1_sample.jpg"
-                         style="width:78%;" alt="Random sample of Cluster 1 images"/>
-                </section>
-
-                <section id="cluster3-samples">
-                    <h2>Cluster 3 &ndash; rural roads <span class="small">(R&sup2;=0.07)</span></h2>
-                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster3_sample.jpg"
-                         style="width:78%;" alt="Random sample of Cluster 3 images"/>
-                </section>
-
-
-                <!-- ************************************************************
-                ************** Closing ********************
-                ************************************************************ -->
 
 
 
-				 <section class="title" id="thanks"
-                         data-background-image="../figures/shutterstock_788457058-small.jpg">
-                    <div class="whitebackground2">
-                        <h5>GeoAI. 3-6 June, 2026, Ghent</h5>
-                        <hr />
-						<h1 style="font-size: 45px;">Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</h1>
-                        <hr />
-                        <h2 style="font-size: 35px;">
-                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., University of Leeds, UK</h2>
-                        <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
-                        <hr/>
-                        <p style="text-align:center;font-size:20px">Slides available at: <br />
-                            <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
-                        </p>
-                        <hr />
-						<!-- <a href="https://europa.eu/european-union/index_en">
-                            <img style="float:left;padding:5px;width:auto; height:60px;"
-							data-src="../figures/LOGO_EU.jpg" />
-							</a> -->
-                        <a href="http://www.leeds.ac.uk/">
-                            <img style="float:right;padding:5px;width:auto; height:60px;"
-								 class="whitebackground"
-                                 data-src="../figures/uol_logo.gif" />
-                        </a>
-                        <a href="https://environment.leeds.ac.uk/geography">
-                            <img style="padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
-                        </a>
-                        <!-- <a href="http://www.turing.ac.uk/">
-                        <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
-                        </a> -->
-                    </div>
-                </section>
+
+
 
     
 
