@@ -40,7 +40,8 @@
 						<h1 style="font-size: 45px;">Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</h1>
                         <hr />
                         <h2 style="font-size: 35px;">
-                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., University of Leeds, UK</h2>
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., <br/>
+                            University of Leeds; University of Bristol, UK</h2>
                         <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
                         <hr/>
                         <p style="text-align:center;font-size:20px">Slides available at: <br />
@@ -82,9 +83,9 @@
                         recoverable from <i>street-level imagery</i> alone</p>
                     <p>Method: Street view image embeddings (CLIP) and Alpha Earth embeddings used to predict
                         deprivation</p>
-                    <p>Results: Surprisingly good predicions! Pictures of houses seem to have the strongest signal</p>
+                    <p>Results: Surprisingly good predictions! Pictures of houses seem to have the strongest signal</p>
                     <p>Paper (in review)</p>
-                    <p class="l2">Asher, Comber, Golzari Osguie, Bui Quang, Kieu &amp; Malleson (2026),
+                    <p class="l2">Asher, Comber, Golzari, Bui Quang, Kieu &amp; Malleson (2026),
                         <i>Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</i></p>
                 </section>
 
@@ -114,10 +115,10 @@
                         a vector where visually/semantically similar images sit close together</p>
                     <p>Pre-trained once, reused across tasks &ndash; no hand-crafted features
                         or task-specific training needed</p>
-                    <p>We use <b>CLIP</b> <span class="small">(Radford et al., 2021)</span>, a
+                    <p>We use <b>CLIP</b> (Contrastive Language-Image Pretraining) (Radford et al., 2021), a
                         vision&ndash;language model that aligns images with text</p>
                     <p class="l2">In further work we start to examine the text associated with
-                        deprivation</p>
+                        images of deprivation</p>
                     <p>Prior work links street imagery to crime, income, perceived safety,
                         poverty and disorder &ndash; but mostly in US/China, on proxy
                         indicators, rarely isolating the contribution of <i>images alone</i></p>
@@ -142,10 +143,10 @@
                 ************************************************************ -->
 
                 <section id="data">
-                    <h2>Study area &amp; data</h2>
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/gm_street_images.png"
                          class="right" style="width:42%;"
                          alt="Map of Greater Manchester showing sampled Street View point locations"/>
+                    <h2>Study area &amp; data</h2>
                     <p><b>Greater Manchester</b>, UK &ndash; 3M+ people, ten conurbations</p>
                     <p><b>Deprivation:</b> 2025 IMD at LSOA level (1,702 neighbourhoods),
                         as national rank</p>
@@ -163,14 +164,15 @@
                     <p>Embeddings are median-pooled to the LSOA</p>
                     <p>XGBoost models predict IMD rank from the embeddings</p>
                     <p>Street View embeddings are also <i>clusters</i> to compare the predictive
-                        stength of different types of scenes</p>
+                        strength of different types of scenes</p>
 
                 </section>
 
 
 
                 <section id="methods-embeddings">
-                   <p>XXXX IMAGE OF STREET VIEW AND ALPHA EARTH ME EMBEDDINGS</p>
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/9a-comparing_embeddings.png"
+                         alt="2D UMAP projection of the CLIP embedding space showing clusters of similar images"/>
                 </section>
 
 
@@ -248,7 +250,7 @@
 
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/6-R2_vs_samplesize.png"
                          class="right" style="width:45%;"
-                         alt="NRMSE versus image subsample size showing residential clusters consistently best"/>
+                         alt="NRMSE versus image sub-sample size showing residential clusters consistently best"/>
 
                     <p>&nbsp;</p> <!-- for layout -->
                     <table style="width:45%; border-collapse:collapse; font-size:75%;">
@@ -323,7 +325,8 @@
                         <h1 style="font-size: 45px;">Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</h1>
                         <hr />
                         <h2 style="font-size: 35px;">
-                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., University of Leeds, UK</h2>
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, Molly Asher, et al., <br/>
+                            University of Leeds; University of Bristol, UK</h2>
                         <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
                         <hr/>
                         <p style="text-align:center;font-size:20px">Slides available at: <br />
