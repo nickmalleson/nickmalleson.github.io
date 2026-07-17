@@ -73,6 +73,9 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2026
 
+Seyidoglu, H., J. Pina-Sánchez, **N. Malleson**, and G. Farrell (2026) The Association between Mobility and Crime in England and Wales. _Crime Science_ 15 (1): 22. DOI: [10.1186/s40163-026-00291-z](https://doi.org/10.1186/s40163-026-00291-z)
+
+
 Hanifah, R., **N. Malleson**, V. Houlden & A. Comber (2026) Spatio-Temporal Estimation of Tourist Arrivals from Social Media Using Spatial Inference and LLM Classification. _Annals of GIS_ 1–31. DOI: [10.1080/19475683.2026.2682204](https://doi.org/10.1080/19475683.2026.2682204)
 
 Hanifah, R., S. Schmidt, C. Zorenböhmer, D. Arifi, B. Resch, N. Malleson, V. Houlden & A. Comber (2026) Tourist Sentiment in Bali Before and During COVID-19: A Spatial-Temporal and Thematic Analysis Using Twitter Data. _Applied Spatial Analysis and Policy_ 19 (2): 114. DOI: [10.1007/s12061-026-09886-0](https://doi.org/10.1007/s12061-026-09886-0)
