@@ -326,6 +326,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conference Proceedings
 
+Beltran, A., M. Tipuric, **N. Malleson** and D. Wagg (2026). Too Hot to Handle? Modelling Household Energy Demand and Climate Policy Responses. In _Proceedings of the 83rd Annual Midwest Political Science Association Conference_, Chicago, IL. Midwest Political Science Association.
+
 Cui, N., **N. Malleson**, V. Houlden and A. Comber (2022). Using social media data to understand the impact of the COVID-19 pandemic on urban green space use. _Urban Forestry & Urban Greening_ 74 (127677).
 DOI: [10.1016/j.ufug.2022.127677](https://doi.org/10.1016/j.ufug.2022.127677).
 
@@ -353,6 +355,8 @@ Heppenstall, A. and **N. Malleson** (2020). Building cities from slime mould, ag
 **Malleson, N**. and M. Birkin (2013). Estimating Individual Behaviour from Massive Social Data for An Urban Agent-Based Model. In A. Koch and P. Mandl (Eds) _GeoSimulation_: Modeling Social Phenomena in Spatial Context. Germany: Lit Verlag. ISBN: [978-3-643-90345-7](http://www.lit-verlag.de/isbn/3-643-90345-7) [[download (pdf)]({{site.url}}/{{site.baseurl}}/wp-content/uploads/2012/01/essa.pdf)]
 
 ### <a name="workingpapers"></a>Working Papers, Pre-Prints and Others
+
+Tipuric, M., A. Beltran, **N. Malleson**, D. Arribas-Bel and D. Wagg (2026). Design of Policy Digital Twins Incorporating Multi-Level Agent Based Modelling. _Preprint_: [arXiv:2607.13766 [cs.CY]](https://doi.org/10.48550/arXiv.2607.13766)
 
 Evans, R., M. Warburton and **N. Malleson** (2026) The school you go to affects whether you become NEET. _The Conversation_. Published 2 April 2026. Available online: [https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365](https://theconversation.com/the-school-you-go-to-affects-whether-you-become-neet-new-research-279365)
 
