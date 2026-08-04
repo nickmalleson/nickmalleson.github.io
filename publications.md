@@ -326,6 +326,8 @@ Andresen, M.A. and **N. Malleson** (2013). Spatial heterogeneity in crime analys
 
 ### <a name="proceedings"></a>Articles in Conference Proceedings
 
+**Malleson, N.** and E. Manley (2026). Towards the Use of Foundation Models and Embeddings for Nuanced Perception and Decision-Making in Agents. In H. Verhagen, E. Chappin and G. Scholz (Eds) _Advances in Social Simulation_, pp. 377-387. Cham: Springer Nature Switzerland. DOI: [10.1007/978-3-032-31712-4_28](https://doi.org/10.1007/978-3-032-31712-4_28).
+
 Beltran, A., M. Tipuric, **N. Malleson** and D. Wagg (2026). Too Hot to Handle? Modelling Household Energy Demand and Climate Policy Responses. In _Proceedings of the 83rd Annual Midwest Political Science Association Conference_, Chicago, IL. Midwest Political Science Association.
 
 Cui, N., **N. Malleson**, V. Houlden and A. Comber (2022). Using social media data to understand the impact of the COVID-19 pandemic on urban green space use. _Urban Forestry & Urban Greening_ 74 (127677).
