@@ -17,7 +17,13 @@
 
         <!-- Theme used for syntax highlighting of code -->
         <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
-        
+
+        <!-- For the EnKF formula -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script type="text/javascript" async
+                src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+        </script>
+
         <!-- Printing and PDF exports -->
         <script>
             var link = document.createElement('link');
@@ -33,7 +39,7 @@
             <div class="slides">
 
                 <section class="title" id="index"
-                         data-background-image="../figures/shutterstock_788457058-small.jpg">
+                         data-background-image="../figures/the-roaming-platypus-310824-unsplash-small.jpg">
                     <div class="whitebackground2">
                         <h5>Geospatial Systems CDT Annual Assembly, 7-8 September, Newcastle University.</h5>
                         <hr />
@@ -66,17 +72,36 @@
                 </section>
 
 
-
                 <!-- ************************************************************
                 ************************* Overview  ************************
                 ************************************************************ -->
 
+                <section data-background-video="../videos/trafalgar_timelapse-1280×720.mp4"
+                         data-background-video-loop="loop"
+                         id="urban-dynamics">
+                    <div class="whitebackground2 fragment">
+                        <h2>Urban Dynamics</h2>
+                        <p>Cities are driven by the movement of people</p>
+                        <p>Crowd and pedestrian dynamics matter for:</p>
+                        <p class="l2">
+                            safety and crowd management in busy public places;
+                            transport, retail vitality and the design of public space;
+                            understanding how neighbourhoods are changing.</p>
+                        <p>But these are <i>complex systems</i>: hard to observe, hard to predict</p>
+                        <p>This talk covers four complementary approaches, and one emerging one:</p>
+                    </div>
+                </section>
+
 				<section id="overview">
-					<img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster4_sample.jpg"
-						 class="right" style="width:35%;"
-									   alt="Sample of street-view images of residential areas"/>
+					<img data-src="../figures/train_station_pedestrian.jpg"
+						 class="right" style="width:30%;"
+									   alt="Escalators in a busy train station"/>
 					<h2>Overview</h2>
-					<p>XXXX</p>
+					<p><b>1. Unpacking</b> pedestrian dynamics &ndash; Principal Component Analysis on footfall counts</p>
+					<p><b>2. Predicting</b> pedestrian volumes &ndash; machine learning with diverse urban data</p>
+					<p><b>3. Simulating</b> crowds in real time &ndash; agent-based models and data assimilation</p>
+					<p><b>4. Reasoning</b> agents &ndash; opportunities for integrating LLMs with ABMs</p>
+					<p><b>5. Aside:</b> geospatial foundation models</p>
 
 					<aside class="notes">
 						ABSTRACT: Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models
@@ -89,18 +114,879 @@
 				</section>
 
 
-				<!-- ************************************************************
-                ************************* Background/Context  ************************
+                <!-- ************************************************************
+                ***** Shared data slide for Parts 1 and 2  *********************
                 ************************************************************ -->
 
+                <section id="melbourne-data">
+                    <figure class="right" style="width:45%;">
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/map2.jpg"
+                             alt="Map of the pedestrian sensor locations in central Melbourne" />
+                        <figcaption>Locations of the Melbourne footfall sensors</figcaption>
+                    </figure>
+
+                    <h2>Melbourne Footfall Counters</h2>
+                    <p>Fantastic data available through the
+                        <a href="https://data.melbourne.vic.gov.au/pages/home/">Melbourne Open Data Portal</a></p>
+                    <p class="l2">94 sensors counting hourly footfall, some date back to 2009</p>
+                    <p>Numerous additional open data sets, including:</p>
+                    <p class="l2">weather; street furniture (benches, bins etc); buildings and landmarks</p>
+                    <p>Both of the next two parts use these data</p>
+                </section>
 
 
+                <!-- ************************************************************
+                ***** SECTION 1: PCA and aggregate pedestrian behaviour  *******
+                ************************************************************ -->
+
+                <section id="section1" class="title"
+                         data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 1</h2>
+                        <h3>Unpacking aggregate pedestrian behaviour with Principal Component Analysis</h3>
+                    </div>
+                </section>
+
+                <section id="s1-overview">
+                    <figure class="right">
+                        <img data-src="../figures/attribution/Melbourne_Skyline_at_night.jpg" alt="Melbourne skyline at night" />
+                        <figcaption><p>Photo attributed to <a href="https://flickr.com/photos/75483412@N08/30944560643">bobarcpics</a> (<a href="http://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a>)</p>
+                        </figcaption>
+                    </figure>
+
+                    <h2>Overview</h2>
+                    <p>Footfall data: counts of pedestrians at numerous locations</p>
+                    <p>Principal Component Analysis (PCA) to isolate key temporal patterns (commuting, shopping, having lunch, etc.)</p>
+                    <p class="l2">Reveals surprisingly clear patterns</p>
+                    <p class="l2">Can be used to better understand the evolution of urban footfall dynamics</p>
+
+                </section>
+
+                <section id="s1-publication">
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/paper_front_page.png"
+                         alt="Picture of the journal article front page"
+                         class="right"/>
+                    <h2>Paper</h2>
+                    <p>Liddle, J., W. Jiang, and N. Malleson (2025).
+                        Leveraging Principal Component Analysis to Uncover Urban Pedestrian Dynamics.
+                        <i>Journal of Geographical Systems</i>
+                        DOI: <a href="https://doi.org/10.1007/s10109-025-00469-0">10.1007/s10109-025-00469-0</a>
+                    </p>
+
+                </section>
+
+                <section id="s1-temporal_patterns">
+                    <h2>Context: Footfall Dynamics</h2>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/temporal_signature-cupum.png"
+                         alt="Hypothetical example of footfall dynamics: graph showing peaks for commuting" />
+                </section>
+
+                <section id="s1-sensors_locs">
+
+                    <figure >
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/map2.jpg"
+                         alt="Map of sensor locations in Melbourne"
+                         style="width:70%"
+						/>
+                        <figcaption>Locations of the Melbourne footfall sensors</figcaption>
+                    </figure>
 
 
+                </section>
+
+                <section id="s1-footfall_example">
+                    <h2>Footfall Data</h2>
+                    <h3>Mean daily and weekly footfall counts</h3>
+                    <p>Some regularity but also huge variation</p>
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/AverageDays_Weeks.png" />
+
+                </section>
+
+                <section id="s1-pca">
+                    <h2>Principal Component Analysis (PCA)</h2>
+                    <p>Technique for reducing dimensionality in datasets</p>
+                    <p>Isolate significant features; the 'principal components' </p>
+                    <p>Raw data can be approximated by a linear combination of <i>component loadings</i></p>
+                    <p>Here: components are vectors of length 24 (or 168 if we look at weeks)</p>
+                </section>
+
+                <section id="s1-pca-num_components">
+                    <h2>How many principal components?</h2>
+                    <h3>Proportion of explained variance</h3>
+                    <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/CumulativeExplainedVariance.png"
+                         alt="Cumulative explained variance - shows number of components needed to explain
+                              the variance in the footfall trends"
+                         style="width: 70%;"/>
+                </section>
+
+                <section id="s1-results-components1">
+                    <h2>Results (i): Most Important Components</h2>
+                    <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/Daily_Comps_for_GIRSUK.png"
+                         alt="Shape of the daily components - look like business, commuters, lunch activity"
+                         style="width: 80%;"
+                         />
+                </section>
+
+                <section id="s1-results-components2">
+                    <img src="../figures/paper_figures/2024-GISRUK-PCA_Ped_Flows/Daily_Comps_for_GIRSUK-vertical.png"
+                         class="right"
+                         style="width:20%;"
+                         alt="Shape of the daily components - look like business, commuters, lunch activity"
+                         />
+                    <h3>Most Important Components</h3>
+                    <p>Component 1 - <i>busyness</i></p>
+                    <p class="l2">Almost identical to mean daily activity</p>
+                    <p class="l2">Busy places: component loadings &gt; 1</p>
+                    <p class="l2">Quiet places: component loadings &lt; 1</p>
+
+                    <p>Component 2 - <i>commuting</i></p>
+                    <p class="l2">Peaks in the morning and afternoon - typical rush hour</p>
+                    <p class="l2">Component loadings represent presence of commuters</p>
+
+                    <p>Component 3 - <i>lunchtime suppression</i></p>
+                    <p class="l2">Suppresses activity in the middle of the day and increase it
+                    over lunch</p>
+
+                </section>
+
+                <section id="s1-results-component_loadings">
+
+                    <h2>Results (ii) Component Loadings</h2>
+                    <h3>Examples: Southern Cross Station and Southbank during the week and at a weekend</h3>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/DailyComps.png"
+                         alt="Graph showing how the component loadings vary by day and location"
+						 style="width:80%;"
+                         />
+                </section>
+
+                <!-- No time to look at the component interactions stuff -->
+                <!--
+                <section id="s1-results-3d-b">
+                    <h2>Results (iii): Component Interactions</h2>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/Plot2DDailyAgg.png"
+                         style="width:42%;"
+                         alt="Showing how two clusters interact and form clusters of different
+                              urban usage patterns"
+                         />
+                </section>
+                -->
+
+                <section id="s1-results-temporal_change-southern_cross">
+                    <h2>Results (iii): Evolution of Usage Patterns</h2>
+                    <p>Southern Cross</p>
+                    <p class="l2">Commuting is largest driver of footfall; still lower than pre-pandemic levels</p>
+                    <p class="l2">Additional footfall might be encouraged by making it attractive to commuters</p>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/VisTSWeeks-Southern_Cross_Station.png"
+                         style="width:100%;"
+                         alt = "Example of how usage patterns in locations change over time"
+                         />
+                </section>
+
+                <section id="s1-results-temporal_change-lygton_street">
+                    <h2>Results (iv): Evolution of Usage Patterns</h2>
+                    <p>Lygon St</p>
+                    <p class="l2">Steady decline in busyness, but a gradual increase in commuting?</p>
+                    <p class="l2">Possible transition towards a more commuting-oriented area</p>
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/VisTSWeeks-Lygon_St.png"
+                         style="width:100%;"
+                         alt = "Example of how usage patterns in locations change over time"
+                         />
+                </section>
+
+                <section id="s1-conclusions" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 1: Summary</h2>
+                        <p>Application of PCA to investigate (spatio-)temporal footfall trends</p>
+                        <p>Drawbacks: validation of activities; equity in sensor location</p>
+                        <p>Opportunities to:</p>
+                        <p class="l2">better understand use of the build environment</p>
+                        <p class="l2">explore evolution of activities over time</p>
+                        <p class="l2">cluster places / times based on activity structure</p>
+                        <p class="l2">explore relationships between components</p>
+                        <p>Many implications for policy making</p>
+                    </div>
+                </section>
 
 
+                <!-- ************************************************************
+                ***** SECTION 2: Predicting pedestrian counts with ML  *********
+                ***** Material from Molly Asher's AGILE 2025 presentation  *****
+                ***** (p/2025-06-AGILE-PCA.pdf) and Asher et al. (2025) EPB ****
+                ************************************************************ -->
+
+                <section id="section2" class="title"
+                         data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 2</h2>
+                        <h3>Predicting Pedestrian Counts using Machine Learning</h3>
+                        <h4>Molly Asher, Yannick Oswald, Nick Malleson</h4>
+                    </div>
+                </section>
+
+                <section id="s2-publication">
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/paper_front_page.jpg"
+                         alt="Picture of the journal article front page"
+                         class="right" style="width:35%;"/>
+                    <h2>Paper</h2>
+                    <p>Asher, M., Y. Oswald, and N. Malleson (2025).
+                        Understanding Pedestrian Dynamics Using Machine Learning with Real-Time Urban Sensors.
+                        <i>Environment and Planning B: Urban Analytics and City Science</i> 52(8).
+                        DOI: <a href="https://doi.org/10.1177/23998083251319058">10.1177/23998083251319058</a>
+                    </p>
+                </section>
+
+                <section id="s2-overview">
+                    <h2>Modelling Overview</h2>
+                    <p><b>Aim:</b> use sensor data to build a predictive model which can estimate the
+                        number of people who will be at any location in the city at any given time</p>
+                    <p>To train a model, we need both:</p>
+                    <p class="l2">Data on what we wanted to predict (dependent variable):
+                        number of pedestrians at different locations over time</p>
+                    <p class="l2">Data on which to base the predictions (explanatory variables):</p>
+                    <p class="l3">time (hour, day, month, year)</p>
+                    <p class="l3">weather conditions</p>
+                    <p class="l3">local built environment</p>
+                    <p class="l3">connectedness of location (road betweenness)</p>
+                    <p class="l3">.. anything else that might drive footfall?</p>
+                    <p>All available in the Melbourne Open Data Portal</p>
+
+                </section>
+
+                <!-- Melbourne open data portal already covered -->
+                <!--
+                <section id="s2-data">
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/sensor_map.jpg"
+                         class="right" style="width:45%;"
+                         alt="Map of the network of pedestrian sensors in central Melbourne"/>
+                    <h2>Melbourne Sensor Data</h2>
+                    <p>Network of pedestrian sensors:</p>
+                    <p class="l2">Record pedestrian counts every hour</p>
+                    <p class="l2">Available openly at the
+                        <a href="https://www.data.vic.gov.au/discover-city-melbourne-open-data">Melbourne Open Data portal</a></p>
+                    <p>Numerous additional open data sets, including:</p>
+                    <p class="l2">Weather</p>
+                    <p class="l2">Street furniture (benches, bins etc)</p>
+                    <p class="l2">Buildings and landmarks</p>
+                </section>-->
+
+                <section id="s2-buffers">
+                    <figure class="right" style="width:50%;">
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/buffer_zone.jpg"
+                             alt="Example buffer zone around a sensor within which spatial features are counted"/>
+                        <figcaption>Example buffer zone within which spatial features are linked to sensors</figcaption>
+                    </figure>
+                    <h2>Linking sensors to their surroundings</h2>
+                    <p>Spatial features are counted within a <i>buffer zone</i> around each sensor</p>
+                    <p class="l2">Buildings, landmarks, street infrastructure, car parks, &hellip;</p>
+                    <p>Combined with time and weather to give <b>80 explanatory variables</b></p>
+                </section>
+
+                <section id="s2-table">
+                    <h2>Melbourne Open Data</h2>
+                    <table style="width:100%; border-collapse:collapse; font-size:55%;">
+                        <thead>
+                            <tr>
+                                <th style="border:1px solid #000; padding:4px;">Sensor ID</th>
+                                <th style="border:1px solid #000; padding:4px;">Hour of day</th>
+                                <th style="border:1px solid #000; padding:4px;">Day of week</th>
+                                <th style="border:1px solid #000; padding:4px;">Month of year</th>
+                                <th style="border:1px solid #000; padding:4px;">Nearby trees</th>
+                                <th style="border:1px solid #000; padding:4px;">Nearby offices</th>
+                                <th style="border:1px solid #000; padding:4px;">Nearby schools</th>
+                                <th style="border:1px solid #000; padding:4px;">Rainfall?</th>
+                                <th style="border:1px solid #000; padding:4px; background-color:#eeeeee;">Pedestrian count</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">7</td><td style="border:1px solid #000; padding:4px;">15</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">0</td><td style="border:1px solid #000; padding:4px;">Yes</td><td style="border:1px solid #000; padding:4px; background-color:#eeeeee;">25</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">7</td><td style="border:1px solid #000; padding:4px;">15</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">0</td><td style="border:1px solid #000; padding:4px;">No</td><td style="border:1px solid #000; padding:4px; background-color:#eeeeee;">27</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">7</td><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">8</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">Yes</td><td style="border:1px solid #000; padding:4px; background-color:#eeeeee;">67</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">7</td><td style="border:1px solid #000; padding:4px;">2</td><td style="border:1px solid #000; padding:4px;">8</td><td style="border:1px solid #000; padding:4px;">1</td><td style="border:1px solid #000; padding:4px;">Yes</td><td style="border:1px solid #000; padding:4px; background-color:#eeeeee;">69</td></tr>
+                            <tr><td colspan="8" style="border:1px solid #000; padding:4px; text-align:center;">&hellip;<i>80 explanatory variables</i>&hellip;</td><td style="border:1px solid #000; padding:4px; background-color:#eeeeee; text-align:center;"><b>?</b></td></tr>
+                        </tbody>
+                    </table>
+                    <p>Train on the known counts; predict the unknown ones</p>
+                </section>
+
+                <section id="s2-model_selection">
+                    <h2>Model selection</h2>
+                    <p>Considered two machine learning models (compared against linear regression)</p>
+                    <p>Evaluated accuracy using 10-fold cross-validation</p>
+                    <table style="width:60%; border-collapse:collapse; font-size:80%;">
+                        <thead>
+                            <tr>
+                                <th style="border:1px solid #000; padding:6px;">Model</th>
+                                <th style="border:1px solid #000; padding:6px;">MAE</th>
+                                <th style="border:1px solid #000; padding:6px;">RMSE</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td style="border:1px solid #000; padding:6px;"><b>Random Forest regression</b></td><td style="border:1px solid #000; padding:6px;"><b>89.88</b></td><td style="border:1px solid #000; padding:6px;"><b>179.62</b></td></tr>
+                            <tr><td style="border:1px solid #000; padding:6px;">XGBoost</td><td style="border:1px solid #000; padding:6px;">121.35</td><td style="border:1px solid #000; padding:6px;">207.40</td></tr>
+                            <tr><td style="border:1px solid #000; padding:6px;">Linear regression</td><td style="border:1px solid #000; padding:6px;">268.40</td><td style="border:1px solid #000; padding:6px;">370.54</td></tr>
+                        </tbody>
+                    </table>
+                    <p>Random forest regressor selected as best performing model</p>
+                </section>
+
+                <section id="s2-evaluation">
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/predicted_vs_actual.jpg"
+                         class="right" style="width:50%;"
+                         alt="Scatter plot of predicted against actual hourly pedestrian counts, clustered around the diagonal"/>
+                    <h2>Model evaluation</h2>
+                    <p>Predicted counts-per-hour of pedestrians plotted against actual values
+                        from the sensor data</p>
+                    <p>Most predictions fall around the diagonal (x=y), giving confidence the model
+                        is not biased towards smaller or larger counts</p>
+                    <p class="l2">MAE = 89.88; RMSE = 179.62</p>
+                </section>
+
+                <section id="s2-evaluation-spatial">
+                    <h2>Model evaluation: spatial</h2>
+                    <figure class="left" style="width:40%;">
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/spatial_mean_counts.jpg"
+                             alt="Map of mean hourly pedestrian counts per sensor across Melbourne"/>
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/spatial_mean_legend.png"
+                             style="width:90%; padding:0; margin:0;"
+                             alt="Colour scale for mean hourly values, running from 31 to 870"/>
+                        <figcaption>Mean hourly counts: central and southern sensors capture
+                            the highest footfall</figcaption>
+                    </figure>
+                    <figure class="right" style="width:40%;">
+                        <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/spatial_mape.jpg"
+                             alt="Map of mean absolute percentage error per sensor across Melbourne"/>
+                        <figcaption>MAPE: several sensors with a much larger percentage error</figcaption>
+                    </figure>
+                </section>
+
+                <section id="s2-evaluation-temporal">
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/temporal_evaluation.png"
+                         class="right" style="width:50%;"
+                         alt="Mean hourly counts and mean absolute percentage error by hour of the week"/>
+                    <h2>Model evaluation: temporal</h2>
+                    <p>Mean counts reflect typical city centre patterns</p>
+                    <p>Largest errors at night</p>
+                    <p class="l2">Small counts &rarr; large <i>percentage</i> errors</p>
+                </section>
+
+                <section id="s2-feature_importance">
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/feature_importance.png"
+                         class="right" style="width:52%;"
+                         alt="Permutation feature importance, coloured by whether the variable is a time, spatial, weather or random variable"/>
+                    <h2>Feature importance</h2>
+                    <p>Ranks each feature's contribution to the prediction</p>
+                    <p><b>Time</b> variables dominate</p>
+                    <p class="l2">hour of day, then day of week</p>
+                    <p><b>Spatial</b> variables matter, but much less</p>
+                    <p class="l2">mixed-use and office landmarks are the strongest</p>
+                    <p><b>Weather</b> variables are weaker still</p>
+                    <p class="l2">rainfall is the most important of them</p>
+                </section>
+
+                <section id="s2-events">
+                    <h2>Evaluating events - model prediction v.s. reality</h2>
+
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/anzac_day_map.jpg"
+                         class="right" style="width:33%;"
+                         alt="Map of the percentage difference between observed and predicted counts on Anzac Day"/>
+                    
+                    <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/pdf_extract/anzac_day_hourly.jpg"
+                         class="right" style="width:33%;"
+                         alt="Predicted versus real hourly counts on Anzac Day, with the percentage increase"/>
+                    <p>E.g. the Anzac Day Parade:</p>
+                    <p >5% more footfall in the whole city over 24h</p>
+                    <p >72% more footfall from 3-10am</p>
+                    <p >128% more footfall at a sensor in the south-east, near the parade</p>
+                </section>
+
+                <section id="s2-conclusions" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 2: Summary</h2>
+                        <p>This model can be used to:</p>
+                        <p class="l2">predict the number of pedestrians in time and space at
+                            un-sampled locations under different conditions</p>
+                        <p class="l2">better understand the impact of the built environment and other
+                            contextual factors on pedestrian counts</p>
+                        <p class="l2">evaluate the success of past events</p>
+                        <p>Model performs reasonably well overall, but there are spatial and
+                            temporal variations in prediction error</p>
+                    </div>
+                </section>
 
 
+                <!-- ************************************************************
+                ***** SECTION 3: ABM and Data Assimilation  ********************
+                ************************************************************ -->
+
+                <section id="section3" class="title"
+                         data-background-image="../figures/train_station_pedestrian.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 3</h2>
+                        <h3>Simulating crowds in real time: agent-based modelling and data assimilation</h3>
+                    </div>
+                </section>
+
+                <section id="s3-IntroToABM" data-background-video="../videos/skylines_mov-long.mp4"
+                         data-background-video-loop="loop">
+                    <div class="whitebackground2 fragment">
+                        <img class="right" style="width:40%" data-src="../figures/sims.png"
+                         alt="Diagram of the sims" />
+                        <h2>Introduction to ABM</h2>
+                        <p>Systems are driven by individuals</p>
+                        <p>Bottom-up modelling</p>
+                        <p class="l2">An alternative approach to modelling</p>
+                        <p class="l2">Rather than controlling from the top, try to represent the individuals</p>
+                        <p class="l2">Account for system behaviour directly</p>
+                        <p>Autonomous, interacting agents</p>
+                        <p>Represent individuals or groups</p>
+                        <p>Situated in a virtual environment</p>
+                    </div>
+                </section>
+
+                <section id="s3-real-time-crowd-modelling">
+                    <img class="right" data-src="../figures/train_station_pedestrian.jpg"
+                         style="width: 40%;"
+                        alt="Image of escalators in a train station" />
+                    <h2>Real Time Crowd Modelling</h2>
+                    <p>We can track individuals (anonymously?) as they move through busy
+                    public spaces</p>
+                    <p>We can simulate crowds quite well, but our simulated crowd will inevitably
+                    diverge from the real one</p>
+                    <p>Scenario: can we use data assimilation to update our crowd model in response
+                        to real-time data?</p>
+                    <p>Lots of potential applications for crowd management etc.</p>
+                </section>
+
+                <section id="s3-prob-divergence" data-background-video="../videos/starlings1-short.mp4"
+                    data-background-video-muted data-background-video-loop="loop">
+
+                    <div class="whitebackground fragment">
+                        <h2>Why we need Data Assimilation</h2>
+                        <p>Complex models will always diverge</p>
+                        <p class="l2">(due to inherent uncertainties in inputs, parameter values, model structure, etc.)</p>
+                        <p>Possible Solution: Data Assimilation</p>
+                        <p>Used in meteorology and hydrology to bring models closer to reality. Combines:</p>
+                        <p class="l2">Noisy, real-world observations</p>
+                        <p class="l2">Model estimates of the system state</p>
+                    </div>
+                </section>
+
+                <section id="s3-dda-vs-calibration">
+
+                    <h2>Data assimilation v.s. calibration</h2>
+
+                    <img data-src="../figures/data-assimilation2.png" style="width:70%;"
+                         alt="Example of optimising the model state using observations and data assimilation"/>
+
+                </section>
+
+                <section id="s3-abm-dda-overview">
+                    <img data-src="../figures/paper_figures/dda.jpg" alt="Diagram of data assimilation and an ABM" />
+                </section>
+
+                <section id="s3-da-challenges">
+
+                    <h2>Challenges for using DA with ABMs</h2>
+
+                    <p>Model size</p>
+                    <p class="l2">10,000 agents * 5 variables = 50,000 distinct parameters</p>
+                    <p>Agent behaviour</p>
+                    <p class="l2">Agent's have goals, needs, etc., so can't be arbitrarily adjusted</p>
+                    <p>Assumptions and parameter types</p>
+                    <p class="l2">Maths typically developed for continuous parameters and
+                        assume normal distributions</p>
+                    <p class="l2">Categorical parameters can be a big problem</p>
+                    <p>... but, at least, some of these problems are shared by climate models</p>
+
+                </section>
+
+                <section id="s3-da-methods">
+
+                    <h2>Some DA Methods</h2>
+                    <p>Basic idea: estimate the <em>posterior</em> model state</p>
+                    <p>Particle Filter</p>
+                    <p class="l2">Create loads of individual model 'particles' run
+                        them simultaneously.</p>
+                    <p class="l2">Remove those that don't represent the observations well;
+                        duplicate those that do</p>
+                    <p class="l2">Advantage: very few assumptions (Gaussian distributions etc.)</p>
+                    <p>Kalman Filter</p>
+                    <p class="l2">Many flavours: Ensemble, Unscented, ... </p>
+                    <p class="l2">Maintain a smaller ensemble and update the particles more intelligently</p>
+                    <p class="l2">Efficient but has stronger assumptions (although they might
+                    work OK anyway...)</p>
+                    <p>4DVar</p>
+                    <p class="l2">This is popular in meteorology but I don't know anything about it...</p>
+
+                </section>
+
+                <section id="s3-pf-experiments">
+                    <h2>Attempt 1: a Particle Filter</h2>
+                    <img data-src="../figures/PF_flowchart3.png"
+                         style="width:80%;"
+                         alt="Flowchart of the experimental design. Lots of models ('particles') are run simultaneously." />
+                </section>
+
+                <section id="s3-pf-stationsim2-b" data-transition="fade">
+                    <h2>Crowd Simulation with a Particle Filter</h2>
+                    <img data-src="../figures/pf_animation.gif"
+                         alt="Animation of a crowding model with data assimilation" />
+                </section>
+
+                <section id="s3-pf-results-median_error">
+
+                    <h2>Particle Filter Results</h2>
+                    <p>Box Environment: More particles = lower error</p>
+                    <p>Exponential increase in complexity</p>
+                    <figure>
+                        <img style="width:55%"
+                             data-src="../figures/paper_figures/2018-ParticleFilterFigs/median_abs_error.png"
+                             alt="median absolute error change with number of agents and particles: greater
+                                  complexity caused by larger numbers of agents can be mitigated by increasing
+                                  the numbers of particles." />
+                    </figure>
+                    <figcaption>
+                        Malleson, Nick, Kevin Minors, Le-Minh Kieu, Jonathan A. Ward, Andrew West, and Alison Heppenstall.
+                        (2020) Simulating Crowds in Real Time with Agent-Based Modelling and a Particle Filter. <i>Journal
+                        of Artificial Societies and Social Simulation</i> 23(3) DOI:
+                        <a href="https://doi.org/10.18564/jasss.4266">10.18564/jasss.4266</a>.
+                    </figcaption>
+                </section>
+
+                <section id="s3-gcs" data-background-video="../videos/grandcentral-short.mp4" data-background-video-muted
+                         data-background-video-loop="loop">
+
+                    <div class="whitebackground2 fragment">
+                        <h2>More realistic simulations:<br/>Grand Central Terminal (New York)</h2>
+
+                        <p>Pedestrian traces data</p>
+                        <p>B. Zhou, X. Wang and X. Tang. (2012) Understanding Collective Crowd Behaviors:
+                            Learning a Mixture Model of Dynamic Pedestrian-Agents. In <i>Proceedings of IEEE Conference on
+                            Computer Vision and Pattern Recognition (CVPR)</i> 2012</p>
+                        <p class="l2"><a href="http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html">
+                            http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html</a></p>
+                        <p>Cleaned and prepared by <a href="https://doi.org/10.12688/openreseurope.14144.1">Ternes et al. (2021)</a>.</p>
+                    </div>
+                </section>
+
+                <section id="s3-enkf">
+                    <figure class="right" style="width:35%;">
+                        <img data-src="../figures/paper_figures/2025-ABM_Wealth_Distribution/fig3.png"
+                             style="width: 60%;"
+                             alt="Flowchart illustrating the ensemble filter process. It begins with generating an ensemble of models, followed by predictions. At each time step, the algorithm checks if filtering is required (t = k). If yes, the predictions are compared to observations, optimal synthesis is computed, and ensemble members are updated. The process repeats for subsequent time steps."
+                             />
+                    </figure>
+
+                    <h2>Attempt 2: Ensemble Kalman Filter (EnKF)</h2>
+                    <p>More complicated, and has stronger assumptions, but can update the model state
+                        (including categorical parameters) directly</p>
+                    <p>
+                            \( \hat{X} = X + K \left( D - H X \right) \)
+                    </p>
+                    <p class="l2">Current state estimate (\(X\)) updated with new information (\(\hat{X}\))</p>
+                    <p class="l2">\(K\) (Kalman gain) balances importance of new data (\(D\)) v.s. current prediction.</p>
+                    <p class="l2">\(H X\): prediction transformed into the same space as the observed data
+                    (e.g. aggregate observations and individual agents)</p>
+                </section>
+
+                <section id="s3-enkf_results">
+                    <h2>Pedestrian simulation: EnKF Results</h2>
+                    <figure class="left" style="width:50%;">
+                        <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/updating_state2.png"
+                             alt="Figure illustrates that, after DA, the posterior estimates of two agents' locations are much closer to their corresponding positions in the data (observation)" />
+                        <figcaption>Figure 9: Comparison of prior and posterior positions of
+                            two agents (‘A’ and ‘B’) in all ensemble member models. After DA the positional estimates of
+                        the agents' locations are much more accurate and have lower variability.</figcaption>
+                    </figure>
+                    <figure class="right" style="width:35%;">
+                        <img data-src="../figures/paper_figures/2023-EnKF_Location_Estimation/cover.png"
+                             alt="Front page of the published paper" />
+                        <figcaption style="font-size: small">Suchak, K., M. Kieu, Y. Oswald, J. A. Ward, and N. Malleson (2024),
+                            Coupling an Agent-Based Model and an Ensemble Kalman Filter for Real-Time Crowd Modelling.
+                            <em>Royal Society Open Science 11</em> (4): 231553.
+                            DOI: <a href="https://doi.org/10.1098/rsos.231553">10.1098/rsos.231553</a>.</figcaption>
+                    </figure>
+                </section>
+
+                <section id="s3-enkf_results-interactive">
+                    <iframe width="1200" height="1000" src="../other/enkf_animation.html"
+                            title="Ensemble Kalman Filter"></iframe>
+                </section>
+
+                <section id="s3-conclusions" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 3: Summary</h2>
+                        <p>Particle filter struggled (so many agents with so many destination choices)</p>
+                        <p class="l2">But there is an opportunity to develop more nuanced filters</p>
+                        <p>EnKF performed very well</p>
+                        <p>Next steps: scale up to larger/more complicated crowds and use a more advanced
+                        crowd model.</p>
+                        <p>Transformative potential of "live" (Swarup and Mortveit, 2020) simulations</p>
+                        <p class="l2">Combine up-to-date, diverse datasets and create accurate predictions using
+                        "all the available information" (Talagrand, 1991)</p>
+                    </div>
+                </section>
+
+
+                <!-- ************************************************************
+                ***** SECTION 4: LLMs and ABMs  ********************************
+                ************************************************************ -->
+
+                <section id="section4" class="title"
+                         data-background-image="../figures/chatgpt/digital_city_abm.png">
+                    <div class="whitebackground2">
+                        <h2>Part 4</h2>
+                        <h3>Opportunities for integrating large language models with agent-based models</h3>
+                    </div>
+                </section>
+
+                <section id="s4-context">
+                    <img class="right"
+                         src="../figures/chatgpt/digital_brain.png"
+                         alt="ChatGPT-generated image of a digital brain" />
+                    <h2>Context</h2>
+                    <p>Agent behaviours are based on historical precedents ... </p>
+                    <p class="l2">Behavioural theories</p>
+                    <p class="l2">Empirical evidence</p>
+                    <p>Commonly implemented using:</p>
+                    <p class="l2">pre-defined rules</p>
+                    <p class="l2">deliberative frameworks</p>
+                    <p class="l2">black box statistical models</p>
+                    <p>These work well when the system is <i>mostly</i> in equilibrium</p>
+                </section>
+
+                <section id="s4-context2">
+                    <h2>Context</h2>
+                    <img src="../figures/explosion.png" class="right" alt="An explosion" />
+                    <p><strong>BUT: </strong> what happens if there is a catastrophic, systemic change?</p>
+                    <p class="l2">2008 global financial crisis</p>
+                    <p class="l2">COVID</p>
+                    <p><i>Models based on historical behavioural assumptions can break down</i></p>
+                    <p>We (researchers) cannot hope to predict these events, nor how people will behave afterwards</p>
+                </section>
+
+                <section id="s4-burglary_example">
+                    <h2>Example: burglary simulation</h2>
+                    <video controls width="640">
+                        <source src="../videos/sim.mp4" type="video/mp4">
+                        <source src="../videos/sim.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                    <p>What happens if the agents can't leave the house?</p>
+                </section>
+
+                <section id="s4-llms">
+                    <h2>Large Language Models (LLMs)</h2>
+                    <p>Early evidence suggests that large-language models (LLMs) can be used to represent a wide range
+                        of human behaviours</p>
+                    <figure class="right">
+                        <img data-src="../figures/attribution/park_llm_agent.png"
+                             style="width:100%;"
+                             alt="Image of the ABM created by Park et. al."
+                             />
+                        <figcaption>Park et al. (2023)
+                            ‘Generative Agents: Interactive Simulacra of Human Behavior’. In Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 1–22. San Francisco CA USA: ACM.
+                            DOI: <a href="https://doi.org/10.1145/3586183.3606763">10.1145/3586183.3606763</a>.
+                        </figcaption>
+                    </figure>
+                    <p>Already a flurry of activity in LLM-backed ABMs</p>
+                    <p class="l2">E.g. METAAGENTS, AgentSociety, Shachi, Concordia, MetaGPT ... and others ... </p>
+                    <p>But efforts are <i>emerging prototypes</i>.</p>
+                    <p>Limited peer review</p>
+                </section>
+
+                <section id="s4-vision">
+                    <h2>Vision</h2>
+                    <h3>Agents backed by foundation models</h3>
+                    <img src="../figures/llm_agents.png"
+                         alt="Diagram showing traditional ABM v.s. one where the agents are controlled by LLMs"/>
+                </section>
+
+                <section id="s4-fm-llms">
+                    <h2>Vision</h2>
+                    <h3>Agents backed by foundation models</h3>
+                    <p><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
+                    <p><strong>Geospatial Foundation Models</strong> capture nuanced, complex spatial associations </p>
+                    <p>Together, these models could allow us to create ABMs where agents behave in realistic ways
+                        even when faced with unprecedented situations</p>
+                </section>
+
+
+                <section id="s4-challenges">
+                    <h2>(some) Challenges</h2>
+                    <p>Environmental adaptability</p>
+                    <p class="l2">Agent reasoning might be unbounded, but their actions are limited by the simulation
+                    environment</p>
+                    <p class="l2"><i>What if my burglar agents wanted to target commercial buildings?</i></p>
+                    <p>Environment perception</p>
+                    <p class="l2">LLMs can only operate on text. Leads to highly simplified contextual descriptions.</p>
+                    <p>Operational challenges</p>
+                    <p class="l2">Computational complexity, validation (data leakage), calibration</p>
+                    <p class="l2">LLMs have 'seen' most major historical events, so how can we validate?</p>
+                </section>
+
+                <section id="s4-conclusions" data-background-image="../figures/shutterstock_788458099-small.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 4: Summary</h2>
+                        <p>ABMs will struggle to represent agent behaviours in unprecedented situations</p>
+                        <p>Foundation models (LLMs, GeoFMs) offer a potential solution;
+                            allowing agents to behave in reasonable ways in novel situations</p>
+                        <p>Significant technical and methodological challenges remain:</p>
+                        <p class="l2">Environmental adaptability</p>
+                        <p class="l2">Environment perception</p>
+                        <p class="l2">Operational challenges</p>
+                    </div>
+                </section>
+
+
+                <!-- ************************************************************
+                ***** SECTION 5: Geospatial Foundation Models (brief)  *********
+                ************************************************************ -->
+
+                <section id="section5" class="title"
+                         data-background-image="../figures/alpha_earth.jpg">
+                    <div class="whitebackground2">
+                        <h2>Part 5</h2>
+                        <h3>Briefly: Geospatial Foundation Models</h3>
+                    </div>
+                </section>
+
+                <section id="s5-geofm">
+                    <figure class="right">
+                        <img src="../figures/attribution/huang_urbanclip.png"
+                             alt="A diagram showing how UrbanCLIP creates place embeddings from OpenStreetMap data"
+                        />
+                        <figcaption>UrbanClip: Balsebre et al. (2024) ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’.
+                            In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
+                            DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a></figcaption>
+
+                        <p></p> <!-- make a bit of space between images-->
+
+                        <img data-src="../figures/alpha_earth.jpg"
+                             alt="A detailed collage of 20 multi-colored tiles featuring high-resolution satellite imagery of various landscapes, illustrating global mapping data"
+                        />
+                        <figcaption>Google <a src="http://www.deepmind.com/research/highlighted-research/alphaearth">
+                            AlphaEarth</a> have released global embeddings from satellite images.</figcaption>
+                    </figure>
+                    <h2>Geospatial Foundation Models</h2>
+                    <p>Foundation models trained on spatial data (sometimes including text)</p>
+                    <p class="l2">E.g. UrbanCLIP, CityFM, GeoGPT, etc.</p>
+                    <p>'Transformers for spatial data'.</p>
+                    <p>Place embeddings capture <i>spatial structure and scale</i> and can be used to
+                        perform advanced spatial reasoning.</p>
+                </section>
+
+                <section id="s5-deprivation-overview">
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/gm_street_images.png"
+                         class="right" style="width:40%;"
+                         alt="Map of Greater Manchester showing sampled Street View point locations"/>
+                    <h2>Example: how much deprivation is <i>visible</i>?</h2>
+                    <p><b>Greater Manchester</b>, UK; 2025 IMD at LSOA level (1,702 neighbourhoods)</p>
+                    <p><b>Street View:</b> 18,897 points sampled on the OSM road network,
+                        4 images each &rarr; <b>~75,600 images</b></p>
+                    <p><b>Method:</b> CLIP embeddings (512-dim) median-pooled to the LSOA;
+                        XGBoost predicts IMD rank</p>
+                    <p>Compared against <b>AlphaEarth</b> satellite embeddings (64-dim)</p>
+                    <p class="l2">Asher, Comber, Golzari Osguie, Bui Quang, Kieu &amp; Malleson (2026),
+                        <i>Estimating Visible Deprivation through the Analysis of Street View Image Embeddings</i></p>
+                </section>
+
+                <section id="s5-rq1-result">
+                    <h2>Street view v.s. satellite</h2>
+                    <p>How much IMD-rank variance does each source explain?</p>
+                    <div style="display:flex; justify-content:space-around; align-items:flex-start;
+                                margin-top:0.4em;">
+                        <div style="width:42%;">
+                            <p style="font-size:160%; margin:0;"><b>~68%</b></p>
+                            <p style="margin:0;"><b>Street View</b> (CLIP)</p>
+                            <p class="small" style="margin:0;">512-dim &middot; test R&sup2;&nbsp;=&nbsp;0.68</p>
+                        </div>
+                        <div style="width:42%;">
+                            <p style="font-size:160%; margin:0; color:#888;"><b>~33%</b></p>
+                            <p style="margin:0;"><b>Satellite</b> (AlphaEarth)</p>
+                            <p class="small" style="margin:0;">64-dim &middot; test R&sup2;&nbsp;=&nbsp;0.32</p>
+                        </div>
+                    </div>
+                    <p>Ground-level cues are <i>not</i> readily visible from above</p>
+                    <p>Off-the-shelf embeddings, no task-specific training</p>
+                </section>
+
+                <section id="s5-rq2-result">
+                    <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/6-R2_vs_samplesize.png"
+                         class="right" style="width:45%;"
+                         alt="NRMSE versus image subsample size showing residential clusters consistently best"/>
+                    <h2>'Residential' scenes carry the strongest signal</h2>
+                    <p>Partition the image embeddings into <i>k</i>&nbsp;=&nbsp;5 clusters of
+                        visually similar scenes (<i>k</i>-means), then fit a model per cluster</p>
+                    <table style="width:45%; border-collapse:collapse; font-size:70%;">
+                        <thead><tr>
+                            <th style="border:1px solid #000; padding:4px;">Cluster (scene)</th>
+                            <th style="border:1px solid #000; padding:4px;">R&sup2;</th>
+                        </tr></thead>
+                        <tbody>
+                            <tr><td style="border:1px solid #000; padding:4px;">4 &mdash; houses</td><td style="border:1px solid #000; padding:4px;"><b>0.60</b></td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">5 &mdash; houses</td><td style="border:1px solid #000; padding:4px;"><b>0.57</b></td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">2 &mdash; commercial/industrial</td><td style="border:1px solid #000; padding:4px;">0.37</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">1 &mdash; greenery</td><td style="border:1px solid #000; padding:4px;">0.32</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;">3 &mdash; rural roads</td><td style="border:1px solid #000; padding:4px;">0.07</td></tr>
+                            <tr><td style="border:1px solid #000; padding:4px;"><i>Global (all images)</i></td><td style="border:1px solid #000; padding:4px;"><i>0.68</i></td></tr>
+                        </tbody>
+                    </table>
+                </section>
+
+
+                <!-- ************************************************************
+                ************** CONCLUSION / CLOSING ****************************
+                ************************************************************ -->
+
+                <section id="summary" data-background-image="../figures/shutterstock_615414464-small.jpg">
+                    <div class="whitebackground2 fragment">
+                        <h2>Summary</h2>
+                        <p><b>PCA</b> to separate footfall into (recognisable) components &ndash; busyness,
+                            commuting, lunchtime &ndash; and tracks how places change</p>
+                        <p><b>Machine learning</b> predicts counts at unsampled places and times;
+                            time dominates, and the residuals can evaluate events</p>
+                        <p><b>ABMs with data assimilation</b> keep a simulation aligned to a real
+                            crowd in real time</p>
+                        <p><b>LLMs</b> could give agents behaviour that survives unprecedented
+                            situations &ndash; but challenges with adaptability, perception and validation</p>
+                        <p><b>Geospatial foundation models</b> turn places into embeddings (we found ~68% of
+                            deprivation variance is recoverable from street imagery alone)</p>
+                    </div>
+                </section>
+
+                <section class="title" id="thanks"
+                         data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <h5>Geospatial Systems CDT Annual Assembly, 7-8 September, Newcastle University.</h5>
+                        <hr />
+                        <h1 style="font-size: 45px;">Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models</h1>
+                        <hr />
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, University of Leeds, UK</h2>
+                        <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:20px">Slides available at: <br />
+                            <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
+                        </p>
+                        <p style="text-align:center;font-size:16px">Thanks: Jack Liddle, Wenhua Jiang, Molly Asher,
+                            Yannick Oswald, Keiran Suchak, Minh Kieu, Patricia Ternes, Robert Clay, Jonathan Ward,
+                            Alison Heppenstall, Andrew Crooks, Ed Manley, Alexis Comber</p>
+                        <hr />
+                        <a href="https://https://www.ukri.org/councils/esrc/">
+                            <img style="float:left;padding:5px;width:auto; height:60px;"
+                                 data-src="../figures/LOGO_ESRC.jpg" />
+                        </a>
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:5px;width:auto; height:60px;"
+                                 class="whitebackground"
+                                 data-src="../figures/uol_logo.gif" />
+                        </a>
+                        <a href="https://environment.leeds.ac.uk/geography">
+                            <img style="padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
+                        </a>
+                    </div>
+                </section>
 
             </div>
         </div>
