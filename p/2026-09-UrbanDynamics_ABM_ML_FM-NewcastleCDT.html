@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="author" content="Nick Malleson">
+        <meta name="keywords" content="ABM; Urban Dynamics; Machine learning; Foundation Models">
+
+        <title>Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models</title>
+
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/white.css">
+
+        <!-- Some extra bits added by Nick -->
+        <link rel="stylesheet" href="reveal/css/nick.css">
+
+        <!-- Theme used for syntax highlighting of code -->
+        <link rel="stylesheet" href="reveal/lib/css/zenburn.css">
+        
+        <!-- Printing and PDF exports -->
+        <script>
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = window.location.search.match(/print-pdf/gi) ? 'reveal/css/print/pdf.css' : 'reveal/css/print/paper.css';
+            document.getElementsByTagName('head')[0].appendChild(link);
+        </script>
+    </head>
+
+    <body>
+        <div class="reveal">
+            <div class="slides">
+
+                <section class="title" id="index"
+                         data-background-image="../figures/shutterstock_788457058-small.jpg">
+                    <div class="whitebackground2">
+                        <h5>Geospatial Systems CDT Annual Assembly, 7-8 September, Newcastle University.</h5>
+                        <hr />
+						<h1 style="font-size: 45px;">Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models</h1>
+                        <hr />
+                        <h2 style="font-size: 35px;">
+                            <a href="http://nickmalleson.co.uk/">Nick Malleson</a>, University of Leeds, UK</h2>
+                        <h4 style="font-size: 25px;"><a href="mailto:n.s.malleson@leeds.ac.uk">n.s.malleson@leeds.ac.uk</a></h4>
+                        <hr/>
+                        <p style="text-align:center;font-size:20px">Slides available at: <br />
+                            <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
+                        </p>
+                        <hr />
+						<a href="https://https://www.ukri.org/councils/esrc/">
+                            <img style="float:left;padding:5px;width:auto; height:60px;"
+							data-src="../figures/LOGO_ESRC.jpg" />
+							</a>
+                        <a href="http://www.leeds.ac.uk/">
+                            <img style="float:right;padding:5px;width:auto; height:60px;"
+								 class="whitebackground"
+                                 data-src="../figures/uol_logo.gif" />
+                        </a>
+                        <a href="https://environment.leeds.ac.uk/geography">
+                            <img style="padding:10px;width:150px; height:auto;" data-src="../figures/LOGO_SOG.png" />
+                        </a>
+                        <!-- <a href="http://www.turing.ac.uk/">
+                        <img style="float:right;padding:10px;width:150px; height:auto;" src="../figures/LOGO_TURING.png"/>
+                        </a> -->
+                    </div>
+                </section>
+
+
+
+                <!-- ************************************************************
+                ************************* Overview  ************************
+                ************************************************************ -->
+
+				<section id="overview">
+					<img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/cluster4_sample.jpg"
+						 class="right" style="width:35%;"
+									   alt="Sample of street-view images of residential areas"/>
+					<h2>Overview</h2>
+					<p>XXXX</p>
+
+					<aside class="notes">
+						ABSTRACT: Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models
+
+						Cities are complex systems whose behaviour is driven by a multitude of diverse, interacting entities that operate across multiple spatial and temporal scales and for whom high-quality data are rarely available at the level required. This presents enormous challenges for modelling.
+
+						This talk will present a range of contemporary approaches that can be used to better understand and, in some cases, predict outcomes in cities. It begins by illustrating how machine learning techniques, coupled with high-resolution pedestrian count data, can offer insight into urban dynamics: where people are, where they are likely to be, and how what these changing patterns can tell us about wider urban evolution. It will then discuss how innovations in foundation modelling and the transformer architecture can be used to draw insight from ‘big’ data sources such as images of places and user-generated text describing neighbourhoods. Finally it turns to agent-based modelling, using examples from research on crime to show how individual behaviour can be simulated directly, and considers what these three approaches might offer one another.
+
+					</aside>
+				</section>
+
+
+				<!-- ************************************************************
+                ************************* Background/Context  ************************
+                ************************************************************ -->
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+        <script src="reveal/lib/js/head.min.js"></script>
+        <script src="reveal/js/reveal.js"></script>
+
+        <script>
+            // More info https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                history: true,
+
+                // More info https://github.com/hakimel/reveal.js#dependencies
+                dependencies: [
+                    { src: 'reveal/plugin/markdown/marked.js' },
+                    { src: 'reveal/plugin/markdown/markdown.js' },
+                    { src: 'reveal/plugin/notes/notes.js', async: true },
+                    { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+                ]
+            });
+        </script>
+    </body>
+
+</html>
