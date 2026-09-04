@@ -52,6 +52,10 @@
                         <p style="text-align:center;font-size:20px">Slides available at: <br />
                             <a href="https://nickmalleson.github.io/presentations.html">https:/nickmalleson.github.io/presentations.html</a>
                         </p>
+                        <p style="text-align:center;font-size:16px">Thanks: Jack Liddle, Wenhua Jiang, Molly Asher,
+                            Yannick Oswald, Keiran Suchak, Minh Kieu, Patricia Ternes, Robert Clay, Jonathan Ward,
+                            Dan Tang, Kevin Minors, Andrew West, Thanh Bui Quang, Naomi Golzari Osguie,
+                            Alison Heppenstall, Andrew Crooks, Ed Manley, Alexis Comber</p>
                         <hr />
 						<a href="https://https://www.ukri.org/councils/esrc/">
                             <img style="float:left;padding:5px;width:auto; height:60px;"
@@ -101,7 +105,7 @@
 					<p><b>2. Predicting</b> pedestrian volumes &ndash; machine learning with diverse urban data</p>
 					<p><b>3. Simulating</b> crowds in real time &ndash; agent-based models and data assimilation</p>
 					<p><b>4. Reasoning</b> agents &ndash; opportunities for integrating LLMs with ABMs</p>
-					<p><b>5. Aside:</b> geospatial foundation models</p>
+					<p><b>5. Aside:</b> Geospatial foundation models</p>
 
 					<aside class="notes">
 						ABSTRACT: Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models
@@ -144,6 +148,7 @@
                     <div class="whitebackground2">
                         <h2>Part 1</h2>
                         <h3>Unpacking aggregate pedestrian behaviour with Principal Component Analysis</h3>
+                        <h4>Jack Liddle, Wenhua Jiang, and Nick Malleson</h4>
                     </div>
                 </section>
 
@@ -175,11 +180,13 @@
 
                 </section>
 
+                <!-- No time for the footfall dynamics slide or the map of sensor locations --
                 <section id="s1-temporal_patterns">
                     <h2>Context: Footfall Dynamics</h2>
                     <img data-src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/temporal_signature-cupum.png"
                          alt="Hypothetical example of footfall dynamics: graph showing peaks for commuting" />
                 </section>
+                
 
                 <section id="s1-sensors_locs">
 
@@ -193,10 +200,12 @@
 
 
                 </section>
+                -->
 
                 <section id="s1-footfall_example">
                     <h2>Footfall Data</h2>
                     <h3>Mean daily and weekly footfall counts</h3>
+                    <p>Morning &amp; evening peaks; weekday v.s weekend</p>
                     <p>Some regularity but also huge variation</p>
                     <img src="../figures/paper_figures/2025-PCA_Pedestrian_Flows/AverageDays_Weeks.png" />
 
@@ -523,22 +532,40 @@
                     <div class="whitebackground2">
                         <h2>Part 3</h2>
                         <h3>Simulating crowds in real time: agent-based modelling and data assimilation</h3>
+                        <h4>Keiran Suchak, Minh Kieu, Yannick Oswald, Jon Ward, Dan Tang, Patricia Ternes,
+                        Robert Clay, Nick Malleson</h4>
+                        <hr />
+                        <p style="font-size:20px; text-align: center">Work conducted under the ERC-funded
+                            <a href="https://urban-analytics.github.io/dust/">DUST</a> project
+                            (<i>Data Assimilation for Agent-Based Models</i>):<br/>
+                            <a href="https://urban-analytics.github.io/dust/">https://urban-analytics.github.io/dust/</a>
+                        </p>
+                                                <hr />
+
+                        <a href="https://urban-analytics.github.io/dust/">
+                            <img style="padding:5px;width:auto; height:100px;"
+                                 data-src="../figures/LOGO_ERC.jpg"
+                                 alt="European Research Council logo" />
+                        </a>
+                        <a href="https://europa.eu/european-union/index_en">
+                            <img style="padding:5px 20px;width:auto; height:100px;"
+                                 data-src="../figures/LOGO_EU.jpg"
+                                 alt="European Union flag" />
+                        </a>
                     </div>
                 </section>
 
                 <section id="s3-IntroToABM" data-background-video="../videos/skylines_mov-long.mp4"
                          data-background-video-loop="loop">
                     <div class="whitebackground2 fragment">
-                        <img class="right" style="width:40%" data-src="../figures/sims.png"
+                        <img class="right" style="width:30%" data-src="../figures/sims.png"
                          alt="Diagram of the sims" />
                         <h2>Introduction to ABM</h2>
                         <p>Systems are driven by individuals</p>
-                        <p>Bottom-up modelling</p>
-                        <p class="l2">An alternative approach to modelling</p>
+                        <p>Agent-Based Modelling</p>
                         <p class="l2">Rather than controlling from the top, try to represent the individuals</p>
                         <p class="l2">Account for system behaviour directly</p>
-                        <p>Autonomous, interacting agents</p>
-                        <p>Represent individuals or groups</p>
+                        <p>Autonomous, interacting agents represent individuals or groups</p>
                         <p>Situated in a virtual environment</p>
                     </div>
                 </section>
@@ -552,9 +579,7 @@
                     public spaces</p>
                     <p>We can simulate crowds quite well, but our simulated crowd will inevitably
                     diverge from the real one</p>
-                    <p>Scenario: can we use data assimilation to update our crowd model in response
-                        to real-time data?</p>
-                    <p>Lots of potential applications for crowd management etc.</p>
+                    <p>Can we update our crowd model in response to real-time data?</p>
                 </section>
 
                 <section id="s3-prob-divergence" data-background-video="../videos/starlings1-short.mp4"
@@ -653,21 +678,7 @@
                     </figcaption>
                 </section>
 
-                <section id="s3-gcs" data-background-video="../videos/grandcentral-short.mp4" data-background-video-muted
-                         data-background-video-loop="loop">
 
-                    <div class="whitebackground2 fragment">
-                        <h2>More realistic simulations:<br/>Grand Central Terminal (New York)</h2>
-
-                        <p>Pedestrian traces data</p>
-                        <p>B. Zhou, X. Wang and X. Tang. (2012) Understanding Collective Crowd Behaviors:
-                            Learning a Mixture Model of Dynamic Pedestrian-Agents. In <i>Proceedings of IEEE Conference on
-                            Computer Vision and Pattern Recognition (CVPR)</i> 2012</p>
-                        <p class="l2"><a href="http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html">
-                            http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html</a></p>
-                        <p>Cleaned and prepared by <a href="https://doi.org/10.12688/openreseurope.14144.1">Ternes et al. (2021)</a>.</p>
-                    </div>
-                </section>
 
                 <section id="s3-enkf">
                     <figure class="right" style="width:35%;">
@@ -687,6 +698,22 @@
                     <p class="l2">\(K\) (Kalman gain) balances importance of new data (\(D\)) v.s. current prediction.</p>
                     <p class="l2">\(H X\): prediction transformed into the same space as the observed data
                     (e.g. aggregate observations and individual agents)</p>
+                </section>
+                
+                <section id="s3-gcs" data-background-video="../videos/grandcentral-short.mp4" data-background-video-muted
+                         data-background-video-loop="loop">
+
+                    <div class="whitebackground2 fragment">
+                        <h2>More realistic simulations:<br/>Grand Central Terminal (New York)</h2>
+
+                        <p>Pedestrian traces data</p>
+                        <p>B. Zhou, X. Wang and X. Tang. (2012) Understanding Collective Crowd Behaviors:
+                            Learning a Mixture Model of Dynamic Pedestrian-Agents. In <i>Proceedings of IEEE Conference on
+                            Computer Vision and Pattern Recognition (CVPR)</i> 2012</p>
+                        <p class="l2"><a href="http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html">
+                            http://www.ee.cuhk.edu.hk/~xgwang/grandcentral.html</a></p>
+                        <p>Cleaned and prepared by <a href="https://doi.org/10.12688/openreseurope.14144.1">Ternes et al. (2021)</a>.</p>
+                    </div>
                 </section>
 
                 <section id="s3-enkf_results">
@@ -709,7 +736,7 @@
                 </section>
 
                 <section id="s3-enkf_results-interactive">
-                    <iframe width="1200" height="1000" src="../other/enkf_animation.html"
+                    <iframe width="1000" height="800" src="../other/enkf_animation.html"
                             title="Ensemble Kalman Filter"></iframe>
                 </section>
 
@@ -745,14 +772,15 @@
                          src="../figures/chatgpt/digital_brain.png"
                          alt="ChatGPT-generated image of a digital brain" />
                     <h2>Context</h2>
-                    <p>Agent behaviours are based on historical precedents ... </p>
+                    <p>Agent behaviours typically based on historical precedents</p>
                     <p class="l2">Behavioural theories</p>
                     <p class="l2">Empirical evidence</p>
                     <p>Commonly implemented using:</p>
                     <p class="l2">pre-defined rules</p>
                     <p class="l2">deliberative frameworks</p>
                     <p class="l2">black box statistical models</p>
-                    <p>These work well when the system is <i>mostly</i> in equilibrium</p>
+                    <p>These work well when the system is <i>mostly</i> in equilibrium, and/or when
+                        we have seen a behaviour in the past</p>
                 </section>
 
                 <section id="s4-context2">
@@ -761,7 +789,8 @@
                     <p><strong>BUT: </strong> what happens if there is a catastrophic, systemic change?</p>
                     <p class="l2">2008 global financial crisis</p>
                     <p class="l2">COVID</p>
-                    <p><i>Models based on historical behavioural assumptions can break down</i></p>
+                    <p class="l2">Climate change</p>
+                    <p>Models based on historical behavioural assumptions can break down</p>
                     <p>We (researchers) cannot hope to predict these events, nor how people will behave afterwards</p>
                 </section>
 
@@ -798,26 +827,35 @@
                 <section id="s4-vision">
                     <h2>Vision</h2>
                     <h3>Agents backed by foundation models</h3>
-                    <img src="../figures/llm_agents.png"
-                         alt="Diagram showing traditional ABM v.s. one where the agents are controlled by LLMs"/>
-                </section>
-
-                <section id="s4-fm-llms">
-                    <h2>Vision</h2>
-                    <h3>Agents backed by foundation models</h3>
-                    <p><strong>Large Language Models</strong> can respond to prompts in 'believable', 'human-like' ways</p>
-                    <p><strong>Geospatial Foundation Models</strong> capture nuanced, complex spatial associations </p>
-                    <p>Together, these models could allow us to create ABMs where agents behave in realistic ways
-                        even when faced with unprecedented situations</p>
+                    <p>There is growing evidence that LLMs can respond to prompts in 'believable', 'human-like' ways</p>
+                    <figure>
+                        <img src="../figures/llm_agents3.png"
+                             alt="Diagram showing traditional ABM v.s. one where the agents are controlled by LLMs"/>
+                        <figcaption>Example of an LLM-driven ABM in the household energy sector. The LLM agent is able
+                        to weigh a wide range of factors and make more flexible decisions than a 'traditional' agent
+                        that is being controlled by pre-determined behavioural rules.</figcaption>
+                    </figure>
                 </section>
 
 
-                <section id="s4-challenges">
-                    <h2>(some) Challenges</h2>
+
+                <section id="s4-challenges1">
+                    <h2>(some) Challenges (i)</h2>
+                    <p>Behavioural realism</p>
+                    <p class="l2">LLM-driven behaviour could be persuasive but inaccurate</p>
+                    <p class="l2">How do we manage the inevitable biases that will come from ingesting Internet data in training?</p>
                     <p>Environmental adaptability</p>
                     <p class="l2">Agent reasoning might be unbounded, but their actions are limited by the simulation
                     environment</p>
                     <p class="l2"><i>What if my burglar agents wanted to target commercial buildings?</i></p>
+                    <p class="l2"><i>What if a household agent wants to visit a 'warm bank'?</i></p>
+                </section>
+                
+                <section id="s4-challenges2">
+
+                    <img data-src=../figures/view_of_a_street.png alt="A street scene"
+                         class="right" style="width: 30%;"/>
+                    <h2>(some) Challenges (ii)</h2>
                     <p>Environment perception</p>
                     <p class="l2">LLMs can only operate on text. Leads to highly simplified contextual descriptions.</p>
                     <p>Operational challenges</p>
@@ -829,12 +867,9 @@
                     <div class="whitebackground2">
                         <h2>Part 4: Summary</h2>
                         <p>ABMs will struggle to represent agent behaviours in unprecedented situations</p>
-                        <p>Foundation models (LLMs, GeoFMs) offer a potential solution;
+                        <p>Foundation models (LLMs, GeoFMs) offer a <i>potential</i> solution;
                             allowing agents to behave in reasonable ways in novel situations</p>
-                        <p>Significant technical and methodological challenges remain:</p>
-                        <p class="l2">Environmental adaptability</p>
-                        <p class="l2">Environment perception</p>
-                        <p class="l2">Operational challenges</p>
+                        <p>Significant technical and methodological challenges remain</p>
                     </div>
                 </section>
 
@@ -857,23 +892,34 @@
                              alt="A diagram showing how UrbanCLIP creates place embeddings from OpenStreetMap data"
                         />
                         <figcaption>UrbanClip: Balsebre et al. (2024) ‘City Foundation Models for Learning General Purpose Representations from OpenStreetMap’.
-                            In Proceedings of the 33rd ACM International Conference on Information and Knowledge Management, 87–97. Boise ID USA: ACM..
                             DOI: <a href="https://doi.org/10.1145/3627673.3679662">10.1145/3627673.3679662</a></figcaption>
 
-                        <p></p> <!-- make a bit of space between images-->
+                        <p class="l2"></p> <!-- make a bit of space between images-->
 
                         <img data-src="../figures/alpha_earth.jpg"
-                             alt="A detailed collage of 20 multi-colored tiles featuring high-resolution satellite imagery of various landscapes, illustrating global mapping data"
+                             alt="A detailed collage of 20 multi-coloured tiles featuring high-resolution satellite imagery of various landscapes, illustrating global mapping data"
                         />
                         <figcaption>Google <a src="http://www.deepmind.com/research/highlighted-research/alphaearth">
                             AlphaEarth</a> have released global embeddings from satellite images.</figcaption>
                     </figure>
                     <h2>Geospatial Foundation Models</h2>
-                    <p>Foundation models trained on spatial data (sometimes including text)</p>
-                    <p class="l2">E.g. UrbanCLIP, CityFM, GeoGPT, etc.</p>
-                    <p>'Transformers for spatial data'.</p>
-                    <p>Place embeddings capture <i>spatial structure and scale</i> and can be used to
-                        perform advanced spatial reasoning.</p>
+                    <p>Foundation models trained on spatial data</p>
+                    <p class="l2">E.g. UrbanCLIP, CityFM, GeoGPT..</p>
+                    <p>Think "an LLM for space"</p>
+                    <p>They create <i>embeddings</i> for a place:</p>
+                    <p class="l2">A (long) vector of numbers describing a place/word/thing, where 
+                        different parts of the vector describe different aspects, and
+                        similar things sit close together
+                    <p>Place embeddings capture <i>spatial structure and scale</i>; used for 
+                        advanced spatial reasoning.</p>
+                </section>
+                
+                <section id="s5-amsterdam_street_view">
+                    
+                    <h2>Example: Image embeddings in Amsterdam</h2>
+                    <img src="../figures/paper_figures/StreetViewDeprivation-Amsterdam/2-embeddings-points-map.png"
+                         alt="Map of PCA-normalised colours of embeddings of images taken in Amsterdam" />
+                
                 </section>
 
                 <section id="s5-deprivation-overview">
@@ -902,7 +948,7 @@
                             <p class="small" style="margin:0;">512-dim &middot; test R&sup2;&nbsp;=&nbsp;0.68</p>
                         </div>
                         <div style="width:42%;">
-                            <p style="font-size:160%; margin:0; color:#888;"><b>~33%</b></p>
+                            <p style="font-size:160%; margin:0; "><b>~33%</b></p>
                             <p style="margin:0;"><b>Satellite</b> (AlphaEarth)</p>
                             <p class="small" style="margin:0;">64-dim &middot; test R&sup2;&nbsp;=&nbsp;0.32</p>
                         </div>
@@ -914,7 +960,7 @@
                 <section id="s5-rq2-result">
                     <img data-src="../figures/paper_figures/2026-GeoAI-INTEGRATE-Embeddings-Deprivation/6-R2_vs_samplesize.png"
                          class="right" style="width:45%;"
-                         alt="NRMSE versus image subsample size showing residential clusters consistently best"/>
+                         alt="NRMSE versus image sub-sample size showing residential clusters consistently best"/>
                     <h2>'Residential' scenes carry the strongest signal</h2>
                     <p>Partition the image embeddings into <i>k</i>&nbsp;=&nbsp;5 clusters of
                         visually similar scenes (<i>k</i>-means), then fit a model per cluster</p>
@@ -945,13 +991,13 @@
                         <p><b>PCA</b> to separate footfall into (recognisable) components &ndash; busyness,
                             commuting, lunchtime &ndash; and tracks how places change</p>
                         <p><b>Machine learning</b> predicts counts at unsampled places and times;
-                            time dominates, and the residuals can evaluate events</p>
-                        <p><b>ABMs with data assimilation</b> keep a simulation aligned to a real
+                            time dominates, and the residuals can be used to evaluate events</p>
+                        <p><b>ABMs with data assimilation</b> keeps a simulation aligned to a real
                             crowd in real time</p>
                         <p><b>LLMs</b> could give agents behaviour that survives unprecedented
-                            situations &ndash; but challenges with adaptability, perception and validation</p>
-                        <p><b>Geospatial foundation models</b> turn places into embeddings (we found ~68% of
-                            deprivation variance is recoverable from street imagery alone)</p>
+                            situations &ndash; but many challenges</p>
+                        <p><b>Geospatial foundation models</b> turn places into embeddings: potentially
+                        an extremely powerful way to represent space</p>
                     </div>
                 </section>
 
@@ -971,6 +1017,7 @@
                         </p>
                         <p style="text-align:center;font-size:16px">Thanks: Jack Liddle, Wenhua Jiang, Molly Asher,
                             Yannick Oswald, Keiran Suchak, Minh Kieu, Patricia Ternes, Robert Clay, Jonathan Ward,
+                            Dan Tang, Kevin Minors, Andrew West, Thanh Bui Quang, Naomi Golzari Osguie,
                             Alison Heppenstall, Andrew Crooks, Ed Manley, Alexis Comber</p>
                         <hr />
                         <a href="https://https://www.ukri.org/councils/esrc/">
