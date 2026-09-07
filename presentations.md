@@ -46,6 +46,8 @@ tagline:
 
 ### <a name="presentations"></a>2026
 
+ - [Modelling Urban Dynamics with Agents, Machine Learning, and Foundation Models]({{site.url}}/{{site.baseurl}}/p/2026-09-UrbanDynamics_ABM_ML_FM-NewcastleCDT.html). Presentation to the Geospatial Systems CDT Annual Assembly, Newcastle University, 7-8 September 2026. 
+
  - [Estimating Visible Deprivation through the Analysis of Street View Image Embeddings]({{site.url}}/{{site.baseurl}}/p/2026-06-GeoAI-INTEGRATE-Embeddings-Deprivation.html). Presentation to the 1st International Conference on Geospatial Artificial Intelligence ([GeoAI 2026](https://geoaiconference.org/)). Ghent University, 3-6 June 2026.
 
  - [Foundation Models for Nuanced Agent Behaviours]({{site.url}}/{{site.baseurl}}/p/2026-01-ABM_LLM.html). Presentation to the European Social Simulation Association ([ESSA](https://essa.eu.org/)) [LLM4ABM Special Interest Group](https://essa.eu.org/special-interests-groups/), online, 8th January 2026.
