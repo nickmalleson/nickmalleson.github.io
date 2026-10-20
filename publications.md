@@ -73,6 +73,8 @@ Crooks, A, **N. Malleson**, E. Manley, A. Heppenstall (2019) _[Agent-Based Model
 
 #### 2026
 
+Dai, X., A. Prestwich, T. Craig, L. Warren, Y. Sheng, **N. Malleson** & J. Ge (2026) Agent-based models in dietary behaviour: a scoping review. _Health Psychology Review_ 1–22. DOI: [10.1080/17437199.2026.2740058](https://doi.org/10.1080/17437199.2026.2740058)
+
 Asher, M., A. Comber, N. Golzari Osguie, T. Bui Quang, M. Kieu & **N. Malleson** (2026) Estimating visible deprivation through the analysis of street view image embeddings. _Computers, Environment and Urban Systems_ 131: 102526. DOI: [10.1016/j.compenvurbsys.2026.102526](https://doi.org/10.1016/j.compenvurbsys.2026.102526)
 
 Seyidoglu, H., J. Pina-Sánchez, **N. Malleson**, and G. Farrell (2026) The Association between Mobility and Crime in England and Wales. _Crime Science_ 15 (1): 22. DOI: [10.1186/s40163-026-00291-z](https://doi.org/10.1186/s40163-026-00291-z)
